@@ -1,0 +1,90 @@
+C:/CHALMERS/sommar-2014/design_runs/t1/m6/enc.vhd {1 {vcom -work work -2002 -explicit C:/CHALMERS/sommar-2014/design_runs/t1/m6/enc.vhd
+Model Technology ModelSim PE Student Edition vcom 10.3 Compiler 2014.01 Jan  6 2014
+Start time: 14:08:06 on May 27,2014
+vcom -reportprogress 300 -work work -2002 -explicit C:/CHALMERS/sommar-2014/design_runs/t1/m6/enc.vhd 
+-- Loading package STANDARD
+-- Loading package const
+-- Compiling entity ering
+-- Compiling architecture eringa of ering
+-- Compiling entity ecount
+-- Compiling architecture ecounta of ecount
+-- Compiling entity enc
+-- Compiling architecture enca of enc
+-- Loading entity ecount
+-- Loading entity ering
+End time: 14:08:07 on May 27,2014
+Errors: 0, Warnings: 0
+
+} {} {}} C:/CHALMERS/sommar-2014/design_runs/t1/m6/const.vhd {1 {vcom -work work -2002 -explicit C:/CHALMERS/sommar-2014/design_runs/t1/m6/const.vhd
+Model Technology ModelSim PE Student Edition vcom 10.3 Compiler 2014.01 Jan  6 2014
+Start time: 14:08:05 on May 27,2014
+vcom -reportprogress 300 -work work -2002 -explicit C:/CHALMERS/sommar-2014/design_runs/t1/m6/const.vhd 
+-- Loading package STANDARD
+-- Compiling package const
+End time: 14:08:05 on May 27,2014
+Errors: 0, Warnings: 0
+
+} {} {}} C:/CHALMERS/sommar-2014/design_runs/t1/m6/dec.vhd {1 {vcom -work work -2002 -explicit C:/CHALMERS/sommar-2014/design_runs/t1/m6/dec.vhd
+Model Technology ModelSim PE Student Edition vcom 10.3 Compiler 2014.01 Jan  6 2014
+Start time: 14:08:05 on May 27,2014
+vcom -reportprogress 300 -work work -2002 -explicit C:/CHALMERS/sommar-2014/design_runs/t1/m6/dec.vhd 
+-- Loading package STANDARD
+-- Loading package const
+-- Compiling entity dcount
+-- Compiling architecture dcounta of dcount
+-- Compiling entity dsyn1
+-- Compiling architecture dsyn1a of dsyn1
+-- Compiling entity dch1
+-- Compiling architecture dch1a of dch1
+-- Compiling entity dbuf
+-- Compiling architecture dbufa of dbuf
+-- Compiling entity dec
+-- Compiling architecture deca of dec
+-- Loading entity dcount
+-- Loading entity dsyn1
+-- Loading entity dch1
+-- Loading entity dbuf
+End time: 14:08:06 on May 27,2014
+Errors: 0, Warnings: 0
+
+} {} {}} C:/CHALMERS/sommar-2014/design_runs/t1/m6/bchio.vhd {1 {vcom -work work -2002 -explicit C:/CHALMERS/sommar-2014/design_runs/t1/m6/bchio.vhd
+Model Technology ModelSim PE Student Edition vcom 10.3 Compiler 2014.01 Jan  6 2014
+Start time: 14:08:04 on May 27,2014
+vcom -reportprogress 300 -work work -2002 -explicit C:/CHALMERS/sommar-2014/design_runs/t1/m6/bchio.vhd 
+-- Loading package STANDARD
+-- Loading package const
+-- Compiling entity ioenc
+-- Compiling architecture ioenca of ioenc
+-- Loading entity enc
+-- Compiling entity iodec
+-- Compiling architecture iodeca of iodec
+-- Loading entity dec
+End time: 14:08:05 on May 27,2014
+Errors: 0, Warnings: 0
+
+} {} {}} C:/CHALMERS/sommar-2014/design_runs/t1/m6/sim.vhd {1 {vcom -work work -2002 -explicit C:/CHALMERS/sommar-2014/design_runs/t1/m6/sim.vhd
+Model Technology ModelSim PE Student Edition vcom 10.3 Compiler 2014.01 Jan  6 2014
+Start time: 14:08:03 on May 27,2014
+vcom -reportprogress 300 -work work -2002 -explicit C:/CHALMERS/sommar-2014/design_runs/t1/m6/sim.vhd 
+-- Loading package STANDARD
+-- Loading package const
+-- Compiling entity encBuf
+-- Compiling architecture encBufa of encBuf
+-- Compiling entity errBuf
+-- Compiling architecture errBufa of errBuf
+-- Compiling entity comBuf
+-- Compiling architecture comBufa of comBuf
+-- Compiling entity decBuf
+-- Compiling architecture decBufa of decBuf
+-- Compiling entity sim
+-- Compiling architecture sima of sim
+-- Loading entity enc
+-- Loading entity dec
+-- Loading entity encBuf
+-- Loading entity errBuf
+-- Loading entity comBuf
+-- Loading entity decBuf
+End time: 14:08:04 on May 27,2014
+Errors: 0, Warnings: 0
+
+} {} {}}
