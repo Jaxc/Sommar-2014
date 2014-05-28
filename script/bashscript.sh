@@ -1,6 +1,6 @@
 #!/bin/bash
-m=6
-t=1
+m=$1
+t=$2
 	mkdir -p design_runs/t$t/m$m 
 	echo "Make dir complete"
 	bash script/editfilescript.sh $m $t
@@ -9,9 +9,10 @@ t=1
 	echo "Copy folder complete"
 	cd design_runs/t$t/m$m/
 	echo "Change dir complete"
-	gcc -o bch_generate bch.c
-	pwd
 	./bch_generate
 	rm bch_generate
+	rm *.c
+	rm *.vht
+	rm *.in
 	echo "Bch.exe complete"
 
