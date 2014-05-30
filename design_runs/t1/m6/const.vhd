@@ -5,16 +5,16 @@
 -- Constant necessary for decoder and encoder
 
 PACKAGE   const IS
-	CONSTANT m: INTEGER:= 4;
-	CONSTANT n: INTEGER:= 15;  -- n= 2^m -1  -size of block
-	CONSTANT k: INTEGER:= 11;  -- BCH code (n,k) -no. of information bits
-	CONSTANT nk: INTEGER:= 4; -- nk=n-k
+	CONSTANT m: INTEGER:= 6;
+	CONSTANT n: INTEGER:= 31;  -- n= 2^m -1  -size of block
+	CONSTANT k: INTEGER:= 25;  -- BCH code (n,k) -no. of information bits
+--	CONSTANT nk: INTEGER:= 4; -- nk=n-k
 	CONSTANT t: INTEGER:= 1;  -- no. of errors to be corrected
 
-	CONSTANT sizea: INTEGER:= 3; -- size of counter ca
-	CONSTANT sizeb: INTEGER:= 3; -- size of counter cb 
+--	CONSTANT sizea: INTEGER:= 3; -- size of counter ca
+--	CONSTANT sizeb: INTEGER:= 3; -- size of counter cb 
 		-- count = iteration* cb + ca
-	CONSTANT sizel: INTEGER:= 3; 
+--	CONSTANT sizel: INTEGER:= 3; 
 		-- size of l integer (degree of error polynomial BMA)
 END const;	
 
