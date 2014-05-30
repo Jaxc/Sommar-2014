@@ -25,6 +25,6 @@
 			echo -e "$currentline" >> sources/bch.in
 		fi		
 		let "a += 1"       
-	done <sources/bchbasis.in
+	done sources/bchbasis.in
 
 	echo "done"
