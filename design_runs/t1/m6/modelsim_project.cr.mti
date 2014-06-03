@@ -1,8 +1,4 @@
-<<<<<<< HEAD
 C:/CHALMERS/sommar-2014/design_runs/t1/m6/BCH_TB.vhd {2 {vcom -nostats -work work -2002 -explicit C:/CHALMERS/sommar-2014/design_runs/t1/m6/BCH_TB.vhd
-=======
-C:/CHALMERS/sommar-2014/design_runs/t1/m6/BCH_TB.vhd {2 {vcom -nostats -work work -2002 -explicit {C:\CHALMERS\sommar-2014\design_runs\t1\m6\BCH_TB.vhd}
->>>>>>> ee8530b2979565393fb6f0aa0107e723fc8512fa
 Model Technology ModelSim PE Student Edition vcom 10.3 Compiler 2014.01 Jan  6 2014
 -- Loading package STANDARD
 -- Loading package config
@@ -11,7 +7,6 @@ Model Technology ModelSim PE Student Edition vcom 10.3 Compiler 2014.01 Jan  6 2
 -- Loading package NUMERIC_STD
 -- Compiling entity BCH_TB
 -- Compiling architecture Testbench of BCH_TB
-<<<<<<< HEAD
 ** Warning: C:/CHALMERS/sommar-2014/design_runs/t1/m6/BCH_TB.vhd(52): (vcom-1283) Cannot reference file "objectFile" inside pure function "loadOperand".
 
 ** Warning: C:/CHALMERS/sommar-2014/design_runs/t1/m6/BCH_TB.vhd(53): (vcom-1283) Cannot reference file "objectFile" inside pure function "loadOperand".
@@ -21,22 +16,6 @@ Model Technology ModelSim PE Student Edition vcom 10.3 Compiler 2014.01 Jan  6 2
 ** Warning: C:/CHALMERS/sommar-2014/design_runs/t1/m6/BCH_TB.vhd(73): (vcom-1283) Cannot reference file "objectFile" inside pure function "loadOpCode".
 
 
-=======
-** Warning: C:\CHALMERS\sommar-2014\design_runs\t1\m6\BCH_TB.vhd(52): (vcom-1283) Cannot reference file "objectFile" inside pure function "loadOperand".
-
-** Warning: C:\CHALMERS\sommar-2014\design_runs\t1\m6\BCH_TB.vhd(53): (vcom-1283) Cannot reference file "objectFile" inside pure function "loadOperand".
-
-** Warning: C:\CHALMERS\sommar-2014\design_runs\t1\m6\BCH_TB.vhd(72): (vcom-1283) Cannot reference file "objectFile" inside pure function "loadOpCode".
-
-** Warning: C:\CHALMERS\sommar-2014\design_runs\t1\m6\BCH_TB.vhd(73): (vcom-1283) Cannot reference file "objectFile" inside pure function "loadOpCode".
-
-
-} {} {}} C:/CHALMERS/sommar-2014/design_runs/t1/m6/config.vhd {1 {vcom -nostats -work work -2002 -explicit C:/CHALMERS/sommar-2014/design_runs/t1/m6/config.vhd
-Model Technology ModelSim PE Student Edition vcom 10.3 Compiler 2014.01 Jan  6 2014
--- Loading package STANDARD
--- Compiling package config
-
->>>>>>> ee8530b2979565393fb6f0aa0107e723fc8512fa
 } {} {}} C:/CHALMERS/sommar-2014/design_runs/t1/m6/enc.vhd {0 {vcom -nostats -work work -2002 -explicit C:/CHALMERS/sommar-2014/design_runs/t1/m6/enc.vhd
 Model Technology ModelSim PE Student Edition vcom 10.3 Compiler 2014.01 Jan  6 2014
 -- Loading package STANDARD
@@ -53,7 +32,6 @@ Model Technology ModelSim PE Student Edition vcom 10.3 Compiler 2014.01 Jan  6 2
 ** Error: C:/CHALMERS/sommar-2014/design_runs/t1/m6/enc.vhd(21): (vcom-1136) Unknown identifier "nk".
 
 ** Error: C:/CHALMERS/sommar-2014/design_runs/t1/m6/enc.vhd(21): Type error resolving infix expression "-" as type std.STANDARD.NATURAL.
-<<<<<<< HEAD
 ** Error: C:/CHALMERS/sommar-2014/design_runs/t1/m6/enc.vhd(37): VHDL Compiler exiting
 
 } {7.0 8.0 9.0 12.0 13.0 15.0 16.0 18.0} {}} C:/CHALMERS/sommar-2014/design_runs/t1/m6/config.vhd {1 {vcom -nostats -work work -2002 -explicit C:/CHALMERS/sommar-2014/design_runs/t1/m6/config.vhd
@@ -62,11 +40,6 @@ Model Technology ModelSim PE Student Edition vcom 10.3 Compiler 2014.01 Jan  6 2
 -- Compiling package config
 
 } {} {}} C:/CHALMERS/sommar-2014/design_runs/t1/m6/dec.vhd {0 {vcom -nostats -work work -2002 -explicit C:/CHALMERS/sommar-2014/design_runs/t1/m6/dec.vhd
-=======
-** Error: C:/CHALMERS/sommar-2014/design_runs/t1/m6/enc.vhd(35): VHDL Compiler exiting
-
-} {7.0 8.0 9.0 12.0 13.0 15.0 16.0 18.0} {}} C:/CHALMERS/sommar-2014/design_runs/t1/m6/dec.vhd {0 {vcom -nostats -work work -2002 -explicit C:/CHALMERS/sommar-2014/design_runs/t1/m6/dec.vhd
->>>>>>> ee8530b2979565393fb6f0aa0107e723fc8512fa
 Model Technology ModelSim PE Student Edition vcom 10.3 Compiler 2014.01 Jan  6 2014
 -- Loading package STANDARD
 -- Loading package const
@@ -82,7 +55,6 @@ Model Technology ModelSim PE Student Edition vcom 10.3 Compiler 2014.01 Jan  6 2
 ** Error: C:/CHALMERS/sommar-2014/design_runs/t1/m6/dec.vhd(42): (vcom-1136) Unknown identifier "m".
 
 ** Error: C:/CHALMERS/sommar-2014/design_runs/t1/m6/dec.vhd(42): Type error resolving infix expression "-" as type std.STANDARD.NATURAL.
-<<<<<<< HEAD
 ** Error: C:/CHALMERS/sommar-2014/design_runs/t1/m6/dec.vhd(48): VHDL Compiler exiting
 
 } {7.0 8.0 9.0 12.0 13.0 15.0 16.0 18.0} {}} C:/CHALMERS/sommar-2014/design_runs/t1/m6/sim.vhd {0 {vcom -nostats -work work -2002 -explicit C:/CHALMERS/sommar-2014/design_runs/t1/m6/sim.vhd
@@ -97,11 +69,6 @@ Model Technology ModelSim PE Student Edition vcom 10.3 Compiler 2014.01 Jan  6 2
 ** Error: C:/CHALMERS/sommar-2014/design_runs/t1/m6/sim.vhd(14): VHDL Compiler exiting
 
 } {6.0 7.0 8.0 11.0} {}} C:/CHALMERS/sommar-2014/design_runs/t1/m6/bchio.vhd {0 {vcom -nostats -work work -2002 -explicit C:/CHALMERS/sommar-2014/design_runs/t1/m6/bchio.vhd
-=======
-** Error: C:/CHALMERS/sommar-2014/design_runs/t1/m6/dec.vhd(46): VHDL Compiler exiting
-
-} {7.0 8.0 9.0 12.0 13.0 15.0 16.0 18.0} {}} C:/CHALMERS/sommar-2014/design_runs/t1/m6/bchio.vhd {0 {vcom -nostats -work work -2002 -explicit C:/CHALMERS/sommar-2014/design_runs/t1/m6/bchio.vhd
->>>>>>> ee8530b2979565393fb6f0aa0107e723fc8512fa
 Model Technology ModelSim PE Student Edition vcom 10.3 Compiler 2014.01 Jan  6 2014
 -- Loading package STANDARD
 -- Loading package const
@@ -148,19 +115,4 @@ Model Technology ModelSim PE Student Edition vcom 10.3 Compiler 2014.01 Jan  6 2
 ** Error: C:/CHALMERS/sommar-2014/design_runs/t1/m6/bchio.vhd(53): Type error in range expression.
 ** Error: C:/CHALMERS/sommar-2014/design_runs/t1/m6/bchio.vhd(56): VHDL Compiler exiting
 
-<<<<<<< HEAD
 } {7.0 8.0 9.0 10.0 11.0 12.0 13.0 15.0 16.0 19.0 20.0 21.0 22.0 23.0 24.0 26.0 27.0 31.0 32.0 34.0 35.0 39.0 40.0 42.0 43.0 47.0} {}}
-=======
-} {7.0 8.0 9.0 10.0 11.0 12.0 13.0 15.0 16.0 19.0 20.0 21.0 22.0 23.0 24.0 26.0 27.0 31.0 32.0 34.0 35.0 39.0 40.0 42.0 43.0 47.0} {}} C:/CHALMERS/sommar-2014/design_runs/t1/m6/sim.vhd {0 {vcom -nostats -work work -2002 -explicit C:/CHALMERS/sommar-2014/design_runs/t1/m6/sim.vhd
-Model Technology ModelSim PE Student Edition vcom 10.3 Compiler 2014.01 Jan  6 2014
--- Loading package STANDARD
--- Loading package const
--- Compiling entity encBuf
-** Error: C:/CHALMERS/sommar-2014/design_runs/t1/m6/sim.vhd(12): (vcom-1136) Unknown identifier "k".
-
-** Error: C:/CHALMERS/sommar-2014/design_runs/t1/m6/sim.vhd(12): Bad expression in right bound of range expression.
-** Error: C:/CHALMERS/sommar-2014/design_runs/t1/m6/sim.vhd(12): Type error in range expression.
-** Error: C:/CHALMERS/sommar-2014/design_runs/t1/m6/sim.vhd(14): VHDL Compiler exiting
-
-} {6.0 7.0 8.0 11.0} {}}
->>>>>>> ee8530b2979565393fb6f0aa0107e723fc8512fa

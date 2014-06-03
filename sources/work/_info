@@ -7,7 +7,6 @@ z2
 !i10e 25
 !i10f 100
 cModel Technology
-<<<<<<< HEAD
 Z0 dC:/CHALMERS/sommar-2014/design_runs/t1/m7
 Ebch_tb
 Z1 w1401475111
@@ -607,6 +606,3 @@ R18
 R19
 R13
 R14
-=======
-dC:/CHALMERS/sommar-2014/design_runs/t1/m6
->>>>>>> ee8530b2979565393fb6f0aa0107e723fc8512fa

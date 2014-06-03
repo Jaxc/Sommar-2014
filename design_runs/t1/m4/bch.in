@@ -1,15 +1,6 @@
-<<<<<<< HEAD
 m=4; -- number of n=2^m-1
 t=1; -- number of errors to be corrected
 -s0 -- generate sym.cmd & sym.cme
 -m1 -- optimization
 -o3 --option
 -i0 
-=======
-m=4; -- number of n=2^m-1
-t=1; -- number of errors to be corrected
--s0 -- generate sym.cmd & sym.cme
--m1 -- optimization
--o3 --option
--i0 
->>>>>>> ee8530b2979565393fb6f0aa0107e723fc8512fa

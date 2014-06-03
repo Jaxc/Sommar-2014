@@ -9,42 +9,25 @@ z2
 cModel Technology
 Z0 dC:/CHALMERS/sommar-2014/design_runs/t1/m6
 Ebch_tb
-<<<<<<< HEAD
 Z1 w1401475158
-=======
-Z1 w1401473283
->>>>>>> ee8530b2979565393fb6f0aa0107e723fc8512fa
 Z2 DPx4 ieee 11 numeric_std 0 22 :ASDNFgHXf_ih3J@9F3Ze1
 Z3 DPx3 std 6 textio 0 22 zE1`LPoLg^DX3Oz^4Fj1K3
 Z4 DPx4 ieee 14 std_logic_1164 0 22 eNV`TJ_GofJTzYa?f<@Oe1
 Z5 DPx4 work 6 config 0 22 f2[3hS2FHQ2^3OQVoaeiA0
 R0
-<<<<<<< HEAD
 Z6 8C:/CHALMERS/sommar-2014/design_runs/t1/m6/BCH_TB.vhd
 Z7 FC:/CHALMERS/sommar-2014/design_runs/t1/m6/BCH_TB.vhd
-=======
-Z6 8C:\CHALMERS\sommar-2014\design_runs\t1\m6\BCH_TB.vhd
-Z7 FC:\CHALMERS\sommar-2014\design_runs\t1\m6\BCH_TB.vhd
->>>>>>> ee8530b2979565393fb6f0aa0107e723fc8512fa
 l0
 L11
 VODX]O>j[aO??`f?[a@=aQ3
 !s100 _=Di:WzKHN@5Kf445Reko2
 Z8 OP;C;10.3;59
 32
-<<<<<<< HEAD
 Z9 !s110 1401475255
 !i10b 1
 Z10 !s108 1401475255.274000
 Z11 !s90 -reportprogress|300|-nostats|-work|work|-2002|-explicit|C:/CHALMERS/sommar-2014/design_runs/t1/m6/BCH_TB.vhd|
 Z12 !s107 C:/CHALMERS/sommar-2014/design_runs/t1/m6/BCH_TB.vhd|
-=======
-Z9 !s110 1401473317
-!i10b 1
-Z10 !s108 1401473317.928000
-Z11 !s90 -reportprogress|300|-nostats|-work|work|-2002|-explicit|C:\CHALMERS\sommar-2014\design_runs\t1\m6\BCH_TB.vhd|
-Z12 !s107 C:\CHALMERS\sommar-2014\design_runs\t1\m6\BCH_TB.vhd|
->>>>>>> ee8530b2979565393fb6f0aa0107e723fc8512fa
 Z13 o-work work -2002 -explicit -O0
 Z14 tExplicit 1
 Atestbench
@@ -130,11 +113,7 @@ VZ>ZG?^fDOi<`7U]9QZI_U3
 !s100 Y?KFU9j`i?7L[E9QdXYP[3
 R8
 32
-<<<<<<< HEAD
 Z24 !s110 1401473317
-=======
-R9
->>>>>>> ee8530b2979565393fb6f0aa0107e723fc8512fa
 !i10b 1
 !s108 1401473317.607000
 !s90 -reportprogress|300|-nostats|-work|work|-2002|-explicit|C:/CHALMERS/sommar-2014/design_runs/t1/m6/const.vhd|
@@ -142,54 +121,33 @@ R9
 R13
 R14
 Edbuf
-<<<<<<< HEAD
 Z25 w1401472036
 R16
 R0
 Z26 8C:/CHALMERS/sommar-2014/design_runs/t1/m6/dec.vhd
 Z27 FC:/CHALMERS/sommar-2014/design_runs/t1/m6/dec.vhd
-=======
-Z24 w1401472036
-R16
-R0
-Z25 8C:/CHALMERS/sommar-2014/design_runs/t1/m6/dec.vhd
-Z26 FC:/CHALMERS/sommar-2014/design_runs/t1/m6/dec.vhd
->>>>>>> ee8530b2979565393fb6f0aa0107e723fc8512fa
 l0
 L111
 Ve1G@<VQS@^9=iVNL<Lkh32
 !s100 ?QfB:h4T9Kg_;5FUk0V7z1
 R8
 32
-<<<<<<< HEAD
 Z28 !s110 1401472240
 !i10b 1
 Z29 !s108 1401472240.160000
 Z30 !s90 -reportprogress|300|-nostats|-work|work|-2002|-explicit|C:/CHALMERS/sommar-2014/design_runs/t1/m6/dec.vhd|
 Z31 !s107 C:/CHALMERS/sommar-2014/design_runs/t1/m6/dec.vhd|
-=======
-Z27 !s110 1401472240
-!i10b 1
-Z28 !s108 1401472240.160000
-Z29 !s90 -reportprogress|300|-nostats|-work|work|-2002|-explicit|C:/CHALMERS/sommar-2014/design_runs/t1/m6/dec.vhd|
-Z30 !s107 C:/CHALMERS/sommar-2014/design_runs/t1/m6/dec.vhd|
->>>>>>> ee8530b2979565393fb6f0aa0107e723fc8512fa
 R13
 R14
 Adbufa
 R16
-<<<<<<< HEAD
 Z32 DEx4 work 4 dbuf 0 22 e1G@<VQS@^9=iVNL<Lkh32
-=======
-Z31 DEx4 work 4 dbuf 0 22 e1G@<VQS@^9=iVNL<Lkh32
->>>>>>> ee8530b2979565393fb6f0aa0107e723fc8512fa
 l119
 L116
 VVE1[i;Y=nMkGUkNC@Uo0k0
 !s100 m6R9E2Kh3^Sj2c@C0b@Zn1
 R8
 32
-<<<<<<< HEAD
 R28
 !i10b 1
 R29
@@ -203,56 +161,28 @@ R16
 R0
 R26
 R27
-=======
-R27
-!i10b 1
-R28
-R29
-R30
-R13
-R14
-Edch1
-R24
-R16
-R0
-R25
-R26
->>>>>>> ee8530b2979565393fb6f0aa0107e723fc8512fa
 l0
 L80
 VS_jK9EdmS13;=X]bzGcab2
 !s100 Q_Ch>WK:hK75n1:88;X253
 R8
 32
-<<<<<<< HEAD
 R28
 !i10b 1
 R29
 R30
 R31
-=======
-R27
-!i10b 1
-R28
-R29
-R30
->>>>>>> ee8530b2979565393fb6f0aa0107e723fc8512fa
 R13
 R14
 Adch1a
 R16
-<<<<<<< HEAD
 Z33 DEx4 work 4 dch1 0 22 S_jK9EdmS13;=X]bzGcab2
-=======
-Z32 DEx4 work 4 dch1 0 22 S_jK9EdmS13;=X]bzGcab2
->>>>>>> ee8530b2979565393fb6f0aa0107e723fc8512fa
 l89
 L86
 VZKa5mJ76CUlC4KdCT`Mko0
 !s100 gQZKD`APH=6F3]b_aJJb43
 R8
 32
-<<<<<<< HEAD
 R28
 !i10b 1
 R29
@@ -266,56 +196,28 @@ Z35 DPx4 work 5 const 0 22 Z>ZG?^fDOi<`7U]9QZI_U3
 R0
 R26
 R27
-=======
-R27
-!i10b 1
-R28
-R29
-R30
-R13
-R14
-Edcount
-R24
-Z33 DPx4 work 5 const 0 22 Z>ZG?^fDOi<`7U]9QZI_U3
-R0
-R25
-R26
->>>>>>> ee8530b2979565393fb6f0aa0107e723fc8512fa
 l0
 L9
 VF4o3Y@bGU6o`Xlh00eFEb0
 !s100 Zni]YMUkZ?0Zf5`C9TUo71
 R8
 32
-<<<<<<< HEAD
 Z36 !s110 1401475260
 !i10b 1
 !s108 1401475260.444000
 R30
 R31
-=======
-R9
-!i10b 1
-!s108 1401473317.708000
-R29
-R30
->>>>>>> ee8530b2979565393fb6f0aa0107e723fc8512fa
 R13
 R14
 Adcounta
 R16
-<<<<<<< HEAD
 Z37 DEx4 work 6 dcount 0 22 F4o3Y@bGU6o`Xlh00eFEb0
-=======
-Z34 DEx4 work 6 dcount 0 22 F4o3Y@bGU6o`Xlh00eFEb0
->>>>>>> ee8530b2979565393fb6f0aa0107e723fc8512fa
 l17
 L14
 V0@3K@_E;?8g[:CSzcJ4GU0
 !s100 mJVXj9=JdhQ`<U<>LRbbP1
 R8
 32
-<<<<<<< HEAD
 R28
 !i10b 1
 R29
@@ -329,28 +231,12 @@ R16
 R0
 R26
 R27
-=======
-R27
-!i10b 1
-R28
-R29
-R30
-R13
-R14
-Edec
-R24
-R16
-R0
-R25
-R26
->>>>>>> ee8530b2979565393fb6f0aa0107e723fc8512fa
 l0
 L132
 V5m9>@jXbzg@13g`@LbIJA0
 !s100 YJmFIlg[fc_fnNJ8c?Jzn2
 R8
 32
-<<<<<<< HEAD
 R28
 !i10b 1
 R29
@@ -365,41 +251,17 @@ Z38 DEx4 work 5 dsyn1 0 22 Kkk2Lj6kGEE3znW]i6@?71
 R37
 R16
 Z39 DEx4 work 3 dec 0 22 5m9>@jXbzg@13g`@LbIJA0
-=======
-R27
-!i10b 1
-R28
-R29
-R30
-R13
-R14
-Adeca
-R31
-R32
-Z35 DEx4 work 5 dsyn1 0 22 Kkk2Lj6kGEE3znW]i6@?71
-R34
-R16
-Z36 DEx4 work 3 dec 0 22 5m9>@jXbzg@13g`@LbIJA0
->>>>>>> ee8530b2979565393fb6f0aa0107e723fc8512fa
 l163
 L137
 VdE@VA<Z:72F]USQOG?F^61
 !s100 297]9_e0dobF=7BlibUn^1
 R8
 32
-<<<<<<< HEAD
 R28
 !i10b 1
 R29
 R30
 R31
-=======
-R27
-!i10b 1
-R28
-R29
-R30
->>>>>>> ee8530b2979565393fb6f0aa0107e723fc8512fa
 R13
 R14
 Edecbuf
@@ -423,11 +285,7 @@ R13
 R14
 Adecbufa
 R16
-<<<<<<< HEAD
 Z40 DEx4 work 6 decbuf 0 22 kJT>c^je0m1zLk`F@5Z^H0
-=======
-Z37 DEx4 work 6 decbuf 0 22 kJT>c^je0m1zLk`F@5Z^H0
->>>>>>> ee8530b2979565393fb6f0aa0107e723fc8512fa
 l83
 L81
 VHdbXgf>m^HMT=6eZ_z1iX0
@@ -442,54 +300,33 @@ R22
 R13
 R14
 Edsyn1
-<<<<<<< HEAD
 R25
 R16
 R0
 R26
 R27
-=======
-R24
-R16
-R0
-R25
-R26
->>>>>>> ee8530b2979565393fb6f0aa0107e723fc8512fa
 l0
 L52
 VKkk2Lj6kGEE3znW]i6@?71
 !s100 TTmjU>CAChJ;eC6TJKAMH3
 R8
 32
-<<<<<<< HEAD
 R28
 !i10b 1
 R29
 R30
 R31
-=======
-R27
-!i10b 1
-R28
-R29
-R30
->>>>>>> ee8530b2979565393fb6f0aa0107e723fc8512fa
 R13
 R14
 Adsyn1a
 R16
-<<<<<<< HEAD
 R38
-=======
-R35
->>>>>>> ee8530b2979565393fb6f0aa0107e723fc8512fa
 l59
 L57
 V;LK81Um=R_<BO0B[N:Kl53
 !s100 m6GdcPz3^UQ^AWU3cAHO23
 R8
 32
-<<<<<<< HEAD
 R28
 !i10b 1
 R29
@@ -503,56 +340,28 @@ R16
 R0
 Z41 8C:/CHALMERS/sommar-2014/design_runs/t1/m6/enc.vhd
 Z42 FC:/CHALMERS/sommar-2014/design_runs/t1/m6/enc.vhd
-=======
-R27
-!i10b 1
-R28
-R29
-R30
-R13
-R14
-Eecount
-R24
-R16
-R0
-Z38 8C:/CHALMERS/sommar-2014/design_runs/t1/m6/enc.vhd
-Z39 FC:/CHALMERS/sommar-2014/design_runs/t1/m6/enc.vhd
->>>>>>> ee8530b2979565393fb6f0aa0107e723fc8512fa
 l0
 L41
 V5N^DNa@L<Cd`OEfgMFdzH3
 !s100 A`]QPU__Nn:jig98;@kV@3
 R8
 32
-<<<<<<< HEAD
 Z43 !s110 1401472241
 !i10b 1
 Z44 !s108 1401472240.748000
 Z45 !s90 -reportprogress|300|-nostats|-work|work|-2002|-explicit|C:/CHALMERS/sommar-2014/design_runs/t1/m6/enc.vhd|
 Z46 !s107 C:/CHALMERS/sommar-2014/design_runs/t1/m6/enc.vhd|
-=======
-Z40 !s110 1401472241
-!i10b 1
-Z41 !s108 1401472240.748000
-Z42 !s90 -reportprogress|300|-nostats|-work|work|-2002|-explicit|C:/CHALMERS/sommar-2014/design_runs/t1/m6/enc.vhd|
-Z43 !s107 C:/CHALMERS/sommar-2014/design_runs/t1/m6/enc.vhd|
->>>>>>> ee8530b2979565393fb6f0aa0107e723fc8512fa
 R13
 R14
 Aecounta
 R16
-<<<<<<< HEAD
 Z47 DEx4 work 6 ecount 0 22 5N^DNa@L<Cd`OEfgMFdzH3
-=======
-Z44 DEx4 work 6 ecount 0 22 5N^DNa@L<Cd`OEfgMFdzH3
->>>>>>> ee8530b2979565393fb6f0aa0107e723fc8512fa
 l49
 L46
 VOm26lahWP::0aWOb:7`K11
 !s100 Z]C_`VZl:J;1C:A3hLO?`1
 R8
 32
-<<<<<<< HEAD
 R43
 !i10b 1
 R44
@@ -566,28 +375,12 @@ R16
 R0
 R41
 R42
-=======
-R40
-!i10b 1
-R41
-R42
-R43
-R13
-R14
-Eenc
-R24
-R16
-R0
-R38
-R39
->>>>>>> ee8530b2979565393fb6f0aa0107e723fc8512fa
 l0
 L78
 VQBQHz_K?Ee?I1A;0NFY9M3
 !s100 4U_gz6Ce[4LS<5R40DRn[0
 R8
 32
-<<<<<<< HEAD
 R43
 !i10b 1
 R44
@@ -600,39 +393,17 @@ Z48 DEx4 work 5 ering 0 22 bmJ@d]AQ@4]J:_eZT4WBN0
 R47
 R16
 Z49 DEx4 work 3 enc 0 22 QBQHz_K?Ee?I1A;0NFY9M3
-=======
-R40
-!i10b 1
-R41
-R42
-R43
-R13
-R14
-Aenca
-Z45 DEx4 work 5 ering 0 22 bmJ@d]AQ@4]J:_eZT4WBN0
-R44
-R16
-Z46 DEx4 work 3 enc 0 22 QBQHz_K?Ee?I1A;0NFY9M3
->>>>>>> ee8530b2979565393fb6f0aa0107e723fc8512fa
 l95
 L83
 VdZPF;[Y:bU58HXE]l1Ma>3
 !s100 KNKiKS]CN1V;Y8_15T87k1
 R8
 32
-<<<<<<< HEAD
 R43
 !i10b 1
 R44
 R45
 R46
-=======
-R40
-!i10b 1
-R41
-R42
-R43
->>>>>>> ee8530b2979565393fb6f0aa0107e723fc8512fa
 R13
 R14
 Eencbuf
@@ -647,11 +418,7 @@ V]RbYcaogYS6?Y^meBoMj`2
 !s100 lCmIo_LFc2@Fi61>lNACA0
 R8
 32
-<<<<<<< HEAD
 Z50 !s110 1401472243
-=======
-Z47 !s110 1401472243
->>>>>>> ee8530b2979565393fb6f0aa0107e723fc8512fa
 !i10b 1
 R20
 R21
@@ -660,22 +427,14 @@ R13
 R14
 Aencbufa
 R16
-<<<<<<< HEAD
 Z51 DEx4 work 6 encbuf 0 22 ]RbYcaogYS6?Y^meBoMj`2
-=======
-Z48 DEx4 work 6 encbuf 0 22 ]RbYcaogYS6?Y^meBoMj`2
->>>>>>> ee8530b2979565393fb6f0aa0107e723fc8512fa
 l18
 L16
 V;9o^:51d7iV4ZSlSE2efJ1
 !s100 :INVO`3SP]@om_APhUecb2
 R8
 32
-<<<<<<< HEAD
 R50
-=======
-R47
->>>>>>> ee8530b2979565393fb6f0aa0107e723fc8512fa
 !i10b 1
 R20
 R21
@@ -683,66 +442,38 @@ R22
 R13
 R14
 Eering
-<<<<<<< HEAD
 R34
 R35
 R0
 R41
 R42
-=======
-R24
-R33
-R0
-R38
-R39
->>>>>>> ee8530b2979565393fb6f0aa0107e723fc8512fa
 l0
 L11
 VbmJ@d]AQ@4]J:_eZT4WBN0
 !s100 AmJ:P1C92gFX<k?Agog8Q2
 R8
 32
-<<<<<<< HEAD
 R36
 !i10b 1
 !s108 1401475260.524000
 R45
 R46
-=======
-R9
-!i10b 1
-!s108 1401473317.802000
-R42
-R43
->>>>>>> ee8530b2979565393fb6f0aa0107e723fc8512fa
 R13
 R14
 Aeringa
 R16
-<<<<<<< HEAD
 R48
-=======
-R45
->>>>>>> ee8530b2979565393fb6f0aa0107e723fc8512fa
 l19
 L16
 V=UoPO9U22dzKlRGCEG?T90
 !s100 YkfO_hm[3Z8[H@`8@@LiR1
 R8
 32
-<<<<<<< HEAD
 R28
 !i10b 1
 R44
 R45
 R46
-=======
-R27
-!i10b 1
-R41
-R42
-R43
->>>>>>> ee8530b2979565393fb6f0aa0107e723fc8512fa
 R13
 R14
 Eerrbuf
@@ -766,11 +497,7 @@ R13
 R14
 Aerrbufa
 R16
-<<<<<<< HEAD
 Z52 DEx4 work 6 errbuf 0 22 AKY@j:ZZ@:0[7=I<RiNMn0
-=======
-Z49 DEx4 work 6 errbuf 0 22 AKY@j:ZZ@:0[7=I<RiNMn0
->>>>>>> ee8530b2979565393fb6f0aa0107e723fc8512fa
 l41
 L39
 VPI[S_3ZXfNAo6PZeB6zcz3
@@ -785,19 +512,11 @@ R22
 R13
 R14
 Eiodec
-<<<<<<< HEAD
 R25
 R16
 R0
 Z53 8C:/CHALMERS/sommar-2014/design_runs/t1/m6/bchio.vhd
 Z54 FC:/CHALMERS/sommar-2014/design_runs/t1/m6/bchio.vhd
-=======
-R24
-R16
-R0
-Z50 8C:/CHALMERS/sommar-2014/design_runs/t1/m6/bchio.vhd
-Z51 FC:/CHALMERS/sommar-2014/design_runs/t1/m6/bchio.vhd
->>>>>>> ee8530b2979565393fb6f0aa0107e723fc8512fa
 l0
 L62
 VX>iLK?j2S3:UY5QkdGk<71
@@ -806,7 +525,6 @@ R8
 32
 R19
 !i10b 1
-<<<<<<< HEAD
 Z55 !s108 1401472244.428000
 Z56 !s90 -reportprogress|300|-nostats|-work|work|-2002|-explicit|C:/CHALMERS/sommar-2014/design_runs/t1/m6/bchio.vhd|
 Z57 !s107 C:/CHALMERS/sommar-2014/design_runs/t1/m6/bchio.vhd|
@@ -814,15 +532,6 @@ R13
 R14
 Aiodeca
 R39
-=======
-Z52 !s108 1401472244.428000
-Z53 !s90 -reportprogress|300|-nostats|-work|work|-2002|-explicit|C:/CHALMERS/sommar-2014/design_runs/t1/m6/bchio.vhd|
-Z54 !s107 C:/CHALMERS/sommar-2014/design_runs/t1/m6/bchio.vhd|
-R13
-R14
-Aiodeca
-R36
->>>>>>> ee8530b2979565393fb6f0aa0107e723fc8512fa
 R16
 DEx4 work 5 iodec 0 22 X>iLK?j2S3:UY5QkdGk<71
 l80
@@ -833,7 +542,6 @@ R8
 32
 R19
 !i10b 1
-<<<<<<< HEAD
 R55
 R56
 R57
@@ -845,26 +553,12 @@ R35
 R0
 R53
 R54
-=======
-R52
-R53
-R54
-R13
-R14
-Eioenc
-R24
-R33
-R0
-R50
-R51
->>>>>>> ee8530b2979565393fb6f0aa0107e723fc8512fa
 l0
 L16
 V_gG8;EiQXW_HN9A@AX>4X0
 !s100 <a4gPjmW@FYM9U8BPglMM3
 R8
 32
-<<<<<<< HEAD
 R24
 !i10b 1
 !s108 1401473317.516000
@@ -874,17 +568,6 @@ R13
 R14
 Aioenca
 R49
-=======
-R9
-!i10b 1
-!s108 1401473317.516000
-R53
-R54
-R13
-R14
-Aioenca
-R46
->>>>>>> ee8530b2979565393fb6f0aa0107e723fc8512fa
 R16
 DEx4 work 5 ioenc 0 22 _gG8;EiQXW_HN9A@AX>4X0
 l34
@@ -895,15 +578,9 @@ R8
 32
 R19
 !i10b 1
-<<<<<<< HEAD
 R55
 R56
 R57
-=======
-R52
-R53
-R54
->>>>>>> ee8530b2979565393fb6f0aa0107e723fc8512fa
 R13
 R14
 Esim
@@ -926,21 +603,12 @@ R22
 R13
 R14
 Asima
-<<<<<<< HEAD
 R40
 R23
 R52
 R51
 R39
 R49
-=======
-R37
-R23
-R49
-R48
-R36
-R46
->>>>>>> ee8530b2979565393fb6f0aa0107e723fc8512fa
 R16
 DEx4 work 3 sim 0 22 U`=87CYWae9?@ChI0DIHV0
 l142
