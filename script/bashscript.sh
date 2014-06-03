@@ -17,3 +17,8 @@ t=$2
 	rm *.in
 	echo "Bch.exe complete"
 
+	ncvhdl -messages -linedebug -v93 const.vhd bchio.vhd BCH_TB.vhd dec.vhd enc.vhd sim.vhd  
+	ncelab -messages -v93 WORKLIB.BCH_TB:Testbench
+	ncsim -input ./ncsim.tcl WORKLIB.BCH_TB:Testbench
+	
+
