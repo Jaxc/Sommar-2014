@@ -74,8 +74,14 @@ int error_creation(void)
 		for(j = 1;j<=t;j++)
 
 		{
-			isone[j] = rand() % n;
+			while(1){
+				isone[j] = rand() % n;
+				if (j == 1) {
+					break;
+				}
+			}
 			n_array[isone[j]] = '1';
+			
 		}
 		fputs(n_array, fp); /* write a string to file */
 	}

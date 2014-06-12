@@ -1,0 +1,3 @@
+vhdl isim_temp "../const.vhd"
+vhdl isim_temp "../enc.vhd"
+vhdl isim_temp "../../../../sources/enc_wrapper.vhd"

@@ -9,8 +9,10 @@ t=$2
 	echo "Copy folder complete"
 	cd design_runs/t$t/m$m/
 	echo "Change dir complete"
+	chmod +x bch_generate
+	chmod +x test_vector_generate
 	./bch_generate
-	./test_vector_generate $1 $2
+	./test_vector_generate $m $t
 	rm bch_generate
 	rm test_vector_generate
 	rm *.vht

@@ -1,0 +1,12 @@
+findings:
+
+9/6-14:
+	There are no usual counters, so toggle rate will be hard to calculate without further knowledge of BCH.
+	The encoder and decoder takes values in serial => buffer needed to feed values.
+	When vdin is high the encoder requests new values, when it is low parity bits are sent. Making a FIFO buffer may be nessesary if the data comes at different rates.
+	The sim.vhd is synthizable, i may want to synth all components and then provide input to the sim.vhd to let it handle the signals.
+	the change between toggle and non toggle seems to be marginal
+
+10/6-14
+	using sim to propagate values:  652797 with sim, 721274 without sim.
+	

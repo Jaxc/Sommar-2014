@@ -1,0 +1,39 @@
+ISim log file
+Running: /home/jaxc/Desktop/projekt/sommar-14/design_runs/t1/m4/test/BCH_TB_isim_beh.exe -intstyle ise -gui -tclbatch isim.cmd -wdb /home/jaxc/Desktop/projekt/sommar-14/design_runs/t1/m4/test/BCH_TB_isim_beh.wdb 
+ISim P.20131013 (signature 0xfbc00daa)
+----------------------------------------------------------------------
+INFO:Security:65 - Your license for 'ISIM' is for trial use only.
+
+
+----------------------------------------------------------------------
+This is a Full version of ISim.
+Time resolution is 1 ps
+# onerror resume
+# wave add /
+# run 1000 ns
+Simulator is doing circuit initialization process.
+Finished circuit initialization process.
+# restart
+# run all
+Simulator is doing circuit initialization process.
+Finished circuit initialization process.
+Stopped at time : 1125074 ns : File "/home/jaxc/Desktop/projekt/sommar-14/design_runs/t1/m4/sim.vhd" Line 183
+# restart
+# run all
+Simulator is doing circuit initialization process.
+Finished circuit initialization process.
+Stopped at time : 723707 ns : File "/home/jaxc/Desktop/projekt/sommar-14/design_runs/t1/m4/BCH_TB.vhd" Line 101
+# restart
+# run 1.00ns
+Simulator is doing circuit initialization process.
+Finished circuit initialization process.
+# run 1.00us
+# restart
+# run 1.00us
+Simulator is doing circuit initialization process.
+Finished circuit initialization process.
+# restart
+# run 1.00us
+Simulator is doing circuit initialization process.
+Finished circuit initialization process.
+# exit 0

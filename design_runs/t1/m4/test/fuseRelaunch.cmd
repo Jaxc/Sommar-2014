@@ -1,0 +1,1 @@
+-intstyle "ise" -incremental -lib "secureip" -o "/home/jaxc/Desktop/projekt/sommar-14/design_runs/t1/m4/test/BCH_TB_isim_beh.exe" -prj "/home/jaxc/Desktop/projekt/sommar-14/design_runs/t1/m4/test/BCH_TB_beh.prj" "work.BCH_TB" 

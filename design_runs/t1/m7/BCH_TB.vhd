@@ -139,7 +139,9 @@ begin
 	end if;
 end process;
 		
-assert (in_counter /= 99999) report "simulation over" severity failure;		
+assert (in_counter /= 99999) report "simulation over" severity failure;	
+
+assert (in_counter MOD 1000 /= 0) report integer'image(incounter/1000) severity warning;	
 
 assert (wrongNow /= '1') report "Error occurred" severity warning;		
 		

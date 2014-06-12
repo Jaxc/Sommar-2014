@@ -1,0 +1,5 @@
+vhdl work "../const.vhd"
+vhdl work "../enc.vhd"
+vhdl work "../dec.vhd"
+vhdl work "../sim.vhd"
+vhdl work "../BCH_TB.vhd"
