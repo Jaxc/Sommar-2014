@@ -1,0 +1,860 @@
+m255
+K4
+z2
+13
+!s112 1.1
+!i10d 8192
+!i10e 25
+!i10f 100
+cModel Technology
+Z0 dC:/CHALMERS/sommar-2014/design_runs/t2/m4
+Ebch_tb
+Z1 w1402562194
+Z2 DPx4 ieee 11 numeric_std 0 22 :ASDNFgHXf_ih3J@9F3Ze1
+Z3 DPx3 std 6 textio 0 22 zE1`LPoLg^DX3Oz^4Fj1K3
+Z4 DPx4 ieee 14 std_logic_1164 0 22 eNV`TJ_GofJTzYa?f<@Oe1
+Z5 DPx4 work 5 const 0 22 15G`aI22ggJFJI;;hH>bA2
+R0
+Z6 8C:/CHALMERS/sommar-2014/design_runs/t2/m4/BCH_TB.vhd
+Z7 FC:/CHALMERS/sommar-2014/design_runs/t2/m4/BCH_TB.vhd
+l0
+L10
+VGjHLk:n@oF4[K5:6<>ZIl3
+!s100 1aW:]3745YGY:@`O9N8HI3
+Z8 OP;C;10.3;59
+32
+Z9 !s110 1402562250
+!i10b 1
+Z10 !s108 1402562249.977000
+Z11 !s90 -reportprogress|300|-nostats|-work|work|-2002|-explicit|C:/CHALMERS/sommar-2014/design_runs/t2/m4/BCH_TB.vhd|
+Z12 !s107 C:/CHALMERS/sommar-2014/design_runs/t2/m4/BCH_TB.vhd|
+Z13 o-work work -2002 -explicit -O0
+Z14 tExplicit 1
+Atestbench
+R2
+R3
+R4
+R5
+Z15 DEx4 work 6 bch_tb 0 22 GjHLk:n@oF4[K5:6<>ZIl3
+l99
+L13
+V<amHN6edV?^T_jGR>QidI0
+!s100 =?8[Pebh1[3_h7?1XN2Q?0
+R8
+32
+R9
+!i10b 1
+R10
+R11
+R12
+R13
+R14
+Ecombuf
+Z16 w1402559138
+R5
+R0
+Z17 8C:/CHALMERS/sommar-2014/design_runs/t2/m4/sim.vhd
+Z18 FC:/CHALMERS/sommar-2014/design_runs/t2/m4/sim.vhd
+l0
+L56
+V_[E5OcFZ45LdolPn7F:U11
+!s100 bFHFb]a4R:]Bd<02?jaF[1
+R8
+32
+Z19 !s110 1402559440
+!i10b 1
+Z20 !s108 1402559439.928000
+Z21 !s90 -reportprogress|300|-nostats|-work|work|-2002|-explicit|C:/CHALMERS/sommar-2014/design_runs/t2/m4/sim.vhd|
+Z22 !s107 C:/CHALMERS/sommar-2014/design_runs/t2/m4/sim.vhd|
+R13
+R14
+Acombufa
+R5
+Z23 DEx4 work 6 combuf 0 22 _[E5OcFZ45LdolPn7F:U11
+l64
+L61
+V1VM03Z]3j72^Nd02XJTTQ0
+!s100 ZAcVMkoe2i5O@YbWOLfBF3
+R8
+32
+R19
+!i10b 1
+R20
+R21
+R22
+R13
+R14
+Pconst
+R16
+R0
+8C:/CHALMERS/sommar-2014/design_runs/t2/m4/const.vhd
+FC:/CHALMERS/sommar-2014/design_runs/t2/m4/const.vhd
+l0
+L7
+V15G`aI22ggJFJI;;hH>bA2
+!s100 KOI25YR`oVWT?7_;V^TiA2
+R8
+32
+!s110 1402559433
+!i10b 1
+!s108 1402559433.904000
+!s90 -reportprogress|300|-nostats|-work|work|-2002|-explicit|C:/CHALMERS/sommar-2014/design_runs/t2/m4/const.vhd|
+!s107 C:/CHALMERS/sommar-2014/design_runs/t2/m4/const.vhd|
+R13
+R14
+Edbuf
+R16
+R5
+R0
+Z24 8C:/CHALMERS/sommar-2014/design_runs/t2/m4/dec.vhd
+Z25 FC:/CHALMERS/sommar-2014/design_runs/t2/m4/dec.vhd
+l0
+L76
+V;FN0z<K9^;SQSeX?[k=;K2
+!s100 =Z;2A<PB8]Ca548^N7Y7J0
+R8
+32
+Z26 !s110 1402559434
+!i10b 1
+Z27 !s108 1402559434.037000
+Z28 !s90 -reportprogress|300|-nostats|-work|work|-2002|-explicit|C:/CHALMERS/sommar-2014/design_runs/t2/m4/dec.vhd|
+Z29 !s107 C:/CHALMERS/sommar-2014/design_runs/t2/m4/dec.vhd|
+R13
+R14
+Adbufa
+R5
+Z30 DEx4 work 4 dbuf 0 22 ;FN0z<K9^;SQSeX?[k=;K2
+l84
+L81
+VH@J:XKWGW6mDjbYR@WUV80
+!s100 PO>8K0J_Dccn>9bLekBPO2
+R8
+32
+R26
+!i10b 1
+R27
+R28
+R29
+R13
+R14
+Edch1
+R16
+R5
+R0
+R24
+R25
+l0
+L209
+VS`AYcDGMAj_lDGOe;5SQ01
+!s100 k5J249HPXARbZW=>NjgTA2
+R8
+32
+R26
+!i10b 1
+R27
+R28
+R29
+R13
+R14
+Adch1a
+R5
+Z31 DEx4 work 4 dch1 0 22 S`AYcDGMAj_lDGOe;5SQ01
+l219
+L215
+V9MA8h6GCFClXgB9U5aQ7m0
+!s100 Wam@1nd3>z`4Zmzj8_e042
+R8
+32
+R26
+!i10b 1
+R27
+R28
+R29
+R13
+R14
+Edch3
+R16
+R5
+R0
+R24
+R25
+l0
+L240
+VoCfDKFQBF3I6:oVVI7PhR3
+!s100 2b?mJ^LnFSelSjB1OZ?M`2
+R8
+32
+R26
+!i10b 1
+R27
+R28
+R29
+R13
+R14
+Adch3a
+R5
+Z32 DEx4 work 4 dch3 0 22 oCfDKFQBF3I6:oVVI7PhR3
+l250
+L246
+V<N[iJnLW?f:4YdFSWgQQf3
+!s100 JnTBM[a8RU7_PJOYejU^_3
+R8
+32
+R26
+!i10b 1
+R27
+R28
+R29
+R13
+R14
+Edcount
+R16
+R5
+R0
+R24
+R25
+l0
+L30
+V11ib:19EfAfGkf^2CD1H31
+!s100 82WbHL6USchgNK]T`;Ee61
+R8
+32
+R26
+!i10b 1
+R27
+R28
+R29
+R13
+R14
+Adcounta
+R5
+Z33 DEx4 work 6 dcount 0 22 11ib:19EfAfGkf^2CD1H31
+l38
+L35
+V9R;b8EkTFnz:KG1<Lo;`m0
+!s100 TZRWCO8ZLocDmazST;]kG2
+R8
+32
+R26
+!i10b 1
+R27
+R28
+R29
+R13
+R14
+Edec
+R16
+R5
+R0
+R24
+R25
+l0
+L273
+VEWCHZDXb0i??z>czEDjhT0
+!s100 7oQI3^LS^CJ?b=3f?Mo`i3
+R8
+32
+R26
+!i10b 1
+R27
+R28
+R29
+R13
+R14
+Adeca
+R32
+R31
+Z34 DEx4 work 5 dsyn3 0 22 =O6JDfVYm5QC>jdWFK4WR1
+Z35 DEx4 work 5 dsyn1 0 22 :SP9HdU>7eBH=@1V8B5_K0
+R30
+R33
+Z36 DEx4 work 4 ffce 0 22 [VWBAdgDmk:Az=6ESGgRf2
+Z37 DEx4 work 3 deq 0 22 WGWONg`^60bzO4:`;ZZhV2
+R5
+Z38 DEx4 work 3 dec 0 22 EWCHZDXb0i??z>czEDjhT0
+l329
+L278
+VQUg9egD]UFeQLQW`iV6641
+!s100 m<Tb?6P6:dT6hmXhcACnX1
+R8
+32
+R26
+!i10b 1
+R27
+R28
+R29
+R13
+R14
+Edec_wrapper
+R16
+R3
+R4
+R0
+Z39 8C:/CHALMERS/sommar-2014/design_runs/t2/m4/dec_wrapper.vhd
+Z40 FC:/CHALMERS/sommar-2014/design_runs/t2/m4/dec_wrapper.vhd
+l0
+L5
+VeX69e^0jJoE?VHCLV[c4=2
+!s100 eh?0f_d^iGBK;zgHaFXgD3
+R8
+32
+R26
+!i10b 1
+Z41 !s108 1402559434.712000
+Z42 !s90 -reportprogress|300|-nostats|-work|work|-2002|-explicit|C:/CHALMERS/sommar-2014/design_runs/t2/m4/dec_wrapper.vhd|
+Z43 !s107 C:/CHALMERS/sommar-2014/design_runs/t2/m4/dec_wrapper.vhd|
+R13
+R14
+Aflipflops
+R3
+R4
+DEx4 work 11 dec_wrapper 0 22 eX69e^0jJoE?VHCLV[c4=2
+l19
+L10
+VR6bc4Abj0TUHlJ<`cQLUU2
+!s100 O::UN8W07G<h16_ja`?nz2
+R8
+32
+R26
+!i10b 1
+R41
+R42
+R43
+R13
+R14
+Edecbuf
+R16
+R5
+R0
+R17
+R18
+l0
+L76
+VkJT>c^je0m1zLk`F@5Z^H0
+!s100 <QA:PaXd^HK[4YZNj>]=i3
+R8
+32
+R19
+!i10b 1
+R20
+R21
+R22
+R13
+R14
+Adecbufa
+R5
+Z44 DEx4 work 6 decbuf 0 22 kJT>c^je0m1zLk`F@5Z^H0
+l83
+L81
+VHdbXgf>m^HMT=6eZ_z1iX0
+!s100 T:WMRe_g4?5EKikEkAJZn0
+R8
+32
+R19
+!i10b 1
+R20
+R21
+R22
+R13
+R14
+Edeq
+R16
+R5
+R0
+R24
+R25
+l0
+L180
+VWGWONg`^60bzO4:`;ZZhV2
+!s100 BOTdbQg=jXD48668k^XDc0
+R8
+32
+R26
+!i10b 1
+R27
+R28
+R29
+R13
+R14
+Adeqa
+Z45 DEx4 work 5 dpow3 0 22 N_JgJAfSLVPZbY078c:n42
+R5
+R37
+l194
+L185
+VEFIeR@n^IzX;^i95KmY_?2
+!s100 b?4N:S?T<F;oFZQU0j@4b2
+R8
+32
+R26
+!i10b 1
+R27
+R28
+R29
+R13
+R14
+Edpow3
+R16
+R5
+R0
+R24
+R25
+l0
+L149
+VN_JgJAfSLVPZbY078c:n42
+!s100 8F5VE7Do4]:61U]68[YUm3
+R8
+32
+R26
+!i10b 1
+R27
+R28
+R29
+R13
+R14
+Adpow3a
+R5
+R45
+l156
+L154
+V5geG10LUZQKM[5m;hfg4L2
+!s100 o3zIN@<;bPhdEjhZ4Jz0]2
+R8
+32
+R26
+!i10b 1
+R27
+R28
+R29
+R13
+R14
+Edsyn1
+R16
+R5
+R0
+R24
+R25
+l0
+L95
+V:SP9HdU>7eBH=@1V8B5_K0
+!s100 8WZ^?3z>:jiN3J=fUD1gj1
+R8
+32
+R26
+!i10b 1
+R27
+R28
+R29
+R13
+R14
+Adsyn1a
+R5
+R35
+l102
+L100
+V;oI?o`VB1BkfNfhbCm?6D1
+!s100 nTIaGdI;O5KBT;jMB^3`@1
+R8
+32
+R26
+!i10b 1
+R27
+R28
+R29
+R13
+R14
+Edsyn3
+R16
+R5
+R0
+R24
+R25
+l0
+L120
+V=O6JDfVYm5QC>jdWFK4WR1
+!s100 3@Gn2PT0AbF9Flf`ebQ0Q3
+R8
+32
+R26
+!i10b 1
+R27
+R28
+R29
+R13
+R14
+Adsyn3a
+R5
+R34
+l127
+L125
+V[TlWVK0odUN=Gl_Z8GNl[2
+!s100 A=[;1Q6>9J5Z`3afjmgm]1
+R8
+32
+R26
+!i10b 1
+R27
+R28
+R29
+R13
+R14
+Eecount
+R16
+R5
+R0
+Z46 8C:/CHALMERS/sommar-2014/design_runs/t2/m4/enc.vhd
+Z47 FC:/CHALMERS/sommar-2014/design_runs/t2/m4/enc.vhd
+l0
+L45
+VaR[_6`NnRj=Okimmn[RiJ2
+!s100 TPX`=51kOhC8?Bk1Q:9@]1
+R8
+32
+Z48 !s110 1402559435
+!i10b 1
+Z49 !s108 1402559435.223000
+Z50 !s90 -reportprogress|300|-nostats|-work|work|-2002|-explicit|C:/CHALMERS/sommar-2014/design_runs/t2/m4/enc.vhd|
+Z51 !s107 C:/CHALMERS/sommar-2014/design_runs/t2/m4/enc.vhd|
+R13
+R14
+Aecounta
+R5
+Z52 DEx4 work 6 ecount 0 22 aR[_6`NnRj=Okimmn[RiJ2
+l53
+L50
+Vn;5R9bB;GhVeFaiJ?ch9l1
+!s100 ;`kGOdc2_@i?O>58h9zRA3
+R8
+32
+R48
+!i10b 1
+R49
+R50
+R51
+R13
+R14
+Eenc
+R16
+R5
+R0
+R46
+R47
+l0
+L82
+Vg=HFHCdJ9TQPXzGL7UX?i3
+!s100 D?<TO1@VaUJA_ElNa0NT>0
+R8
+32
+R48
+!i10b 1
+R49
+R50
+R51
+R13
+R14
+Aenca
+Z53 DEx4 work 5 ering 0 22 bmJ@d]AQ@4]J:_eZT4WBN0
+R52
+R5
+Z54 DEx4 work 3 enc 0 22 g=HFHCdJ9TQPXzGL7UX?i3
+l99
+L87
+VAKLfUSV3G6B^<BT8PWYD?3
+!s100 i:Hmd]4o9?I75CbcDFQ5Q1
+R8
+32
+R48
+!i10b 1
+R49
+R50
+R51
+R13
+R14
+Eenc_wrapper
+R16
+R3
+R4
+R0
+Z55 8C:/CHALMERS/sommar-2014/design_runs/t2/m4/enc_wrapper.vhd
+Z56 FC:/CHALMERS/sommar-2014/design_runs/t2/m4/enc_wrapper.vhd
+l0
+L5
+VW[ZBZ@QbJS=n>MMl6OVQE0
+!s100 _AkeMZPK5nKidQ_]UMGTM2
+R8
+32
+R48
+!i10b 1
+Z57 !s108 1402559435.738000
+Z58 !s90 -reportprogress|300|-nostats|-work|work|-2002|-explicit|C:/CHALMERS/sommar-2014/design_runs/t2/m4/enc_wrapper.vhd|
+Z59 !s107 C:/CHALMERS/sommar-2014/design_runs/t2/m4/enc_wrapper.vhd|
+R13
+R14
+Aflipflops
+R3
+R4
+DEx4 work 11 enc_wrapper 0 22 W[ZBZ@QbJS=n>MMl6OVQE0
+l19
+L10
+VAlEM@dKe_9E=A7l_Qmj;C1
+!s100 doTa5O8Jo3cB6YA>`Ma8F0
+R8
+32
+R48
+!i10b 1
+R57
+R58
+R59
+R13
+R14
+Eencbuf
+R16
+R5
+R0
+R17
+R18
+l0
+L10
+V]RbYcaogYS6?Y^meBoMj`2
+!s100 lCmIo_LFc2@Fi61>lNACA0
+R8
+32
+Z60 !s110 1402559439
+!i10b 1
+R20
+R21
+R22
+R13
+R14
+Aencbufa
+R5
+Z61 DEx4 work 6 encbuf 0 22 ]RbYcaogYS6?Y^meBoMj`2
+l18
+L16
+V;9o^:51d7iV4ZSlSE2efJ1
+!s100 :INVO`3SP]@om_APhUecb2
+R8
+32
+R60
+!i10b 1
+R20
+R21
+R22
+R13
+R14
+Eering
+R16
+R5
+R0
+R46
+R47
+l0
+L11
+VbmJ@d]AQ@4]J:_eZT4WBN0
+!s100 AmJ:P1C92gFX<k?Agog8Q2
+R8
+32
+R48
+!i10b 1
+R49
+R50
+R51
+R13
+R14
+Aeringa
+R5
+R53
+l19
+L16
+VCPbbAZ3GD8PIBNL>29PAS0
+!s100 S3=ZhKJHk@UV@?lHFQo9I0
+R8
+32
+R48
+!i10b 1
+R49
+R50
+R51
+R13
+R14
+Eerrbuf
+R16
+R5
+R0
+R17
+R18
+l0
+L33
+VAKY@j:ZZ@:0[7=I<RiNMn0
+!s100 2iGVJZXS7@aZhaN6WTNKP3
+R8
+32
+R19
+!i10b 1
+R20
+R21
+R22
+R13
+R14
+Aerrbufa
+R5
+Z62 DEx4 work 6 errbuf 0 22 AKY@j:ZZ@:0[7=I<RiNMn0
+l41
+L39
+VPI[S_3ZXfNAo6PZeB6zcz3
+!s100 eIhaPT5X;o[7VRE22`3T?2
+R8
+32
+R19
+!i10b 1
+R20
+R21
+R22
+R13
+R14
+Effce
+R16
+R0
+R24
+R25
+l0
+L7
+V[VWBAdgDmk:Az=6ESGgRf2
+!s100 ZYBbZdNEEi=@YPS0nB4L;1
+R8
+32
+R26
+!i10b 1
+R27
+R28
+R29
+R13
+R14
+Affcea
+R36
+l14
+L12
+VAENjWICa8V9LCnDI`;CKm1
+!s100 0;4JG:=<il4<DT:1aLoRk1
+R8
+32
+R26
+!i10b 1
+R27
+R28
+R29
+R13
+R14
+Eiodec
+R16
+R5
+R0
+Z63 8C:/CHALMERS/sommar-2014/design_runs/t2/m4/bchio.vhd
+Z64 FC:/CHALMERS/sommar-2014/design_runs/t2/m4/bchio.vhd
+l0
+L62
+VX>iLK?j2S3:UY5QkdGk<71
+!s100 hIDjULF3QcMSiTQV?Sa4X2
+R8
+32
+Z65 !s110 1402559441
+!i10b 1
+Z66 !s108 1402559441.001000
+Z67 !s90 -reportprogress|300|-nostats|-work|work|-2002|-explicit|C:/CHALMERS/sommar-2014/design_runs/t2/m4/bchio.vhd|
+Z68 !s107 C:/CHALMERS/sommar-2014/design_runs/t2/m4/bchio.vhd|
+R13
+R14
+Aiodeca
+R38
+R5
+DEx4 work 5 iodec 0 22 X>iLK?j2S3:UY5QkdGk<71
+l80
+L71
+V6NCe^o?0ffo0hHYA[@?gO0
+!s100 Gc_geH7?=eAm6TGbU=>7`1
+R8
+32
+R65
+!i10b 1
+R66
+R67
+R68
+R13
+R14
+Eioenc
+R16
+R5
+R0
+R63
+R64
+l0
+L16
+V_gG8;EiQXW_HN9A@AX>4X0
+!s100 <a4gPjmW@FYM9U8BPglMM3
+R8
+32
+R65
+!i10b 1
+R66
+R67
+R68
+R13
+R14
+Aioenca
+R54
+R5
+DEx4 work 5 ioenc 0 22 _gG8;EiQXW_HN9A@AX>4X0
+l34
+L25
+Vg6<6h9@aFPMf>k[LS5Km[3
+!s100 ?PbDPjCz_Al`JKRdgi@^g3
+R8
+32
+R65
+!i10b 1
+R66
+R67
+R68
+R13
+R14
+Esim
+R16
+R5
+R0
+R17
+R18
+l0
+L98
+VU`=87CYWae9?@ChI0DIHV0
+!s100 N5gLKe^hP:Zj?mlOS[PBN2
+R8
+32
+R19
+!i10b 1
+R20
+R21
+R22
+R13
+R14
+Asima
+R44
+R23
+R62
+R61
+R38
+R54
+R5
+DEx4 work 3 sim 0 22 U`=87CYWae9?@ChI0DIHV0
+l142
+L107
+V6V8GMgU5h`P]fOVIX@MAB0
+!s100 01LCok2aYmj:eE:QfK?m92
+R8
+32
+R19
+!i10b 1
+R20
+R21
+R22
+R13
+R14

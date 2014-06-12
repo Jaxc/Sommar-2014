@@ -1,15 +1,4 @@
-C:/CHALMERS/sommar-2014/design_runs/t1/m7/bchio.vhd {1 {vcom -nostats -work work -2002 -explicit C:/CHALMERS/sommar-2014/design_runs/t1/m7/bchio.vhd
-Model Technology ModelSim PE Student Edition vcom 10.3 Compiler 2014.01 Jan  6 2014
--- Loading package STANDARD
--- Loading package const
--- Compiling entity ioenc
--- Compiling architecture ioenca of ioenc
--- Loading entity enc
--- Compiling entity iodec
--- Compiling architecture iodeca of iodec
--- Loading entity dec
-
-} {} {}} C:/CHALMERS/sommar-2014/design_runs/t1/m7/sim.vhd {2 {vcom -nostats -work work -2002 -explicit C:/CHALMERS/sommar-2014/design_runs/t1/m7/sim.vhd
+C:/CHALMERS/sommar-2014/design_runs/t1/m7/sim.vhd {2 {vcom -nostats -work work -2002 -explicit C:/CHALMERS/sommar-2014/design_runs/t1/m7/sim.vhd
 Model Technology ModelSim PE Student Edition vcom 10.3 Compiler 2014.01 Jan  6 2014
 -- Loading package STANDARD
 -- Loading package const
@@ -44,15 +33,16 @@ Model Technology ModelSim PE Student Edition vcom 10.3 Compiler 2014.01 Jan  6 2
 -- Loading entity comBuf
 -- Loading entity decBuf
 
-} {} {}} C:/CHALMERS/sommar-2014/design_runs/t1/m7/BCH_TB.vhd {1 {vcom -nostats -work work -2002 -explicit {C:\CHALMERS\sommar-2014\design_runs\t1\m7\BCH_TB.vhd}
+} {} {}} C:/CHALMERS/sommar-2014/design_runs/t1/m7/bchio.vhd {1 {vcom -nostats -work work -2002 -explicit C:/CHALMERS/sommar-2014/design_runs/t1/m7/bchio.vhd
 Model Technology ModelSim PE Student Edition vcom 10.3 Compiler 2014.01 Jan  6 2014
 -- Loading package STANDARD
 -- Loading package const
--- Loading package TEXTIO
--- Loading package std_logic_1164
--- Loading package NUMERIC_STD
--- Compiling entity BCH_TB
--- Compiling architecture Testbench of BCH_TB
+-- Compiling entity ioenc
+-- Compiling architecture ioenca of ioenc
+-- Loading entity enc
+-- Compiling entity iodec
+-- Compiling architecture iodeca of iodec
+-- Loading entity dec
 
 } {} {}} C:/CHALMERS/sommar-2014/design_runs/t1/m7/enc.vhd {1 {vcom -nostats -work work -2002 -explicit C:/CHALMERS/sommar-2014/design_runs/t1/m7/enc.vhd
 Model Technology ModelSim PE Student Edition vcom 10.3 Compiler 2014.01 Jan  6 2014

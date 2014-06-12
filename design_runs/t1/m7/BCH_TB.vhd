@@ -77,7 +77,8 @@ end component;
 
 signal clk : BIT;
 signal reset : BIT;
-
+signal din : BIT_VECTOR(0 to k-1);
+signal error: BIT_VECTOR(0 to n-1);
 signal vdin : BIT;
 signal vdout : BIT;
 signal wrongNow : BIT;
@@ -100,10 +101,12 @@ begin
 	wait for 1 ns;
 	clk <= '0';
 	wait for 1 ns;
+	wait for 5 ns;
+	clk <= '0';
+	wait for 5 ns;
 end process;
 
 reset <= '1', '0' after 55 ns;
-
 in_generate:for i in 0 to n-1 generate
 current_error(i) <= to_bit(error(in_counter)(i));
 end generate in_generate;
@@ -117,6 +120,11 @@ end generate error_generate;
 
 --error(4 to n-1) <= (others => '0');--,(others => '0') after 1314 ns;
 --error(0 to 3) <= "1000", "0000" after 10 us;
+din(0 to 7) <= "10101010";
+din(8 to k-1) <= (others => '0');
+
+error(4 to n-1) <= (others => '0');--,(others => '0') after 1314 ns;
+error(0 to 3) <= "1000", "0000" after 10 us;
 
 BCH_sim : sim
 port map( 
@@ -124,6 +132,8 @@ port map(
 		reset => reset,
 		din => current_in,
 		error => current_error,
+		din => din,
+		error => error,
 		vdin => vdin,
 		vdout => vdout,
 		wrongNow => wrongNow,
@@ -139,9 +149,7 @@ begin
 	end if;
 end process;
 		
-assert (in_counter /= 99999) report "simulation over" severity failure;	
-
-assert (in_counter MOD 1000 /= 0) report integer'image(incounter/1000) severity warning;	
+assert (in_counter /= 99999) report "simulation over" severity failure;		
 
 assert (wrongNow /= '1') report "Error occurred" severity warning;		
 		
