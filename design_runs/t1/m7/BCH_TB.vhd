@@ -86,6 +86,7 @@ signal dout : BIT_VECTOR(0 to k-1);
 
 signal current_error : BIT_VECTOR(n-1 downto 0);
 signal current_in : BIT_VECTOR(k-1 downto 0);
+signal last_in,last_in_2 : BIT_VECTOR(k-1 downto 0);
 
 constant error : n_array_type := loaderror(string'("error.txt"));
 constant din : k_array_type := loadin(string'("in.txt"));
@@ -136,10 +137,16 @@ begin
 		in_counter <= 0;
 	elsif (vdin'event) and (vdin = '0') then
 		in_counter <= in_counter +1;
+		last_in <= current_in;
+		last_in_2 <= last_in;
+	elsif (vdin'event) and (vdin = '1') then
+		assert (last_in_2 = dout) report "ERROR" severity failure;
 	end if;
 end process;
 		
-assert (in_counter /= 99999) report "simulation over" severity failure;		
+assert (in_counter /= 99999) report "simulation over" severity failure;	
+
+assert (in_counter MOD 1000 /= 0) report integer'image(in_counter/1000)&" % complete" severity warning;	
 
 assert (wrongNow /= '1') report "Error occurred" severity warning;		
 		

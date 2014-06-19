@@ -1,0 +1,32 @@
+ncvhdl: 08.20-s012: (c) Copyright 1995-2009 Cadence Design Systems, Inc.
+TOOL:	ncvhdl	08.20-s012: Started on Jun 18, 2014 at 11:33:01 CEST
+ncvhdl
+    -messages
+    -linedebug
+    -v93
+    const.vhd
+    bchio.vhd
+    BCH_TB.vhd
+    dec.vhd
+    enc.vhd
+    sim.vhd
+
+const.vhd:
+	errors: 0, warnings: 0
+bchio.vhd:
+		FOR ALL : enc USE ENTITY WORK.enc (enca);
+		                             |
+ncvhdl_p: *E,SELLIB (bchio.vhd,30|31): unit (enc:enca) not found in library (worklib).
+		FOR ALL : dec USE ENTITY WORK.dec (deca); 
+		                             |
+ncvhdl_p: *E,SELLIB (bchio.vhd,76|31): unit (dec:deca) not found in library (worklib).
+	errors: 2, warnings: 0
+BCH_TB.vhd:
+	errors: 0, warnings: 0
+dec.vhd:
+	errors: 0, warnings: 0
+enc.vhd:
+	errors: 0, warnings: 0
+sim.vhd:
+	errors: 0, warnings: 0
+TOOL:	ncvhdl	08.20-s012: Exiting on Jun 18, 2014 at 11:33:02 CEST  (total: 00:00:01)

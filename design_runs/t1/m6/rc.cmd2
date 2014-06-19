@@ -1,0 +1,30 @@
+# Cadence Encounter(R) RTL Compiler
+#   version v10.10-s209_1 (32-bit) built Feb  3 2011
+#
+
+
+set_attribute library {{ /chalmers/sw/sup/cds/cmos065-5.3.4/CORE65LPSVT_5.1/libs/CORE65LPSVT_nom_1.20V_25C.lib }}
+
+read_hdl -vhdl const.vhd enc.vhd dec.vhd enc_dec_wrapper.vhd
+elaborate
+define_clock -name main_clk -period 1000 [find / -port clk]
+synthesize -to_mapped -effort medium
+set_attribute lp_asserted_probability 0.5 /designs/sim/ports_in/din
+ls
+
+
+
+
+ls /designs/enc_dec_wrapper/ports_in/
+set_attribute lp_asserted_probability 0.5 /designs/sim/ports_in/din*
+set_attribute lp_asserted_probability 0.5 /designs/sim/ports_in/din
+set_attribute lp_asserted_probability 0.5 /designs/enc_dec_wrapper/din
+set_attribute lp_asserted_probability 0.5 /designs/enc_dec_wrapper/ports_in/din
+set_attribute lp_asserted_probability 0.5
+set_attribute lp_asserted_probability 0.5 /designs/enc_dec_wrapper/ports_in/din
+et_attribute lp_asserted_toggle_rate 35.0 /designs/end_dec_wrapper/ports_in/din
+
+et_attribute lp_asserted_toggle_rate 35.0 /designs/end_dec_wrapper/ports_in/din
+et_attribute lp_asserted_toggle_rate 35.0 /designs/end_dec_wrapper/ports_in/dinet_attribute lp_asserted_toggle_rate 35.0 /designs/end_dec_wrapper/ports_in/din
+set_attribute lp_asserted_toggle_rate 35.0 /designs/end_dec_wrapper/ports_in/din
+set_attribute lp_asserted_toggle_rate 35.0 /designs/end_dec_wrapper/ports_in/din

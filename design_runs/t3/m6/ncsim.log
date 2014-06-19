@@ -1,0 +1,9 @@
+ncsim: 08.20-s012: (c) Copyright 1995-2009 Cadence Design Systems, Inc.
+ncsim> run
+ASSERT/WARNING (time 0 FS) from process :$PROCESS_003 (architecture WORKLIB.BCH_TB:Testbench)
+0 % complete
+ASSERT/FAILURE (time 306 NS) from process :$PROCESS_001 (architecture WORKLIB.BCH_TB:Testbench)
+ERROR
+Assertion at 306 NS + 6
+./BCH_TB.vhd:143 		assert (last_in_2 = dout) report "ERROR" severity failure;
+ncsim> exit

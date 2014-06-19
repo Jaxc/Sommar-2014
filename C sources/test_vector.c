@@ -46,6 +46,8 @@ int error_creation(void)
 {
 
 	int isone[t];
+	int g;
+	int h;
 	int i;
 	int j;
 	int l;
@@ -74,7 +76,21 @@ int error_creation(void)
 		for(j = 1;j<=t;j++)
 
 		{
-			isone[j] = rand() % n;
+			while(1) {
+				isone[j] = rand() % n;
+				if (j == 1){
+					break;
+				}	
+				g = 0;
+				for(h = 1; h < j;h++){
+					if (abs(isone[j]-isone[j-h])<=d_min){
+						g++;
+					}
+				}
+				if (g > 0){
+					break;
+				}
+			}
 			n_array[isone[j]] = '1';
 		}
 		fputs(n_array, fp); /* write a string to file */

@@ -1,0 +1,104 @@
+ncelab: 08.20-s012: (c) Copyright 1995-2009 Cadence Design Systems, Inc.
+TOOL:	ncelab	08.20-s012: Started on Jun 18, 2014 at 11:33:02 CEST
+ncelab
+    -messages
+    -v93
+    WORKLIB.BCH_TB:Testbench
+
+	Elaborating the design hierarchy:
+ncelab: *W,DLNCOD: Intermediate file for architecture worklib.bch_tb:testbench (COD) <0x3a780f8b> could not be read (no such object).
+ncelab: *W,DLNCOD: Intermediate file for entity worklib.bch_tb (COD) <0x3a780f8b> could not be read (no such object).
+ncelab: *W,DLNCOD: Intermediate file for package worklib.const (COD) <0x3a780f8b> could not be read (no such object).
+WORKLIB.CONST (package):
+	streams: 1, words: 6
+WORKLIB.BCH_TB (entity):
+	streams: 1, words: 38
+WORKLIB.BCH_TB:TESTBENCH (architecture):
+	streams: 8, words: 8010
+ncelab: *W,DLNCOD: Intermediate file for architecture worklib.sim:sima (COD) <0x3a780f8b> could not be read (no such object).
+ncelab: *W,DLNCOD: Intermediate file for entity worklib.decbuf (COD) <0x3a780f8b> could not be read (no such object).
+ncelab: *W,DLNCOD: Intermediate file for entity worklib.combuf (COD) <0x3a780f8b> could not be read (no such object).
+ncelab: *W,DLNCOD: Intermediate file for entity worklib.errbuf (COD) <0x3a780f8b> could not be read (no such object).
+ncelab: *W,DLNCOD: Intermediate file for entity worklib.encbuf (COD) <0x3a780f8b> could not be read (no such object).
+ncelab: *W,DLNCOD: Intermediate file for entity worklib.dec (COD) <0x3a780f8b> could not be read (no such object).
+ncelab: *W,DLNCOD: Intermediate file for entity worklib.enc (COD) <0x3a780f8b> could not be read (no such object).
+ncelab: *W,DLNCOD: Intermediate file for entity worklib.sim (COD) <0x3a780f8b> could not be read (no such object).
+WORKLIB.SIM (entity):
+	streams: 13, words: 653
+WORKLIB.ENC (entity):
+	streams: 6, words: 68
+WORKLIB.DEC (entity):
+	streams: 6, words: 68
+WORKLIB.ENCBUF (entity):
+	streams: 6, words: 249
+WORKLIB.ERRBUF (entity):
+	streams: 6, words: 249
+WORKLIB.COMBUF (entity):
+	streams: 4, words: 56
+WORKLIB.DECBUF (entity):
+	streams: 6, words: 249
+WORKLIB.SIM:SIMA (architecture):
+	streams: 7, words: 1431
+ncelab: *W,DLNCOD: Intermediate file for architecture worklib.enc:enca (COD) <0x3a780f8b> could not be read (no such object).
+ncelab: *W,DLNCOD: Intermediate file for entity worklib.ering (COD) <0x3a780f8b> could not be read (no such object).
+ncelab: *W,DLNCOD: Intermediate file for entity worklib.ecount (COD) <0x3a780f8b> could not be read (no such object).
+WORKLIB.ECOUNT (entity):
+	streams: 4, words: 56
+WORKLIB.ERING (entity):
+	streams: 5, words: 62
+WORKLIB.ENC:ENCA (architecture):
+	streams: 3, words: 241
+ncelab: *W,DLNCOD: Intermediate file for architecture worklib.ecount:ecounta (COD) <0x3a780f8b> could not be read (no such object).
+WORKLIB.ECOUNT:ECOUNTA (architecture):
+	streams: 1, words: 256
+ncelab: *W,DLNCOD: Intermediate file for architecture worklib.ering:eringa (COD) <0x3a780f8b> could not be read (no such object).
+WORKLIB.ERING:ERINGA (architecture):
+	streams: 1, words: 413
+ncelab: *W,DLNCOD: Intermediate file for architecture worklib.dec:deca (COD) <0x3a780f8b> could not be read (no such object).
+ncelab: *W,DLNCOD: Intermediate file for entity worklib.dbuf (COD) <0x3a780f8b> could not be read (no such object).
+ncelab: *W,DLNCOD: Intermediate file for entity worklib.dch1 (COD) <0x3a780f8b> could not be read (no such object).
+ncelab: *W,DLNCOD: Intermediate file for entity worklib.dsyn1 (COD) <0x3a780f8b> could not be read (no such object).
+ncelab: *W,DLNCOD: Intermediate file for entity worklib.dcount (COD) <0x3a780f8b> could not be read (no such object).
+WORKLIB.DCOUNT (entity):
+	streams: 6, words: 68
+WORKLIB.DSYN1 (entity):
+	streams: 6, words: 246
+WORKLIB.DCH1 (entity):
+	streams: 7, words: 430
+WORKLIB.DBUF (entity):
+	streams: 6, words: 68
+WORKLIB.DEC:DECA (architecture):
+	streams: 6, words: 2414
+ncelab: *W,DLNCOD: Intermediate file for architecture worklib.dcount:dcounta (COD) <0x3a780f8b> could not be read (no such object).
+WORKLIB.DCOUNT:DCOUNTA (architecture):
+	streams: 1, words: 256
+ncelab: *W,DLNCOD: Intermediate file for architecture worklib.dsyn1:dsyn1a (COD) <0x3a780f8b> could not be read (no such object).
+WORKLIB.DSYN1:DSYN1A (architecture):
+	streams: 1, words: 256
+ncelab: *W,DLNCOD: Intermediate file for architecture worklib.dch1:dch1a (COD) <0x3a780f8b> could not be read (no such object).
+WORKLIB.DCH1:DCH1A (architecture):
+	streams: 1, words: 413
+ncelab: *W,DLNCOD: Intermediate file for architecture worklib.dbuf:dbufa (COD) <0x3a780f8b> could not be read (no such object).
+WORKLIB.DBUF:DBUFA (architecture):
+	streams: 1, words: 259
+ncelab: *W,DLNCOD: Intermediate file for architecture worklib.encbuf:encbufa (COD) <0x3a780f8b> could not be read (no such object).
+WORKLIB.ENCBUF:ENCBUFA (architecture):
+	streams: 1, words: 259
+ncelab: *W,DLNCOD: Intermediate file for architecture worklib.errbuf:errbufa (COD) <0x3a780f8b> could not be read (no such object).
+WORKLIB.ERRBUF:ERRBUFA (architecture):
+	streams: 1, words: 259
+ncelab: *W,DLNCOD: Intermediate file for architecture worklib.combuf:combufa (COD) <0x3a780f8b> could not be read (no such object).
+WORKLIB.COMBUF:COMBUFA (architecture):
+	streams: 1, words: 259
+ncelab: *W,DLNCOD: Intermediate file for architecture worklib.decbuf:decbufa (COD) <0x3a780f8b> could not be read (no such object).
+WORKLIB.DECBUF:DECBUFA (architecture):
+	streams: 1, words: 259
+	Building instance specific data structures.
+	Design hierarchy summary:
+		              Instances  Unique
+		Components:          15      14
+		Default bindings:     1       -
+		Processes:         2114      69
+		Signals:             58      58
+	Writing initial simulation snapshot: WORKLIB.BCH_TB:TESTBENCH
+TOOL:	ncelab	08.20-s012: Exiting on Jun 18, 2014 at 11:33:34 CEST  (total: 00:00:32)

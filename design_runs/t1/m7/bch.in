@@ -1,6 +1,0 @@
-m=7; -- number of n=2^m-1
-t=1; -- number of errors to be corrected
--s0 -- generate sym.cmd & sym.cme
--m1 -- optimization
--o3 --option
--i0 
