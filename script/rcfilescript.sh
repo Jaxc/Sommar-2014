@@ -39,19 +39,27 @@
 			currentline=${currentline:0:38}$toggleTimeInt.$toggleTimeFrac${currentline:38:len}
 		fi
 
+                if [ $a == "10" ]
+                then
+                        len=${#currentline}
+
+                        currentline=${currentline:0:38}$toggleTimeInt.$toggleTi$
+                fi
+
+
 #		if [ $a == "10" ]
 #		then
 #                   	len=${#currentline}
 #                      currentline=${currentline:0:38}$toggleTimeInt.$toggleTimeFrac${currentline:38:len}
 #		fi
 
-		if [ $a == "12" ] 
+		if [ $a == "15" ] 
 		then
                     	len=${#currentline}
                         currentline=${currentline:0:25}$integerValue.$fractionalValue${currentline:25:len}		
 		fi
 
-		if [ $a == "13" ]
+		if [ $a == "16" ]
 		then
                     	len=${#currentline}
                         currentline=${currentline:0:27}$integerValue.$fractionalValue${currentline:27:len}

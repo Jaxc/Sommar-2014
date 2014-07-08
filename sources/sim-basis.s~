@@ -8,7 +8,7 @@ set_attribute lp_asserted_probability 0.5 /designs/enc_dec_wrapper/ports_in/din
 set_attribute lp_asserted_toggle_rate  /designs/enc_dec_wrapper/ports_in/din
 set_attribute lp_asserted_probability 0.001 /designs/enc_dec_wrapper/ports_in/error
 set_attribute lp_asserted_toggle_rate  /designs/enc_dec_wrapper/ports_in/din
-set_attribute lp_power_analysis_effort medium/
+
 
 report power > sim_power_GHz.txt
 report timing > sim_timing_GHz.txt
