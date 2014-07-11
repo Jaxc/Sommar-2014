@@ -1,0 +1,15 @@
+ncelab: 08.20-s012: (c) Copyright 1995-2009 Cadence Design Systems, Inc.
+TOOL:	ncelab	08.20-s012: Started on Jul 09, 2014 at 14:53:16 CEST
+ncelab
+    -messages
+    -v93
+    WORKLIB.BCH_TB:Testbench
+
+	Elaborating the design hierarchy:
+Simulation execution error detected: file I/O error
+cannot open 'error.txt' for reading (No such file or directory)
+source file: BCH_TB.vhd, line = 52, position = 15
+Subprogram body: LOADERROR (line: 50 in design unit WORKLIB.BCH_TB:TESTBENCH)
+	   Entity/architecture elaboration: :BCH_TB(Testbench):
+ncelab: *E,CUELEE: execution error prevents further elaboration.
+TOOL:	ncelab	08.20-s012: Exiting on Jul 09, 2014 at 14:53:16 CEST  (total: 00:00:00)

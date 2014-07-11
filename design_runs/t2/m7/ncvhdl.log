@@ -1,0 +1,16 @@
+ncvhdl: 08.20-s012: (c) Copyright 1995-2009 Cadence Design Systems, Inc.
+TOOL:	ncvhdl	08.20-s012: Started on Jul 09, 2014 at 14:47:48 CEST
+ncvhdl
+    -messages
+    -linedebug
+    -v93
+    const.vhd
+    bchio.vhd
+    BCH_TB.vhd
+    dec.vhd
+    enc.vhd
+    sim.vhd
+
+const.vhd:
+ncvhdl_p: *F,DLNFS: Packed library for 'worklib' was either corrupt or the file system cache consistency check failed. To correct the problem, remove the packed library, and recompile. If the problem persists, contact Cadence Design Systems.
+TOOL:	ncvhdl	08.20-s012: Exiting on Jul 09, 2014 at 14:47:49 CEST  (total: 00:00:01)

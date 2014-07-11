@@ -1,0 +1,236 @@
+ncvhdl: 08.20-s012: (c) Copyright 1995-2009 Cadence Design Systems, Inc.
+TOOL:	ncvhdl	08.20-s012: Started on Jul 09, 2014 at 15:04:19 CEST
+ncvhdl
+    -messages
+    -linedebug
+    -v93
+    const.vhd
+    bchio.vhd
+    BCH_TB.vhd
+    dec.vhd
+    enc.vhd
+    sim.vhd
+
+const.vhd:
+	errors: 0, warnings: 0
+bchio.vhd:
+ncvhdl_p: *W,DLWNEW: Intermediate file package WORKLIB.CONST (AST)
+	is newer than expected by entity WORKLIB.ENC (AST)
+		actual:   Wed Jul  9 15:04:19 2014
+		expected: Wed Jul  9 15:02:55 2014.
+ncvhdl_p: *W,DLWNEW: Intermediate file package WORKLIB.CONST (AST)
+	is newer than expected by entity WORKLIB.DEC (AST)
+		actual:   Wed Jul  9 15:04:19 2014
+		expected: Wed Jul  9 15:02:55 2014.
+	errors: 0, warnings: 2
+BCH_TB.vhd:
+	errors: 0, warnings: 0
+dec.vhd:
+	  	FOR ALL: drd USE ENTITY WORK.drd (drda);
+	  	      |
+ncvhdl_p: *W,CSAOZP (dec.vhd,1105|10): OTHERS/ALL does not apply to any labels [5.2].
+	  	FOR ALL: drdcer USE ENTITY WORK.drdcer (drdcera);
+	  	      |
+ncvhdl_p: *W,CSAOZP (dec.vhd,1115|10): OTHERS/ALL does not apply to any labels [5.2].
+	  	FOR ALL: dpm USE ENTITY WORK.dpm (dpma);
+	  	      |
+ncvhdl_p: *W,CSAOZP (dec.vhd,1125|10): OTHERS/ALL does not apply to any labels [5.2].
+	  	FOR ALL: dxorm USE ENTITY WORK.dxorm (dxorma);
+	  	      |
+ncvhdl_p: *W,CSAOZP (dec.vhd,1130|10): OTHERS/ALL does not apply to any labels [5.2].
+	errors: 0, warnings: 4
+enc.vhd:
+	errors: 0, warnings: 0
+sim.vhd:
+	errors: 0, warnings: 0
+WORKLIB.CONST (package):
+	streams: 1, words: 6
+WORKLIB.IOENC (entity):
+	streams: 6, words: 68
+ncvhdl_cg: *W,DLWNEW: Intermediate file entity WORKLIB.ENC (AST)
+	is newer than expected by architecture WORKLIB.IOENC:IOENCA (AST)
+		actual:   Wed Jul  9 15:04:19 2014
+		expected: Wed Jul  9 15:02:56 2014.
+WORKLIB.IOENC:IOENCA (architecture):
+	streams: 2, words: 694
+WORKLIB.IODEC (entity):
+	streams: 6, words: 68
+ncvhdl_cg: *W,DLWNEW: Intermediate file entity WORKLIB.DEC (AST)
+	is newer than expected by architecture WORKLIB.IODEC:IODECA (AST)
+		actual:   Wed Jul  9 15:04:19 2014
+		expected: Wed Jul  9 15:02:56 2014.
+WORKLIB.IODEC:IODECA (architecture):
+	streams: 2, words: 694
+WORKLIB.BCH_TB (entity):
+	streams: 1, words: 38
+WORKLIB.BCH_TB:TESTBENCH (architecture):
+	streams: 8, words: 8830
+WORKLIB.DMUL21 (entity):
+	streams: 8, words: 584
+WORKLIB.DMUL21:DMUL21A (architecture):
+	streams: 2, words: 719
+WORKLIB.DRD1CE (entity):
+	streams: 5, words: 62
+WORKLIB.DRD1CE:DRD1CEA (architecture):
+	streams: 1, words: 99
+WORKLIB.DRDCER (entity):
+	streams: 8, words: 416
+WORKLIB.DRDCER:DRDCERA (architecture):
+	streams: 1, words: 246
+WORKLIB.DRDCESONE (entity):
+	streams: 9, words: 422
+WORKLIB.DRDCESONE:DRDCESONEA (architecture):
+	streams: 1, words: 246
+WORKLIB.DRDCE (entity):
+	streams: 7, words: 410
+WORKLIB.DRDCE:DRDCEA (architecture):
+	streams: 1, words: 246
+WORKLIB.DRD (entity):
+	streams: 6, words: 404
+WORKLIB.DRD:DRDA (architecture):
+	streams: 1, words: 246
+WORKLIB.DXORM (entity):
+	streams: 7, words: 578
+WORKLIB.DXORM:DXORMA (architecture):
+	streams: 1, words: 99
+WORKLIB.DSIPO (entity):
+	streams: 5, words: 230
+WORKLIB.DSIPO:DSIPOA (architecture):
+	streams: 1, words: 246
+WORKLIB.DSHPE (entity):
+	streams: 8, words: 416
+WORKLIB.DSHPE:DSHPEA (architecture):
+	streams: 1, words: 246
+WORKLIB.DSHR (entity):
+	streams: 7, words: 242
+WORKLIB.DSHR:DSHRA (architecture):
+	streams: 1, words: 246
+WORKLIB.DANDM (entity):
+	streams: 6, words: 404
+WORKLIB.DANDM:DANDMA (architecture):
+	streams: 2, words: 719
+WORKLIB.DBUF (entity):
+	streams: 8, words: 80
+WORKLIB.DBUF:DBUFA (architecture):
+	streams: 1, words: 533
+WORKLIB.DSDBM (entity):
+	streams: 6, words: 404
+WORKLIB.DSDBM:DSDBMA (architecture):
+	streams: 2, words: 866
+WORKLIB.DSDBMRING (entity):
+	streams: 7, words: 410
+WORKLIB.DSDBMRING:DSDBMRINGA (architecture):
+	streams: 1, words: 246
+WORKLIB.DPDBM (entity):
+	streams: 7, words: 578
+WORKLIB.DPDBM:DPDBMA (architecture):
+	streams: 2, words: 3405
+WORKLIB.DPM (entity):
+	streams: 7, words: 578
+WORKLIB.DPM:DPMA (architecture):
+	streams: 2, words: 3415
+WORKLIB.DSSBM (entity):
+	streams: 8, words: 416
+WORKLIB.DSSBM:DSSBMA (architecture):
+	streams: 1, words: 246
+WORKLIB.DXORT (entity):
+	streams: 6, words: 68
+WORKLIB.DXORT:DXORTA (architecture):
+	streams: 1, words: 99
+WORKLIB.DMLI (entity):
+	streams: 5, words: 398
+WORKLIB.DMLI:DMLIA (architecture):
+	streams: 1, words: 99
+WORKLIB.DSQ (entity):
+	streams: 5, words: 398
+WORKLIB.DSQ:DSQA (architecture):
+	streams: 1, words: 246
+WORKLIB.DRDRDUALONE (entity):
+	streams: 8, words: 416
+WORKLIB.DRDRDUALONE:DRDRDUALONEA (architecture):
+	streams: 1, words: 246
+WORKLIB.DINV (entity):
+	streams: 13, words: 446
+WORKLIB.DINV:DINVA (architecture):
+	streams: 6, words: 4837
+WORKLIB.DCHEQ (entity):
+	streams: 8, words: 584
+WORKLIB.DCHEQ:DCHEQA (architecture):
+	streams: 1, words: 246
+WORKLIB.DSYN1 (entity):
+	streams: 10, words: 596
+WORKLIB.DSYN1:DSYN1A (architecture):
+	streams: 1, words: 256
+WORKLIB.DSYN3 (entity):
+	streams: 6, words: 236
+WORKLIB.DSYN3:DSYN3A (architecture):
+	streams: 1, words: 246
+WORKLIB.DSYN5 (entity):
+	streams: 6, words: 236
+WORKLIB.DSYN5:DSYN5A (architecture):
+	streams: 1, words: 246
+WORKLIB.DCH1 (entity):
+	streams: 7, words: 410
+WORKLIB.DCH1:DCH1A (architecture):
+	streams: 1, words: 393
+WORKLIB.DCH2 (entity):
+	streams: 7, words: 410
+WORKLIB.DCH2:DCH2A (architecture):
+	streams: 1, words: 393
+WORKLIB.DCH3 (entity):
+	streams: 7, words: 410
+WORKLIB.DCH3:DCH3A (architecture):
+	streams: 1, words: 393
+WORKLIB.DCA (entity):
+	streams: 6, words: 235
+WORKLIB.DCA:DCAA (architecture):
+	streams: 3, words: 1845
+WORKLIB.DCB (entity):
+	streams: 6, words: 235
+WORKLIB.DCB:DCBA (architecture):
+	streams: 3, words: 1777
+WORKLIB.DCL (entity):
+	streams: 8, words: 247
+WORKLIB.DCL:DCLA (architecture):
+	streams: 3, words: 2087
+WORKLIB.DCOUNT (entity):
+	streams: 18, words: 140
+WORKLIB.DCOUNT:DCOUNTA (architecture):
+	streams: 5, words: 1560
+WORKLIB.DEC (entity):
+	streams: 6, words: 68
+WORKLIB.DEC:DECA (architecture):
+	streams: 28, words: 25033
+WORKLIB.ERING (entity):
+	streams: 5, words: 62
+WORKLIB.ERING:ERINGA (architecture):
+	streams: 1, words: 453
+WORKLIB.ECOUNT (entity):
+	streams: 4, words: 56
+WORKLIB.ECOUNT:ECOUNTA (architecture):
+	streams: 1, words: 246
+WORKLIB.ENC (entity):
+	streams: 6, words: 68
+WORKLIB.ENC:ENCA (architecture):
+	streams: 3, words: 241
+WORKLIB.ENCBUF (entity):
+	streams: 6, words: 336
+WORKLIB.ENCBUF:ENCBUFA (architecture):
+	streams: 1, words: 346
+WORKLIB.ERRBUF (entity):
+	streams: 6, words: 376
+WORKLIB.ERRBUF:ERRBUFA (architecture):
+	streams: 1, words: 386
+WORKLIB.COMBUF (entity):
+	streams: 4, words: 56
+WORKLIB.COMBUF:COMBUFA (architecture):
+	streams: 1, words: 253
+WORKLIB.DECBUF (entity):
+	streams: 6, words: 336
+WORKLIB.DECBUF:DECBUFA (architecture):
+	streams: 1, words: 346
+WORKLIB.SIM (entity):
+	streams: 13, words: 954
+WORKLIB.SIM:SIMA (architecture):
+	streams: 7, words: 2033
+TOOL:	ncvhdl	08.20-s012: Exiting on Jul 09, 2014 at 15:04:19 CEST  (total: 00:00:00)
