@@ -12,7 +12,7 @@ Checking out license 'First_Encounter_GXL'... (0 seconds elapsed)
 License First_Encounter_GXL checkout failed
 Checking out license 'SOC_Encounter_GXL'... (0 seconds elapsed)
 License SOC_Encounter_GXL checkout failed
-Checking out license 'Encounter_Digital_Impl_Sys_XL'... (1 second elapsed)
+Checking out license 'Encounter_Digital_Impl_Sys_XL'... (0 seconds elapsed)
 
                        Cadence Encounter(R) RTL Compiler
                Version v10.10-s209_1 (32-bit), built Feb  3 2011
@@ -107,7 +107,7 @@ called '~/.cadence/.synth_init'.
 Send us feedback at rc_feedback@cadence.com.
 ================================================================================
 
-Sourcing './sim-1.0GHz.s' (Tue Jul 08 11:18:18 +0200 2014)...
+Sourcing './sim-1.0GHz.s' (Tue Jul 15 11:46:26 +0200 2014)...
 Warning : Timing attributes intrinsic_rise and intrinsic_fall are not expected and will be ignored. [LBR-21]
         : The library pin involved is 'HS65_LSS1_FA1X21/CO'.
         : Although the delay model for this library is table lookup, it appears that linear delay model parameters are also present.
@@ -6820,14 +6820,17 @@ Warning : Undriven module output port. [ELABUTL-123]
         : Use the 'hdl_undriven_output_port_value' attribute to control treatment of undriven output port during elaboration.
   Done elaborating 'enc_dec_wrapper'.
 Info    : Deleting instances not driving any primary outputs. [GLO-32]
-        : Deleting 3 hierarchical instances.
+        : Deleting 4 hierarchical instances.
         : Optimizations like for example constant propagation or redundancy removal could change the connections so an instance does not drive any primary outputs anymore. To see the list of deleted instances, set the 'information_level' attribute to 2 or above.
+        Trying carrysave optimization (configuration 1 of 1) on module 'dbuf'...
+Info    : Done carrysave optimization. [RTLOPT-20]
+        : There is 1 CSA group in module 'dbuf'... Accepted.
 Mapping enc_dec_wrapper to gates.
  
 Global mapping target info
 ==========================
 Cost Group 'default' target slack:    28 ps
-Target path end-point (Pin: d1/count/vdout11_reg/d)
+Target path end-point (Pin: decoder/b1/dout_buf_reg/d)
 
  
 Global mapping status
@@ -6836,12 +6839,12 @@ Global mapping status
                  Total    Neg   
 Operation         Area   Slack  Worst Path
 -------------------------------------------------------------------------------
- global_map       8700       0  N/A
+ global_map      21511       0  N/A
  
 Global incremental target info
 ==============================
-Cost Group 'default' target slack:    16 ps
-Target path end-point (Pin: d1/s1/syn_reg[0]/TI (HS65_LS_SDFPQX4/TI))
+Cost Group 'default' target slack:    18 ps
+Target path end-point (Pin: decoder/b1/dout_buf_reg/D (HS65_LS_DFPQX9/D))
 
  
 Global incremental optimization status
@@ -6850,7 +6853,7 @@ Global incremental optimization status
                  Total    Neg   
 Operation         Area   Slack  Worst Path
 -------------------------------------------------------------------------------
- global_inc       8698       0  N/A
+ global_inc      19781       0  N/A
 Info    : 'Conformal LEC9.1-s400' or later builds is recommended for verification. [WDO-600]
         : The use of 'Conformal LEC9.1-s400' or later builds is recommended to get better verification results.
 Generating a dofile for design 'enc_dec_wrapper' in file 'fv/enc_dec_wrapper/rtl_to_g1.do' ...
@@ -6861,7 +6864,7 @@ Incremental optimization status
                  Total    Neg       Max       Max    Max   
 Operation         Area   Slack     Trans      Cap   Fanout 
 -------------------------------------------------------------------------------
- init_iopt        8698       0         0        0        0
+ init_iopt       19781       0         0        0        0
  
 Incremental optimization status
 ===============================
@@ -6869,10 +6872,15 @@ Incremental optimization status
                  Total    Neg       Max       Max    Max   
 Operation         Area   Slack     Trans      Cap   Fanout 
 -------------------------------------------------------------------------------
- init_delay       8698       0         0        0        0
- init_drc         8698       0         0        0        0
- init_area        8698       0         0        0        0
- glob_area        8698       0         0        0        0
+ init_delay      19781       0         0        0        0
+ init_drc        19781       0         0        0        0
+ init_area       19781       0         0        0        0
+ rem_buf         19754       0         0        0        0
+ rem_inv         19740       0         0        0        0
+ merge_bi        19733       0         0        0        0
+ gate_comp       19723       0         0        0        0
+ glob_area       19628       0         0        0        0
+ area_down       19565       0         0        0        0
  
 Incremental optimization status
 ===============================
@@ -6880,9 +6888,12 @@ Incremental optimization status
                  Total    Neg       Max       Max    Max   
 Operation         Area   Slack     Trans      Cap   Fanout 
 -------------------------------------------------------------------------------
- init_delay       8698       0         0        0        0
- init_drc         8698       0         0        0        0
- init_area        8698       0         0        0        0
+ init_delay      19565       0         0        0        0
+ init_drc        19565       0         0        0        0
+ init_area       19565       0         0        0        0
+ gate_comp       19563       0         0        0        0
+ glob_area       19542       0         0        0        0
+ area_down       19540       0         0        0        0
 
   Done mapping enc_dec_wrapper
   Synthesis succeeded.
@@ -6891,361 +6902,32 @@ Operation         Area   Slack     Trans      Cap   Fanout
 Warning : Possible timing problems have been detected in this design. [TIM-11]
         : The design is 'enc_dec_wrapper'.
         : Use 'report timing -lint' for more information.
-rc:/> report timing num_path 10
-Error   : A command argument did not match any of the acceptable command options. [TUI-64] [report timing]
-        : The argument in question is 'num_path'.
-        : Check the command usage and correct the input to the command.
+rc:/> Warning : Instance count threshold exceeded.  Switching to manual update mode. [GUI-12]
+        : Current instance count: '4863', threshold: '2000'
+        : To change the threshold set the 'gui_sv_threshold' root attribute.
+  Setting attribute of root '/': 'gui_sv_update' = manual
+df
+Error   : A required argument was not specified. [TUI-202] [dft_trace_back]
+        : An argument of type '<pin|port>' was not specified.
+        : Rerun the command specifying all required arguments.
+  dft_trace_back: trace back one level from a given pin 
 
-Usage: report timing  [-endpoints] [-summary] [-lint] [-verbose]
-           [-full_pin_names] [-physical] [-gtd] [-gui] [-num_paths <integer>]
-           [-worst <integer>] [-slack_limit <delay in picoseconds>]
-           [-mode <mode>] [-from <instance|external_delay|clock|port|pin>+]
-           [-through <instance|port|pin>+]+
-           [-to <instance|external_delay|clock|port|pin>+] [-paths <string>]
-           [-exceptions <exception>+] [-cost_group <cost_group>+] [> file]
+Usage: dft_trace_back  [-mode <integer>] [-polarity] [-continue] [-print]
+           <pin|port>
 
-    [-endpoints]:
-        timing endpoints only 
-    [-summary]:
-        timing summary only 
-    [-lint]:
-        timing warnings only 
-    [-verbose]:
-        an extra qualifier to '-lint' can be used with '-lint' only 
-    [-full_pin_names]:
-        full hierarchical path of each pin is printed 
-    [-physical]:
-        include physical information in report 
-    [-gtd]:
-        generate output for Global Timing Debugger 
-    [-gui]:
-        invoke GUI timing report dialog 
-    [-num_paths <integer>]:
-        number of paths 
-    [-worst <integer>]:
-        number of worst paths to each endpoint 
-    [-slack_limit <delay in picoseconds>]:
-        only paths with less than this slack 
-    [-mode <mode>]:
-        a mode the paths should be restricted to 
-    [-from <instance|external_delay|clock|port|pin>+]:
-        from list 
-    [-through <instance|port|pin>+]:
-        specifies paths that pass through these pins or instances. This option 
-        can be repeated indicating that the path must go through at least one 
-        element of each through list (in the order the options were specified). 
-        Objects must be ports, hierarchical pins, pins on sequential/mapped 
-        combinational cells, or sequential/mapped combinational instances. 
-    [-to <instance|external_delay|clock|port|pin>+]:
-        to list 
-    [-paths <string>]:
-        a path identifier result from the specify_paths command 
-    [-exceptions <exception>+]:
-        report paths for exceptions 
-    [-cost_group <cost_group>+]:
-        report paths for cost groups 
+    [-mode <integer>]:
+        trace back one level under the specified mode (0-3). 0: no constant 
+        propagation, 1: tied-constant propagation, 2: tied-constant and 
+        test-mode propagation, 3: tied-constant, test-mode and shift-enable 
+        propagation [default: 3] 
+    [-polarity]:
+        also return whether the polarity changes through the trace 
+    [-continue]:
+        continue the trace back until PI, sequential gate, complex instance or 
+        constant is reached 
+    [-print]:
+        print the status and pin at every trace back 
+    <pin|port>:
+        pin or port to start the back-trace from 
 1
-rc:/> report timing -num_path 10
-Warning : Possible timing problems have been detected in this design. [TIM-11]
-        : The design is 'enc_dec_wrapper'.
-============================================================
-  Generated by:           Encounter(R) RTL Compiler v10.10-s209_1
-  Generated on:           Jul 08 2014  11:29:15 am
-  Module:                 enc_dec_wrapper
-  Technology library:     CORE65LPSVT 
-  Operating conditions:   _nominal_ (balanced_tree)
-  Wireload mode:          enclosed
-  Area mode:              timing library
-============================================================
-
-path   1:
-
-       Pin                Type         Fanout Load Slew Delay Arrival   
-                                              (fF) (ps)  (ps)   (ps)    
-------------------------------------------------------------------------
-(clock main_clk)     launch                                         0 R 
-d1
-  count
-    cout_reg[7]/CP                                    0             0 R 
-    cout_reg[7]/Q    HS65_LS_DFPQX9         4  8.2   41  +109     109 F 
-    g390/B                                                 +0     109   
-    g390/Z           HS65_LS_OR4X4          1  3.2   41   +85     194 F 
-    g388/B                                                 +0     194   
-    g388/Z           HS65_LS_NOR2X6         1  1.9   29   +32     226 R 
-    g386/A                                                 +0     226   
-    g386/Z           HS65_LS_NOR4ABX2       1  1.8   71   +93     319 R 
-    g385/A                                                 +0     319   
-    g385/Z           HS65_LS_AND2X4        20 51.1  315  +233     552 R 
-  count/pe 
-  h1/pe 
-    ch_reg[9]/TE     HS65_LS_SDFPQX9                       +0     552   
-    ch_reg[9]/CP     setup                            0  +294     846 R 
-- - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - 
-(clock main_clk)     capture                                     1000 R 
-------------------------------------------------------------------------
-Timing slack :     154ps 
-Start-point  : d1/count/cout_reg[7]/CP
-End-point    : d1/h1/ch_reg[9]/TE
-
-path   2:
-
-       Pin                Type         Fanout Load Slew Delay Arrival   
-                                              (fF) (ps)  (ps)   (ps)    
-------------------------------------------------------------------------
-(clock main_clk)     launch                                         0 R 
-d1
-  count
-    cout_reg[7]/CP                                    0             0 R 
-    cout_reg[7]/Q    HS65_LS_DFPQX9         4  8.2   41  +109     109 F 
-    g390/B                                                 +0     109   
-    g390/Z           HS65_LS_OR4X4          1  3.2   41   +85     194 F 
-    g388/B                                                 +0     194   
-    g388/Z           HS65_LS_NOR2X6         1  1.9   29   +32     226 R 
-    g386/A                                                 +0     226   
-    g386/Z           HS65_LS_NOR4ABX2       1  1.8   71   +93     319 R 
-    g385/A                                                 +0     319   
-    g385/Z           HS65_LS_AND2X4        20 51.1  315  +233     552 R 
-  count/pe 
-  h1/pe 
-    ch_reg[1]/TE     HS65_LS_SDFPQX9                       +0     552   
-    ch_reg[1]/CP     setup                            0  +294     846 R 
-- - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - 
-(clock main_clk)     capture                                     1000 R 
-------------------------------------------------------------------------
-Timing slack :     154ps 
-Start-point  : d1/count/cout_reg[7]/CP
-End-point    : d1/h1/ch_reg[1]/TE
-
-path   3:
-
-       Pin                Type         Fanout Load Slew Delay Arrival   
-                                              (fF) (ps)  (ps)   (ps)    
-------------------------------------------------------------------------
-(clock main_clk)     launch                                         0 R 
-d1
-  count
-    cout_reg[7]/CP                                    0             0 R 
-    cout_reg[7]/Q    HS65_LS_DFPQX9         4  8.2   41  +109     109 F 
-    g390/B                                                 +0     109   
-    g390/Z           HS65_LS_OR4X4          1  3.2   41   +85     194 F 
-    g388/B                                                 +0     194   
-    g388/Z           HS65_LS_NOR2X6         1  1.9   29   +32     226 R 
-    g386/A                                                 +0     226   
-    g386/Z           HS65_LS_NOR4ABX2       1  1.8   71   +93     319 R 
-    g385/A                                                 +0     319   
-    g385/Z           HS65_LS_AND2X4        20 51.1  315  +233     552 R 
-  count/pe 
-  h1/pe 
-    ch_reg[0]/TE     HS65_LS_SDFPQX9                       +0     552   
-    ch_reg[0]/CP     setup                            0  +294     846 R 
-- - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - 
-(clock main_clk)     capture                                     1000 R 
-------------------------------------------------------------------------
-Timing slack :     154ps 
-Start-point  : d1/count/cout_reg[7]/CP
-End-point    : d1/h1/ch_reg[0]/TE
-
-path   4:
-
-       Pin                Type         Fanout Load Slew Delay Arrival   
-                                              (fF) (ps)  (ps)   (ps)    
-------------------------------------------------------------------------
-(clock main_clk)     launch                                         0 R 
-d1
-  count
-    cout_reg[7]/CP                                    0             0 R 
-    cout_reg[7]/Q    HS65_LS_DFPQX9         4  8.2   41  +109     109 F 
-    g390/B                                                 +0     109   
-    g390/Z           HS65_LS_OR4X4          1  3.2   41   +85     194 F 
-    g388/B                                                 +0     194   
-    g388/Z           HS65_LS_NOR2X6         1  1.9   29   +32     226 R 
-    g386/A                                                 +0     226   
-    g386/Z           HS65_LS_NOR4ABX2       1  1.8   71   +93     319 R 
-    g385/A                                                 +0     319   
-    g385/Z           HS65_LS_AND2X4        20 51.1  315  +233     552 R 
-  count/pe 
-  h1/pe 
-    ch_reg[2]/TE     HS65_LS_SDFPQX9                       +0     552   
-    ch_reg[2]/CP     setup                            0  +294     846 R 
-- - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - 
-(clock main_clk)     capture                                     1000 R 
-------------------------------------------------------------------------
-Timing slack :     154ps 
-Start-point  : d1/count/cout_reg[7]/CP
-End-point    : d1/h1/ch_reg[2]/TE
-
-path   5:
-
-       Pin                Type         Fanout Load Slew Delay Arrival   
-                                              (fF) (ps)  (ps)   (ps)    
-------------------------------------------------------------------------
-(clock main_clk)     launch                                         0 R 
-d1
-  count
-    cout_reg[7]/CP                                    0             0 R 
-    cout_reg[7]/Q    HS65_LS_DFPQX9         4  8.2   41  +109     109 F 
-    g390/B                                                 +0     109   
-    g390/Z           HS65_LS_OR4X4          1  3.2   41   +85     194 F 
-    g388/B                                                 +0     194   
-    g388/Z           HS65_LS_NOR2X6         1  1.9   29   +32     226 R 
-    g386/A                                                 +0     226   
-    g386/Z           HS65_LS_NOR4ABX2       1  1.8   71   +93     319 R 
-    g385/A                                                 +0     319   
-    g385/Z           HS65_LS_AND2X4        20 51.1  315  +233     552 R 
-  count/pe 
-  h1/pe 
-    ch_reg[3]/TE     HS65_LS_SDFPQX9                       +0     552   
-    ch_reg[3]/CP     setup                            0  +294     846 R 
-- - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - 
-(clock main_clk)     capture                                     1000 R 
-------------------------------------------------------------------------
-Timing slack :     154ps 
-Start-point  : d1/count/cout_reg[7]/CP
-End-point    : d1/h1/ch_reg[3]/TE
-
-path   6:
-
-       Pin                Type         Fanout Load Slew Delay Arrival   
-                                              (fF) (ps)  (ps)   (ps)    
-------------------------------------------------------------------------
-(clock main_clk)     launch                                         0 R 
-d1
-  count
-    cout_reg[7]/CP                                    0             0 R 
-    cout_reg[7]/Q    HS65_LS_DFPQX9         4  8.2   41  +109     109 F 
-    g390/B                                                 +0     109   
-    g390/Z           HS65_LS_OR4X4          1  3.2   41   +85     194 F 
-    g388/B                                                 +0     194   
-    g388/Z           HS65_LS_NOR2X6         1  1.9   29   +32     226 R 
-    g386/A                                                 +0     226   
-    g386/Z           HS65_LS_NOR4ABX2       1  1.8   71   +93     319 R 
-    g385/A                                                 +0     319   
-    g385/Z           HS65_LS_AND2X4        20 51.1  315  +233     552 R 
-  count/pe 
-  h1/pe 
-    ch_reg[4]/TE     HS65_LS_SDFPQX9                       +0     552   
-    ch_reg[4]/CP     setup                            0  +294     846 R 
-- - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - 
-(clock main_clk)     capture                                     1000 R 
-------------------------------------------------------------------------
-Timing slack :     154ps 
-Start-point  : d1/count/cout_reg[7]/CP
-End-point    : d1/h1/ch_reg[4]/TE
-
-path   7:
-
-       Pin                Type         Fanout Load Slew Delay Arrival   
-                                              (fF) (ps)  (ps)   (ps)    
-------------------------------------------------------------------------
-(clock main_clk)     launch                                         0 R 
-d1
-  count
-    cout_reg[7]/CP                                    0             0 R 
-    cout_reg[7]/Q    HS65_LS_DFPQX9         4  8.2   41  +109     109 F 
-    g390/B                                                 +0     109   
-    g390/Z           HS65_LS_OR4X4          1  3.2   41   +85     194 F 
-    g388/B                                                 +0     194   
-    g388/Z           HS65_LS_NOR2X6         1  1.9   29   +32     226 R 
-    g386/A                                                 +0     226   
-    g386/Z           HS65_LS_NOR4ABX2       1  1.8   71   +93     319 R 
-    g385/A                                                 +0     319   
-    g385/Z           HS65_LS_AND2X4        20 51.1  315  +233     552 R 
-  count/pe 
-  h1/pe 
-    ch_reg[5]/TE     HS65_LS_SDFPQX9                       +0     552   
-    ch_reg[5]/CP     setup                            0  +294     846 R 
-- - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - 
-(clock main_clk)     capture                                     1000 R 
-------------------------------------------------------------------------
-Timing slack :     154ps 
-Start-point  : d1/count/cout_reg[7]/CP
-End-point    : d1/h1/ch_reg[5]/TE
-
-path   8:
-
-       Pin                Type         Fanout Load Slew Delay Arrival   
-                                              (fF) (ps)  (ps)   (ps)    
-------------------------------------------------------------------------
-(clock main_clk)     launch                                         0 R 
-d1
-  count
-    cout_reg[7]/CP                                    0             0 R 
-    cout_reg[7]/Q    HS65_LS_DFPQX9         4  8.2   41  +109     109 F 
-    g390/B                                                 +0     109   
-    g390/Z           HS65_LS_OR4X4          1  3.2   41   +85     194 F 
-    g388/B                                                 +0     194   
-    g388/Z           HS65_LS_NOR2X6         1  1.9   29   +32     226 R 
-    g386/A                                                 +0     226   
-    g386/Z           HS65_LS_NOR4ABX2       1  1.8   71   +93     319 R 
-    g385/A                                                 +0     319   
-    g385/Z           HS65_LS_AND2X4        20 51.1  315  +233     552 R 
-  count/pe 
-  h1/pe 
-    ch_reg[6]/TE     HS65_LS_SDFPQX9                       +0     552   
-    ch_reg[6]/CP     setup                            0  +294     846 R 
-- - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - 
-(clock main_clk)     capture                                     1000 R 
-------------------------------------------------------------------------
-Timing slack :     154ps 
-Start-point  : d1/count/cout_reg[7]/CP
-End-point    : d1/h1/ch_reg[6]/TE
-
-path   9:
-
-       Pin                Type         Fanout Load Slew Delay Arrival   
-                                              (fF) (ps)  (ps)   (ps)    
-------------------------------------------------------------------------
-(clock main_clk)     launch                                         0 R 
-d1
-  count
-    cout_reg[7]/CP                                    0             0 R 
-    cout_reg[7]/Q    HS65_LS_DFPQX9         4  8.2   41  +109     109 F 
-    g390/B                                                 +0     109   
-    g390/Z           HS65_LS_OR4X4          1  3.2   41   +85     194 F 
-    g388/B                                                 +0     194   
-    g388/Z           HS65_LS_NOR2X6         1  1.9   29   +32     226 R 
-    g386/A                                                 +0     226   
-    g386/Z           HS65_LS_NOR4ABX2       1  1.8   71   +93     319 R 
-    g385/A                                                 +0     319   
-    g385/Z           HS65_LS_AND2X4        20 51.1  315  +233     552 R 
-  count/pe 
-  h1/pe 
-    ch_reg[7]/TE     HS65_LS_SDFPQX9                       +0     552   
-    ch_reg[7]/CP     setup                            0  +294     846 R 
-- - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - 
-(clock main_clk)     capture                                     1000 R 
-------------------------------------------------------------------------
-Timing slack :     154ps 
-Start-point  : d1/count/cout_reg[7]/CP
-End-point    : d1/h1/ch_reg[7]/TE
-
-path  10:
-
-       Pin                Type         Fanout Load Slew Delay Arrival   
-                                              (fF) (ps)  (ps)   (ps)    
-------------------------------------------------------------------------
-(clock main_clk)     launch                                         0 R 
-d1
-  count
-    cout_reg[7]/CP                                    0             0 R 
-    cout_reg[7]/Q    HS65_LS_DFPQX9         4  8.2   41  +109     109 F 
-    g390/B                                                 +0     109   
-    g390/Z           HS65_LS_OR4X4          1  3.2   41   +85     194 F 
-    g388/B                                                 +0     194   
-    g388/Z           HS65_LS_NOR2X6         1  1.9   29   +32     226 R 
-    g386/A                                                 +0     226   
-    g386/Z           HS65_LS_NOR4ABX2       1  1.8   71   +93     319 R 
-    g385/A                                                 +0     319   
-    g385/Z           HS65_LS_AND2X4        20 51.1  315  +233     552 R 
-  count/pe 
-  h1/pe 
-    ch_reg[8]/TE     HS65_LS_SDFPQX9                       +0     552   
-    ch_reg[8]/CP     setup                            0  +294     846 R 
-- - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - 
-(clock main_clk)     capture                                     1000 R 
-------------------------------------------------------------------------
-Timing slack :     154ps 
-Start-point  : d1/count/cout_reg[7]/CP
-End-point    : d1/h1/ch_reg[8]/TE
-
-rc:/> exit
+rc:/> 

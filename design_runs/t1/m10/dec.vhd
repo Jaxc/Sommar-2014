@@ -123,8 +123,40 @@ END dch1a;
 
 
 ----------------------------------------------------------------------
--- circuit for storing data to be corrected or already corrected
 
+--counter
+	library IEEE;
+	USE IEEE.STD_LOGIC_1164.ALL;
+	USE IEEE.numeric_STD.all;
+	USE WORK.const.ALL;
+ENTITY bufcount IS
+PORT (clk : IN BIT;
+	count: OUT STD_LOGIC_VECTOR(m-1 downto 0)); 
+END bufcount;
+
+ARCHITECTURE bufcnt of bufcount is
+	signal cnt : integer range 0 to n;
+BEGIN
+
+PROCESS (clk)
+BEGIN
+	if( clk'EVENT AND clk = '1') then 
+	
+		if cnt = n then
+			cnt <= 0;
+		else
+			cnt <= cnt +1;
+		end if;
+	
+		count <= STD_LOGIC_VECTOR(to_unsigned(cnt,m));
+	end if;
+end process;
+end bufcnt;
+
+-- circuit for storing data to be corrected or already corrected
+	library IEEE;
+	USE IEEE.STD_LOGIC_1164.ALL;
+	USE IEEE.numeric_STD.all;
 	USE WORK.const.ALL;
 ENTITY dbuf IS
 PORT (clk, err, vdout, din: IN BIT;
@@ -132,14 +164,35 @@ PORT (clk, err, vdout, din: IN BIT;
 END dbuf;
 
 ARCHITECTURE dbufa OF dbuf IS
-	SIGNAL buf: BIT_VECTOR(0 TO n+1); 
-	-- siso shift registers for storing data to be corrected
+	SIGNAL buf: BIT_VECTOR(0 TO n); 
+	SIGNAL cnt,cnt_last : integer range 0 to n+1;
+	SIGNAL dout_buf,dout_buf2 : BIT;
+	signal cnt_buf : STD_LOGIC_VECTOR(m-1 downto 0);
+	component bufcount
+	PORT(clk: in BIT; count : OUT STD_LOGIC_VECTOR(m-1 downto 0));
+	end component;
+
   BEGIN
-  PROCESS BEGIN
-	WAIT UNTIL clk'EVENT AND clk='1';
-	buf<= din & buf(0 TO n);
-	dout<= (buf(n+1) XOR err) AND vdout;
+  PROCESS (clk)
+	BEGIN
+	if ( clk'EVENT AND clk='1') then
+		buf(cnt_last) <= din;
+		dout_buf2 <= buf(cnt);
+		dout_buf <= dout_buf2;
+		dout <= (dout_buf XOR err) and vdout;
+		cnt_last <= cnt;
+	end if;
+
+
+
+	
   END PROCESS;
+
+	bufcnt1: bufcount
+		port map (clk,cnt_buf);
+	
+	cnt <= to_integer(unsigned(cnt_buf));
+
 END dbufa;
 
 ----------------------------------------------------------------------

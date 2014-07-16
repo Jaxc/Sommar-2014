@@ -1,0 +1,11 @@
+ncsim: 08.20-s012: (c) Copyright 1995-2009 Cadence Design Systems, Inc.
+ncsim> run
+ASSERT/WARNING (time 0 FS) from process :$PROCESS_003 (architecture WORKLIB.BCH_TB:Testbench)
+0 % complete
+ASSERT/WARNING (time 0 FS) from package ieee.NUMERIC_STD, this builtin function called  from process :BCH_sim:d1:b1:$PROCESS_001 (architecture WORKLIB.dbuf:dbufa)
+Built-in conversion function argument contains ('U', 'X', 'W', 'Z', '-') in an operand (treated as '0').
+ASSERT/WARNING (time 2046034 NS) from process :$PROCESS_003 (architecture WORKLIB.BCH_TB:Testbench)
+1 % complete
+Simulation interrupted at 2276536 NS + 3
+./enc.vhd:56 	vdinR<= NOT cout(0) AND cout(1) AND NOT cout(2) AND NOT cout(3) AND NOT cout(4) AND cout(5) AND NOT cout(6) AND NOT cout(7) AND cout(8) AND cout(9); 
+ncsim> exit

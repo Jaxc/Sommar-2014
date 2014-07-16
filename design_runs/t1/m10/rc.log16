@@ -13,6 +13,7 @@ License First_Encounter_GXL checkout failed
 Checking out license 'SOC_Encounter_GXL'... (0 seconds elapsed)
 License SOC_Encounter_GXL checkout failed
 Checking out license 'Encounter_Digital_Impl_Sys_XL'... (0 seconds elapsed)
+Reading GUI preferences file '/chalmers/users/jacobro/.cadence/rc.gui'.
 
                        Cadence Encounter(R) RTL Compiler
                Version v10.10-s209_1 (32-bit), built Feb  3 2011
@@ -107,7 +108,7 @@ called '~/.cadence/.synth_init'.
 Send us feedback at rc_feedback@cadence.com.
 ================================================================================
 
-Sourcing './sim-1.500GHz.s' (Wed Jul 09 14:51:01 +0200 2014)...
+Sourcing './sim-1.0GHz.s' (Wed Jul 16 11:42:54 +0200 2014)...
 Warning : Timing attributes intrinsic_rise and intrinsic_fall are not expected and will be ignored. [LBR-21]
         : The library pin involved is 'HS65_LSS1_FA1X21/CO'.
         : Although the delay model for this library is table lookup, it appears that linear delay model parameters are also present.
@@ -6820,14 +6821,22 @@ Warning : Undriven module output port. [ELABUTL-123]
         : Use the 'hdl_undriven_output_port_value' attribute to control treatment of undriven output port during elaboration.
   Done elaborating 'enc_dec_wrapper'.
 Info    : Deleting instances not driving any primary outputs. [GLO-32]
-        : Deleting 3 hierarchical instances.
+        : Deleting 4 hierarchical instances.
         : Optimizations like for example constant propagation or redundancy removal could change the connections so an instance does not drive any primary outputs anymore. To see the list of deleted instances, set the 'information_level' attribute to 2 or above.
+        Trying carrysave optimization (configuration 1 of 1) on module 'bufcount'...
+Info    : Done carrysave optimization. [RTLOPT-20]
+        : There is 1 CSA group in module 'bufcount'... Accepted.
 Mapping enc_dec_wrapper to gates.
+Info    : Replacing a flip-flop with a logic constant 0. [GLO-12]
+        : The instance is 'decoder/b1/cnt_last_reg[10]'.
+        : This optimization was enabled by the root attribute 'optimize_constant_0_flops'.
+Info    : Deleting instances not driving any primary outputs. [GLO-32]
+        : Deleting 1 sequential instance.
  
 Global mapping target info
 ==========================
-Cost Group 'default' target slack:    18 ps
-Target path end-point (Pin: decoder/count/vdout11_reg/d)
+Cost Group 'default' target slack:    28 ps
+Target path end-point (Pin: decoder/b1/bufcnt1/cnt_reg[1]/d)
 
  
 Global mapping status
@@ -6836,58 +6845,613 @@ Global mapping status
                  Total    Neg   
 Operation         Area   Slack  Worst Path
 -------------------------------------------------------------------------------
- global_map       8712       0  N/A
+ global_map      18646       0  N/A
  
 Global incremental target info
 ==============================
-Cost Group 'default' target slack:     9 ps
-Target path end-point (Pin: decoder/h1/ch_reg[0]/TE (HS65_LS_SDFPQX9/TE))
+Cost Group 'default' target slack:    16 ps
+Target path end-point (Pin: decoder/b1/dout_buf2_reg/TI (HS65_LS_SDFPQX4/TI))
 
- 
-Global incremental optimization status
-======================================
-                         Worst  
-                 Total    Neg   
-Operation         Area   Slack  Worst Path
--------------------------------------------------------------------------------
- global_inc       8704       0  N/A
-Info    : 'Conformal LEC9.1-s400' or later builds is recommended for verification. [WDO-600]
-        : The use of 'Conformal LEC9.1-s400' or later builds is recommended to get better verification results.
-Generating a dofile for design 'enc_dec_wrapper' in file 'fv/enc_dec_wrapper/rtl_to_g1.do' ...
- 
-Incremental optimization status
-===============================
-                         Worst  - - - - DRC Totals - - - - 
-                 Total    Neg       Max       Max    Max   
-Operation         Area   Slack     Trans      Cap   Fanout 
--------------------------------------------------------------------------------
- init_iopt        8704       0         0        0        0
- 
-Incremental optimization status
-===============================
-                         Worst  - - - - DRC Totals - - - - 
-                 Total    Neg       Max       Max    Max   
-Operation         Area   Slack     Trans      Cap   Fanout 
--------------------------------------------------------------------------------
- init_delay       8704       0         0        0        0
- init_drc         8704       0         0        0        0
- init_area        8704       0         0        0        0
- glob_area        8702       0         0        0        0
- 
-Incremental optimization status
-===============================
-                         Worst  - - - - DRC Totals - - - - 
-                 Total    Neg       Max       Max    Max   
-Operation         Area   Slack     Trans      Cap   Fanout 
--------------------------------------------------------------------------------
- init_delay       8702       0         0        0        0
- init_drc         8702       0         0        0        0
- init_area        8702       0         0        0        0
+Info    : Changing wireload model of a design/subdesign. [TIM-92]
+        : Changing wireload model of subdesign 'dec' from area_18Kto24K to area_12Kto18K.
+        : The change of wireloa                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                            Info    : The schematic is in manual update mode. [GUI-10]
+ find: finds an object by type and name
 
-  Done mapping enc_dec_wrapper
-  Synthesis succeeded.
-  Setting attribute of port 'din': 'lp_asserted_probability' = 0.50000
-  Setting attribute of port 'din': 'lp_asserted_toggle_rate' = 23.333000
-Warning : Possible timing problems have been detected in this design. [TIM-11]
-        : The design is 'enc_dec_wrapper'.
-        : Use 'report timing -lint' for more information.
+Usage: find [<root_path>] [-maxdepth <integer>] [-mindepth <integer>] 
+       [-ignorecase] [-regexp <expression>] [-split] [-vname] [-option|*]+ 
+       <object> 
+
+    [<root_path>]: 
+        specifies the name of the directory from where to start searching. Do 
+        an explicit search if not specified. Argument may include wildcard 
+        ('*') characters. 
+    <object>: 
+        specifies the name of the object to match. Argument may include 
+        wildcard ('*') characters and single character match ('?') characters. 
+    [-maxdepth <integer>]: 
+        descends no more than the specified number of levels below 'root_path'. 
+        A level of '0' searches only the 'root_path'. Default: infinity. 
+    [-mindepth <integer>]: 
+        skips the specified number of levels below 'root_path' before finding 
+        objects. A level of '1' searches all objects except 'root_path'. 
+        Default: 0. 
+    [-ignorecase]: 
+        specifies case insensitive search 
+    [-split]: 
+        split output one object per line 
+    [-regexp <expression>]: 
+        specifies regular expression 
+    [-vname]: 
+        return Verilog style names where appropriate 
+    [-option]: 
+        specifies the type of object to find. Multiple types are supported or 
+        '*' for all. Each specified option must be of the form 
+        '-<object_type>'. The following are valid object types: 
+
+        actual_scan_chain                 actual_scan_segment 
+        attribute                         blockage 
+        boundary_scan_segment             clock 
+        cluster                           constant 
+        cost_group                        cpf_command 
+        cpf_command_id                    ctp_source 
+        ctp_timed_object                  def_pin 
+        design                            dft_configuration_mode 
+        direct_access_function            domain_macro_parameter 
+        exception                         exploration_power_domain 
+        exported_variable                 external_delay 
+        fill                              formal_verification_constraint 
+        gcell                             group 
+        hdl_arch                          hdl_bind 
+        hdl_block                         hdl_comp 
+        hdl_config                        hdl_impl 
+        hdl_inst                          hdl_label 
+        hdl_lib                           hdl_oper 
+        hdl_pack                          hdl_param 
+        hdl_pin                           hdl_proc 
+        hdl_subp                          instance 
+        isolation_rule                    job 
+        jtag_instruction                  jtag_instruction_register 
+        jtag_macro                        jtag_port 
+        layer                             level_shifter_group 
+        level_shifter_rule                libarc 
+        libcell                           libpin 
+        library                           library_domain 
+        mbist_clock                       message 
+        message_group                     mode 
+        net                               nominal_condition 
+        nondefaultrule                    object_type 
+        opcg_domain                       opcg_mode 
+        opcg_trigger                      operating_condition 
+        osc_source                        osc_source_reference 
+        pcell                             pdomain 
+        pin                               pin_bus 
+        port                              port_bus 
+        power_domain                      power_ground_net 
+        power_mode                        queue 
+        region                            root 
+        row                               run 
+        run_parameter                     scan_chain 
+        scan_segment                      scenario 
+        sdp_column                        sdp_group 
+        sdp_instance                      sdp_row 
+        seq_function                      slot 
+        specialnet                        style 
+        subdesign                         subport 
+        subport_bus                       subscenario 
+        test_clock                        test_clock_domain 
+        test_signal                       thread 
+        thread_parameter                  thread_result 
+        track                             via 
+        violation                         wireload 
+        wireload_selection                
+1
+1
+    while executing
+"find  -maxdepth 2 -instance *cnt*"
+    ("eval" body line 1)
+    invoked from within
+"eval $cmd"
+    (procedure "vrc_sgn_search_begin" line 17)
+    invoked from within
+"vrc_sgn_search_begin .sgn1.search"
+    (command bound to event)
+ find: finds an object by type and name
+
+Usage: find [<root_path>] [-maxdepth <integer>] [-mindepth <integer>] 
+       [-ignorecase] [-regexp <expression>] [-split] [-vname] [-option|*]+ 
+       <object> 
+
+    [<root_path>]: 
+        specifies the name of the directory from where to start searching. Do 
+        an explicit search if not specified. Argument may include wildcard 
+        ('*') characters. 
+    <object>: 
+        specifies the name of the object to match. Argument may include 
+        wildcard ('*') characters and single character match ('?') characters. 
+    [-maxdepth <integer>]: 
+        descends no more than the specified number of levels below 'root_path'. 
+        A level of '0' searches only the 'root_path'. Default: infinity. 
+    [-mindepth <integer>]: 
+        skips the specified number of levels below 'root_path' before finding 
+        objects. A level of '1' searches all objects except 'root_path'. 
+        Default: 0. 
+    [-ignorecase]: 
+        specifies case insensitive search 
+    [-split]: 
+        split output one object per line 
+    [-regexp <expression>]: 
+        specifies regular expression 
+    [-vname]: 
+        return Verilog style names where appropriate 
+    [-option]: 
+        specifies the type of object to find. Multiple types are supported or 
+        '*' for all. Each specified option must be of the form 
+        '-<object_type>'. The following are valid object types: 
+
+        actual_scan_chain                 actual_scan_segment 
+        attribute                         blockage 
+        boundary_scan_segment             clock 
+        cluster                           constant 
+        cost_group                        cpf_command 
+        cpf_command_id                    ctp_source 
+        ctp_timed_object                  def_pin 
+        design                            dft_configuration_mode 
+        direct_access_function            domain_macro_parameter 
+        exception                         exploration_power_domain 
+        exported_variable                 external_delay 
+        fill                              formal_verification_constraint 
+        gcell                             group 
+        hdl_arch                          hdl_bind 
+        hdl_block                         hdl_comp 
+        hdl_config                        hdl_impl 
+        hdl_inst                          hdl_label 
+        hdl_lib                           hdl_oper 
+        hdl_pack                          hdl_param 
+        hdl_pin                           hdl_proc 
+        hdl_subp                          instance 
+        isolation_rule                    job 
+        jtag_instruction                  jtag_instruction_register 
+        jtag_macro                        jtag_port 
+        layer                             level_shifter_group 
+        level_shifter_rule                libarc 
+        libcell                           libpin 
+        library                           library_domain 
+        mbist_clock                       message 
+        message_group                     mode 
+        net                               nominal_condition 
+        nondefaultrule                    object_type 
+        opcg_domain                       opcg_mode 
+        opcg_trigger                      operating_condition 
+        osc_source                        osc_source_reference 
+        pcell                             pdomain 
+        pin                               pin_bus 
+        port                              port_bus 
+        power_domain                      power_ground_net 
+        power_mode                        queue 
+        region                            root 
+        row                               run 
+        run_parameter                     scan_chain 
+        scan_segment                      scenario 
+        sdp_column                        sdp_group 
+        sdp_instance                      sdp_row 
+        seq_function                      slot 
+        specialnet                        style 
+        subdesign                         subport 
+        subport_bus                       subscenario 
+        test_clock                        test_clock_domain 
+        test_signal                       thread 
+        thread_parameter                  thread_result 
+        track                             via 
+        violation                         wireload 
+        wireload_selection                
+1
+1
+    while executing
+"find  -maxdepth 2 -instance *cnt*"
+    ("eval" body line 1)
+    invoked from within
+"eval $cmd"
+    (procedure "vrc_sgn_search_begin" line 17)
+    invoked from within
+"vrc_sgn_search_begin .sgn1.search"
+    invoked from within
+".sgn1.search.buttons.search invoke"
+    ("uplevel" body line 1)
+    invoked from within
+"uplevel #0 [list $w invoke]"
+    (procedure "tk::ButtonUp" line 22)
+    invoked from within
+"tk::ButtonUp .sgn1.search.buttons.search"
+    (command bound to event)
+ find: finds an object by type and name
+
+Usage: find [<root_path>] [-maxdepth <integer>] [-mindepth <integer>] 
+       [-ignorecase] [-regexp <expression>] [-split] [-vname] [-option|*]+ 
+       <object> 
+
+    [<root_path>]: 
+        specifies the name of the directory from where to start searching. Do 
+        an explicit search if not specified. Argument may include wildcard 
+        ('*') characters. 
+    <object>: 
+        specifies the name of the object to match. Argument may include 
+        wildcard ('*') characters and single character match ('?') characters. 
+    [-maxdepth <integer>]: 
+        descends no more than the specified number of levels below 'root_path'. 
+        A level of '0' searches only the 'root_path'. Default: infinity. 
+    [-mindepth <integer>]: 
+        skips the specified number of levels below 'root_path' before finding 
+        objects. A level of '1' searches all objects except 'root_path'. 
+        Default: 0. 
+    [-ignorecase]: 
+        specifies case insensitive search 
+    [-split]: 
+        split output one object per line 
+    [-regexp <expression>]: 
+        specifies regular expression 
+    [-vname]: 
+        return Verilog style names where appropriate 
+    [-option]: 
+        specifies the type of object to find. Multiple types are supported or 
+        '*' for all. Each specified option must be of the form 
+        '-<object_type>'. The following are valid object types: 
+
+        actual_scan_chain                 actual_scan_segment 
+        attribute                         blockage 
+        boundary_scan_segment             clock 
+        cluster                           constant 
+        cost_group                        cpf_command 
+        cpf_command_id                    ctp_source 
+        ctp_timed_object                  def_pin 
+        design                            dft_configuration_mode 
+        direct_access_function            domain_macro_parameter 
+        exception                         exploration_power_domain 
+        exported_variable                 external_delay 
+        fill                              formal_verification_constraint 
+        gcell                             group 
+        hdl_arch                          hdl_bind 
+        hdl_block                         hdl_comp 
+        hdl_config                        hdl_impl 
+        hdl_inst                          hdl_label 
+        hdl_lib                           hdl_oper 
+        hdl_pack                          hdl_param 
+        hdl_pin                           hdl_proc 
+        hdl_subp                          instance 
+        isolation_rule                    job 
+        jtag_instruction                  jtag_instruction_register 
+        jtag_macro                        jtag_port 
+        layer                             level_shifter_group 
+        level_shifter_rule                libarc 
+        libcell                           libpin 
+        library                           library_domain 
+        mbist_clock                       message 
+        message_group                     mode 
+        net                               nominal_condition 
+        nondefaultrule                    object_type 
+        opcg_domain                       opcg_mode 
+        opcg_trigger                      operating_condition 
+        osc_source                        osc_source_reference 
+        pcell ×Ä¡ÿÙÆ¥ÿØÆ¥ÿØÆ¥ÿØÆ§ÿÚÉ©ÿÖÆ¤ÿ×Æ¤ÿÙÈ¨ÿÖÆ¢ÿÔÃŸÿÔÄ¢ÿÙÈ¨ÿ×Å¦ÿ×Å¦ÿÙÈ¨ÿÕÅ£ÿÖÅ£ÿÕÅ£ÿ×Æ¤ÿÖÅ£ÿÙÆ¥ÿÖÃ ÿ×Ã¥ÿÙÅ¦ÿÔÂÿÖÂ ÿØÅ¢ÿÖÂŸÿÓÀœÿÒÀ›ÿÔÀÿÒ¿œÿÑ¾™ÿĞ½˜ÿÒ¾œÿÓÁŸÿÒ¾›ÿÌ¹“ÿÉ¶ÿÌ¸‘ÿÎº”ÿÏ»˜ÿÎ¼šÿÏ»˜ÿÍ¹•ÿÎº–ÿÍ»–ÿÌº–ÿÍ»–ÿÌº–ÿÊ¸”ÿÊ¸”ÿÊ¸”ÿÊ¸‘ÿÊ¸‘ÿÉ·‘ÿÈ¶ÿË¹“ÿÌ¹•ÿÌ¹•ÿÍº–ÿÌ¹•ÿÍº—ÿÎ¼˜ÿÌ¹•ÿÊ¸“ÿÉ·“ÿÇµÿÅ³‹ÿÄ³ŠÿÆ´ÿÉ·‘ÿÊ·“ÿÇµÿÉ¶’ÿÇµÿÇµÿÇµÿÈ¶ÿÆ³ÿÅ³ŒÿÆ´ÿÆ´ÿÃ±ŠÿÃ°ŠÿÃ°ˆÿÄ±‰ÿÂ¯ˆÿÃ°ˆÿÃ°ˆÿÁ®†ÿÀ­…ÿÀ®†ÿÁ®ˆÿÀ­‡ÿÁ®ˆÿÄ±‹ÿÂ¯‰ÿÂ¯‰ÿÂ¯‰ÿÀ­‡ÿÀ­‡ÿÀ­‡ÿ¿­‡ÿ¿­‡ÿÂ°‹ÿÁ¯‹ÿ¿­‡ÿ¿¬‡ÿ¿­‡ÿ¿­‡ÿÀ®ˆÿÀ®ˆÿ¿­‡ÿ¾¬†ÿ¾¬†ÿ¾¬†ÿ¿­‡ÿ¾¬†ÿ½«…ÿ½ª…ÿ¾«…ÿ½ª…ÿ¼ª„ÿ½«…ÿ¼ª„ÿ¼ª„ÿ¼©ƒÿ½ª„ÿ½ªƒÿ¼¨ÿ»§‚ÿ¼©ƒÿ¼©ƒÿ½ª„ÿ¼©ƒÿ¼©ƒÿ½ª„ÿ½©ƒÿ¼¨ƒÿ¼©ƒÿ¼¨‚ÿ¹¥€ÿ¹¥€ÿ»§‚ÿ»§‚ÿº¦ÿ¼©ƒÿ¼©ƒÿ»©ƒÿ¼©ƒÿ»¨‚ÿ»©ƒÿ»©ƒÿ»©ƒÿ»©ƒÿ»¨‚ÿº§‚ÿº§ÿ¼©ƒÿ¼©ƒÿº§‚ÿ¸¥€ÿ»§‚ÿ»§‚ÿ¼©ƒÿ»¨‚ÿ¹¦ÿ¹¦ÿº¦ÿº¦ÿ¹¦ÿ·¤ÿ·¤ÿ¸¥€ÿ¹¦ÿ¹¦ÿ¸¥€ÿ·¤ÿ·£~ÿ¸¥€ÿ¸¥€ÿ·¤ÿ¶£~ÿ¸¥ÿ·¤ÿ¸¥€ÿ·¤ÿ·£~ÿ¶£~ÿ¶¢}ÿ·¤ÿ¶£~ÿ¶£~ÿ·¤ÿ¶¢}ÿµ¡|ÿ¶¢}ÿ¶¢}ÿ¶¢}ÿ¶£~ÿ¶£~ÿµ¢}ÿ¸¥€ÿ¸¥€ÿµ¢}ÿ¶¢}ÿ·¤ÿ¸¥€ÿ¸¤ÿ¶¢}ÿµ¡|ÿ¶¢}ÿ¶¡|ÿ¶¡|ÿµ¡{ÿ´ {ÿ¶¢}ÿ¶¡|ÿ·¢}ÿµ¡|ÿ´¡{ÿ¶£~ÿ¶£~ÿ¶£~ÿ¶¢}ÿ¶¢}ÿµ¢|ÿµ¢}ÿ¶£}ÿ¶£}ÿµ¢|ÿ¶£~ÿ¶£~ÿ¶£}ÿ·¤ÿ¶£}ÿ¶£}ÿ·£~ÿ¶£}ÿ¶£}ÿ·¤ÿ·¤ÿ¸¥€ÿ·£~ÿ·£~ÿ·£~ÿ·£~ÿ·£~ÿ·£~ÿ´¡|ÿ¶£}ÿ·£~ÿµ¢}ÿµ¢}ÿ¶£}ÿ¶¢}ÿ¶¢}ÿµ¢|ÿµ¢|ÿ¶¢}ÿ¶¢}ÿ´¡|ÿ´¡{ÿµ¡|ÿµ¡|ÿµ {ÿ´ |ÿ²Ÿzÿ±yÿ²Ÿzÿ³ {ÿ°xÿ±yÿ²Ÿzÿ±yÿ²Ÿzÿ´ |ÿµ¡|ÿ´ |ÿ²Ÿzÿ³ yÿ²Ÿxÿ²Ÿzÿ³Ÿ{ÿ³Ÿ{ÿ±xÿ±yÿ²zÿ±yÿ±yÿ±yÿ±yÿ±yÿ²zÿ±xÿ³Ÿ{ÿ²Ÿzÿ³Ÿ{ÿ±yÿ²zÿ°œwÿ°œwÿ°xÿ°œwÿ°xÿ°xÿ°xÿ°œwÿ°œwÿ¯œwÿ°œwÿ°œwÿ¯›vÿ°xÿ¯›vÿ¯›vÿ°œyÿ°œyÿ¯›xÿ¯œyÿ°xÿ°œwÿ®švÿ°œwÿ¯œwÿ°œwÿ°xÿ¯›wÿ®švÿ®švÿ­™uÿ¯›wÿ¯›vÿ¯›wÿ®švÿ¯švÿ®™uÿ®™uÿ®™uÿ¯›wÿ¯švÿ®™uÿ¯švÿ¯švÿ®™uÿ¬—sÿ®™uÿ®™uÿ®™uÿ¯švÿ¯švÿ¯švÿ¯›wÿ­˜tÿ®™uÿ®™uÿ®™uÿ®švÿ®™uÿ¬˜tÿ­˜tÿ®švÿ®™uÿ¬—sÿ®™uÿ¯švÿ¬—sÿ«–sÿ­˜tÿ¬—sÿ®™uÿ­˜tÿ¬—tÿ­˜tÿ¬—tÿ¬—tÿ­˜tÿ¬—tÿ¬—tÿ«–rÿ«—sÿ¬—tÿ¬—uÿ«–tÿ¬—uÿ«–tÿ­˜tÿ¬—tÿ«—tÿ¬˜tÿ find: finds an object by type and name
+
+Usage: find [<root_path>] [-maxdepth <integer>] [-mindepth <integer>] 
+       [-ignorecase] [-regexp <expression>] [-split] [-vname] [-option|*]+ 
+       <object> 
+
+    [<root_path>]: 
+        specifies the name of the directory from where to start searching. Do 
+        an explicit search if not specified. Argument may include wildcard 
+        ('*') characters. 
+    <object>: 
+        specifies the name of the object to match. Argument may include 
+        wildcard ('*') characters and single character match ('?') characters. 
+    [-maxdepth <integer>]: 
+        descends no more than the specified number of levels below 'root_path'. 
+        A level of '0' searches only the 'root_path'. Default: infinity. 
+    [-mindepth <integer>]: 
+        skips the specified number of levels below 'root_path' before finding 
+        objects. A level of '1' searches all objects except 'root_path'. 
+        Default: 0. 
+    [-ignorecase]: 
+        specifies case insensitive search 
+    [-split]: 
+        split output one object per line 
+    [-regexp <expression>]: 
+        specifies regular expression 
+    [-vname]: 
+        return Verilog style names where appropriate 
+    [-option]: 
+        specifies the type of object to find. Multiple types are supported or 
+        '*' for all. Each specified option must be of the form 
+        '-<object_type>'. The following are valid object types: 
+
+        actual_scan_chain                 actual_scan_segment 
+        attribute                         blockage 
+        boundary_scan_segment             clock 
+        cluster                           constant 
+        cost_group                        cpf_command 
+        cpf_command_id                    ctp_source 
+        ctp_timed_object                  def_pin 
+        design                            dft_configuration_mode 
+        direct_access_function            domain_macro_parameter 
+        exception                         exploration_power_domain 
+        exported_variable                 external_delay 
+        fill                              formal_verification_constraint 
+        gcell                             group 
+        hdl_arch                          hdl_bind 
+        hdl_block                         hdl_comp 
+        hdl_config                        hdl_impl 
+        hdl_inst                          hdl_label 
+        hdl_lib                           hdl_oper 
+        hdl_pack                          hdl_param 
+        hdl_pin                           hdl_proc 
+        hdl_subp                          instance 
+        isolation_rule                    job 
+        jtag_instruction                  jtag_instruction_register 
+        jtag_macro                        jtag_port 
+        layer                             level_shifter_group 
+        level_shifter_rule                libarc 
+        libcell                           libpin 
+        library                           library_domain 
+        mbist_clock                       message 
+        message_group                     mode 
+        net                               nominal_condition 
+        nondefaultrule                    object_type 
+        opcg_domain                       opcg_mode 
+        opcg_trigger                      operating_condition 
+        osc_source                        osc_source_reference 
+        pcell                             pdomain 
+        pin                               pin_bus 
+        port                              port_bus 
+        power_domain                      power_ground_net 
+        power_mode                        queue 
+        region                            root 
+        row                               run 
+        run_parameter                     scan_chain 
+        scan_segment                      scenario 
+        sdp_column                        sdp_group 
+        sdp_instance                      sdp_row 
+        seq_function                      slot 
+        specialnet                        style 
+        subdesign                         subport 
+        subport_bus                       subscenario 
+        test_clock                        test_clock_domain 
+        test_signal                       thread 
+        thread_parameter                  thread_result 
+        track                             via 
+        violation                         wireload 
+        wireload_selection                
+1
+1
+    while executing
+"find  -maxdepth 2 -net *cnt*"
+    ("eval" body line 1)
+    invoked from within
+"eval $cmd"
+    (procedure "vrc_sgn_search_begin" line 21)
+    invoked from within
+"vrc_sgn_search_begin .sgn1.search"
+    invoked from within
+".sgn1.search.buttons.search invoke"
+    ("uplevel" body line 1)
+    invoked from within
+"uplevel #0 [list $w invoke]"
+    (procedure "tk::ButtonUp" line 22)
+    invoked from within
+"tk::ButtonUp .sgn1.search.buttons.search"
+    (command bound to event)
+ find: finds an object by type and name
+
+Usage: find [<root_path>] [-maxdepth <integer>] [-mindepth <integer>] 
+       [-ignorecase] [-regexp <expression>] [-split] [-vname] [-option|*]+ 
+       <object> 
+
+    [<root_path>]: 
+        specifies the name of the directory from where to start searching. Do 
+        an explicit search if not specified. Argument may include wildcard 
+        ('*') characters. 
+    <object>: 
+        specifies the name of the object to match. Argument may include 
+        wildcard ('*') characters and single character match ('?') characters. 
+    [-maxdepth <integer>]: 
+        descends no more than the specified number of levels below 'root_path'. 
+        A level of '0' searches only the 'root_path'. Default: infinity. 
+    [-mindepth <integer>]: 
+        skips the specified number of levels below 'root_path' before finding 
+        objects. A level of '1' searches all objects except 'root_path'. 
+        Default: 0. 
+    [-ignorecase]: 
+        specifies case insensitive search 
+    [-split]: 
+        split output one object per line 
+    [-regexp <expression>]: 
+        specifies regular expression 
+    [-vname]: 
+        return Verilog style names where appropriate 
+    [-option]: 
+        specifies the type of object to find. Multiple types are supported or 
+        '*' for all. Each specified option must be of the form 
+        '-<object_type>'. The following are valid object types: 
+
+        actual_scan_chain                 actual_scan_segment 
+        attribute                         blockage 
+        boundary_scan_segment             clock 
+        cluster                           constant 
+        cost_group                        cpf_command 
+        cpf_command_id                    ctp_source 
+        ctp_timed_object                  def_pin 
+        design                            dft_configuration_mode 
+        direct_access_function            domain_macro_parameter 
+        exception                         exploration_power_domain 
+        exported_variable                 external_delay 
+        fill                              formal_verification_constraint 
+        gcell                             group 
+        hdl_arch                          hdl_bind 
+        hdl_block                         hdl_comp 
+        hdl_config                        hdl_impl 
+        hdl_inst                          hdl_label 
+        hdl_lib                           hdl_oper 
+        hdl_pack                          hdl_param 
+        hdl_pin                           hdl_proc 
+        hdl_subp                          instance 
+        isolation_rule                    job 
+        jtag_instruction                  jtag_instruction_register 
+        jtag_macro                        jtag_port 
+        layer                             level_shifter_group 
+        level_shifter_rule                libarc 
+        libcell                           libpin 
+        library                           library_domain 
+        mbist_clock                       message 
+        message_group                     mode 
+        net                               nominal_condition 
+        nondefaultrule                    object_type 
+        opcg_domain                       opcg_mode 
+        opcg_trigger                      operating_condition 
+        osc_source                        osc_source_reference 
+        pcell                             pdomain 
+        pin                               pin_bus 
+        port                              port_bus 
+        power_domain                      power_ground_net 
+        power_mode                        queue 
+        region                            root 
+        row                               run 
+        run_parameter                     scan_chain 
+        scan_segment                      scenario 
+        sdp_column                        sdp_group 
+        sdp_instance                      sdp_row 
+        seq_function                      slot 
+        specialnet                        style 
+        subdesign                         subport 
+        subport_bus                       subscenario 
+        test_clock                        test_clock_domain 
+        test_signal                       thread 
+        thread_parameter                  thread_result 
+        track                             via 
+        violation                         wireload 
+        wireload_selection                
+1
+1
+    while executing
+"find  -maxdepth 2 -net *"
+    ("eval" body line 1)
+    invoked from within
+"eval $cmd"
+    (procedure "vrc_sgn_search_begin" line 21)
+    invoked from within
+"vrc_sgn_search_begin .sgn1.search"
+    invoked from within
+".sgn1.search.buttons.search invoke"
+    ("uplevel" body line 1)
+    invoked from within
+"uplevel #0 [list $w invoke]"
+    (procedure "tk::ButtonUp" line 22)
+    invoked from within
+"tk::ButtonUp .sgn1.search.buttons.search"
+    (command bound to event)
+ find: finds an object by type and name
+
+Usage: find [<root_path>] [-maxdepth <integer>] [-mindepth <integer>] 
+       [-ignorecase] [-regexp <expression>] [-split] [-vname] [-option|*]+ 
+       <object> 
+
+    [<root_path>]: 
+        specifies the name of the directory from where to start searching. Do 
+        an explicit search if not specified. Argument may include wildcard 
+        ('*') characters. 
+    <object>: 
+        specifies the name of the object to match. Argument may include 
+        wildcard ('*') characters and single character match ('?') characters. 
+    [-maxdepth <integer>]: 
+        descends no more than the specified number of levels below 'root_path'. 
+        A level of '0' searches only the 'root_path'. Default: infinity. 
+    [-mindepth <integer>]: 
+        skips the specified number of levels below 'root_path' before finding 
+        objects. A level of '1' searches all objects except 'root_path'. 
+        Default: 0. 
+    [-ignorecase]: 
+        specifies case insensitive search 
+    [-split]: 
+        split output one object per line 
+    [-regexp <expression>]: 
+        specifies regular expression 
+    [-vname]: 
+        return Verilog style names where appropriate 
+    [-option]: 
+        specifies the type of object to find. Multiple types are supported or 
+        '*' for all. Each specified option must be of the form 
+        '-<object_type>'. The following are valid object types: 
+
+        actual_scan_chain                 actual_scan_segment 
+        attribute                         blockage 
+        boundary_scan_segment             clock 
+        cluster                           constant 
+        cost_group                        cpf_command 
+        cpf_command_id                    ctp_source 
+        ctp_timed_object                  def_pin 
+        design                            dft_configuration_mode 
+        direct_access_function            domain_macro_parameter 
+        exception                         exploration_power_domain 
+        exported_variable                 external_delay 
+        fill                              formal_verification_constraint 
+        gcell                             group 
+        hdl_arch                          hdl_bind 
+        hdl_block                         hdl_comp 
+        hdl_config                        hdl_impl 
+        hdl_inst                          hdl_label 
+        hdl_lib                           hdl_oper 
+        hdl_pack                          hdl_param 
+        hdl_pin                           hdl_proc 
+        hdl_subp                          instance 
+        isolation_rule                    job 
+        jtag_instruction                  jtag_instruction_register 
+        jtag_macro                        jtag_port 
+        layer                             level_shifter_group 
+        level_shifter_rule                libarc 
+        libcell                           libpin 
+        library                           library_domain 
+        mbist_clock                       message 
+        message_group                     mode 
+        net                               nominal_condition 
+        nondefaultrule                    object_type 
+        opcg_domain                       opcg_mode 
+        opcg_trigger                      operating_condition 
+        osc_source                        osc_source_reference 
+        pcell                             pdomain 
+        pin                               pin_bus 
+        port                              port_bus 
+        power_domain                      power_ground_net 
+        power_mode                        queue 
+        region                            root 
+        row                               run 
+        run_parameter                     scan_chain 
+        scan_segment                      scenario 
+        sdp_column                        sdp_group 
+        sdp_instance                      sdp_row 
+        seq_function                      slot 
+        specialnet                        style 
+        subdesign                         subport 
+        subport_bus                       subscenario 
+        test_clock                        test_clock_domain 
+        test_signal                       thread 
+        thread_parameter                  thread_result 
+        track                             via 
+        violation                         wireload 
+        wireload_selection                
+1
+1
+    while executing
+"find  -maxdepth 2 -instance *"
+    ("eval" body line 1)
+    invoked from within
+"eval $cmd"
+    (procedure "vrc_sgn_search_begin" line 17)
+    invoked from within
+"vrc_sgn_search_begin .sgn1.search"
+    invoked from within
+".sgn1.search.buttons.search invoke"
+    ("uplevel" body line 1)
+    invoked from within
+"uplevel #0 [list $w invoke]"
+    (procedure "tk::ButtonUp" line 22)
+    invoked from within
+"tk::ButtonUp .sgn1.search.buttons.search"
+    (command bound to event)

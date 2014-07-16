@@ -124,12 +124,21 @@ END dbuf;
 
 ARCHITECTURE dbufa OF dbuf IS
 	SIGNAL buf: BIT_VECTOR(0 TO n+1); 
-	-- siso shift registers for storing data to be corrected
+	SIGNAL cnt,cnt_last : integer range 0 to n+1;
+	SIGNAL dout_buf : BIT;
   BEGIN
   PROCESS BEGIN
 	WAIT UNTIL clk'EVENT AND clk='1';
-	buf<= din & buf(0 TO n);
-	dout<= (buf(n+1) XOR err) AND vdout;
+	buf(cnt_last) <= din;
+	dout_buf <= buf(cnt);
+	dout <= (dout_buf XOR err) and vdout;
+	cnt_last <= cnt;
+
+	if cnt = n+1 then
+		cnt <= 0;
+	else
+		cnt <= cnt +1;
+	end if;
   END PROCESS;
 END dbufa;
 

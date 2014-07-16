@@ -12,7 +12,8 @@ Checking out license 'First_Encounter_GXL'... (0 seconds elapsed)
 License First_Encounter_GXL checkout failed
 Checking out license 'SOC_Encounter_GXL'... (0 seconds elapsed)
 License SOC_Encounter_GXL checkout failed
-Checking out license 'Encounter_Digital_Impl_Sys_XL'... (1 second elapsed)
+Checking out license 'Encounter_Digital_Impl_Sys_XL'... (0 seconds elapsed)
+Reading GUI preferences file '/chalmers/users/jacobro/.cadence/rc.gui'.
 
                        Cadence Encounter(R) RTL Compiler
                Version v10.10-s209_1 (32-bit), built Feb  3 2011
@@ -107,7 +108,7 @@ called '~/.cadence/.synth_init'.
 Send us feedback at rc_feedback@cadence.com.
 ================================================================================
 
-Sourcing './sim-1.0GHz.s' (Wed Jul 09 12:01:01 +0200 2014)...
+Sourcing './sim-1.500GHz.s' (Wed Jul 16 10:48:29 +0200 2014)...
 Warning : Timing attributes intrinsic_rise and intrinsic_fall are not expected and will be ignored. [LBR-21]
         : The library pin involved is 'HS65_LSS1_FA1X21/CO'.
         : Although the delay model for this library is table lookup, it appears that linear delay model parameters are also present.
@@ -6820,14 +6821,26 @@ Warning : Undriven module output port. [ELABUTL-123]
         : Use the 'hdl_undriven_output_port_value' attribute to control treatment of undriven output port during elaboration.
   Done elaborating 'enc_dec_wrapper'.
 Info    : Deleting instances not driving any primary outputs. [GLO-32]
-        : Deleting 3 hierarchical instances.
+        : Deleting 4 hierarchical instances.
         : Optimizations like for example constant propagation or redundancy removal could change the connections so an instance does not drive any primary outputs anymore. To see the list of deleted instances, set the 'information_level' attribute to 2 or above.
+        Trying carrysave optimization (configuration 1 of 1) on module 'dbuf'...
+Info    : Done carrysave optimization. [RTLOPT-20]
+        : There is 1 CSA group in module 'dbuf'... Accepted.
 Mapping enc_dec_wrapper to gates.
+Info    : Replacing a flip-flop with a logic constant 0. [GLO-12]
+        : The instance is 'decoder/b1/cnt_reg[10]'.
+        : This optimization was enabled by the root attribute 'optimize_constant_0_flops'.
+Info    : Deleting instances not driving any primary outputs. [GLO-32]
+        : Deleting 1 sequential instance.
+Info    : Replacing a flip-flop with a logic constant 0. [GLO-12]
+        : The instance is 'decoder/b1/cnt_last_reg[10]'.
+Info    : Deleting instances not driving any primary outputs. [GLO-32]
+        : Deleting 1 sequential instance.
  
 Global mapping target info
 ==========================
-Cost Group 'default' target slack:    28 ps
-Target path end-point (Pin: d1/count/vdout11_reg/d)
+Cost Group 'default' target slack:    18 ps
+Target path end-point (Pin: decoder/b1/dout_buf2_reg/d)
 
  
 Global mapping status
@@ -6836,12 +6849,13 @@ Global mapping status
                  Total    Neg   
 Operation         Area   Slack  Worst Path
 -------------------------------------------------------------------------------
- global_map       8700       0  N/A
+ global_map      22735    -109  decoder/b1/cnt_reg[5]/CP -->
+                                   decoder/b1/dout_buf2_reg/D
  
 Global incremental target info
 ==============================
-Cost Group 'default' target slack:    16 ps
-Target path end-point (Pin: d1/s1/syn_reg[0]/TI (HS65_LS_SDFPQX4/TI))
+Cost Group 'default' target slack:  -109 ps
+Target path end-point (Pin: decoder/b1/dout_buf2_reg/D (HS65_LS_DFPQX9/D))
 
  
 Global incremental optimization status
@@ -6850,7 +6864,8 @@ Global incremental optimization status
                  Total    Neg   
 Operation         Area   Slack  Worst Path
 -------------------------------------------------------------------------------
- global_inc       8698       0  N/A
+ global_inc      20494    -114  decoder/b1/cnt_reg[2]/CP -->
+                                   decoder/b1/dout_buf2_reg/D
 Info    : 'Conformal LEC9.1-s400' or later builds is recommended for verification. [WDO-600]
         : The use of 'Conformal LEC9.1-s400' or later builds is recommended to get better verification results.
 Generating a dofile for design 'enc_dec_wrapper' in file 'fv/enc_dec_wrapper/rtl_to_g1.do' ...
@@ -6861,7 +6876,8 @@ Incremental optimization status
                  Total    Neg       Max       Max    Max   
 Operation         Area   Slack     Trans      Cap   Fanout 
 -------------------------------------------------------------------------------
- init_iopt        8698       0         0        0        0
+ init_iopt       20494    -114         0        0        0
+            Path: decoder/b1/cnt_reg[2]/CP --> decoder/b1/dout_buf2_reg/D
  
 Incremental optimization status
 ===============================
@@ -6869,10 +6885,56 @@ Incremental optimization status
                  Total    Neg       Max       Max    Max   
 Operation         Area   Slack     Trans      Cap   Fanout 
 -------------------------------------------------------------------------------
- init_delay       8698       0         0        0        0
- init_drc         8698       0         0        0        0
- init_area        8698       0         0        0        0
- glob_area        8698       0         0        0        0
+ init_delay      20494    -114         0        0        0
+            Path: decoder/b1/cnt_reg[2]/CP --> decoder/b1/dout_buf2_reg/D
+ incr_delay      20644     -58         0        0        0
+            Path: decoder/b1/cnt_reg[0]/CP --> decoder/b1/dout_buf2_reg/D
+ incr_delay      20915     -44         0        0        0
+            Path: decoder/b1/cnt_reg[0]/CP --> decoder/b1/dout_buf2_reg/D
+ incr_delay      20965     -42         0        0        0
+            Path: decoder/b1/cnt_reg[3]/CP --> decoder/b1/dout_buf2_reg/D
+ incr_delay      21200     -39         0        0       26
+            Path: decoder/b1/cnt_last_reg[2]/CP --> decoder/b1/buf_reg[292]/D
+ incr_delay      21673     -19         0        0      101
+            Path: decoder/b1/cnt_reg[3]/CP --> decoder/b1/dout_buf2_reg/D
+ incr_delay      21638     -15         0        0      134
+            Path: decoder/b1/cnt_reg[2]/CP --> decoder/b1/dout_buf2_reg/D
+ incr_delay      21716      -9         0        0      134
+            Path: decoder/b1/cnt_reg[0]/CP --> decoder/b1/dout_buf2_reg/D
+ incr_delay      21799      -2         0        0      134
+            Path: decoder/b1/cnt_reg[2]/CP --> decoder/b1/dout_buf2_reg/D
+ incr_delay      21850       0         0        0      134
+            Path: decoder/b1/cnt_reg[0]/CP --> decoder/b1/dout_buf2_reg/D
+ init_drc        21850       0         0        0      134
+            Path: decoder/b1/cnt_reg[0]/CP --> decoder/b1/dout_buf2_reg/D
+ incr_drc        21851       0         0        0      112
+            Path: decoder/b1/cnt_reg[0]/CP --> decoder/b1/dout_buf2_reg/D
+ incr_drc        21850       0         0        0      101
+            Path: decoder/b1/cnt_reg[0]/CP --> decoder/b1/dout_buf2_reg/D
+ incr_drc        21847       0         0        0      101
+            Path: decoder/b1/cnt_reg[0]/CP --> decoder/b1/dout_buf2_reg/D
+ init_area       21847       0         0        0      101
+            Path: decoder/b1/cnt_reg[0]/CP --> decoder/b1/dout_buf2_reg/D
+ rem_buf         21820       0         0        0      101
+            Path: decoder/b1/cnt_reg[0]/CP --> decoder/b1/dout_buf2_reg/D
+ rem_inv         21788       0         0        0      101
+            Path: decoder/b1/cnt_reg[0]/CP --> decoder/b1/dout_buf2_reg/D
+ merge_bi        21638       0         0        0       96
+            Path: decoder/b1/cnt_reg[0]/CP --> decoder/b1/dout_buf2_reg/D
+ io_phase        21634       0         0        0       96
+            Path: decoder/b1/cnt_reg[0]/CP --> decoder/b1/dout_buf2_reg/D
+ gate_comp       21633       0         0        0       96
+            Path: decoder/b1/cnt_reg[0]/CP --> decoder/b1/dout_buf2_reg/D
+ glob_area       21397       0         0        0       96
+            Path: decoder/b1/cnt_reg[0]/CP --> decoder/b1/dout_buf2_reg/D
+ area_down       21216       0         0        0       96
+            Path: decoder/b1/cnt_reg[0]/CP --> decoder/b1/dout_buf2_reg/D
+ rem_buf         21212       0         0        0       96
+            Path: decoder/b1/cnt_reg[0]/CP --> decoder/b1/dout_buf2_reg/D
+ rem_inv         21208       0         0        0       96
+            Path: decoder/b1/cnt_reg[0]/CP --> decoder/b1/dout_buf2_reg/D
+ merge_bi        21185       0         0        0       96
+            Path: decoder/b1/cnt_reg[0]/CP --> decoder/b1/dout_buf2_reg/D
  
 Incremental optimization status
 ===============================
@@ -6880,14 +6942,25 @@ Incremental optimization status
                  Total    Neg       Max       Max    Max   
 Operation         Area   Slack     Trans      Cap   Fanout 
 -------------------------------------------------------------------------------
- init_delay       8698       0         0        0        0
- init_drc         8698       0         0        0        0
- init_area        8698       0         0        0        0
+ init_delay      21185       0         0        0       96
+            Path: decoder/b1/cnt_reg[0]/CP --> decoder/b1/dout_buf2_reg/D
+ init_drc        21185       0         0        0       96
+            Path: decoder/b1/cnt_reg[0]/CP --> decoder/b1/dout_buf2_reg/D
+ init_area       21185       0         0        0       96
+            Path: decoder/b1/cnt_reg[0]/CP --> decoder/b1/dout_buf2_reg/D
+ rem_buf         21184       0         0        0       96
+            Path: decoder/b1/cnt_reg[0]/CP --> decoder/b1/dout_buf2_reg/D
+ rem_inv         21182       0         0        0       96
+            Path: decoder/b1/cnt_reg[0]/CP --> decoder/b1/dout_buf2_reg/D
+ glob_area       21132       0         0        0       96
+            Path: decoder/b1/cnt_reg[0]/CP --> decoder/b1/dout_buf2_reg/D
+ area_down       21120       0         0        0       96
+            Path: decoder/b1/cnt_reg[0]/CP --> decoder/b1/dout_buf2_reg/D
 
   Done mapping enc_dec_wrapper
   Synthesis succeeded.
   Setting attribute of port 'din': 'lp_asserted_probability' = 0.50000
-  Setting attribute of port 'din': 'lp_asserted_toggle_rate' = 35.000000
+  Setting attribute of port 'din': 'lp_asserted_toggle_rate' = 23.333000
 Warning : Possible timing problems have been detected in this design. [TIM-11]
         : The design is 'enc_dec_wrapper'.
         : Use 'report timing -lint' for more information.

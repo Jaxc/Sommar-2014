@@ -2,6 +2,8 @@ ncsim: 08.20-s012: (c) Copyright 1995-2009 Cadence Design Systems, Inc.
 ncsim> run
 ASSERT/WARNING (time 0 FS) from process :$PROCESS_003 (architecture WORKLIB.BCH_TB:Testbench)
 0 % complete
+ASSERT/WARNING (time 0 FS) from package ieee.NUMERIC_STD, this builtin function called  from process :BCH_sim:d1:b1:$PROCESS_001 (architecture WORKLIB.dbuf:dbufa)
+Built-in conversion function argument contains ('U', 'X', 'W', 'Z', '-') in an operand (treated as '0').
 ASSERT/WARNING (time 126042 NS) from process :$PROCESS_003 (architecture WORKLIB.BCH_TB:Testbench)
 1 % complete
 ASSERT/WARNING (time 252042 NS) from process :$PROCESS_003 (architecture WORKLIB.BCH_TB:Testbench)

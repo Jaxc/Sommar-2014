@@ -11,4 +11,6 @@ set_attribute lp_asserted_toggle_rate 35.0 /designs/enc_dec_wrapper/ports_in/din
 
 report power > sim_power_1.0GHz.txt
 report timing > sim_timing_1.0GHz.txt
-exit
+
+set_attribute gui_sv_update manual /
+set_attribute gui_sv_threshold 5000 / 

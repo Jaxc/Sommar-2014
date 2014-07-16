@@ -5,6 +5,4 @@
 #   -files sim-1.0GHz.s
 
 source sim-1.0GHz.s
-report timing num_path 10
-report timing -num_path 10
-exit
+df

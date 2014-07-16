@@ -12,7 +12,7 @@ t=$2
     chmod +x bch_generate
     chmod +x test_vector_generate
     ./bch_generate
-#    ./test_vector_generate $m $t
+    ./test_vector_generate $m $t
     rm bch_generate
     rm test_vector_generate
     rm *.vht
@@ -21,7 +21,7 @@ t=$2
 
     ncvhdl -messages -linedebug -v93 const.vhd bchio.vhd BCH_TB.vhd dec.vhd enc.vhd sim.vhd  
     ncelab -messages -v93 WORKLIB.BCH_TB:Testbench
-#    ncsim -input ./ncsim.tcl WORKLIB.BCH_TB:Testbench
+    ncsim -input ./ncsim.tcl WORKLIB.BCH_TB:Testbench
 
     rc -files sim-1.0GHz.s
     rc -files sim-1.500GHz.s
@@ -29,10 +29,10 @@ t=$2
     rc -files sim-2.500GHz.s
     rc -files sim-3.0GHz.s
     rc -files sim-3.500GHz.s
-
-    bash ../../../scripts/editpower.sh 1 0
-    bash ../../../scripts/editpower.sh 1 500
-    bash ../../../scripts/editpower.sh 2 0
-    bash ../../../scripts/editpower.sh 2 500
-    bash ../../../scripts/editpower.sh 3 0
-    bash ../../../scripts/editpower.sh 3 500
+    pwd
+    bash ../../../script/editpower.sh 1 0
+    bash ../../../script/editpower.sh 1 500
+    bash ../../../script/editpower.sh 2 0
+    bash ../../../script/editpower.sh 2 500
+    bash ../../../script/editpower.sh 3 0
+    bash ../../../script/editpower.sh 3 500

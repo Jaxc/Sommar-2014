@@ -12,7 +12,7 @@ Checking out license 'First_Encounter_GXL'... (0 seconds elapsed)
 License First_Encounter_GXL checkout failed
 Checking out license 'SOC_Encounter_GXL'... (0 seconds elapsed)
 License SOC_Encounter_GXL checkout failed
-Checking out license 'Encounter_Digital_Impl_Sys_XL'... (1 second elapsed)
+Checking out license 'Encounter_Digital_Impl_Sys_XL'... (0 seconds elapsed)
 
                        Cadence Encounter(R) RTL Compiler
                Version v10.10-s209_1 (32-bit), built Feb  3 2011
@@ -107,7 +107,7 @@ called '~/.cadence/.synth_init'.
 Send us feedback at rc_feedback@cadence.com.
 ================================================================================
 
-Sourcing './sim-3.500GHz.s' (Tue Jul 08 11:01:12 +0200 2014)...
+Sourcing './sim-1.0GHz.s' (Tue Jul 15 11:42:04 +0200 2014)...
 Warning : Timing attributes intrinsic_rise and intrinsic_fall are not expected and will be ignored. [LBR-21]
         : The library pin involved is 'HS65_LSS1_FA1X21/CO'.
         : Although the delay model for this library is table lookup, it appears that linear delay model parameters are also present.
@@ -6820,14 +6820,17 @@ Warning : Undriven module output port. [ELABUTL-123]
         : Use the 'hdl_undriven_output_port_value' attribute to control treatment of undriven output port during elaboration.
   Done elaborating 'enc_dec_wrapper'.
 Info    : Deleting instances not driving any primary outputs. [GLO-32]
-        : Deleting 3 hierarchical instances.
+        : Deleting 4 hierarchical instances.
         : Optimizations like for example constant propagation or redundancy removal could change the connections so an instance does not drive any primary outputs anymore. To see the list of deleted instances, set the 'information_level' attribute to 2 or above.
+        Trying carrysave optimization (configuration 1 of 1) on module 'dbuf'...
+Info    : Done carrysave optimization. [RTLOPT-20]
+        : There is 1 CSA group in module 'dbuf'... Accepted.
 Mapping enc_dec_wrapper to gates.
  
 Global mapping target info
 ==========================
-Cost Group 'default' target slack:   -88 ps
-Target path end-point (Pin: d1/h1/ch_reg[2]/d)
+Cost Group 'default' target slack:    28 ps
+Target path end-point (Pin: decoder/b1/dout_buf_reg/d)
 
  
 Global mapping status
@@ -6836,12 +6839,12 @@ Global mapping status
                  Total    Neg   
 Operation         Area   Slack  Worst Path
 -------------------------------------------------------------------------------
- global_map       8888    -118  d1/count/cout_reg[1]/CP --> d1/s1/syn_reg[0]/D
+ global_map      21511       0  N/A
  
 Global incremental target info
 ==============================
-Cost Group 'default' target slack:  -117 ps
-Target path end-point (Pin: d1/s1/syn_reg[0]/D (HS65_LS_DFPQX9/D))
+Cost Group 'default' target slack:    18 ps
+Target path end-point (Pin: decoder/b1/dout_buf_reg/D (HS65_LS_DFPQX9/D))
 
  
 Global incremental optimization status
@@ -6850,7 +6853,7 @@ Global incremental optimization status
                  Total    Neg   
 Operation         Area   Slack  Worst Path
 -------------------------------------------------------------------------------
- global_inc       8836    -125  d1/count/cout_reg[4]/CP --> d1/s1/syn_reg[0]/D
+ global_inc      19781       0  N/A
 Info    : 'Conformal LEC9.1-s400' or later builds is recommended for verification. [WDO-600]
         : The use of 'Conformal LEC9.1-s400' or later builds is recommended to get better verification results.
 Generating a dofile for design 'enc_dec_wrapper' in file 'fv/enc_dec_wrapper/rtl_to_g1.do' ...
@@ -6861,8 +6864,7 @@ Incremental optimization status
                  Total    Neg       Max       Max    Max   
 Operation         Area   Slack     Trans      Cap   Fanout 
 -------------------------------------------------------------------------------
- init_iopt        8836    -125         0        0       11
-            Path: d1/count/cout_reg[4]/CP --> d1/s1/syn_reg[0]/D
+ init_iopt       19781       0         0        0        0
  
 Incremental optimization status
 ===============================
@@ -6870,38 +6872,15 @@ Incremental optimization status
                  Total    Neg       Max       Max    Max   
 Operation         Area   Slack     Trans      Cap   Fanout 
 -------------------------------------------------------------------------------
- init_delay       8836    -125         0        0       11
-            Path: d1/count/cout_reg[4]/CP --> d1/s1/syn_reg[0]/D
- incr_delay       8850    -111         0        0       11
-            Path: d1/count/cout_reg[1]/CP --> d1/h1/ch_reg[8]/D
- incr_delay       8883    -108         0        0       11
-            Path: d1/count/cout_reg[1]/CP --> d1/h1/ch_reg[1]/D
- incr_delay       8886    -107         0        0       11
-            Path: d1/count/cout_reg[1]/CP --> d1/h1/ch_reg[3]/D
- incr_delay       8886    -107         0        0       11
-            Path: d1/count/cout_reg[6]/CP --> d1/count/vdout11_reg/D
- incr_delay       8912    -104         0        0       11
-            Path: d1/count/cout_reg[1]/CP --> d1/s1/syn_reg[0]/D
- init_drc         8912    -104         0        0       11
-            Path: d1/count/cout_reg[1]/CP --> d1/s1/syn_reg[0]/D
- incr_drc         8911    -103         0        0       11
-            Path: d1/count/cout_reg[1]/CP --> d1/s1/syn_reg[0]/D
- init_area        8911    -103         0        0       11
-            Path: d1/count/cout_reg[1]/CP --> d1/s1/syn_reg[0]/D
- rem_buf          8909    -103         0        0       11
-            Path: d1/count/cout_reg[1]/CP --> d1/s1/syn_reg[0]/D
- rem_inv          8908    -103         0        0       11
-            Path: d1/count/cout_reg[1]/CP --> d1/s1/syn_reg[0]/D
- rem_inv_qb       8906    -103         0        0       11
-            Path: d1/count/cout_reg[1]/CP --> d1/s1/syn_reg[0]/D
- io_phase         8902    -103         0        0       11
-            Path: d1/count/cout_reg[1]/CP --> d1/s1/syn_reg[0]/D
- gate_comp        8881    -103         0        0       11
-            Path: d1/count/cout_reg[1]/CP --> d1/count/vdout11_reg/D
- glob_area        8871    -103         0        0       11
-            Path: d1/count/cout_reg[1]/CP --> d1/count/vdout11_reg/D
- area_down        8837    -103         0        0       11
-            Path: d1/count/cout_reg[1]/CP --> d1/count/vdout11_reg/D
+ init_delay      19781       0         0        0        0
+ init_drc        19781       0         0        0        0
+ init_area       19781       0         0        0        0
+ rem_buf         19754       0         0        0        0
+ rem_inv         19740       0         0        0        0
+ merge_bi        19733       0         0        0        0
+ gate_comp       19723       0         0        0        0
+ glob_area       19628       0         0        0        0
+ area_down       19565       0         0        0        0
  
 Incremental optimization status
 ===============================
@@ -6909,23 +6888,21 @@ Incremental optimization status
                  Total    Neg       Max       Max    Max   
 Operation         Area   Slack     Trans      Cap   Fanout 
 -------------------------------------------------------------------------------
- init_delay       8837    -103         0        0       11
-            Path: d1/count/cout_reg[1]/CP --> d1/count/vdout11_reg/D
- incr_delay       8842    -103         0        0       11
-            Path: d1/count/cout_reg[1]/CP --> d1/s1/syn_reg[0]/D
- init_drc         8842    -103         0        0       11
-            Path: d1/count/cout_reg[1]/CP --> d1/s1/syn_reg[0]/D
- incr_drc         8842    -103         0        0       11
-            Path: d1/count/cout_reg[1]/CP --> d1/s1/syn_reg[0]/D
- init_area        8842    -103         0        0       11
-            Path: d1/count/cout_reg[1]/CP --> d1/s1/syn_reg[0]/D
- rem_buf          8839    -103         0        0       11
-            Path: d1/count/cout_reg[1]/CP --> d1/s1/syn_reg[0]/D
+ init_delay      19565       0         0        0        0
+ init_drc        19565       0         0        0        0
+ init_area       19565       0         0        0        0
+ gate_comp       19563       0         0        0        0
+ glob_area       19542       0         0        0        0
+ area_down       19540       0         0        0        0
 
   Done mapping enc_dec_wrapper
   Synthesis succeeded.
   Setting attribute of port 'din': 'lp_asserted_probability' = 0.50000
-  Setting attribute of port 'din': 'lp_asserted_toggle_rate' = 10.000000
+  Setting attribute of port 'din': 'lp_asserted_toggle_rate' = 35.000000
 Warning : Possible timing problems have been detected in this design. [TIM-11]
         : The design is 'enc_dec_wrapper'.
         : Use 'report timing -lint' for more information.
+rc:/> Warning : Instance count threshold exceeded.  Switching to manual update mode. [GUI-12]
+        : Current instance count: '4863', threshold: '2000'
+        : To change the threshold set the 'gui_sv_threshold' root attribute.
+  Setting attribute of root '/': 'gui_sv_update' = manual

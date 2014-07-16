@@ -1,58 +1,30 @@
 ncvhdl: 08.20-s012: (c) Copyright 1995-2009 Cadence Design Systems, Inc.
-TOOL:	ncvhdl	08.20-s012: Started on Jul 09, 2014 at 14:50:28 CEST
+TOOL:	ncvhdl	08.20-s012: Started on Jul 16, 2014 at 11:25:00 CEST
 ncvhdl
     -messages
     -linedebug
     -v93
     const.vhd
-    bchio.vhd
-    BCH_TB.vhd
     dec.vhd
     enc.vhd
+    bchio.vhd
+    BCH_TB.vhd
     sim.vhd
 
 const.vhd:
-	errors: 0, warnings: 0
-bchio.vhd:
-ncvhdl_p: *W,DLWNEW: Intermediate file package WORKLIB.CONST (AST)
-	is newer than expected by entity WORKLIB.ENC (AST)
-		actual:   Wed Jul  9 14:50:28 2014
-		expected: Wed Jul  9 12:00:52 2014.
-ncvhdl_p: *W,DLWNEW: Intermediate file package WORKLIB.CONST (AST)
-	is newer than expected by entity WORKLIB.DEC (AST)
-		actual:   Wed Jul  9 14:50:28 2014
-		expected: Wed Jul  9 12:00:52 2014.
-	errors: 0, warnings: 2
-BCH_TB.vhd:
 	errors: 0, warnings: 0
 dec.vhd:
 	errors: 0, warnings: 0
 enc.vhd:
 	errors: 0, warnings: 0
+bchio.vhd:
+	errors: 0, warnings: 0
+BCH_TB.vhd:
+	errors: 0, warnings: 0
 sim.vhd:
 	errors: 0, warnings: 0
 WORKLIB.CONST (package):
 	streams: 1, words: 6
-WORKLIB.IOENC (entity):
-	streams: 6, words: 68
-ncvhdl_cg: *W,DLWNEW: Intermediate file entity WORKLIB.ENC (AST)
-	is newer than expected by architecture WORKLIB.IOENC:IOENCA (AST)
-		actual:   Wed Jul  9 14:50:28 2014
-		expected: Wed Jul  9 12:00:52 2014.
-WORKLIB.IOENC:IOENCA (architecture):
-	streams: 2, words: 520
-WORKLIB.IODEC (entity):
-	streams: 6, words: 68
-ncvhdl_cg: *W,DLWNEW: Intermediate file entity WORKLIB.DEC (AST)
-	is newer than expected by architecture WORKLIB.IODEC:IODECA (AST)
-		actual:   Wed Jul  9 14:50:28 2014
-		expected: Wed Jul  9 12:00:52 2014.
-WORKLIB.IODEC:IODECA (architecture):
-	streams: 2, words: 520
-WORKLIB.BCH_TB (entity):
-	streams: 1, words: 38
-WORKLIB.BCH_TB:TESTBENCH (architecture):
-	streams: 8, words: 8054
 WORKLIB.DCOUNT (entity):
 	streams: 6, words: 68
 WORKLIB.DCOUNT:DCOUNTA (architecture):
@@ -65,10 +37,14 @@ WORKLIB.DCH1 (entity):
 	streams: 7, words: 430
 WORKLIB.DCH1:DCH1A (architecture):
 	streams: 1, words: 413
+WORKLIB.BUFCOUNT (entity):
+	streams: 4, words: 234
+WORKLIB.BUFCOUNT:BUFCNT (architecture):
+	streams: 1, words: 181
 WORKLIB.DBUF (entity):
 	streams: 6, words: 68
 WORKLIB.DBUF:DBUFA (architecture):
-	streams: 1, words: 259
+	streams: 1, words: 724
 WORKLIB.DEC (entity):
 	streams: 6, words: 68
 WORKLIB.DEC:DECA (architecture):
@@ -85,6 +61,18 @@ WORKLIB.ENC (entity):
 	streams: 6, words: 68
 WORKLIB.ENC:ENCA (architecture):
 	streams: 3, words: 241
+WORKLIB.IOENC (entity):
+	streams: 6, words: 68
+WORKLIB.IOENC:IOENCA (architecture):
+	streams: 2, words: 520
+WORKLIB.IODEC (entity):
+	streams: 6, words: 68
+WORKLIB.IODEC:IODECA (architecture):
+	streams: 2, words: 520
+WORKLIB.BCH_TB (entity):
+	streams: 1, words: 38
+WORKLIB.BCH_TB:TESTBENCH (architecture):
+	streams: 8, words: 8054
 WORKLIB.ENCBUF (entity):
 	streams: 6, words: 249
 WORKLIB.ENCBUF:ENCBUFA (architecture):
@@ -105,4 +93,4 @@ WORKLIB.SIM (entity):
 	streams: 13, words: 653
 WORKLIB.SIM:SIMA (architecture):
 	streams: 7, words: 1431
-TOOL:	ncvhdl	08.20-s012: Exiting on Jul 09, 2014 at 14:50:28 CEST  (total: 00:00:00)
+TOOL:	ncvhdl	08.20-s012: Exiting on Jul 16, 2014 at 11:25:01 CEST  (total: 00:00:01)
