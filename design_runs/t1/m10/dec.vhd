@@ -123,36 +123,6 @@ END dch1a;
 
 
 ----------------------------------------------------------------------
-
---counter
-	library IEEE;
-	USE IEEE.STD_LOGIC_1164.ALL;
-	USE IEEE.numeric_STD.all;
-	USE WORK.const.ALL;
-ENTITY bufcount IS
-PORT (clk : IN BIT;
-	count: OUT STD_LOGIC_VECTOR(m-1 downto 0)); 
-END bufcount;
-
-ARCHITECTURE bufcnt of bufcount is
-	signal cnt : integer range 0 to n;
-BEGIN
-
-PROCESS (clk)
-BEGIN
-	if( clk'EVENT AND clk = '1') then 
-	
-		if cnt = n then
-			cnt <= 0;
-		else
-			cnt <= cnt +1;
-		end if;
-	
-		count <= STD_LOGIC_VECTOR(to_unsigned(cnt,m));
-	end if;
-end process;
-end bufcnt;
-
 -- circuit for storing data to be corrected or already corrected
 	library IEEE;
 	USE IEEE.STD_LOGIC_1164.ALL;
@@ -165,33 +135,52 @@ END dbuf;
 
 ARCHITECTURE dbufa OF dbuf IS
 	SIGNAL buf: BIT_VECTOR(0 TO n); 
-	SIGNAL cnt,cnt_last : integer range 0 to n+1;
+	SIGNAL cnt : integer range 0 to n+1;
 	SIGNAL dout_buf,dout_buf2 : BIT;
 	signal cnt_buf : STD_LOGIC_VECTOR(m-1 downto 0);
+	SIGNAL reg_ena,last_reg_ena : BIT_VECTOR(0 to n);
 	component bufcount
 	PORT(clk: in BIT; count : OUT STD_LOGIC_VECTOR(m-1 downto 0));
 	end component;
 
+
   BEGIN
+
+	process(cnt)
+	begin
+		reg_ena <= (others => '0');
+		reg_ena(cnt) <= '1';
+	end process;
+
+		
+	registers:for i in 0 to n generate
+		process(clk)
+		begin
+			if last_reg_ena(i) = '1' then
+				buf(i) <= din;
+			end if;
+		end process;
+
+
+	end generate;
+
+
+
   PROCESS (clk)
 	BEGIN
 	if ( clk'EVENT AND clk='1') then
-		buf(cnt_last) <= din;
 		dout_buf2 <= buf(cnt);
 		dout_buf <= dout_buf2;
 		dout <= (dout_buf XOR err) and vdout;
-		cnt_last <= cnt;
+		last_reg_ena <= reg_ena;
+		if cnt = n then
+			cnt <= 0;
+		else
+			cnt <= cnt +1;
+		end if;
 	end if;
 
-
-
-	
   END PROCESS;
-
-	bufcnt1: bufcount
-		port map (clk,cnt_buf);
-	
-	cnt <= to_integer(unsigned(cnt_buf));
 
 END dbufa;
 

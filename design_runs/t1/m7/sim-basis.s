@@ -12,4 +12,7 @@ set_attribute lp_power_analysis_effort medium/
 
 report power > sim_power_GHz.txt
 report timing > sim_timing_GHz.txt
+ 
+set_attribute gui_sv_update manual /
+set_attribute gui_sv_threshold 5000 /
 exit

@@ -1,5 +1,5 @@
 ncelab: 08.20-s012: (c) Copyright 1995-2009 Cadence Design Systems, Inc.
-TOOL:	ncelab	08.20-s012: Started on Jul 15, 2014 at 10:26:47 CEST
+TOOL:	ncelab	08.20-s012: Started on Jul 16, 2014 at 14:55:35 CEST
 ncelab
     -messages
     -v93
@@ -11,7 +11,7 @@ ncelab
 		             Instances  Unique
 		Components:         15      14
 		Default bindings:    1       -
-		Processes:         316      63
-		Signals:            61      61
+		Processes:         445      64
+		Signals:            64      64
 	Writing initial simulation snapshot: WORKLIB.BCH_TB:TESTBENCH
-TOOL:	ncelab	08.20-s012: Exiting on Jul 15, 2014 at 10:26:49 CEST  (total: 00:00:02)
+TOOL:	ncelab	08.20-s012: Exiting on Jul 16, 2014 at 14:55:37 CEST  (total: 00:00:02)

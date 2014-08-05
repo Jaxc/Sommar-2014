@@ -1,5 +1,5 @@
 ncelab: 08.20-s012: (c) Copyright 1995-2009 Cadence Design Systems, Inc.
-TOOL:	ncelab	08.20-s012: Started on Jul 16, 2014 at 11:25:01 CEST
+TOOL:	ncelab	08.20-s012: Started on Jul 16, 2014 at 15:00:24 CEST
 ncelab
     -messages
     -v93
@@ -9,9 +9,9 @@ ncelab
 	Building instance specific data structures.
 	Design hierarchy summary:
 		              Instances  Unique
-		Components:          16      15
-		Default bindings:     2       -
-		Processes:         2116      71
+		Components:          15      14
+		Default bindings:     1       -
+		Processes:         3139      70
 		Signals:             64      64
 	Writing initial simulation snapshot: WORKLIB.BCH_TB:TESTBENCH
-TOOL:	ncelab	08.20-s012: Exiting on Jul 16, 2014 at 11:25:15 CEST  (total: 00:00:14)
+TOOL:	ncelab	08.20-s012: Exiting on Jul 16, 2014 at 15:00:38 CEST  (total: 00:00:14)

@@ -1,5 +1,5 @@
 ncvhdl: 08.20-s012: (c) Copyright 1995-2009 Cadence Design Systems, Inc.
-TOOL:	ncvhdl	08.20-s012: Started on Jul 16, 2014 at 11:25:00 CEST
+TOOL:	ncvhdl	08.20-s012: Started on Jul 16, 2014 at 15:00:23 CEST
 ncvhdl
     -messages
     -linedebug
@@ -37,14 +37,10 @@ WORKLIB.DCH1 (entity):
 	streams: 7, words: 430
 WORKLIB.DCH1:DCH1A (architecture):
 	streams: 1, words: 413
-WORKLIB.BUFCOUNT (entity):
-	streams: 4, words: 234
-WORKLIB.BUFCOUNT:BUFCNT (architecture):
-	streams: 1, words: 181
 WORKLIB.DBUF (entity):
 	streams: 6, words: 68
 WORKLIB.DBUF:DBUFA (architecture):
-	streams: 1, words: 724
+	streams: 2, words: 1441
 WORKLIB.DEC (entity):
 	streams: 6, words: 68
 WORKLIB.DEC:DECA (architecture):
@@ -93,4 +89,4 @@ WORKLIB.SIM (entity):
 	streams: 13, words: 653
 WORKLIB.SIM:SIMA (architecture):
 	streams: 7, words: 1431
-TOOL:	ncvhdl	08.20-s012: Exiting on Jul 16, 2014 at 11:25:01 CEST  (total: 00:00:01)
+TOOL:	ncvhdl	08.20-s012: Exiting on Jul 16, 2014 at 15:00:24 CEST  (total: 00:00:01)

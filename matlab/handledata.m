@@ -6,7 +6,7 @@ output = cell(2,10);
 for m_cnt = 1:10
     for t_cnt = 1:3
         try
-        output{t_cnt,m_cnt} = addtestrun(t_cnt,m_cnt,'1.0');
+        output{t_cnt,m_cnt} = addtestrun(t_cnt,m_cnt,'3.0');
 %        plot(t, 'Color', colorOrder(mod(length(get(gca, 'Children')), size(colorOrder, 1))+1, :))
         
         end
