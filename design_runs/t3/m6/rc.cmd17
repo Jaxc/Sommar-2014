@@ -1,0 +1,35 @@
+# Cadence Encounter(R) RTL Compiler
+#   version v10.10-s209_1 (32-bit) built Feb  3 2011
+#
+# Run with the following arguments:
+#   -files sim-1.0GHz.s
+
+source sim-1.0GHz.s
+
+
+elaborate
+rm /designs/drd/
+rm /designs/dsipo/
+
+rm /designs/dshpe/
+rm /designs/dshr/
+rm /designs/dandm/
+rm /designs/dsdbmRing//
+rm /designs/dsdbmRing/
+elaborate
+rm /designs/dssbm//
+rm /designs/dsmli
+rm /designs/dsmli/
+elaborate
+rm /designs/dmli/
+rm /designs/dinv/
+elaborate
+synthesize
+define_clock -name main_clk -period 1000 [find / -port clk]
+synthesize -to_mapped -effort medium
+report timing
+set_attribute lp_asserted_probability 0.5 /designs/enc_dec_wrapper/ports_in/din
+set_attribute lp_asserted_toggle_rate 35.0 /designs/enc_dec_wrapper/ports_in/din
+report power > sim_power_1.0GHz.txt
+report timing > sim_timing_1.0GHz.txt
+exit

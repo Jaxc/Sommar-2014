@@ -70,14 +70,16 @@ dsyn5 - syndromes  5
 
 --------------- Chien Search ------------
 dcheq - check if Chien search equal zero - found an error
-		Reg= 0		XOR= 12
+		Reg= 0		XOR= 18
+drdce - m registers for x^0
+		Reg= 6		XOR= 0
 dch1 - Chien Search for x^1
 		Reg= 6		XOR= 1
 dch2 - Chien Search for x^2
 		Reg= 6		XOR= 2
 dch3 - Chien Search for x^3
 		Reg= 6		XOR= 3
-	total	Reg= 18		XOR= 18
+	total	Reg= 24		XOR= 24
 
 --------------- Syndromes rearranging ------------
 dmul21 - 2 to 1 multiplexers 
@@ -88,52 +90,41 @@ drdce - m registers with clock enable
 
 --------------- Berlekamp-Massey Algorithm ----
 dmul21 - 2 to 1 multiplexers
-dmli - multiply by L^i
-		Reg= 0		XOR= 1
-dinv - inversion/division
-		Reg= 12		XOR= 38
-dsdbmRing - bit-Serial Dual Basis Multiplier Ring
-		Reg= 6		XOR= 1
-drdce - m registers with clock enable
-		Reg= 6		XOR= 0
+		Reg= 0 * 2 = 0	XOR= 0 * 2 = 0
 drdceSOne - m registers with set to one
+		Reg= 6 * 4 = 24	XOR= 0 * 4 = 0
+drdcer - m registers with reset
 		Reg= 6 * 2 = 12	XOR= 0 * 2 = 0
-drd1ce - single register with clock enable
-		Reg= 1 * 2 = 2	XOR= 0 * 2 = 0
-dsdbm - bit-serial dual basis multiplier
-		Reg= 0		XOR= 5
-dshpe - m shift registers (ring) with parallel enable
-		Reg= 6		XOR= 0
-dshr - m shift registers (ring) with reset and addition
-		Reg= 6 * 2 = 12	XOR= 1 * 2 = 2
-dandm - m AND gates
-		Reg= 0 * 4 = 0	XOR= 0 * 4 = 0
-dxort - t XOR gates
-		Reg= 0 * 6 = 0	XOR= 3 * 6 = 18
-dssbm - bit-serial standard basis multiplier
-		Reg= 6		XOR= 7
-	total	Reg= 56		XOR= 72
+dxorm - m * XOR - modulo 2 addition
+		Reg= 0 * 2 = 0	XOR= 6 * 2 = 12
+dpm - bit-parallel standard basis multiplier option L
+		Reg= 0 * 10 = 0	XOR= 35 * 10 = 350
+dxort - modulo 2 addition
+		Reg= 0 * 6 = 0	XOR= 2 * 6 = 12
+drdce - m registers
+		Reg= 6 * 2 = 12	XOR= 0 * 2 = 0
+	total	Reg= 48		XOR= 374
 
 --------------- The buffer  ----
 dbuf - buffer for storing data to be corrected
-		Reg= 70		XOR= 1
-	total	Reg= 70		XOR= 1
+		Reg= 55		XOR= 1
+	total	Reg= 55		XOR= 1
 
 --------------- The control system  ----
 dca - less signficant control counter
-		Reg= 3		XOR= 2
+		Reg= 2		XOR= 1
 dcb - more signficant control counter
-		Reg= 3		XOR= 2
+		Reg= 5		XOR= 4
 dcl - degree of error polynomial
 		Reg= 3		XOR= 3
 drd1ce - single register
 		Reg= 1 * 5 = 5	XOR= 0 * 5 = 0
 dcount - control system
-	total	Reg= 14		XOR= 7
+	total	Reg= 15		XOR= 8
 
 
 	DECODER total
-		Reg= 206		XOR= 116
+		Reg= 190		XOR= 425
 
 
 
