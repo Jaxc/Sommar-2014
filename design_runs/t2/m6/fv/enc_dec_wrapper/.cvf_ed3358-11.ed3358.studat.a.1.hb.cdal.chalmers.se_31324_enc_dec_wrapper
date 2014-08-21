@@ -1,8 +1,0 @@
-#Copyright notice: Copyright 1997-2010 Cadence Design Systems, Inc. All rights reserved worldwide.
-
-
-ovf_setup -ungroup_separator { _ }
-
-ovf_uniquify \
--module { dec } \
-{ { f2 ffce ffce_1 } } 

@@ -13,6 +13,7 @@ License First_Encounter_GXL checkout failed
 Checking out license 'SOC_Encounter_GXL'... (0 seconds elapsed)
 License SOC_Encounter_GXL checkout failed
 Checking out license 'Encounter_Digital_Impl_Sys_XL'... (0 seconds elapsed)
+Reading GUI preferences file '/chalmers/users/jacobro/.cadence/rc.gui'.
 
                        Cadence Encounter(R) RTL Compiler
                Version v10.10-s209_1 (32-bit), built Feb  3 2011
@@ -107,7 +108,7 @@ called '~/.cadence/.synth_init'.
 Send us feedback at rc_feedback@cadence.com.
 ================================================================================
 
-Sourcing './sim-3.500GHz.s' (Tue Jul 15 10:30:29 +0200 2014)...
+Sourcing './sim-3.500GHz.s' (Thu Aug 21 21:07:29 +0200 2014)...
 Warning : Timing attributes intrinsic_rise and intrinsic_fall are not expected and will be ignored. [LBR-21]
         : The library pin involved is 'HS65_LSS1_FA1X21/CO'.
         : Although the delay model for this library is table lookup, it appears that linear delay model parameters are also present.
@@ -6815,22 +6816,534 @@ Warning : Timing attributes intrinsic_rise and intrinsic_fall are not expected a
 Warning : Timing attributes intrinsic_rise and intrinsic_fall are not expected and will be ignored. [LBR-21]
         : The library pin involved is 'HS65_LS_XOR3X9/Z'.
   Elaborating top-level block 'enc_dec_wrapper' from file 'enc_dec_wrapper.vhd'.
+Warning : Referenced signal not in sensitivity list.  This may cause simulation mismatches between the original and synthesized designs. [CDFG-360]
+        : Signal 'last_reg_ena' in module 'dbuf' in file 'dec.vhd' on line 143.
+Warning : Referenced signal not in sensitivity list.  This may cause simulation mismatches between the original and synthesized designs. [CDFG-360]
+        : Signal 'din' in module 'dbuf' in file 'dec.vhd' on line 143.
+Warning : Referenced signal not in sensitivity list.  This may cause simulation mismatches between the original and synthesized designs. [CDFG-360]
+        : Signal 'last_reg_ena' in module 'dbuf' in file 'dec.vhd' on line 143.
+Warning : Referenced signal not in sensitivity list.  This may cause simulation mismatches between the original and synthesized designs. [CDFG-360]
+        : Signal 'din' in module 'dbuf' in file 'dec.vhd' on line 143.
+Warning : Referenced signal not in sensitivity list.  This may cause simulation mismatches between the original and synthesized designs. [CDFG-360]
+        : Signal 'last_reg_ena' in module 'dbuf' in file 'dec.vhd' on line 143.
+Warning : Referenced signal not in sensitivity list.  This may cause simulation mismatches between the original and synthesized designs. [CDFG-360]
+        : Signal 'din' in module 'dbuf' in file 'dec.vhd' on line 143.
+Warning : Referenced signal not in sensitivity list.  This may cause simulation mismatches between the original and synthesized designs. [CDFG-360]
+        : Signal 'last_reg_ena' in module 'dbuf' in file 'dec.vhd' on line 143.
+Warning : Referenced signal not in sensitivity list.  This may cause simulation mismatches between the original and synthesized designs. [CDFG-360]
+        : Signal 'din' in module 'dbuf' in file 'dec.vhd' on line 143.
+Warning : Referenced signal not in sensitivity list.  This may cause simulation mismatches between the original and synthesized designs. [CDFG-360]
+        : Signal 'last_reg_ena' in module 'dbuf' in file 'dec.vhd' on line 143.
+Warning : Referenced signal not in sensitivity list.  This may cause simulation mismatches between the original and synthesized designs. [CDFG-360]
+        : Signal 'din' in module 'dbuf' in file 'dec.vhd' on line 143.
+Warning : Referenced signal not in sensitivity list.  This may cause simulation mismatches between the original and synthesized designs. [CDFG-360]
+        : Signal 'last_reg_ena' in module 'dbuf' in file 'dec.vhd' on line 143.
+Warning : Referenced signal not in sensitivity list.  This may cause simulation mismatches between the original and synthesized designs. [CDFG-360]
+        : Signal 'din' in module 'dbuf' in file 'dec.vhd' on line 143.
+Warning : Referenced signal not in sensitivity list.  This may cause simulation mismatches between the original and synthesized designs. [CDFG-360]
+        : Signal 'last_reg_ena' in module 'dbuf' in file 'dec.vhd' on line 143.
+Warning : Referenced signal not in sensitivity list.  This may cause simulation mismatches between the original and synthesized designs. [CDFG-360]
+        : Signal 'din' in module 'dbuf' in file 'dec.vhd' on line 143.
+Warning : Referenced signal not in sensitivity list.  This may cause simulation mismatches between the original and synthesized designs. [CDFG-360]
+        : Signal 'last_reg_ena' in module 'dbuf' in file 'dec.vhd' on line 143.
+Warning : Referenced signal not in sensitivity list.  This may cause simulation mismatches between the original and synthesized designs. [CDFG-360]
+        : Signal 'din' in module 'dbuf' in file 'dec.vhd' on line 143.
+Warning : Referenced signal not in sensitivity list.  This may cause simulation mismatches between the original and synthesized designs. [CDFG-360]
+        : Signal 'last_reg_ena' in module 'dbuf' in file 'dec.vhd' on line 143.
+Warning : Referenced signal not in sensitivity list.  This may cause simulation mismatches between the original and synthesized designs. [CDFG-360]
+        : Signal 'din' in module 'dbuf' in file 'dec.vhd' on line 143.
+Warning : Referenced signal not in sensitivity list.  This may cause simulation mismatches between the original and synthesized designs. [CDFG-360]
+        : Signal 'last_reg_ena' in module 'dbuf' in file 'dec.vhd' on line 143.
+Warning : Referenced signal not in sensitivity list.  This may cause simulation mismatches between the original and synthesized designs. [CDFG-360]
+        : Signal 'din' in module 'dbuf' in file 'dec.vhd' on line 143.
+Warning : Referenced signal not in sensitivity list.  This may cause simulation mismatches between the original and synthesized designs. [CDFG-360]
+        : Signal 'last_reg_ena' in module 'dbuf' in file 'dec.vhd' on line 143.
+Warning : Referenced signal not in sensitivity list.  This may cause simulation mismatches between the original and synthesized designs. [CDFG-360]
+        : Signal 'din' in module 'dbuf' in file 'dec.vhd' on line 143.
+Warning : Referenced signal not in sensitivity list.  This may cause simulation mismatches between the original and synthesized designs. [CDFG-360]
+        : Signal 'last_reg_ena' in module 'dbuf' in file 'dec.vhd' on line 143.
+Warning : Referenced signal not in sensitivity list.  This may cause simulation mismatches between the original and synthesized designs. [CDFG-360]
+        : Signal 'din' in module 'dbuf' in file 'dec.vhd' on line 143.
+Warning : Referenced signal not in sensitivity list.  This may cause simulation mismatches between the original and synthesized designs. [CDFG-360]
+        : Signal 'last_reg_ena' in module 'dbuf' in file 'dec.vhd' on line 143.
+Warning : Referenced signal not in sensitivity list.  This may cause simulation mismatches between the original and synthesized designs. [CDFG-360]
+        : Signal 'din' in module 'dbuf' in file 'dec.vhd' on line 143.
+Warning : Referenced signal not in sensitivity list.  This may cause simulation mismatches between the original and synthesized designs. [CDFG-360]
+        : Signal 'last_reg_ena' in module 'dbuf' in file 'dec.vhd' on line 143.
+Warning : Referenced signal not in sensitivity list.  This may cause simulation mismatches between the original and synthesized designs. [CDFG-360]
+        : Signal 'din' in module 'dbuf' in file 'dec.vhd' on line 143.
+Warning : Referenced signal not in sensitivity list.  This may cause simulation mismatches between the original and synthesized designs. [CDFG-360]
+        : Signal 'last_reg_ena' in module 'dbuf' in file 'dec.vhd' on line 143.
+Warning : Referenced signal not in sensitivity list.  This may cause simulation mismatches between the original and synthesized designs. [CDFG-360]
+        : Signal 'din' in module 'dbuf' in file 'dec.vhd' on line 143.
+Warning : Referenced signal not in sensitivity list.  This may cause simulation mismatches between the original and synthesized designs. [CDFG-360]
+        : Signal 'last_reg_ena' in module 'dbuf' in file 'dec.vhd' on line 143.
+Warning : Referenced signal not in sensitivity list.  This may cause simulation mismatches between the original and synthesized designs. [CDFG-360]
+        : Signal 'din' in module 'dbuf' in file 'dec.vhd' on line 143.
+Warning : Referenced signal not in sensitivity list.  This may cause simulation mismatches between the original and synthesized designs. [CDFG-360]
+        : Signal 'last_reg_ena' in module 'dbuf' in file 'dec.vhd' on line 143.
+Warning : Referenced signal not in sensitivity list.  This may cause simulation mismatches between the original and synthesized designs. [CDFG-360]
+        : Signal 'din' in module 'dbuf' in file 'dec.vhd' on line 143.
+Warning : Referenced signal not in sensitivity list.  This may cause simulation mismatches between the original and synthesized designs. [CDFG-360]
+        : Signal 'last_reg_ena' in module 'dbuf' in file 'dec.vhd' on line 143.
+Warning : Referenced signal not in sensitivity list.  This may cause simulation mismatches between the original and synthesized designs. [CDFG-360]
+        : Signal 'din' in module 'dbuf' in file 'dec.vhd' on line 143.
+Warning : Referenced signal not in sensitivity list.  This may cause simulation mismatches between the original and synthesized designs. [CDFG-360]
+        : Signal 'last_reg_ena' in module 'dbuf' in file 'dec.vhd' on line 143.
+Warning : Referenced signal not in sensitivity list.  This may cause simulation mismatches between the original and synthesized designs. [CDFG-360]
+        : Signal 'din' in module 'dbuf' in file 'dec.vhd' on line 143.
+Warning : Referenced signal not in sensitivity list.  This may cause simulation mismatches between the original and synthesized designs. [CDFG-360]
+        : Signal 'last_reg_ena' in module 'dbuf' in file 'dec.vhd' on line 143.
+Warning : Referenced signal not in sensitivity list.  This may cause simulation mismatches between the original and synthesized designs. [CDFG-360]
+        : Signal 'din' in module 'dbuf' in file 'dec.vhd' on line 143.
+Warning : Referenced signal not in sensitivity list.  This may cause simulation mismatches between the original and synthesized designs. [CDFG-360]
+        : Signal 'last_reg_ena' in module 'dbuf' in file 'dec.vhd' on line 143.
+Warning : Referenced signal not in sensitivity list.  This may cause simulation mismatches between the original and synthesized designs. [CDFG-360]
+        : Signal 'din' in module 'dbuf' in file 'dec.vhd' on line 143.
+Warning : Referenced signal not in sensitivity list.  This may cause simulation mismatches between the original and synthesized designs. [CDFG-360]
+        : Signal 'last_reg_ena' in module 'dbuf' in file 'dec.vhd' on line 143.
+Warning : Referenced signal not in sensitivity list.  This may cause simulation mismatches between the original and synthesized designs. [CDFG-360]
+        : Signal 'din' in module 'dbuf' in file 'dec.vhd' on line 143.
+Warning : Referenced signal not in sensitivity list.  This may cause simulation mismatches between the original and synthesized designs. [CDFG-360]
+        : Signal 'last_reg_ena' in module 'dbuf' in file 'dec.vhd' on line 143.
+Warning : Referenced signal not in sensitivity list.  This may cause simulation mismatches between the original and synthesized designs. [CDFG-360]
+        : Signal 'din' in module 'dbuf' in file 'dec.vhd' on line 143.
+Warning : Referenced signal not in sensitivity list.  This may cause simulation mismatches between the original and synthesized designs. [CDFG-360]
+        : Signal 'last_reg_ena' in module 'dbuf' in file 'dec.vhd' on line 143.
+Warning : Referenced signal not in sensitivity list.  This may cause simulation mismatches between the original and synthesized designs. [CDFG-360]
+        : Signal 'din' in module 'dbuf' in file 'dec.vhd' on line 143.
+Warning : Referenced signal not in sensitivity list.  This may cause simulation mismatches between the original and synthesized designs. [CDFG-360]
+        : Signal 'last_reg_ena' in module 'dbuf' in file 'dec.vhd' on line 143.
+Warning : Referenced signal not in sensitivity list.  This may cause simulation mismatches between the original and synthesized designs. [CDFG-360]
+        : Signal 'din' in module 'dbuf' in file 'dec.vhd' on line 143.
+Warning : Referenced signal not in sensitivity list.  This may cause simulation mismatches between the original and synthesized designs. [CDFG-360]
+        : Signal 'last_reg_ena' in module 'dbuf' in file 'dec.vhd' on line 143.
+Warning : Referenced signal not in sensitivity list.  This may cause simulation mismatches between the original and synthesized designs. [CDFG-360]
+        : Signal 'din' in module 'dbuf' in file 'dec.vhd' on line 143.
+Warning : Referenced signal not in sensitivity list.  This may cause simulation mismatches between the original and synthesized designs. [CDFG-360]
+        : Signal 'last_reg_ena' in module 'dbuf' in file 'dec.vhd' on line 143.
+Warning : Referenced signal not in sensitivity list.  This may cause simulation mismatches between the original and synthesized designs. [CDFG-360]
+        : Signal 'din' in module 'dbuf' in file 'dec.vhd' on line 143.
+Warning : Referenced signal not in sensitivity list.  This may cause simulation mismatches between the original and synthesized designs. [CDFG-360]
+        : Signal 'last_reg_ena' in module 'dbuf' in file 'dec.vhd' on line 143.
+Warning : Referenced signal not in sensitivity list.  This may cause simulation mismatches between the original and synthesized designs. [CDFG-360]
+        : Signal 'din' in module 'dbuf' in file 'dec.vhd' on line 143.
+Warning : Referenced signal not in sensitivity list.  This may cause simulation mismatches between the original and synthesized designs. [CDFG-360]
+        : Signal 'last_reg_ena' in module 'dbuf' in file 'dec.vhd' on line 143.
+Warning : Referenced signal not in sensitivity list.  This may cause simulation mismatches between the original and synthesized designs. [CDFG-360]
+        : Signal 'din' in module 'dbuf' in file 'dec.vhd' on line 143.
+Warning : Referenced signal not in sensitivity list.  This may cause simulation mismatches between the original and synthesized designs. [CDFG-360]
+        : Signal 'last_reg_ena' in module 'dbuf' in file 'dec.vhd' on line 143.
+Warning : Referenced signal not in sensitivity list.  This may cause simulation mismatches between the original and synthesized designs. [CDFG-360]
+        : Signal 'din' in module 'dbuf' in file 'dec.vhd' on line 143.
+Warning : Referenced signal not in sensitivity list.  This may cause simulation mismatches between the original and synthesized designs. [CDFG-360]
+        : Signal 'last_reg_ena' in module 'dbuf' in file 'dec.vhd' on line 143.
+Warning : Referenced signal not in sensitivity list.  This may cause simulation mismatches between the original and synthesized designs. [CDFG-360]
+        : Signal 'din' in module 'dbuf' in file 'dec.vhd' on line 143.
+Warning : Referenced signal not in sensitivity list.  This may cause simulation mismatches between the original and synthesized designs. [CDFG-360]
+        : Signal 'last_reg_ena' in module 'dbuf' in file 'dec.vhd' on line 143.
+Warning : Referenced signal not in sensitivity list.  This may cause simulation mismatches between the original and synthesized designs. [CDFG-360]
+        : Signal 'din' in module 'dbuf' in file 'dec.vhd' on line 143.
+Warning : Referenced signal not in sensitivity list.  This may cause simulation mismatches between the original and synthesized designs. [CDFG-360]
+        : Signal 'last_reg_ena' in module 'dbuf' in file 'dec.vhd' on line 143.
+Warning : Referenced signal not in sensitivity list.  This may cause simulation mismatches between the original and synthesized designs. [CDFG-360]
+        : Signal 'din' in module 'dbuf' in file 'dec.vhd' on line 143.
+Warning : Referenced signal not in sensitivity list.  This may cause simulation mismatches between the original and synthesized designs. [CDFG-360]
+        : Signal 'last_reg_ena' in module 'dbuf' in file 'dec.vhd' on line 143.
+Warning : Referenced signal not in sensitivity list.  This may cause simulation mismatches between the original and synthesized designs. [CDFG-360]
+        : Signal 'din' in module 'dbuf' in file 'dec.vhd' on line 143.
+Warning : Referenced signal not in sensitivity list.  This may cause simulation mismatches between the original and synthesized designs. [CDFG-360]
+        : Signal 'last_reg_ena' in module 'dbuf' in file 'dec.vhd' on line 143.
+Warning : Referenced signal not in sensitivity list.  This may cause simulation mismatches between the original and synthesized designs. [CDFG-360]
+        : Signal 'din' in module 'dbuf' in file 'dec.vhd' on line 143.
+Warning : Referenced signal not in sensitivity list.  This may cause simulation mismatches between the original and synthesized designs. [CDFG-360]
+        : Signal 'last_reg_ena' in module 'dbuf' in file 'dec.vhd' on line 143.
+Warning : Referenced signal not in sensitivity list.  This may cause simulation mismatches between the original and synthesized designs. [CDFG-360]
+        : Signal 'din' in module 'dbuf' in file 'dec.vhd' on line 143.
+Warning : Referenced signal not in sensitivity list.  This may cause simulation mismatches between the original and synthesized designs. [CDFG-360]
+        : Signal 'last_reg_ena' in module 'dbuf' in file 'dec.vhd' on line 143.
+Warning : Referenced signal not in sensitivity list.  This may cause simulation mismatches between the original and synthesized designs. [CDFG-360]
+        : Signal 'din' in module 'dbuf' in file 'dec.vhd' on line 143.
+Warning : Referenced signal not in sensitivity list.  This may cause simulation mismatches between the original and synthesized designs. [CDFG-360]
+        : Signal 'last_reg_ena' in module 'dbuf' in file 'dec.vhd' on line 143.
+Warning : Referenced signal not in sensitivity list.  This may cause simulation mismatches between the original and synthesized designs. [CDFG-360]
+        : Signal 'din' in module 'dbuf' in file 'dec.vhd' on line 143.
+Warning : Referenced signal not in sensitivity list.  This may cause simulation mismatches between the original and synthesized designs. [CDFG-360]
+        : Signal 'last_reg_ena' in module 'dbuf' in file 'dec.vhd' on line 143.
+Warning : Referenced signal not in sensitivity list.  This may cause simulation mismatches between the original and synthesized designs. [CDFG-360]
+        : Signal 'din' in module 'dbuf' in file 'dec.vhd' on line 143.
+Warning : Referenced signal not in sensitivity list.  This may cause simulation mismatches between the original and synthesized designs. [CDFG-360]
+        : Signal 'last_reg_ena' in module 'dbuf' in file 'dec.vhd' on line 143.
+Warning : Referenced signal not in sensitivity list.  This may cause simulation mismatches between the original and synthesized designs. [CDFG-360]
+        : Signal 'din' in module 'dbuf' in file 'dec.vhd' on line 143.
+Warning : Referenced signal not in sensitivity list.  This may cause simulation mismatches between the original and synthesized designs. [CDFG-360]
+        : Signal 'last_reg_ena' in module 'dbuf' in file 'dec.vhd' on line 143.
+Warning : Referenced signal not in sensitivity list.  This may cause simulation mismatches between the original and synthesized designs. [CDFG-360]
+        : Signal 'din' in module 'dbuf' in file 'dec.vhd' on line 143.
+Warning : Referenced signal not in sensitivity list.  This may cause simulation mismatches between the original and synthesized designs. [CDFG-360]
+        : Signal 'last_reg_ena' in module 'dbuf' in file 'dec.vhd' on line 143.
+Warning : Referenced signal not in sensitivity list.  This may cause simulation mismatches between the original and synthesized designs. [CDFG-360]
+        : Signal 'din' in module 'dbuf' in file 'dec.vhd' on line 143.
+Warning : Referenced signal not in sensitivity list.  This may cause simulation mismatches between the original and synthesized designs. [CDFG-360]
+        : Signal 'last_reg_ena' in module 'dbuf' in file 'dec.vhd' on line 143.
+Warning : Referenced signal not in sensitivity list.  This may cause simulation mismatches between the original and synthesized designs. [CDFG-360]
+        : Signal 'din' in module 'dbuf' in file 'dec.vhd' on line 143.
+Warning : Referenced signal not in sensitivity list.  This may cause simulation mismatches between the original and synthesized designs. [CDFG-360]
+        : Signal 'last_reg_ena' in module 'dbuf' in file 'dec.vhd' on line 143.
+Warning : Referenced signal not in sensitivity list.  This may cause simulation mismatches between the original and synthesized designs. [CDFG-360]
+        : Signal 'din' in module 'dbuf' in file 'dec.vhd' on line 143.
+Warning : Referenced signal not in sensitivity list.  This may cause simulation mismatches between the original and synthesized designs. [CDFG-360]
+        : Signal 'last_reg_ena' in module 'dbuf' in file 'dec.vhd' on line 143.
+Warning : Referenced signal not in sensitivity list.  This may cause simulation mismatches between the original and synthesized designs. [CDFG-360]
+        : Signal 'din' in module 'dbuf' in file 'dec.vhd' on line 143.
+Warning : Referenced signal not in sensitivity list.  This may cause simulation mismatches between the original and synthesized designs. [CDFG-360]
+        : Signal 'last_reg_ena' in module 'dbuf' in file 'dec.vhd' on line 143.
+Warning : Referenced signal not in sensitivity list.  This may cause simulation mismatches between the original and synthesized designs. [CDFG-360]
+        : Signal 'din' in module 'dbuf' in file 'dec.vhd' on line 143.
+Warning : Referenced signal not in sensitivity list.  This may cause simulation mismatches between the original and synthesized designs. [CDFG-360]
+        : Signal 'last_reg_ena' in module 'dbuf' in file 'dec.vhd' on line 143.
+Warning : Referenced signal not in sensitivity list.  This may cause simulation mismatches between the original and synthesized designs. [CDFG-360]
+        : Signal 'din' in module 'dbuf' in file 'dec.vhd' on line 143.
+Warning : Referenced signal not in sensitivity list.  This may cause simulation mismatches between the original and synthesized designs. [CDFG-360]
+        : Signal 'last_reg_ena' in module 'dbuf' in file 'dec.vhd' on line 143.
+Warning : Referenced signal not in sensitivity list.  This may cause simulation mismatches between the original and synthesized designs. [CDFG-360]
+        : Signal 'din' in module 'dbuf' in file 'dec.vhd' on line 143.
+Warning : Referenced signal not in sensitivity list.  This may cause simulation mismatches between the original and synthesized designs. [CDFG-360]
+        : Signal 'last_reg_ena' in module 'dbuf' in file 'dec.vhd' on line 143.
+Warning : Referenced signal not in sensitivity list.  This may cause simulation mismatches between the original and synthesized designs. [CDFG-360]
+        : Signal 'din' in module 'dbuf' in file 'dec.vhd' on line 143.
+Warning : Referenced signal not in sensitivity list.  This may cause simulation mismatches between the original and synthesized designs. [CDFG-360]
+        : Signal 'last_reg_ena' in module 'dbuf' in file 'dec.vhd' on line 143.
+Warning : Referenced signal not in sensitivity list.  This may cause simulation mismatches between the original and synthesized designs. [CDFG-360]
+        : Signal 'din' in module 'dbuf' in file 'dec.vhd' on line 143.
+Warning : Referenced signal not in sensitivity list.  This may cause simulation mismatches between the original and synthesized designs. [CDFG-360]
+        : Signal 'last_reg_ena' in module 'dbuf' in file 'dec.vhd' on line 143.
+Warning : Referenced signal not in sensitivity list.  This may cause simulation mismatches between the original and synthesized designs. [CDFG-360]
+        : Signal 'din' in module 'dbuf' in file 'dec.vhd' on line 143.
+Warning : Referenced signal not in sensitivity list.  This may cause simulation mismatches between the original and synthesized designs. [CDFG-360]
+        : Signal 'last_reg_ena' in module 'dbuf' in file 'dec.vhd' on line 143.
+Warning : Referenced signal not in sensitivity list.  This may cause simulation mismatches between the original and synthesized designs. [CDFG-360]
+        : Signal 'din' in module 'dbuf' in file 'dec.vhd' on line 143.
+Warning : Referenced signal not in sensitivity list.  This may cause simulation mismatches between the original and synthesized designs. [CDFG-360]
+        : Signal 'last_reg_ena' in module 'dbuf' in file 'dec.vhd' on line 143.
+Warning : Referenced signal not in sensitivity list.  This may cause simulation mismatches between the original and synthesized designs. [CDFG-360]
+        : Signal 'din' in module 'dbuf' in file 'dec.vhd' on line 143.
+Warning : Referenced signal not in sensitivity list.  This may cause simulation mismatches between the original and synthesized designs. [CDFG-360]
+        : Signal 'last_reg_ena' in module 'dbuf' in file 'dec.vhd' on line 143.
+Warning : Referenced signal not in sensitivity list.  This may cause simulation mismatches between the original and synthesized designs. [CDFG-360]
+        : Signal 'din' in module 'dbuf' in file 'dec.vhd' on line 143.
+Warning : Referenced signal not in sensitivity list.  This may cause simulation mismatches between the original and synthesized designs. [CDFG-360]
+        : Signal 'last_reg_ena' in module 'dbuf' in file 'dec.vhd' on line 143.
+Warning : Referenced signal not in sensitivity list.  This may cause simulation mismatches between the original and synthesized designs. [CDFG-360]
+        : Signal 'din' in module 'dbuf' in file 'dec.vhd' on line 143.
+Warning : Referenced signal not in sensitivity list.  This may cause simulation mismatches between the original and synthesized designs. [CDFG-360]
+        : Signal 'last_reg_ena' in module 'dbuf' in file 'dec.vhd' on line 143.
+Warning : Referenced signal not in sensitivity list.  This may cause simulation mismatches between the original and synthesized designs. [CDFG-360]
+        : Signal 'din' in module 'dbuf' in file 'dec.vhd' on line 143.
+Warning : Referenced signal not in sensitivity list.  This may cause simulation mismatches between the original and synthesized designs. [CDFG-360]
+        : Signal 'last_reg_ena' in module 'dbuf' in file 'dec.vhd' on line 143.
+Warning : Referenced signal not in sensitivity list.  This may cause simulation mismatches between the original and synthesized designs. [CDFG-360]
+        : Signal 'din' in module 'dbuf' in file 'dec.vhd' on line 143.
+Warning : Referenced signal not in sensitivity list.  This may cause simulation mismatches between the original and synthesized designs. [CDFG-360]
+        : Signal 'last_reg_ena' in module 'dbuf' in file 'dec.vhd' on line 143.
+Warning : Referenced signal not in sensitivity list.  This may cause simulation mismatches between the original and synthesized designs. [CDFG-360]
+        : Signal 'din' in module 'dbuf' in file 'dec.vhd' on line 143.
+Warning : Referenced signal not in sensitivity list.  This may cause simulation mismatches between the original and synthesized designs. [CDFG-360]
+        : Signal 'last_reg_ena' in module 'dbuf' in file 'dec.vhd' on line 143.
+Warning : Referenced signal not in sensitivity list.  This may cause simulation mismatches between the original and synthesized designs. [CDFG-360]
+        : Signal 'din' in module 'dbuf' in file 'dec.vhd' on line 143.
+Warning : Referenced signal not in sensitivity list.  This may cause simulation mismatches between the original and synthesized designs. [CDFG-360]
+        : Signal 'last_reg_ena' in module 'dbuf' in file 'dec.vhd' on line 143.
+Warning : Referenced signal not in sensitivity list.  This may cause simulation mismatches between the original and synthesized designs. [CDFG-360]
+        : Signal 'din' in module 'dbuf' in file 'dec.vhd' on line 143.
+Warning : Referenced signal not in sensitivity list.  This may cause simulation mismatches between the original and synthesized designs. [CDFG-360]
+        : Signal 'last_reg_ena' in module 'dbuf' in file 'dec.vhd' on line 143.
+Warning : Referenced signal not in sensitivity list.  This may cause simulation mismatches between the original and synthesized designs. [CDFG-360]
+        : Signal 'din' in module 'dbuf' in file 'dec.vhd' on line 143.
+Warning : Referenced signal not in sensitivity list.  This may cause simulation mismatches between the original and synthesized designs. [CDFG-360]
+        : Signal 'last_reg_ena' in module 'dbuf' in file 'dec.vhd' on line 143.
+Warning : Referenced signal not in sensitivity list.  This may cause simulation mismatches between the original and synthesized designs. [CDFG-360]
+        : Signal 'din' in module 'dbuf' in file 'dec.vhd' on line 143.
+Warning : Referenced signal not in sensitivity list.  This may cause simulation mismatches between the original and synthesized designs. [CDFG-360]
+        : Signal 'last_reg_ena' in module 'dbuf' in file 'dec.vhd' on line 143.
+Warning : Referenced signal not in sensitivity list.  This may cause simulation mismatches between the original and synthesized designs. [CDFG-360]
+        : Signal 'din' in module 'dbuf' in file 'dec.vhd' on line 143.
+Warning : Referenced signal not in sensitivity list.  This may cause simulation mismatches between the original and synthesized designs. [CDFG-360]
+        : Signal 'last_reg_ena' in module 'dbuf' in file 'dec.vhd' on line 143.
+Warning : Referenced signal not in sensitivity list.  This may cause simulation mismatches between the original and synthesized designs. [CDFG-360]
+        : Signal 'din' in module 'dbuf' in file 'dec.vhd' on line 143.
+Warning : Referenced signal not in sensitivity list.  This may cause simulation mismatches between the original and synthesized designs. [CDFG-360]
+        : Signal 'last_reg_ena' in module 'dbuf' in file 'dec.vhd' on line 143.
+Warning : Referenced signal not in sensitivity list.  This may cause simulation mismatches between the original and synthesized designs. [CDFG-360]
+        : Signal 'din' in module 'dbuf' in file 'dec.vhd' on line 143.
+Warning : Referenced signal not in sensitivity list.  This may cause simulation mismatches between the original and synthesized designs. [CDFG-360]
+        : Signal 'last_reg_ena' in module 'dbuf' in file 'dec.vhd' on line 143.
+Warning : Referenced signal not in sensitivity list.  This may cause simulation mismatches between the original and synthesized designs. [CDFG-360]
+        : Signal 'din' in module 'dbuf' in file 'dec.vhd' on line 143.
+Warning : Referenced signal not in sensitivity list.  This may cause simulation mismatches between the original and synthesized designs. [CDFG-360]
+        : Signal 'last_reg_ena' in module 'dbuf' in file 'dec.vhd' on line 143.
+Warning : Referenced signal not in sensitivity list.  This may cause simulation mismatches between the original and synthesized designs. [CDFG-360]
+        : Signal 'din' in module 'dbuf' in file 'dec.vhd' on line 143.
+Warning : Referenced signal not in sensitivity list.  This may cause simulation mismatches between the original and synthesized designs. [CDFG-360]
+        : Signal 'last_reg_ena' in module 'dbuf' in file 'dec.vhd' on line 143.
+Warning : Referenced signal not in sensitivity list.  This may cause simulation mismatches between the original and synthesized designs. [CDFG-360]
+        : Signal 'din' in module 'dbuf' in file 'dec.vhd' on line 143.
+Warning : Referenced signal not in sensitivity list.  This may cause simulation mismatches between the original and synthesized designs. [CDFG-360]
+        : Signal 'last_reg_ena' in module 'dbuf' in file 'dec.vhd' on line 143.
+Warning : Referenced signal not in sensitivity list.  This may cause simulation mismatches between the original and synthesized designs. [CDFG-360]
+        : Signal 'din' in module 'dbuf' in file 'dec.vhd' on line 143.
+Warning : Referenced signal not in sensitivity list.  This may cause simulation mismatches between the original and synthesized designs. [CDFG-360]
+        : Signal 'last_reg_ena' in module 'dbuf' in file 'dec.vhd' on line 143.
+Warning : Referenced signal not in sensitivity list.  This may cause simulation mismatches between the original and synthesized designs. [CDFG-360]
+        : Signal 'din' in module 'dbuf' in file 'dec.vhd' on line 143.
+Warning : Referenced signal not in sensitivity list.  This may cause simulation mismatches between the original and synthesized designs. [CDFG-360]
+        : Signal 'last_reg_ena' in module 'dbuf' in file 'dec.vhd' on line 143.
+Warning : Referenced signal not in sensitivity list.  This may cause simulation mismatches between the original and synthesized designs. [CDFG-360]
+        : Signal 'din' in module 'dbuf' in file 'dec.vhd' on line 143.
+Warning : Referenced signal not in sensitivity list.  This may cause simulation mismatches between the original and synthesized designs. [CDFG-360]
+        : Signal 'last_reg_ena' in module 'dbuf' in file 'dec.vhd' on line 143.
+Warning : Referenced signal not in sensitivity list.  This may cause simulation mismatches between the original and synthesized designs. [CDFG-360]
+        : Signal 'din' in module 'dbuf' in file 'dec.vhd' on line 143.
+Warning : Referenced signal not in sensitivity list.  This may cause simulation mismatches between the original and synthesized designs. [CDFG-360]
+        : Signal 'last_reg_ena' in module 'dbuf' in file 'dec.vhd' on line 143.
+Warning : Referenced signal not in sensitivity list.  This may cause simulation mismatches between the original and synthesized designs. [CDFG-360]
+        : Signal 'din' in module 'dbuf' in file 'dec.vhd' on line 143.
+Warning : Referenced signal not in sensitivity list.  This may cause simulation mismatches between the original and synthesized designs. [CDFG-360]
+        : Signal 'last_reg_ena' in module 'dbuf' in file 'dec.vhd' on line 143.
+Warning : Referenced signal not in sensitivity list.  This may cause simulation mismatches between the original and synthesized designs. [CDFG-360]
+        : Signal 'din' in module 'dbuf' in file 'dec.vhd' on line 143.
+Warning : Referenced signal not in sensitivity list.  This may cause simulation mismatches between the original and synthesized designs. [CDFG-360]
+        : Signal 'last_reg_ena' in module 'dbuf' in file 'dec.vhd' on line 143.
+Warning : Referenced signal not in sensitivity list.  This may cause simulation mismatches between the original and synthesized designs. [CDFG-360]
+        : Signal 'din' in module 'dbuf' in file 'dec.vhd' on line 143.
+Warning : Referenced signal not in sensitivity list.  This may cause simulation mismatches between the original and synthesized designs. [CDFG-360]
+        : Signal 'last_reg_ena' in module 'dbuf' in file 'dec.vhd' on line 143.
+Warning : Referenced signal not in sensitivity list.  This may cause simulation mismatches between the original and synthesized designs. [CDFG-360]
+        : Signal 'din' in module 'dbuf' in file 'dec.vhd' on line 143.
+Warning : Referenced signal not in sensitivity list.  This may cause simulation mismatches between the original and synthesized designs. [CDFG-360]
+        : Signal 'last_reg_ena' in module 'dbuf' in file 'dec.vhd' on line 143.
+Warning : Referenced signal not in sensitivity list.  This may cause simulation mismatches between the original and synthesized designs. [CDFG-360]
+        : Signal 'din' in module 'dbuf' in file 'dec.vhd' on line 143.
+Warning : Referenced signal not in sensitivity list.  This may cause simulation mismatches between the original and synthesized designs. [CDFG-360]
+        : Signal 'last_reg_ena' in module 'dbuf' in file 'dec.vhd' on line 143.
+Warning : Referenced signal not in sensitivity list.  This may cause simulation mismatches between the original and synthesized designs. [CDFG-360]
+        : Signal 'din' in module 'dbuf' in file 'dec.vhd' on line 143.
+Warning : Referenced signal not in sensitivity list.  This may cause simulation mismatches between the original and synthesized designs. [CDFG-360]
+        : Signal 'last_reg_ena' in module 'dbuf' in file 'dec.vhd' on line 143.
+Warning : Referenced signal not in sensitivity list.  This may cause simulation mismatches between the original and synthesized designs. [CDFG-360]
+        : Signal 'din' in module 'dbuf' in file 'dec.vhd' on line 143.
+Warning : Referenced signal not in sensitivity list.  This may cause simulation mismatches between the original and synthesized designs. [CDFG-360]
+        : Signal 'last_reg_ena' in module 'dbuf' in file 'dec.vhd' on line 143.
+Warning : Referenced signal not in sensitivity list.  This may cause simulation mismatches between the original and synthesized designs. [CDFG-360]
+        : Signal 'din' in module 'dbuf' in file 'dec.vhd' on line 143.
+Warning : Referenced signal not in sensitivity list.  This may cause simulation mismatches between the original and synthesized designs. [CDFG-360]
+        : Signal 'last_reg_ena' in module 'dbuf' in file 'dec.vhd' on line 143.
+Warning : Referenced signal not in sensitivity list.  This may cause simulation mismatches between the original and synthesized designs. [CDFG-360]
+        : Signal 'din' in module 'dbuf' in file 'dec.vhd' on line 143.
+Warning : Referenced signal not in sensitivity list.  This may cause simulation mismatches between the original and synthesized designs. [CDFG-360]
+        : Signal 'last_reg_ena' in module 'dbuf' in file 'dec.vhd' on line 143.
+Warning : Referenced signal not in sensitivity list.  This may cause simulation mismatches between the original and synthesized designs. [CDFG-360]
+        : Signal 'din' in module 'dbuf' in file 'dec.vhd' on line 143.
+Warning : Referenced signal not in sensitivity list.  This may cause simulation mismatches between the original and synthesized designs. [CDFG-360]
+        : Signal 'last_reg_ena' in module 'dbuf' in file 'dec.vhd' on line 143.
+Warning : Referenced signal not in sensitivity list.  This may cause simulation mismatches between the original and synthesized designs. [CDFG-360]
+        : Signal 'din' in module 'dbuf' in file 'dec.vhd' on line 143.
+Warning : Referenced signal not in sensitivity list.  This may cause simulation mismatches between the original and synthesized designs. [CDFG-360]
+        : Signal 'last_reg_ena' in module 'dbuf' in file 'dec.vhd' on line 143.
+Warning : Referenced signal not in sensitivity list.  This may cause simulation mismatches between the original and synthesized designs. [CDFG-360]
+        : Signal 'din' in module 'dbuf' in file 'dec.vhd' on line 143.
+Warning : Referenced signal not in sensitivity list.  This may cause simulation mismatches between the original and synthesized designs. [CDFG-360]
+        : Signal 'last_reg_ena' in module 'dbuf' in file 'dec.vhd' on line 143.
+Warning : Referenced signal not in sensitivity list.  This may cause simulation mismatches between the original and synthesized designs. [CDFG-360]
+        : Signal 'din' in module 'dbuf' in file 'dec.vhd' on line 143.
+Warning : Referenced signal not in sensitivity list.  This may cause simulation mismatches between the original and synthesized designs. [CDFG-360]
+        : Signal 'last_reg_ena' in module 'dbuf' in file 'dec.vhd' on line 143.
+Warning : Referenced signal not in sensitivity list.  This may cause simulation mismatches between the original and synthesized designs. [CDFG-360]
+        : Signal 'din' in module 'dbuf' in file 'dec.vhd' on line 143.
+Warning : Referenced signal not in sensitivity list.  This may cause simulation mismatches between the original and synthesized designs. [CDFG-360]
+        : Signal 'last_reg_ena' in module 'dbuf' in file 'dec.vhd' on line 143.
+Warning : Referenced signal not in sensitivity list.  This may cause simulation mismatches between the original and synthesized designs. [CDFG-360]
+        : Signal 'din' in module 'dbuf' in file 'dec.vhd' on line 143.
+Warning : Referenced signal not in sensitivity list.  This may cause simulation mismatches between the original and synthesized designs. [CDFG-360]
+        : Signal 'last_reg_ena' in module 'dbuf' in file 'dec.vhd' on line 143.
+Warning : Referenced signal not in sensitivity list.  This may cause simulation mismatches between the original and synthesized designs. [CDFG-360]
+        : Signal 'din' in module 'dbuf' in file 'dec.vhd' on line 143.
+Warning : Referenced signal not in sensitivity list.  This may cause simulation mismatches between the original and synthesized designs. [CDFG-360]
+        : Signal 'last_reg_ena' in module 'dbuf' in file 'dec.vhd' on line 143.
+Warning : Referenced signal not in sensitivity list.  This may cause simulation mismatches between the original and synthesized designs. [CDFG-360]
+        : Signal 'din' in module 'dbuf' in file 'dec.vhd' on line 143.
+Warning : Referenced signal not in sensitivity list.  This may cause simulation mismatches between the original and synthesized designs. [CDFG-360]
+        : Signal 'last_reg_ena' in module 'dbuf' in file 'dec.vhd' on line 143.
+Warning : Referenced signal not in sensitivity list.  This may cause simulation mismatches between the original and synthesized designs. [CDFG-360]
+        : Signal 'din' in module 'dbuf' in file 'dec.vhd' on line 143.
+Warning : Referenced signal not in sensitivity list.  This may cause simulation mismatches between the original and synthesized designs. [CDFG-360]
+        : Signal 'last_reg_ena' in module 'dbuf' in file 'dec.vhd' on line 143.
+Warning : Referenced signal not in sensitivity list.  This may cause simulation mismatches between the original and synthesized designs. [CDFG-360]
+        : Signal 'din' in module 'dbuf' in file 'dec.vhd' on line 143.
+Warning : Referenced signal not in sensitivity list.  This may cause simulation mismatches between the original and synthesized designs. [CDFG-360]
+        : Signal 'last_reg_ena' in module 'dbuf' in file 'dec.vhd' on line 143.
+Warning : Referenced signal not in sensitivity list.  This may cause simulation mismatches between the original and synthesized designs. [CDFG-360]
+        : Signal 'din' in module 'dbuf' in file 'dec.vhd' on line 143.
+Warning : Referenced signal not in sensitivity list.  This may cause simulation mismatches between the original and synthesized designs. [CDFG-360]
+        : Signal 'last_reg_ena' in module 'dbuf' in file 'dec.vhd' on line 143.
+Warning : Referenced signal not in sensitivity list.  This may cause simulation mismatches between the original and synthesized designs. [CDFG-360]
+        : Signal 'din' in module 'dbuf' in file 'dec.vhd' on line 143.
+Warning : Referenced signal not in sensitivity list.  This may cause simulation mismatches between the original and synthesized designs. [CDFG-360]
+        : Signal 'last_reg_ena' in module 'dbuf' in file 'dec.vhd' on line 143.
+Warning : Referenced signal not in sensitivity list.  This may cause simulation mismatches between the original and synthesized designs. [CDFG-360]
+        : Signal 'din' in module 'dbuf' in file 'dec.vhd' on line 143.
+Warning : Referenced signal not in sensitivity list.  This may cause simulation mismatches between the original and synthesized designs. [CDFG-360]
+        : Signal 'last_reg_ena' in module 'dbuf' in file 'dec.vhd' on line 143.
+Warning : Referenced signal not in sensitivity list.  This may cause simulation mismatches between the original and synthesized designs. [CDFG-360]
+        : Signal 'din' in module 'dbuf' in file 'dec.vhd' on line 143.
+Warning : Referenced signal not in sensitivity list.  This may cause simulation mismatches between the original and synthesized designs. [CDFG-360]
+        : Signal 'last_reg_ena' in module 'dbuf' in file 'dec.vhd' on line 143.
+Warning : Referenced signal not in sensitivity list.  This may cause simulation mismatches between the original and synthesized designs. [CDFG-360]
+        : Signal 'din' in module 'dbuf' in file 'dec.vhd' on line 143.
+Warning : Referenced signal not in sensitivity list.  This may cause simulation mismatches between the original and synthesized designs. [CDFG-360]
+        : Signal 'last_reg_ena' in module 'dbuf' in file 'dec.vhd' on line 143.
+Warning : Referenced signal not in sensitivity list.  This may cause simulation mismatches between the original and synthesized designs. [CDFG-360]
+        : Signal 'din' in module 'dbuf' in file 'dec.vhd' on line 143.
+Warning : Referenced signal not in sensitivity list.  This may cause simulation mismatches between the original and synthesized designs. [CDFG-360]
+        : Signal 'last_reg_ena' in module 'dbuf' in file 'dec.vhd' on line 143.
+Warning : Referenced signal not in sensitivity list.  This may cause simulation mismatches between the original and synthesized designs. [CDFG-360]
+        : Signal 'din' in module 'dbuf' in file 'dec.vhd' on line 143.
+Warning : Referenced signal not in sensitivity list.  This may cause simulation mismatches between the original and synthesized designs. [CDFG-360]
+        : Signal 'last_reg_ena' in module 'dbuf' in file 'dec.vhd' on line 143.
+Warning : Referenced signal not in sensitivity list.  This may cause simulation mismatches between the original and synthesized designs. [CDFG-360]
+        : Signal 'din' in module 'dbuf' in file 'dec.vhd' on line 143.
+Warning : Referenced signal not in sensitivity list.  This may cause simulation mismatches between the original and synthesized designs. [CDFG-360]
+        : Signal 'last_reg_ena' in module 'dbuf' in file 'dec.vhd' on line 143.
+Warning : Referenced signal not in sensitivity list.  This may cause simulation mismatches between the original and synthesized designs. [CDFG-360]
+        : Signal 'din' in module 'dbuf' in file 'dec.vhd' on line 143.
+Warning : Referenced signal not in sensitivity list.  This may cause simulation mismatches between the original and synthesized designs. [CDFG-360]
+        : Signal 'last_reg_ena' in module 'dbuf' in file 'dec.vhd' on line 143.
+Warning : Referenced signal not in sensitivity list.  This may cause simulation mismatches between the original and synthesized designs. [CDFG-360]
+        : Signal 'din' in module 'dbuf' in file 'dec.vhd' on line 143.
+Warning : Referenced signal not in sensitivity list.  This may cause simulation mismatches between the original and synthesized designs. [CDFG-360]
+        : Signal 'last_reg_ena' in module 'dbuf' in file 'dec.vhd' on line 143.
+Warning : Referenced signal not in sensitivity list.  This may cause simulation mismatches between the original and synthesized designs. [CDFG-360]
+        : Signal 'din' in module 'dbuf' in file 'dec.vhd' on line 143.
+Warning : Referenced signal not in sensitivity list.  This may cause simulation mismatches between the original and synthesized designs. [CDFG-360]
+        : Signal 'last_reg_ena' in module 'dbuf' in file 'dec.vhd' on line 143.
+Warning : Referenced signal not in sensitivity list.  This may cause simulation mismatches between the original and synthesized designs. [CDFG-360]
+        : Signal 'din' in module 'dbuf' in file 'dec.vhd' on line 143.
+Warning : Referenced signal not in sensitivity list.  This may cause simulation mismatches between the original and synthesized designs. [CDFG-360]
+        : Signal 'last_reg_ena' in module 'dbuf' in file 'dec.vhd' on line 143.
+Warning : Referenced signal not in sensitivity list.  This may cause simulation mismatches between the original and synthesized designs. [CDFG-360]
+        : Signal 'din' in module 'dbuf' in file 'dec.vhd' on line 143.
+Warning : Referenced signal not in sensitivity list.  This may cause simulation mismatches between the original and synthesized designs. [CDFG-360]
+        : Signal 'last_reg_ena' in module 'dbuf' in file 'dec.vhd' on line 143.
+Warning : Referenced signal not in sensitivity list.  This may cause simulation mismatches between the original and synthesized designs. [CDFG-360]
+        : Signal 'din' in module 'dbuf' in file 'dec.vhd' on line 143.
+Warning : Referenced signal not in sensitivity list.  This may cause simulation mismatches between the original and synthesized designs. [CDFG-360]
+        : Signal 'last_reg_ena' in module 'dbuf' in file 'dec.vhd' on line 143.
+Warning : Referenced signal not in sensitivity list.  This may cause simulation mismatches between the original and synthesized designs. [CDFG-360]
+        : Signal 'din' in module 'dbuf' in file 'dec.vhd' on line 143.
+Warning : Referenced signal not in sensitivity list.  This may cause simulation mismatches between the original and synthesized designs. [CDFG-360]
+        : Signal 'last_reg_ena' in module 'dbuf' in file 'dec.vhd' on line 143.
+Warning : Referenced signal not in sensitivity list.  This may cause simulation mismatches between the original and synthesized designs. [CDFG-360]
+        : Signal 'din' in module 'dbuf' in file 'dec.vhd' on line 143.
+Warning : Referenced signal not in sensitivity list.  This may cause simulation mismatches between the original and synthesized designs. [CDFG-360]
+        : Signal 'last_reg_ena' in module 'dbuf' in file 'dec.vhd' on line 143.
+Warning : Referenced signal not in sensitivity list.  This may cause simulation mismatches between the original and synthesized designs. [CDFG-360]
+        : Signal 'din' in module 'dbuf' in file 'dec.vhd' on line 143.
+Warning : Referenced signal not in sensitivity list.  This may cause simulation mismatches between the original and synthesized designs. [CDFG-360]
+        : Signal 'last_reg_ena' in module 'dbuf' in file 'dec.vhd' on line 143.
+Warning : Referenced signal not in sensitivity list.  This may cause simulation mismatches between the original and synthesized designs. [CDFG-360]
+        : Signal 'din' in module 'dbuf' in file 'dec.vhd' on line 143.
+Warning : Referenced signal not in sensitivity list.  This may cause simulation mismatches between the original and synthesized designs. [CDFG-360]
+        : Signal 'last_reg_ena' in module 'dbuf' in file 'dec.vhd' on line 143.
+Warning : Referenced signal not in sensitivity list.  This may cause simulation mismatches between the original and synthesized designs. [CDFG-360]
+        : Signal 'din' in module 'dbuf' in file 'dec.vhd' on line 143.
+Warning : Referenced signal not in sensitivity list.  This may cause simulation mismatches between the original and synthesized designs. [CDFG-360]
+        : Signal 'last_reg_ena' in module 'dbuf' in file 'dec.vhd' on line 143.
+Warning : Referenced signal not in sensitivity list.  This may cause simulation mismatches between the original and synthesized designs. [CDFG-360]
+        : Signal 'din' in module 'dbuf' in file 'dec.vhd' on line 143.
+Warning : Referenced signal not in sensitivity list.  This may cause simulation mismatches between the original and synthesized designs. [CDFG-360]
+        : Signal 'last_reg_ena' in module 'dbuf' in file 'dec.vhd' on line 143.
+Warning : Referenced signal not in sensitivity list.  This may cause simulation mismatches between the original and synthesized designs. [CDFG-360]
+        : Signal 'din' in module 'dbuf' in file 'dec.vhd' on line 143.
+Warning : Referenced signal not in sensitivity list.  This may cause simulation mismatches between the original and synthesized designs. [CDFG-360]
+        : Signal 'last_reg_ena' in module 'dbuf' in file 'dec.vhd' on line 143.
+Warning : Referenced signal not in sensitivity list.  This may cause simulation mismatches between the original and synthesized designs. [CDFG-360]
+        : Signal 'din' in module 'dbuf' in file 'dec.vhd' on line 143.
+Warning : Referenced signal not in sensitivity list.  This may cause simulation mismatches between the original and synthesized designs. [CDFG-360]
+        : Signal 'last_reg_ena' in module 'dbuf' in file 'dec.vhd' on line 143.
+Warning : Referenced signal not in sensitivity list.  This may cause simulation mismatches between the original and synthesized designs. [CDFG-360]
+        : Signal 'din' in module 'dbuf' in file 'dec.vhd' on line 143.
+Warning : Referenced signal not in sensitivity list.  This may cause simulation mismatches between the original and synthesized designs. [CDFG-360]
+        : Signal 'last_reg_ena' in module 'dbuf' in file 'dec.vhd' on line 143.
+Warning : Referenced signal not in sensitivity list.  This may cause simulation mismatches between the original and synthesized designs. [CDFG-360]
+        : Signal 'din' in module 'dbuf' in file 'dec.vhd' on line 143.
+Warning : Referenced signal not in sensitivity list.  This may cause simulation mismatches between the original and synthesized designs. [CDFG-360]
+        : Signal 'last_reg_ena' in module 'dbuf' in file 'dec.vhd' on line 143.
+Warning : Referenced signal not in sensitivity list.  This may cause simulation mismatches between the original and synthesized designs. [CDFG-360]
+        : Signal 'din' in module 'dbuf' in file 'dec.vhd' on line 143.
+Warning : Referenced signal not in sensitivity list.  This may cause simulation mismatches between the original and synthesized designs. [CDFG-360]
+        : Signal 'last_reg_ena' in module 'dbuf' in file 'dec.vhd' on line 143.
+Warning : Referenced signal not in sensitivity list.  This may cause simulation mismatches between the original and synthesized designs. [CDFG-360]
+        : Signal 'din' in module 'dbuf' in file 'dec.vhd' on line 143.
+Warning : Referenced signal not in sensitivity list.  This may cause simulation mismatches between the original and synthesized designs. [CDFG-360]
+        : Signal 'last_reg_ena' in module 'dbuf' in file 'dec.vhd' on line 143.
+Warning : Referenced signal not in sensitivity list.  This may cause simulation mismatches between the original and synthesized designs. [CDFG-360]
+        : Signal 'din' in module 'dbuf' in file 'dec.vhd' on line 143.
+Warning : Referenced signal not in sensitivity list.  This may cause simulation mismatches between the original and synthesized designs. [CDFG-360]
+        : Signal 'last_reg_ena' in module 'dbuf' in file 'dec.vhd' on line 143.
+Warning : Referenced signal not in sensitivity list.  This may cause simulation mismatches between the original and synthesized designs. [CDFG-360]
+        : Signal 'din' in module 'dbuf' in file 'dec.vhd' on line 143.
+Warning : Referenced signal not in sensitivity list.  This may cause simulation mismatches between the original and synthesized designs. [CDFG-360]
+        : Signal 'last_reg_ena' in module 'dbuf' in file 'dec.vhd' on line 143.
+Warning : Referenced signal not in sensitivity list.  This may cause simulation mismatches between the original and synthesized designs. [CDFG-360]
+        : Signal 'din' in module 'dbuf' in file 'dec.vhd' on line 143.
+Warning : Referenced signal not in sensitivity list.  This may cause simulation mismatches between the original and synthesized designs. [CDFG-360]
+        : Signal 'last_reg_ena' in module 'dbuf' in file 'dec.vhd' on line 143.
+Warning : Referenced signal not in sensitivity list.  This may cause simulation mismatches between the original and synthesized designs. [CDFG-360]
+        : Signal 'din' in module 'dbuf' in file 'dec.vhd' on line 143.
+Warning : Referenced signal not in sensitivity list.  This may cause simulation mismatches between the original and synthesized designs. [CDFG-360]
+        : Signal 'last_reg_ena' in module 'dbuf' in file 'dec.vhd' on line 143.
+Warning : Referenced signal not in sensitivity list.  This may cause simulation mismatches between the original and synthesized designs. [CDFG-360]
+        : Signal 'din' in module 'dbuf' in file 'dec.vhd' on line 143.
+Warning : Referenced signal not in sensitivity list.  This may cause simulation mismatches between the original and synthesized designs. [CDFG-360]
+        : Signal 'last_reg_ena' in module 'dbuf' in file 'dec.vhd' on line 143.
+Warning : Referenced signal not in sensitivity list.  This may cause simulation mismatches between the original and synthesized designs. [CDFG-360]
+        : Signal 'din' in module 'dbuf' in file 'dec.vhd' on line 143.
+Warning : Referenced signal not in sensitivity list.  This may cause simulation mismatches between the original and synthesized designs. [CDFG-360]
+        : Signal 'last_reg_ena' in module 'dbuf' in file 'dec.vhd' on line 143.
+Warning : Referenced signal not in sensitivity list.  This may cause simulation mismatches between the original and synthesized designs. [CDFG-360]
+        : Signal 'din' in module 'dbuf' in file 'dec.vhd' on line 143.
+Warning : Referenced signal not in sensitivity list.  This may cause simulation mismatches between the original and synthesized designs. [CDFG-360]
+        : Signal 'last_reg_ena' in module 'dbuf' in file 'dec.vhd' on line 143.
+Warning : Referenced signal not in sensitivity list.  This may cause simulation mismatches between the original and synthesized designs. [CDFG-360]
+        : Signal 'din' in module 'dbuf' in file 'dec.vhd' on line 143.
+Warning : Referenced signal not in sensitivity list.  This may cause simulation mismatches between the original and synthesized designs. [CDFG-360]
+        : Signal 'last_reg_ena' in module 'dbuf' in file 'dec.vhd' on line 143.
+Warning : Referenced signal not in sensitivity list.  This may cause simulation mismatches between the original and synthesized designs. [CDFG-360]
+        : Signal 'din' in module 'dbuf' in file 'dec.vhd' on line 143.
+Warning : Referenced signal not in sensitivity list.  This may cause simulation mismatches between the original and synthesized designs. [CDFG-360]
+        : Signal 'last_reg_ena' in module 'dbuf' in file 'dec.vhd' on line 143.
+Warning : Referenced signal not in sensitivity list.  This may cause simulation mismatches between the original and synthesized designs. [CDFG-360]
+        : Signal 'din' in module 'dbuf' in file 'dec.vhd' on line 143.
+Warning : Referenced signal not in sensitivity list.  This may cause simulation mismatches between the original and synthesized designs. [CDFG-360]
+        : Signal 'last_reg_ena' in module 'dbuf' in file 'dec.vhd' on line 143.
+Warning : Referenced signal not in sensitivity list.  This may cause simulation mismatches between the original and synthesized designs. [CDFG-360]
+        : Signal 'din' in module 'dbuf' in file 'dec.vhd' on line 143.
+Warning : Detected a logic abstract. [CDFG-331]
+        : The name of the logic abstract is 'bufcount' in file 'dec.vhd' on line 133.
+        : A logic abstract is an unresolved reference with defined port names and directions.  It is inferred from an empty Verilog or VHDL design.  Use 'set_attribute hdl_infer_unresolved_from_logic_abstract false /' to treat an empty module as a defined module.
 Warning : Undriven module output port. [ELABUTL-123]
         : Undriven bits of output port 'vdin' in module 'enc_dec_wrapper' in file 'enc_dec_wrapper.vhd' on line 7, column 2.
         : Use the 'hdl_undriven_output_port_value' attribute to control treatment of undriven output port during elaboration.
   Done elaborating 'enc_dec_wrapper'.
 Info    : Deleting instances not driving any primary outputs. [GLO-32]
-        : Deleting 4 hierarchical instances.
+        : Deleting 3 hierarchical instances.
         : Optimizations like for example constant propagation or redundancy removal could change the connections so an instance does not drive any primary outputs anymore. To see the list of deleted instances, set the 'information_level' attribute to 2 or above.
-        Trying carrysave optimization (configuration 1 of 1) on module 'dbuf'...
-Info    : Done carrysave optimization. [RTLOPT-20]
-        : There is 1 CSA group in module 'dbuf'... Accepted.
 Mapping enc_dec_wrapper to gates.
  
 Global mapping target info
 ==========================
-Cost Group 'default' target slack:  -172 ps
-Target path end-point (Pin: decoder/b1/dout_buf_reg/d)
+Cost Group 'default' target slack:   -77 ps
+Target path end-point (Pin: decoder/s1/syn_reg[0]/d)
 
  
 Global mapping status
@@ -6839,19 +7352,17 @@ Global mapping status
                  Total    Neg   
 Operation         Area   Slack  Worst Path
 -------------------------------------------------------------------------------
- global_map       4120    -334  decoder/b1/cnt_reg[0]/CP -->
-                                   decoder/b1/dout_buf_reg/D
+ global_map       3264    -103  decoder/count/cout_reg[6]/CP -->
+                                   decoder/s1/syn_reg[0]/D
  
 Global incremental target info
 ==============================
-Cost Group 'default' target slack:  -335 ps
-Target path end-point (Pin: decoder/b1/dout_buf_reg/D (HS65_LS_DFPQX9/D))
+Cost Group 'default' target slack:  -104 ps
+Target path end-point (Pin: decoder/s1/syn_reg[0]/D (HS65_LS_DFPQX9/D))
 
 Info    : Changing wireload model of a design/subdesign. [TIM-92]
-        : Changing wireload model of design 'enc_dec_wrapper' from area_4Kto5K to area_3Kto4K.
+        : Changing wireload model of subdesign 'dec' from area_3Kto4K to area_2Kto3K.
         : The change of wireload model will likely change the design's timing slightly.
-Info    : Changing wireload model of a design/subdesign. [TIM-92]
-        : Changing wireload model of subdesign 'dbuf' from area_3Kto4K to area_2Kto3K.
  
 Global incremental optimization status
 ======================================
@@ -6859,8 +7370,11 @@ Global incremental optimization status
                  Total    Neg   
 Operation         Area   Slack  Worst Path
 -------------------------------------------------------------------------------
- global_inc       3463    -344  decoder/b1/cnt_reg[0]/CP -->
-                                   decoder/b1/dout_buf_reg/D
+ global_inc       3236    -105  decoder/count/cout_reg[4]/CP -->
+                                   decoder/count/vdout11_reg/D
+Warning : Detected a logic abstract in the design. [VRO-14]
+        : The name of the logic abstract module is 'bufcount'.
+        : A logic abstract is an unresolved reference with defined port names and directions. By default, such modules are written in the netlist. Use 'set_attr write_vlog_empty_module_for_logic_abstract false /' to prevent writing empty modules in the netlist for a logic abstract.
 Info    : 'Conformal LEC9.1-s400' or later builds is recommended for verification. [WDO-600]
         : The use of 'Conformal LEC9.1-s400' or later builds is recommended to get better verification results.
 Generating a dofile for design 'enc_dec_wrapper' in file 'fv/enc_dec_wrapper/rtl_to_g1.do' ...
@@ -6871,17 +7385,8 @@ Incremental optimization status
                  Total    Neg       Max       Max    Max   
 Operation         Area   Slack     Trans      Cap   Fanout 
 -------------------------------------------------------------------------------
- init_iopt        3463    -344         0        0        0
-            Path: decoder/b1/cnt_reg[0]/CP --> decoder/b1/dout_buf_reg/D
- 
-Incremental optimization status (pre-loop)
-==========================================
-                         Worst  - - - - DRC Totals - - - - 
-                 Total    Neg       Max       Max    Max   
-Operation         Area   Slack     Trans      Cap   Fanout 
--------------------------------------------------------------------------------
- simp_cc_in       3462    -343         0        0        0
-            Path: decoder/b1/cnt_reg[0]/CP --> decoder/b1/dout_buf_reg/D
+ init_iopt        3236    -105         0        0        2
+            Path: decoder/count/cout_reg[4]/CP --> decoder/count/vdout11_reg/D
  
 Incremental optimization status
 ===============================
@@ -6889,60 +7394,61 @@ Incremental optimization status
                  Total    Neg       Max       Max    Max   
 Operation         Area   Slack     Trans      Cap   Fanout 
 -------------------------------------------------------------------------------
- init_delay       3462    -343         0        0        0
-            Path: decoder/b1/cnt_reg[0]/CP --> decoder/b1/dout_buf_reg/D
- incr_delay       3697    -278         0        0       10
-            Path: decoder/b1/cnt_reg[0]/CP --> decoder/b1/dout_buf_reg/D
- incr_delay       3724    -271         0        0       10
-            Path: decoder/b1/cnt_reg[0]/CP --> decoder/b1/dout_buf_reg/D
- incr_delay       3807    -259         0        0        1
-            Path: decoder/b1/cnt_reg[2]/CP --> decoder/b1/dout_buf_reg/D
- incr_delay       3834    -256         0        0        1
-            Path: decoder/b1/cnt_reg[0]/CP --> decoder/b1/dout_buf_reg/D
- incr_delay       3896    -250         0        0        0
-            Path: decoder/b1/cnt_reg[1]/CP --> decoder/b1/dout_buf_reg/D
- incr_delay       3928    -247         0        0        0
-            Path: decoder/b1/cnt_reg[0]/CP --> decoder/b1/dout_buf_reg/D
- incr_delay       3939    -247         0        0        0
-            Path: decoder/b1/cnt_reg[1]/CP --> decoder/b1/dout_buf_reg/D
- incr_delay       3953    -245         0        0        0
-            Path: decoder/b1/cnt_reg[1]/CP --> decoder/b1/dout_buf_reg/D
- incr_delay       3957    -245         0        0        0
-            Path: decoder/b1/cnt_reg[0]/CP --> decoder/b1/dout_buf_reg/D
- incr_delay       3979    -243         0        0        0
-            Path: decoder/b1/cnt_reg[2]/CP --> decoder/b1/dout_buf_reg/D
- incr_delay       3985    -243         0        0        0
-            Path: decoder/b1/cnt_reg[1]/CP --> decoder/b1/dout_buf_reg/D
- incr_delay       3989    -243         0        0        0
-            Path: decoder/b1/cnt_reg[0]/CP --> decoder/b1/dout_buf_reg/D
- init_drc         3989    -243         0        0        0
-            Path: decoder/b1/cnt_reg[0]/CP --> decoder/b1/dout_buf_reg/D
- init_area        3989    -243         0        0        0
-            Path: decoder/b1/cnt_reg[0]/CP --> decoder/b1/dout_buf_reg/D
- rem_buf          3957    -243         0        0        0
-            Path: decoder/b1/cnt_reg[0]/CP --> decoder/b1/dout_buf_reg/D
- rem_inv          3936    -243         0        0        0
-            Path: decoder/b1/cnt_reg[0]/CP --> decoder/b1/dout_buf_reg/D
- merge_bi         3917    -243         0        0        0
-            Path: decoder/b1/cnt_reg[5]/CP --> decoder/b1/dout_buf_reg/D
- rem_inv_qb       3915    -243         0        0        0
-            Path: decoder/b1/cnt_reg[2]/CP --> decoder/b1/dout_buf_reg/D
- io_phase         3914    -243         0        0        0
-            Path: decoder/b1/cnt_reg[2]/CP --> decoder/b1/dout_buf_reg/D
- gate_comp        3909    -243         0        0        0
-            Path: decoder/b1/cnt_reg[2]/CP --> decoder/b1/dout_buf_reg/D
- glob_area        3806    -243         0        0        0
-            Path: decoder/b1/cnt_reg[2]/CP --> decoder/b1/dout_buf_reg/D
- area_down        3750    -243         0        0        0
-            Path: decoder/b1/cnt_reg[0]/CP --> decoder/b1/dout_buf_reg/D
- rem_buf          3742    -243         0        0        0
-            Path: decoder/b1/cnt_reg[0]/CP --> decoder/b1/dout_buf_reg/D
- rem_inv          3725    -243         0        0        0
-            Path: decoder/b1/cnt_reg[0]/CP --> decoder/b1/dout_buf_reg/D
- merge_bi         3712    -242         0        0        0
-            Path: decoder/b1/cnt_reg[1]/CP --> decoder/b1/dout_buf_reg/D
+ init_delay       3236    -105         0        0        2
+            Path: decoder/count/cout_reg[4]/CP --> decoder/count/vdout11_reg/D
+ incr_delay       3251     -86         0        0        2
+            Path: decoder/count/cout_reg[3]/CP --> decoder/h1/ch_reg[6]/D
+ incr_delay       3256     -86         0        0        2
+            Path: decoder/count/cout_reg[1]/CP --> decoder/s1/syn_reg[0]/D
+ incr_delay       3267     -85         0        0        2
+            Path: decoder/count/cout_reg[6]/CP --> decoder/s1/syn_reg[0]/D
+ init_drc         3267     -85         0        0        2
+            Path: decoder/count/cout_reg[6]/CP --> decoder/s1/syn_reg[0]/D
+ incr_drc         3266     -84         0        0        2
+            Path: decoder/count/cout_reg[6]/CP --> decoder/s1/syn_reg[0]/D
+ init_area        3266     -84         0        0        2
+            Path: decoder/count/cout_reg[6]/CP --> decoder/s1/syn_reg[0]/D
+ rem_buf          3261     -84         0        0        2
+            Path: decoder/count/cout_reg[6]/CP --> decoder/s1/syn_reg[0]/D
+ rem_inv          3258     -84         0        0        2
+            Path: decoder/count/cout_reg[6]/CP --> decoder/s1/syn_reg[0]/D
+ rem_inv_qb       3252     -83         0        0        2
+            Path: decoder/count/cout_reg[1]/CP --> decoder/s1/syn_reg[0]/D
+ gate_comp        3250     -83         0        0        2
+            Path: decoder/count/cout_reg[2]/CP --> decoder/s1/syn_reg[0]/D
+ glob_area        3244     -83         0        0        2
+            Path: decoder/count/cout_reg[2]/CP --> decoder/s1/syn_reg[0]/D
+ area_down        3240     -83         0        0        2
+            Path: decoder/count/cout_reg[2]/CP --> decoder/s1/syn_reg[0]/D
+ 
+Incremental optimization status
+===============================
+                         Worst  - - - - DRC Totals - - - - 
+                 Total    Neg       Max       Max    Max   
+Operation         Area   Slack     Trans      Cap   Fanout 
+-------------------------------------------------------------------------------
+ init_delay       3240     -83         0        0        2
+            Path: decoder/count/cout_reg[2]/CP --> decoder/s1/syn_reg[0]/D
+ incr_delay       3257     -80         0        0        2
+            Path: decoder/count/cout_reg[3]/CP --> decoder/s1/syn_reg[0]/D
+ incr_delay       3267     -79         0        0        2
+            Path: decoder/h1/ch_reg[0]/CP --> decoder/b1/dout_reg/D
+ incr_delay       3271     -77         0        0        2
+            Path: decoder/count/cout_reg[1]/CP --> decoder/s1/syn_reg[0]/D
+ init_drc         3271     -77         0        0        2
+            Path: decoder/count/cout_reg[1]/CP --> decoder/s1/syn_reg[0]/D
+ incr_drc         3271     -77         0        0        2
+            Path: decoder/count/cout_reg[1]/CP --> decoder/s1/syn_reg[0]/D
+ init_area        3271     -77         0        0        2
+            Path: decoder/count/cout_reg[1]/CP --> decoder/s1/syn_reg[0]/D
+ rem_buf          3268     -77         0        0        2
+            Path: decoder/count/cout_reg[1]/CP --> decoder/s1/syn_reg[0]/D
+ glob_area        3264     -77         0        0        2
+            Path: decoder/count/cout_reg[1]/CP --> decoder/s1/syn_reg[0]/D
+ area_down        3258     -77         0        0        2
+            Path: decoder/count/cout_reg[1]/CP --> decoder/s1/syn_reg[0]/D
 Info    : Changing wireload model of a design/subdesign. [TIM-92]
-        : Changing wireload model of subdesign 'dbuf' from area_2Kto3K to area_3Kto4K.
+        : Changing wireload model of subdesign 'dec' from area_2Kto3K to area_3Kto4K.
  
 Incremental optimization status
 ===============================
@@ -6950,28 +7456,10 @@ Incremental optimization status
                  Total    Neg       Max       Max    Max   
 Operation         Area   Slack     Trans      Cap   Fanout 
 -------------------------------------------------------------------------------
- init_delay       3712    -242         0        0        0
-            Path: decoder/b1/cnt_reg[2]/CP --> decoder/b1/dout_buf_reg/D
- incr_delay       3726    -241         0        0        0
-            Path: decoder/b1/cnt_reg[1]/CP --> decoder/b1/dout_buf_reg/D
- incr_delay       3745    -239         0        0        0
-            Path: decoder/b1/cnt_reg[1]/CP --> decoder/b1/dout_buf_reg/D
- incr_delay       3752    -239         0        0        0
-            Path: decoder/b1/cnt_reg[0]/CP --> decoder/b1/dout_buf_reg/D
- incr_delay       3758    -238         0        0        0
-            Path: decoder/b1/cnt_reg[1]/CP --> decoder/b1/dout_buf_reg/D
- incr_delay       3762    -237         0        0        0
-            Path: decoder/b1/cnt_reg[1]/CP --> decoder/b1/dout_buf_reg/D
- init_drc         3762    -237         0        0        0
-            Path: decoder/b1/cnt_reg[1]/CP --> decoder/b1/dout_buf_reg/D
- init_area        3762    -237         0        0        0
-            Path: decoder/b1/cnt_reg[1]/CP --> decoder/b1/dout_buf_reg/D
- rem_buf          3759    -237         0        0        0
-            Path: decoder/b1/cnt_reg[1]/CP --> decoder/b1/dout_buf_reg/D
- glob_area        3726    -237         0        0        0
-            Path: decoder/b1/cnt_reg[0]/CP --> decoder/b1/dout_buf_reg/D
- area_down        3716    -237         0        0        0
-            Path: decoder/b1/cnt_reg[0]/CP --> decoder/b1/dout_buf_reg/D
+ init_delay       3258     -77         0        0        2
+            Path: decoder/count/cout_reg[1]/CP --> decoder/s1/syn_reg[0]/D
+ init_area        3258     -77         0        0        2
+            Path: decoder/count/cout_reg[1]/CP --> decoder/s1/syn_reg[0]/D
 
   Done mapping enc_dec_wrapper
   Synthesis succeeded.

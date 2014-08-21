@@ -1,17 +1,25 @@
 clear all
-
+close all
 output = cell(2,10);
 
 
 for m_cnt = 1:10
     for t_cnt = 1:3
         try
-        output{t_cnt,m_cnt} = addtestrun(t_cnt,m_cnt,'3.0');
+        output{t_cnt,m_cnt,1} = addtestrun(t_cnt,m_cnt,'1.0');
+        output{t_cnt,m_cnt,2} = addtestrun(t_cnt,m_cnt,'1.500');
+        output{t_cnt,m_cnt,3} = addtestrun(t_cnt,m_cnt,'2.0');
+        output{t_cnt,m_cnt,4} = addtestrun(t_cnt,m_cnt,'2.500');
+        output{t_cnt,m_cnt,5} = addtestrun(t_cnt,m_cnt,'3.0');
+        output{t_cnt,m_cnt,6} = addtestrun(t_cnt,m_cnt,'3.500');
 %        plot(t, 'Color', colorOrder(mod(length(get(gca, 'Children')), size(colorOrder, 1))+1, :))
         
         end
     end
 end
+%output2 = output;
+load output_shift_buffer.mat
+
 
 b1_1 = [output{1,6}{4,5} output{1,7}{4,5} output{1,10}{4,5}];
 count_1 = [output{1,6}{5,5} output{1,7}{5,5} output{1,10}{5,5}];
@@ -35,7 +43,8 @@ i = 1;
 
 for m_cnt = 6:10
 	for t_cnt = 1:2
-		try
+		
+        try
 			for j = 1:length(output{t_cnt,m_cnt})
 				is_dec = strfind('decoder',output{t_cnt,m_cnt}{j,1});
 				is_enc = strfind('encoder',output{t_cnt,m_cnt}{j,1});
@@ -55,8 +64,29 @@ for m_cnt = 6:10
 	end
 end
 
+i = 1;
+for m_cnt = 6:10
+	for t_cnt = 1:2
+		
+        try
+			for j = 1:length(output2{t_cnt,m_cnt})
+				is_dec = strfind('decoder',output2{t_cnt,m_cnt}{j,1});
+				is_enc = strfind('encoder',output2{t_cnt,m_cnt}{j,1});
 
-
+				if is_dec == 1 
+					dec_row = j;
+				end
+	
+				if is_enc == 1
+					enc_row = j;
+				end
+			end
+			power2(i) = (output2{t_cnt,m_cnt}{dec_row,end}+output2{t_cnt,m_cnt}{enc_row,end});
+			m(i) = m_cnt;
+			i = i+1;
+		end
+	end
+end
 
 
 if mod(length(power),2)==1 
@@ -64,6 +94,14 @@ if mod(length(power),2)==1
     m = [m(1:2:end); m(2:2:end) 0];
 else
     power = [power(1:2:end); power(2:2:end)];
+    m = [m(1:2:end); m(2:2:end)];
+end
+
+if mod(length(power2),2)==1 
+    power2 = [power2(1:2:end); power2(2:2:end) 0];
+    m = [m(1:2:end); m(2:2:end) 0];
+else
+    power2 = [power2(1:2:end); power2(2:2:end)];
     m = [m(1:2:end); m(2:2:end)];
 end
 
@@ -79,5 +117,109 @@ freq = 1e9;
 bits_per_sec = k./n*freq;
 
 joule_sec = power;
+joule_sec2 = power2;
 figure
-plot(m',joule_sec'./bits_per_sec')
+plot(m',joule_sec',m',joule_sec2')
+title('Comparision of power consumption of different memory implementations');
+xlabel('m');
+ylabel('Power [W]');
+
+legend('Location','NorthWest','Circular buffer T=1','Circular buffer T=2','Shift buffer T=1','Shift buffer T=2');
+
+figure
+plot(m',joule_sec'./bits_per_sec');
+title('Energy needed to transmit 1 bit of information');
+xlabel('m');
+ylabel('Joule/bit [J/bit]');
+
+legend('Location','NorthWest','T=1','T=2');
+
+%%
+clear power
+i = 1;
+for run = 1:4
+    for m_cnt = 6:6
+        for t_cnt = 1:1
+            
+            try
+                for j = 1:length(output{t_cnt,m_cnt,run})
+                    is_dec = strfind('decoder',output{t_cnt,m_cnt,run}{j,1});
+                    is_enc = strfind('encoder',output{t_cnt,m_cnt,run}{j,1});
+                    
+                    if is_dec == 1
+                        dec_row = j;
+                    end
+                    
+                    if is_enc == 1
+                        enc_row = j;
+                    end
+                end
+                power(i,1) = (output{t_cnt,m_cnt,run}{dec_row,end}+output{t_cnt,m_cnt,run}{enc_row,end});
+                m(i) = m_cnt;
+                i = i+1;
+            end
+        end
+    end
+end
+i = 1;
+for run = 1:4
+    for m_cnt = 7:7
+        for t_cnt = 1:1
+            
+            try
+                for j = 1:length(output{t_cnt,m_cnt,run})
+                    is_dec = strfind('decoder',output{t_cnt,m_cnt,run}{j,1});
+                    is_enc = strfind('encoder',output{t_cnt,m_cnt,run}{j,1});
+                    
+                    if is_dec == 1
+                        dec_row = j;
+                    end
+                    
+                    if is_enc == 1
+                        enc_row = j;
+                    end
+                end
+                power(i,2) = (output{t_cnt,m_cnt,run}{dec_row,end}+output{t_cnt,m_cnt,run}{enc_row,end});
+                m(i) = m_cnt;
+                i = i+1;
+            end
+        end
+    end
+end
+
+i = 1;
+for run = 1:4
+    for m_cnt = 10:10
+        for t_cnt = 1:1
+            
+            try
+                for j = 1:length(output{t_cnt,m_cnt,run})
+                    is_dec = strfind('decoder',output{t_cnt,m_cnt,run}{j,1});
+                    is_enc = strfind('encoder',output{t_cnt,m_cnt,run}{j,1});
+                    
+                    if is_dec == 1
+                        dec_row = j;
+                    end
+                    
+                    if is_enc == 1
+                        enc_row = j;
+                    end
+                end
+                power(i,3) = (output{t_cnt,m_cnt,run}{dec_row,end}+output{t_cnt,m_cnt,run}{enc_row,end});
+                m(i) = m_cnt;
+                i = i+1;
+            end
+        end
+    end
+end
+
+%%
+freq = [1e9 1.5e9 2e9 2.5e9];
+%bits_per_sec = (k(1)./n(1)*freq);
+
+figure
+plot(freq',power(:,1)',freq([1 2 3])',power([1 2 3],2)',freq',power(:,3)')
+
+
+figure
+plot(freq',power(:,1)'./(k(1)./n(1)*freq),freq([1 2 3])',power([1 2 3],2)'./(k(2)./n(2)*freq([1 2 3])),freq',power(:,3)'./(k(3)./n(3)*freq))

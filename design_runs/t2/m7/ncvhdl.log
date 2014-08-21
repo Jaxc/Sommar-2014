@@ -1,16 +1,112 @@
 ncvhdl: 08.20-s012: (c) Copyright 1995-2009 Cadence Design Systems, Inc.
-TOOL:	ncvhdl	08.20-s012: Started on Jul 09, 2014 at 14:47:48 CEST
+TOOL:	ncvhdl	08.20-s012: Started on Aug 21, 2014 at 21:05:53 CEST
 ncvhdl
     -messages
     -linedebug
     -v93
     const.vhd
-    bchio.vhd
-    BCH_TB.vhd
     dec.vhd
     enc.vhd
+    bchio.vhd
+    BCH_TB.vhd
     sim.vhd
 
 const.vhd:
-ncvhdl_p: *F,DLNFS: Packed library for 'worklib' was either corrupt or the file system cache consistency check failed. To correct the problem, remove the packed library, and recompile. If the problem persists, contact Cadence Design Systems.
-TOOL:	ncvhdl	08.20-s012: Exiting on Jul 09, 2014 at 14:47:49 CEST  (total: 00:00:01)
+	errors: 0, warnings: 0
+dec.vhd:
+	errors: 0, warnings: 0
+enc.vhd:
+	errors: 0, warnings: 0
+bchio.vhd:
+	errors: 0, warnings: 0
+BCH_TB.vhd:
+	errors: 0, warnings: 0
+sim.vhd:
+	errors: 0, warnings: 0
+WORKLIB.CONST (package):
+	streams: 1, words: 6
+WORKLIB.FFCE (entity):
+	streams: 5, words: 62
+WORKLIB.FFCE:FFCEA (architecture):
+	streams: 1, words: 99
+WORKLIB.DCOUNT (entity):
+	streams: 7, words: 74
+WORKLIB.DCOUNT:DCOUNTA (architecture):
+	streams: 1, words: 246
+WORKLIB.DBUF (entity):
+	streams: 6, words: 68
+WORKLIB.DBUF:DBUFA (architecture):
+	streams: 2, words: 1620
+WORKLIB.DSYN1 (entity):
+	streams: 6, words: 236
+WORKLIB.DSYN1:DSYN1A (architecture):
+	streams: 1, words: 246
+WORKLIB.DSYN3 (entity):
+	streams: 6, words: 236
+WORKLIB.DSYN3:DSYN3A (architecture):
+	streams: 1, words: 246
+WORKLIB.DPOW3 (entity):
+	streams: 5, words: 398
+WORKLIB.DPOW3:DPOW3A (architecture):
+	streams: 1, words: 336
+WORKLIB.DEQ (entity):
+	streams: 6, words: 404
+WORKLIB.DEQ:DEQA (architecture):
+	streams: 3, words: 1740
+WORKLIB.DCH1 (entity):
+	streams: 9, words: 422
+WORKLIB.DCH1:DCH1A (architecture):
+	streams: 1, words: 393
+WORKLIB.DCH3 (entity):
+	streams: 9, words: 422
+WORKLIB.DCH3:DCH3A (architecture):
+	streams: 1, words: 393
+WORKLIB.DEC (entity):
+	streams: 6, words: 68
+WORKLIB.DEC:DECA (architecture):
+	streams: 10, words: 4363
+WORKLIB.ERING (entity):
+	streams: 5, words: 62
+WORKLIB.ERING:ERINGA (architecture):
+	streams: 1, words: 433
+WORKLIB.ECOUNT (entity):
+	streams: 4, words: 56
+WORKLIB.ECOUNT:ECOUNTA (architecture):
+	streams: 1, words: 246
+WORKLIB.ENC (entity):
+	streams: 6, words: 68
+WORKLIB.ENC:ENCA (architecture):
+	streams: 3, words: 241
+WORKLIB.IOENC (entity):
+	streams: 6, words: 68
+WORKLIB.IOENC:IOENCA (architecture):
+	streams: 2, words: 508
+WORKLIB.IODEC (entity):
+	streams: 6, words: 68
+WORKLIB.IODEC:IODECA (architecture):
+	streams: 2, words: 508
+WORKLIB.BCH_TB (entity):
+	streams: 1, words: 38
+WORKLIB.BCH_TB:TESTBENCH (architecture):
+	streams: 8, words: 8000
+WORKLIB.ENCBUF (entity):
+	streams: 6, words: 243
+WORKLIB.ENCBUF:ENCBUFA (architecture):
+	streams: 1, words: 253
+WORKLIB.ERRBUF (entity):
+	streams: 6, words: 243
+WORKLIB.ERRBUF:ERRBUFA (architecture):
+	streams: 1, words: 253
+WORKLIB.COMBUF (entity):
+	streams: 4, words: 56
+WORKLIB.COMBUF:COMBUFA (architecture):
+	streams: 1, words: 253
+WORKLIB.DECBUF (entity):
+	streams: 6, words: 243
+WORKLIB.DECBUF:DECBUFA (architecture):
+	streams: 1, words: 253
+WORKLIB.SIM (entity):
+	streams: 13, words: 635
+WORKLIB.SIM:SIMA (architecture):
+	streams: 7, words: 1395
+TOOL:	ncvhdl	08.20-s012: Exiting on Aug 21, 2014 at 21:05:53 CEST  (total: 00:00:00)

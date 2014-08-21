@@ -11,8 +11,8 @@ PACKAGE   const IS
 	CONSTANT nk: INTEGER:= 12; -- nk=n-k
 	CONSTANT t: INTEGER:= 2;  -- no. of errors to be corrected
 
-	CONSTANT sizea: INTEGER:= 3; -- size of counter ca
-	CONSTANT sizeb: INTEGER:= 3; -- size of counter cb 
+	CONSTANT sizea: INTEGER:= 2; -- size of counter ca
+	CONSTANT sizeb: INTEGER:= 5; -- size of counter cb 
 		-- count = iteration* cb + ca
 	CONSTANT sizel: INTEGER:= 3; 
 		-- size of l integer (degree of error polynomial BMA)
