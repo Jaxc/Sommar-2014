@@ -116,13 +116,13 @@ freq = 1e9;
 
 bits_per_sec = k./n*freq;
 
-joule_sec = power;
-joule_sec2 = power2;
+joule_sec = power*1e12;
+joule_sec2 = power2*1e12;
 figure
-plot(m',joule_sec',m',joule_sec2')
+plot(m',power'*1e3,m',power2'*1e3)
 title('Comparision of power consumption of different memory implementations');
 xlabel('m');
-ylabel('Power [W]');
+ylabel('Power [mW]');
 
 legend('Location','NorthWest','Circular buffer T=1','Circular buffer T=2','Shift buffer T=1','Shift buffer T=2');
 
@@ -130,7 +130,7 @@ figure
 plot(m',joule_sec'./bits_per_sec');
 title('Energy needed to transmit 1 bit of information');
 xlabel('m');
-ylabel('Joule/bit [J/bit]');
+ylabel('Energy/bit [pJ/bit]');
 
 legend('Location','NorthWest','T=1','T=2');
 
@@ -219,7 +219,16 @@ freq = [1e9 1.5e9 2e9 2.5e9];
 
 figure
 plot(freq',power(:,1)',freq([1 2 3])',power([1 2 3],2)',freq',power(:,3)')
-
+title('Power consumption at different frequencies')
+xlabel('Frequency [Hz]')
+ylabel('Power [w]')
+legend('Location','NorthWest','m=6','m=7','m=10');
 
 figure
-plot(freq',power(:,1)'./(k(1)./n(1)*freq),freq([1 2 3])',power([1 2 3],2)'./(k(2)./n(2)*freq([1 2 3])),freq',power(:,3)'./(k(3)./n(3)*freq))
+plot(freq',power(:,1)'./(k(1)./n(1)*freq))
+title('Energy needed to transmit 1 bit of information')
+xlabel('Frequency [Hz]')
+ylabel('Joule per bit [J/bit]')
+legend('m = 6')
+%freq([1 2 3])',power([1 2 3],2)'./(k(2)./n(2)*freq([1 2 3])))
+%plot(freq',power(:,3)'./(k(3)./n(3)*freq))
