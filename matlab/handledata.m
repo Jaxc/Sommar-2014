@@ -21,18 +21,27 @@ end
 load output_shift_buffer.mat
 
 
-b1_1 = [output{1,6}{4,5} output{1,7}{4,5} output{1,10}{4,5}];
-count_1 = [output{1,6}{5,5} output{1,7}{5,5} output{1,10}{5,5}];
-s1_1 = [output{1,6}{6,5} output{1,7}{6,5} output{1,10}{6,5}];
-h1_1 = [output{1,6}{7,5} output{1,7}{7,5} output{1,10}{7,5}];
-c1_1 = [output{1,6}{9,5} output{1,7}{9,5} output{1,10}{9,5}];
-r1_1 = [output{1,6}{10,5} output{1,7}{10,5} output{1,10}{10,5}];
+b1_1 = [output2{1,6}{4,5} output2{1,7}{4,5} output2{1,10}{4,5}];
+count_1 = [output2{1,6}{5,5} output2{1,7}{5,5} output2{1,10}{5,5}];
+s1_1 = [output2{1,6}{6,5} output2{1,7}{6,5} output2{1,10}{6,5}];
+h1_1 = [output2{1,6}{7,5} output2{1,7}{7,5} output2{1,10}{7,5}];
+c1_1 = [output2{1,6}{9,5} output2{1,7}{9,5} output2{1,10}{9,5}];
+r1_1 = [output2{1,6}{10,5} output2{1,7}{10,5} output2{1,10}{10,5}];
 
 m = [6 7 10];
-bar([m;m;m;m;m;m]',[b1_1; count_1;s1_1 ;h1_1 ;c1_1; r1_1]','stacked')
+bar([m;m;m;m;m;m]',[b1_1; count_1;s1_1 ;h1_1 ;c1_1; r1_1]'*1e3,'stacked')
+title('Power consumed by the components of the BCH encoder and decoder for t = 1')
+xlabel('m')
+ylabel('power [mw]')
+legend('Location','NorthWest','Buffer','Decoder counter','Syndrome calculation','Chien search','Encoder counter','Encoder shift register')
 
+figure
 
-
+bar([m;m;m;m;m]',[count_1;s1_1 ;h1_1 ;c1_1; r1_1]'*1e3,'stacked')
+title('Power consumed by the components of the BCH encoder and decoder for t = 1')
+xlabel('m')
+ylabel('power [mw]')
+legend('Location','NorthWest','Decoder counter','Syndrome calculation','Chien search','Encoder counter','Encoder shift register')
 
 
 %bar(6,output{1,6}{4,5},6,output{1,6}{5,5},6,output{1,6}{6,5},6,output{1,6}{7,5},6,output{1,6}{9,5},6,output{1,6}{10,5},'stacked')
@@ -118,6 +127,16 @@ bits_per_sec = k./n*freq;
 
 joule_sec = power*1e12;
 joule_sec2 = power2*1e12;
+
+%%
+figure
+plot(m',power2'*1e3)
+title('Power depending on chosen m and t');
+xlabel('m');
+ylabel('Power [mW]');
+legend('Location','NorthWest','t=1','t=2');
+
+%%
 figure
 plot(m',power'*1e3,m',power2'*1e3)
 title('Comparision of power consumption of different memory implementations');

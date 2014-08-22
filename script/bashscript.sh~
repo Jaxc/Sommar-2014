@@ -19,9 +19,9 @@ t=$2
     rm *.in
     echo "Bch.exe complete"
 
-    ncvhdl -messages -linedebug -v93 const.vhd bchio.vhd BCH_TB.vhd dec.vhd enc.vhd sim.vhd  
+    ncvhdl -messages -linedebug -v93 const.vhd dec.vhd enc.vhd bchio.vhd BCH_TB.vhd sim.vhd  
     ncelab -messages -v93 WORKLIB.BCH_TB:Testbench
-    ncsim -input ./ncsim.tcl WORKLIB.BCH_TB:Testbench
+%    ncsim -input ./ncsim.tcl WORKLIB.BCH_TB:Testbench
 
     rc -files sim-1.0GHz.s
     rc -files sim-1.500GHz.s
