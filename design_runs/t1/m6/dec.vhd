@@ -133,7 +133,7 @@ BEGIN
 process(cnt)
 begin
 reg_ena <= (others => '0');
-reg_ena(last_cnt) <= '1';
+reg_ena(cnt) <= '1';
 end process;
 registers:for i in 0 to n generate
 	process(clk)
@@ -151,7 +151,7 @@ PROCESS (clk)
 		dout_buf <= dout_buf2;
 		dout <= (dout_buf XOR err) and vdout;
 		last_reg_ena <= reg_ena;
-		if cnt = n-1 then
+		if cnt = n then
 			cnt <= 0;
 		else
 			cnt <= cnt +1;
