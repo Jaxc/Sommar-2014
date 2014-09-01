@@ -54,42 +54,6 @@ END dcounta;
 ----------------------------------------------------------------------
 -- circuit for storing data to be corrected or already corrected
 
-
-	
-library IEEE;
-USE IEEE.STD_LOGIC_1164.ALL;
-USE IEEE.numeric_STD.all;
-USE WORK.const.ALL;
-
-ENTITY demux IS
-	PORT (cnt_2: IN STD_LOGIC_VECTOR;
-	      din : IN BIT;
-	  	vector_out : OUT BIT_VECTOR(0 to n););
-END demux;
-
-ARCHITECTURE demux1 of demux is
-signal reg_ena : bit_vector(0 to n);
-
-BEGIN
-cnt <= 
-reg_ena <= (others => '0');
-reg_ena(cnt) <= '1';
-end process;
-registers:for i in 0 to n generate
-	process(din)
-		begin
-		if last_reg_ena(i) = '1' then
-			vector_out(i) <= din;
-		end if;
-	end process;
-end generate;	
-
-End demux1;
-
-
-
-
-
 	library IEEE;
 USE IEEE.STD_LOGIC_1164.ALL;
 USE IEEE.numeric_STD.all;
@@ -109,17 +73,17 @@ end component;
 BEGIN
 process(cnt)
 begin
---reg_ena <= (others => '0');
---reg_ena(cnt) <= '1';
---end process;
---registers:for i in 0 to n generate
---	process(clk)
---		begin
---		if last_reg_ena(i) = '1' then
---			buf(i) <= din;
---		end if;
---	end process;
---end generate;
+reg_ena <= (others => '0');
+reg_ena(cnt) <= '1';
+end process;
+registers:for i in 0 to n generate
+	process(clk)
+		begin
+		if last_reg_ena(i) = '1' then
+			buf(i) <= din;
+		end if;
+	end process;
+end generate;
 
 PROCESS (clk)
 	BEGIN

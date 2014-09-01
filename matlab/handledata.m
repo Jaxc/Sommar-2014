@@ -19,7 +19,7 @@ for m_cnt = 1:10
 end
 %output2 = output;
 load output_shift_buffer.mat
-
+output
 
 b1_1 = [output2{1,6}{4,5} output2{1,7}{4,5} output2{1,10}{4,5}];
 count_1 = [output2{1,6}{5,5} output2{1,7}{5,5} output2{1,10}{5,5}];
@@ -49,8 +49,8 @@ legend('Location','NorthWest','Decoder counter','Syndrome calculation','Chien se
 %bar(7,output{1,7}{4,5},7,output{1,7}{5,5},7,output{1,7}{6,5},7,output{1,7}{7,5},7,output{1,7}{9,5},7,output{1,7}{10,5},'stacked')
 %%
 i = 1;
-
-for m_cnt = 6:10
+m = [ ];
+for m_cnt = 1:10
 	for t_cnt = 1:2
 		
         try
@@ -74,7 +74,7 @@ for m_cnt = 6:10
 end
 
 i = 1;
-for m_cnt = 6:10
+for m_cnt = 1:10
 	for t_cnt = 1:2
 		
         try
@@ -91,7 +91,7 @@ for m_cnt = 6:10
 				end
 			end
 			power2(i) = (output2{t_cnt,m_cnt}{dec_row,end}+output2{t_cnt,m_cnt}{enc_row,end});
-			m(i) = m_cnt;
+			m2(i) = m_cnt;
 			i = i+1;
 		end
 	end
@@ -108,10 +108,10 @@ end
 
 if mod(length(power2),2)==1 
     power2 = [power2(1:2:end); power2(2:2:end) 0];
-    m = [m(1:2:end); m(2:2:end) 0];
+    m2 = [m2(1:2:end); m2(2:2:end) 0];
 else
     power2 = [power2(1:2:end); power2(2:2:end)];
-    m = [m(1:2:end); m(2:2:end)];
+    m2 = [m2(1:2:end); m2(2:2:end)];
 end
 
 
@@ -130,7 +130,7 @@ joule_sec2 = power2*1e12;
 
 %%
 figure
-plot(m',power2'*1e3)
+plot(m2',power2'*1e3)
 title('Power depending on chosen m and t');
 xlabel('m');
 ylabel('Power [mW]');
@@ -138,8 +138,8 @@ legend('Location','NorthWest','t=1','t=2');
 
 %%
 figure
-plot(m',power'*1e3,m',power2'*1e3)
-title('Comparision of power consumption of different memory implementations');
+plot(m',power'*1e3,'o-',m2',power2'*1e3,'o-')
+title('Comparision of power consumption of different memory implementations at f = 1GHz');
 xlabel('m');
 ylabel('Power [mW]');
 

@@ -1,0 +1,22 @@
+#Copyright notice: Copyright 1997-2010 Cadence Design Systems, Inc. All rights reserved worldwide.
+
+
+ovf_setup -ungroup_separator { _ }
+
+ovf_transform \
+-module { dbuf } \
+-type { tree } \
+-internal_type { 206 } \
+-internal_index { 78 } \
+-input { 7 add_117_15.A } \
+-output { 7 O1 } \
+-from { \
+   { 7 add_117_15 : UADD { { add_117_15.A } { 'b1 ZERO 7 } } } \
+   { O1 = { add_117_15.1 } } } \
+-to { \
+   { 7 inc_add_117_15_1 : UINC { { add_117_15.A } { 'b1 ZERO 7 } } } \
+   { O1 = { inc_add_117_15_1.1 } } }
+
+ovf_uniquify \
+-module { dec } \
+{ { f2 ffce ffce_1 } } 

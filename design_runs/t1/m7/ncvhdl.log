@@ -1,5 +1,5 @@
 ncvhdl: 08.20-s012: (c) Copyright 1995-2009 Cadence Design Systems, Inc.
-TOOL:	ncvhdl	08.20-s012: Started on Aug 27, 2014 at 10:06:41 CEST
+TOOL:	ncvhdl	08.20-s012: Started on Aug 29, 2014 at 11:07:09 CEST
 ncvhdl
     -messages
     -linedebug
@@ -89,4 +89,4 @@ WORKLIB.SIM (entity):
 	streams: 13, words: 635
 WORKLIB.SIM:SIMA (architecture):
 	streams: 7, words: 1395
-TOOL:	ncvhdl	08.20-s012: Exiting on Aug 27, 2014 at 10:06:41 CEST  (total: 00:00:00)
+TOOL:	ncvhdl	08.20-s012: Exiting on Aug 29, 2014 at 11:07:09 CEST  (total: 00:00:00)

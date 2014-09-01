@@ -23,6 +23,9 @@ t=$2
     ncelab -messages -v93 WORKLIB.BCH_TB:Testbench
     ncsim -input ./ncsim.tcl WORKLIB.BCH_TB:Testbench
 
+    rm in.txt
+    rm error.txt
+
     rc -files sim-1.0GHz.s
     rc -files sim-1.500GHz.s
     rc -files sim-2.0GHz.s

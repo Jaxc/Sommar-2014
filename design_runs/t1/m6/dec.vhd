@@ -124,37 +124,60 @@ END dbuf;
 ARCHITECTURE dbufa OF dbuf IS
 SIGNAL buf: BIT_VECTOR(0 TO n);
 SIGNAL cnt,last_cnt : integer range 0 to n+2;
-SIGNAL dout_buf,dout_buf2 : BIT;
-SIGNAL reg_ena,last_reg_ena : BIT_VECTOR(0 to n);
+SIGNAL reg_ena,last_reg_ena,dout_buf,dout_buf2 : BIT_VECTOR(0 to n);
+
+CONSTANT zero_vec : BIT_VECTOR(0 to n-1) := (others => '0');
+
 component bufcount
 PORT(clk: in BIT; count : OUT STD_LOGIC_VECTOR(m-1 downto 0));
 end component;
 BEGIN
-process(cnt)
+process(cnt,clk)
 begin
-reg_ena <= (others => '0');
-reg_ena(cnt) <= '1';
-end process;
-registers:for i in 0 to n generate
-	process(clk)
-		begin
-		if last_reg_ena(i) = '1' then
-			buf(i) <= din;
+	if ( clk'EVENT AND clk='1') then
+		reg_ena(1 to n) <= reg_ena(0 to n-1);
+		if reg_ena(0 to n-1) = zero_vec then
+			reg_ena(0) <= '1';
+--			assert false report "happens" severity warning;
+		else 
+			reg_ena(0) <= '0';
+--			assert false report "not happens" severity warning;
 		end if;
-	end process;
+	end if;
+end process;
+
+
+	registers:for i in 0 to n generate
+		process(clk)
+			begin
+			if reg_ena(i) = '1' then
+				buf(i) <= din;
+			end if;
+		end process;
 end generate;
 
 PROCESS (clk)
 	BEGIN
 	if ( clk'EVENT AND clk='1') then
-		dout_buf2 <= buf(cnt);
-		dout_buf <= dout_buf2;
-		dout <= (dout_buf XOR err) and vdout;
+		
+		registers:for i in 0 to n generate
+			begin
+			if reg_ena(i) = '1' then
+				buf(i) <= din;
+			end if;
+
+		end generate;
+
+		MUX : for i in 0 to n-1 generate
+		begin
+			dout_buf(i) <= buf(i) and reg_ena(i);
+			dout_buf2(i+1) <= dout_buf(i) or dout_buf2(i)
+		end generate;
+		
+--		dout_buf2 <= buf(cnt);
+--		dout_buf <= dout_buf2;
+		dout <= (dout_buf2(n) XOR err) and vdout;
 		last_reg_ena <= reg_ena;
-		if cnt = n then
-			cnt <= 0;
-		else
-			cnt <= cnt +1;
 		end if;
 		last_cnt <= cnt;
 

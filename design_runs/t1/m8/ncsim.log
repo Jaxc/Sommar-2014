@@ -1,0 +1,45 @@
+ncsim: 08.20-s012: (c) Copyright 1995-2009 Cadence Design Systems, Inc.
+ncsim> run
+ASSERT/WARNING (time 0 FS) from process :$PROCESS_003 (architecture WORKLIB.BCH_TB:Testbench)
+0 % complete
+ASSERT/WARNING (time 510038 NS) from process :$PROCESS_003 (architecture WORKLIB.BCH_TB:Testbench)
+1 % complete
+ASSERT/WARNING (time 1020038 NS) from process :$PROCESS_003 (architecture WORKLIB.BCH_TB:Testbench)
+2 % complete
+ASSERT/WARNING (time 1530038 NS) from process :$PROCESS_003 (architecture WORKLIB.BCH_TB:Testbench)
+3 % complete
+ASSERT/WARNING (time 2040038 NS) from process :$PROCESS_003 (architecture WORKLIB.BCH_TB:Testbench)
+4 % complete
+ASSERT/WARNING (time 2550038 NS) from process :$PROCESS_003 (architecture WORKLIB.BCH_TB:Testbench)
+5 % complete
+ASSERT/WARNING (time 3060038 NS) from process :$PROCESS_003 (architecture WORKLIB.BCH_TB:Testbench)
+6 % complete
+ASSERT/WARNING (time 3570038 NS) from process :$PROCESS_003 (architecture WORKLIB.BCH_TB:Testbench)
+7 % complete
+ASSERT/WARNING (time 4080038 NS) from process :$PROCESS_003 (architecture WORKLIB.BCH_TB:Testbench)
+8 % complete
+ASSERT/WARNING (time 4590038 NS) from process :$PROCESS_003 (architecture WORKLIB.BCH_TB:Testbench)
+9 % complete
+ASSERT/WARNING (time 5100038 NS) from process :$PROCESS_003 (architecture WORKLIB.BCH_TB:Testbench)
+10 % complete
+ASSERT/WARNING (time 5610038 NS) from process :$PROCESS_003 (architecture WORKLIB.BCH_TB:Testbench)
+11 % complete
+ASSERT/WARNING (time 6120038 NS) from process :$PROCESS_003 (architecture WORKLIB.BCH_TB:Testbench)
+12 % complete
+ASSERT/WARNING (time 6630038 NS) from process :$PROCESS_003 (architecture WORKLIB.BCH_TB:Testbench)
+13 % complete
+ASSERT/WARNING (time 7140038 NS) from process :$PROCESS_003 (architecture WORKLIB.BCH_TB:Testbench)
+14 % complete
+ASSERT/WARNING (time 7650038 NS) from process :$PROCESS_003 (architecture WORKLIB.BCH_TB:Testbench)
+15 % complete
+ASSERT/WARNING (time 8160038 NS) from process :$PROCESS_003 (architecture WORKLIB.BCH_TB:Testbench)
+16 % complete
+ASSERT/WARNING (time 8670038 NS) from process :$PROCESS_003 (architecture WORKLIB.BCH_TB:Testbench)
+17 % complete
+ASSERT/WARNING (time 9180038 NS) from process :$PROCESS_003 (architecture WORKLIB.BCH_TB:Testbench)
+18 % complete
+ASSERT/WARNING (time 9690038 NS) from process :$PROCESS_003 (architecture WORKLIB.BCH_TB:Testbench)
+19 % complete
+Simulation interrupted at 10035994 NS + 2
+./sim.vhd:48 		buf<= '0' & buf(0 TO n-2); 	
+ncsim> exit
