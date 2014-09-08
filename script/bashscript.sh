@@ -26,12 +26,13 @@ t=$2
     rm in.txt
     rm error.txt
 
-    rc -files sim-1.0GHz.s
-    rc -files sim-1.500GHz.s
-    rc -files sim-2.0GHz.s
-    rc -files sim-2.500GHz.s
-    rc -files sim-3.0GHz.s
-    rc -files sim-3.500GHz.s
+  rc -files super-sim
+#    rc -files sim-1.0GHz.s
+#    rc -files sim-1.500GHz.s
+#    rc -files sim-2.0GHz.s
+#    rc -files sim-2.500GHz.s
+#    rc -files sim-3.0GHz.s
+#    rc -files sim-3.500GHz.s
     pwd
     bash ../../../script/editpower.sh 1 0
     bash ../../../script/editpower.sh 1 500

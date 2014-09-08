@@ -54,6 +54,14 @@ ASSERT/WARNING (time 6350040 NS) from process :$PROCESS_003 (architecture WORKLI
 25 % complete
 ASSERT/WARNING (time 6604040 NS) from process :$PROCESS_003 (architecture WORKLIB.BCH_TB:Testbench)
 26 % complete
-Simulation interrupted at 6722976 NS + 1
-./dec.vhd:142 	process(clk)
+ASSERT/WARNING (time 6858040 NS) from process :$PROCESS_003 (architecture WORKLIB.BCH_TB:Testbench)
+27 % complete
+ASSERT/WARNING (time 7112040 NS) from process :$PROCESS_003 (architecture WORKLIB.BCH_TB:Testbench)
+28 % complete
+ASSERT/WARNING (time 7366040 NS) from process :$PROCESS_003 (architecture WORKLIB.BCH_TB:Testbench)
+29 % complete
+ASSERT/WARNING (time 7620040 NS) from process :$PROCESS_003 (architecture WORKLIB.BCH_TB:Testbench)
+30 % complete
+Simulation interrupted at 7764576 NS + 2
+./sim.vhd:48 		buf<= '0' & buf(0 TO n-2); 	
 ncsim> exit

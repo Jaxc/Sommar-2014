@@ -21,12 +21,21 @@ end
 load output_shift_buffer.mat
 output
 
-b1_1 = [output2{1,6}{4,5} output2{1,7}{4,5} output2{1,10}{4,5}];
-count_1 = [output2{1,6}{5,5} output2{1,7}{5,5} output2{1,10}{5,5}];
-s1_1 = [output2{1,6}{6,5} output2{1,7}{6,5} output2{1,10}{6,5}];
-h1_1 = [output2{1,6}{7,5} output2{1,7}{7,5} output2{1,10}{7,5}];
-c1_1 = [output2{1,6}{9,5} output2{1,7}{9,5} output2{1,10}{9,5}];
-r1_1 = [output2{1,6}{10,5} output2{1,7}{10,5} output2{1,10}{10,5}];
+%b1_1 = [output2{1,6}{4,5} output2{1,7}{4,5} output2{1,10}{4,5}];
+%count_1 = [output2{1,6}{5,5} output2{1,7}{5,5} output2{1,10}{5,5}];
+%s1_1 = [output2{1,6}{6,5} output2{1,7}{6,5} output2{1,10}{6,5}];
+%h1_1 = [output2{1,6}{7,5} output2{1,7}{7,5} output2{1,10}{7,5}];
+%c1_1 = [output2{1,6}{9,5} output2{1,7}{9,5} output2{1,10}{9,5}];
+%r1_1 = [output2{1,6}{10,5} output2{1,7}{10,5} output2{1,10}{10,5}];
+
+b1_1 = [output{1,6}{4,5} output{1,7}{4,5} output{1,10}{4,5}];
+count_1 = [output{1,6}{5,5} output{1,7}{5,5} output{1,10}{5,5}];
+s1_1 = [output{1,6}{6,5} output{1,7}{6,5} output{1,10}{6,5}];
+h1_1 = [output{1,6}{7,5} output{1,7}{7,5} output{1,10}{7,5}];
+c1_1 = [output{1,6}{9,5} output{1,7}{9,5} output{1,10}{9,5}];
+r1_1 = [output{1,6}{10,5} output{1,7}{10,5} output{1,10}{10,5}];
+
+
 
 m = [6 7 10];
 bar([m;m;m;m;m;m]',[b1_1; count_1;s1_1 ;h1_1 ;c1_1; r1_1]'*1e3,'stacked')

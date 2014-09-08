@@ -118,69 +118,51 @@ USE IEEE.STD_LOGIC_1164.ALL;
 USE IEEE.numeric_STD.all;
 USE WORK.const.ALL;
 ENTITY dbuf IS
-PORT (clk, err, vdout, din: IN BIT;
-dout: OUT BIT);
+	PORT (clk, err, vdout, din: IN BIT;
+	dout: OUT BIT);
 END dbuf;
 ARCHITECTURE dbufa OF dbuf IS
-SIGNAL buf: BIT_VECTOR(0 TO n);
-SIGNAL cnt,last_cnt : integer range 0 to n+2;
-SIGNAL reg_ena,last_reg_ena,dout_buf,dout_buf2 : BIT_VECTOR(0 to n);
-
 CONSTANT zero_vec : BIT_VECTOR(0 to n-1) := (others => '0');
+SIGNAL buf,dout_buf,dout_buf2 : BIT_VECTOR(0 to n);
+signal reg_ena : BIT_VECTOR(0 to n):= '1' & zero_vec;
+signal dout_buf3,vdout_last : BIT;
+
+
 
 component bufcount
 PORT(clk: in BIT; count : OUT STD_LOGIC_VECTOR(m-1 downto 0));
 end component;
 BEGIN
-process(cnt,clk)
-begin
-	if ( clk'EVENT AND clk='1') then
-		reg_ena(1 to n) <= reg_ena(0 to n-1);
-		if reg_ena(0 to n-1) = zero_vec then
-			reg_ena(0) <= '1';
---			assert false report "happens" severity warning;
-		else 
-			reg_ena(0) <= '0';
---			assert false report "not happens" severity warning;
-		end if;
-	end if;
-end process;
-
-
 	registers:for i in 0 to n generate
-		process(clk)
-			begin
-			if reg_ena(i) = '1' then
-				buf(i) <= din;
-			end if;
-		end process;
-end generate;
+	
+		buf2_gen1:if i /= 0 generate	
+			dout_buf2(i) <= dout_buf(i) or dout_buf2(i-1);
+		end generate;
 
+		process(clk,buf,reg_ena)
+		begin
+			if ( clk'EVENT AND clk='1') then
+				if reg_ena(i) = '1' then
+					buf(i) <= din;
+				end if;				
+			end if;
+			dout_buf(i) <= buf(i) and reg_ena(i);
+		end process;
+
+	end generate;
+dout_buf2(0) <= dout_buf(0);
 PROCESS (clk)
 	BEGIN
 	if ( clk'EVENT AND clk='1') then
-		
-		registers:for i in 0 to n generate
-			begin
-			if reg_ena(i) = '1' then
-				buf(i) <= din;
-			end if;
-
-		end generate;
-
-		MUX : for i in 0 to n-1 generate
-		begin
-			dout_buf(i) <= buf(i) and reg_ena(i);
-			dout_buf2(i+1) <= dout_buf(i) or dout_buf2(i)
-		end generate;
-		
---		dout_buf2 <= buf(cnt);
---		dout_buf <= dout_buf2;
-		dout <= (dout_buf2(n) XOR err) and vdout;
-		last_reg_ena <= reg_ena;
+		dout_buf3 <= dout_buf2(n);
+		dout <= (dout_buf3 XOR err) and vdout;
+		reg_ena(1 to n) <= reg_ena(0 to n-1);
+		vdout_last <= vdout;
+		if vdout = '1' and vdout_last = '0' then
+			reg_ena(0) <= '1';
+		else
+			reg_ena(0) <= '0';
 		end if;
-		last_cnt <= cnt;
-
 	end if;
 end process;
 

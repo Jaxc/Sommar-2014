@@ -79,7 +79,7 @@ dout: OUT BIT);
 END dbuf;
 ARCHITECTURE dbufa OF dbuf IS
 SIGNAL buf: BIT_VECTOR(0 TO n);
-SIGNAL cnt : integer range 0 to n+1;
+SIGNAL cnt,last_cnt : integer range 0 to n+2;
 SIGNAL dout_buf,dout_buf2 : BIT;
 SIGNAL reg_ena,last_reg_ena : BIT_VECTOR(0 to n);
 component bufcount
@@ -107,10 +107,10 @@ PROCESS (clk)
 		dout_buf <= dout_buf2;
 		dout <= (dout_buf XOR err) and vdout;
 		last_reg_ena <= reg_ena;
-		if cnt < n-1 then
-			cnt <= cnt +1;
-		else
+		if cnt = n then
 			cnt <= 0;
+		else
+			cnt <= cnt +1;
 		end if;
 		last_cnt <= cnt;
 

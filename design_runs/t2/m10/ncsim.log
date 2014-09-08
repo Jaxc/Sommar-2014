@@ -1,27 +1,2 @@
 ncsim: 08.20-s012: (c) Copyright 1995-2009 Cadence Design Systems, Inc.
 ncsim> run
-ASSERT/WARNING (time 0 FS) from process :$PROCESS_003 (architecture WORKLIB.BCH_TB:Testbench)
-0 % complete
-ASSERT/WARNING (time 2046014 NS) from process :$PROCESS_003 (architecture WORKLIB.BCH_TB:Testbench)
-1 % complete
-ASSERT/WARNING (time 4092014 NS) from process :$PROCESS_003 (architecture WORKLIB.BCH_TB:Testbench)
-2 % complete
-ASSERT/WARNING (time 6138014 NS) from process :$PROCESS_003 (architecture WORKLIB.BCH_TB:Testbench)
-3 % complete
-ASSERT/WARNING (time 8184014 NS) from process :$PROCESS_003 (architecture WORKLIB.BCH_TB:Testbench)
-4 % complete
-ASSERT/WARNING (time 10230014 NS) from process :$PROCESS_003 (architecture WORKLIB.BCH_TB:Testbench)
-5 % complete
-ASSERT/WARNING (time 12276014 NS) from process :$PROCESS_003 (architecture WORKLIB.BCH_TB:Testbench)
-6 % complete
-ASSERT/WARNING (time 14322014 NS) from process :$PROCESS_003 (architecture WORKLIB.BCH_TB:Testbench)
-7 % complete
-ASSERT/WARNING (time 16368014 NS) from process :$PROCESS_003 (architecture WORKLIB.BCH_TB:Testbench)
-8 % complete
-ASSERT/WARNING (time 18414014 NS) from process :$PROCESS_003 (architecture WORKLIB.BCH_TB:Testbench)
-9 % complete
-ASSERT/WARNING (time 20460014 NS) from process :$PROCESS_003 (architecture WORKLIB.BCH_TB:Testbench)
-10 % complete
-Simulation interrupted at 21882926 NS + 2
-./sim.vhd:48 		buf<= '0' & buf(0 TO n-2); 	
-ncsim> exit

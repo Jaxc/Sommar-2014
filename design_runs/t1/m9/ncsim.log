@@ -2,10 +2,6 @@ ncsim: 08.20-s012: (c) Copyright 1995-2009 Cadence Design Systems, Inc.
 ncsim> run
 ASSERT/WARNING (time 0 FS) from process :$PROCESS_003 (architecture WORKLIB.BCH_TB:Testbench)
 0 % complete
-ASSERT/WARNING (time 1022036 NS) from process :$PROCESS_003 (architecture WORKLIB.BCH_TB:Testbench)
-1 % complete
-ASSERT/WARNING (time 2044036 NS) from process :$PROCESS_003 (architecture WORKLIB.BCH_TB:Testbench)
-2 % complete
-Simulation interrupted at 2049474 NS + 3
-./enc.vhd:55 	vdinR<= NOT cout(0) AND NOT cout(1) AND cout(2) AND NOT cout(3) AND NOT cout(4) AND NOT cout(5) AND NOT cout(6) AND cout(7) AND cout(8); 
+Simulation interrupted at 66885 NS + 1
+./dec.vhd:149 		process(clk,buf,reg_ena)
 ncsim> exit

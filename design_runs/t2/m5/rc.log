@@ -13,9 +13,10 @@ License First_Encounter_GXL checkout failed
 Checking out license 'SOC_Encounter_GXL'... (0 seconds elapsed)
 License SOC_Encounter_GXL checkout failed
 Checking out license 'Encounter_Digital_Impl_Sys_XL'... (0 seconds elapsed)
+Reading GUI preferences file '/chalmers/users/jacobro/.cadence/rc.gui'.
 
-                         Cadence Encounter(R) RTL Compiler
-                 Version v10.10-s209_1 (32-bit), built Feb  3 2011
+                       Cadence Encounter(R) RTL Compiler
+               Version v10.10-s209_1 (32-bit), built Feb  3 2011
 
 
 Copyright notice: Copyright 1997-2010 Cadence Design Systems, Inc. All rights 
@@ -25,8 +26,8 @@ Patent notices: Protected by U.S. Patents: 5892687; 6470486; 6772398; 6772399;
 6807651; 6832357; 7007247 
 
 
-===================================================================================
-                   Welcome to Cadence Encounter(R) RTL Compiler
+================================================================================
+                  Welcome to Cadence Encounter(R) RTL Compiler
 
 Here is a quick introduction on how to access our product information.  
 If you do not want this message to appear in the future, create an 
@@ -105,9 +106,9 @@ called '~/.cadence/.synth_init'.
     subdesign  timing_driven_muxopto
 
 Send us feedback at rc_feedback@cadence.com.
-===================================================================================
+================================================================================
 
-Sourcing './sim-1.0GHz.s' (Fri Aug 29 11:16:03 +0200 2014)...
+Sourcing './super-sim' (Tue Sep 02 14:45:32 +0200 2014)...
 Warning : Timing attributes intrinsic_rise and intrinsic_fall are not expected and will be ignored. [LBR-21]
         : The library pin involved is 'HS65_LSS1_FA1X21/CO'.
         : Although the delay model for this library is table lookup, it appears that linear delay model parameters are also present.
@@ -3462,6 +3463,9 @@ Warning : Timing attributes intrinsic_rise and intrinsic_fall are not expected a
 Warning : Timing attributes intrinsic_rise and intrinsic_fall are not expected and will be ignored. [LBR-21]
         : The library pin involved is 'HS65_LS_XOR3X9/Z'.
   Setting attribute of root '/': 'library' = { /chalmers/sw/sup/cds/cmos065-5.3.4/CORE65LPSVT_5.1/libs/CORE65LPSVT_nom_1.20V_25C.lib }
+Warning : Initial values are ignored for synthesis. [VHDL-639]
+        : in file 'dec.vhd' on line 86.
+        : The specified construct has no effect on synthesis. In some cases (such as 'after' clauses in signal assignments) may cause a mismatch between and simulation.
 Warning : Timing attributes intrinsic_rise and intrinsic_fall are not expected and will be ignored. [LBR-21]
         : The library pin involved is 'HS65_LSS1_FA1X21/CO'.
 Warning : Timing attributes intrinsic_rise and intrinsic_fall are not expected and will be ignored. [LBR-21]
@@ -6815,153 +6819,26 @@ Warning : Timing attributes intrinsic_rise and intrinsic_fall are not expected a
 Warning : Timing attributes intrinsic_rise and intrinsic_fall are not expected and will be ignored. [LBR-21]
         : The library pin involved is 'HS65_LS_XOR3X9/Z'.
   Elaborating top-level block 'enc_dec_wrapper' from file 'enc_dec_wrapper.vhd'.
-Warning : Referenced signal not in sensitivity list.  This may cause simulation mismatches between the original and synthesized designs. [CDFG-360]
-        : Signal 'last_reg_ena' in module 'dbuf' in file 'dec.vhd' on line 98.
-Warning : Referenced signal not in sensitivity list.  This may cause simulation mismatches between the original and synthesized designs. [CDFG-360]
-        : Signal 'din' in module 'dbuf' in file 'dec.vhd' on line 98.
-Warning : Referenced signal not in sensitivity list.  This may cause simulation mismatches between the original and synthesized designs. [CDFG-360]
-        : Signal 'last_reg_ena' in module 'dbuf' in file 'dec.vhd' on line 98.
-Warning : Referenced signal not in sensitivity list.  This may cause simulation mismatches between the original and synthesized designs. [CDFG-360]
-        : Signal 'din' in module 'dbuf' in file 'dec.vhd' on line 98.
-Warning : Referenced signal not in sensitivity list.  This may cause simulation mismatches between the original and synthesized designs. [CDFG-360]
-        : Signal 'last_reg_ena' in module 'dbuf' in file 'dec.vhd' on line 98.
-Warning : Referenced signal not in sensitivity list.  This may cause simulation mismatches between the original and synthesized designs. [CDFG-360]
-        : Signal 'din' in module 'dbuf' in file 'dec.vhd' on line 98.
-Warning : Referenced signal not in sensitivity list.  This may cause simulation mismatches between the original and synthesized designs. [CDFG-360]
-        : Signal 'last_reg_ena' in module 'dbuf' in file 'dec.vhd' on line 98.
-Warning : Referenced signal not in sensitivity list.  This may cause simulation mismatches between the original and synthesized designs. [CDFG-360]
-        : Signal 'din' in module 'dbuf' in file 'dec.vhd' on line 98.
-Warning : Referenced signal not in sensitivity list.  This may cause simulation mismatches between the original and synthesized designs. [CDFG-360]
-        : Signal 'last_reg_ena' in module 'dbuf' in file 'dec.vhd' on line 98.
-Warning : Referenced signal not in sensitivity list.  This may cause simulation mismatches between the original and synthesized designs. [CDFG-360]
-        : Signal 'din' in module 'dbuf' in file 'dec.vhd' on line 98.
-Warning : Referenced signal not in sensitivity list.  This may cause simulation mismatches between the original and synthesized designs. [CDFG-360]
-        : Signal 'last_reg_ena' in module 'dbuf' in file 'dec.vhd' on line 98.
-Warning : Referenced signal not in sensitivity list.  This may cause simulation mismatches between the original and synthesized designs. [CDFG-360]
-        : Signal 'din' in module 'dbuf' in file 'dec.vhd' on line 98.
-Warning : Referenced signal not in sensitivity list.  This may cause simulation mismatches between the original and synthesized designs. [CDFG-360]
-        : Signal 'last_reg_ena' in module 'dbuf' in file 'dec.vhd' on line 98.
-Warning : Referenced signal not in sensitivity list.  This may cause simulation mismatches between the original and synthesized designs. [CDFG-360]
-        : Signal 'din' in module 'dbuf' in file 'dec.vhd' on line 98.
-Warning : Referenced signal not in sensitivity list.  This may cause simulation mismatches between the original and synthesized designs. [CDFG-360]
-        : Signal 'last_reg_ena' in module 'dbuf' in file 'dec.vhd' on line 98.
-Warning : Referenced signal not in sensitivity list.  This may cause simulation mismatches between the original and synthesized designs. [CDFG-360]
-        : Signal 'din' in module 'dbuf' in file 'dec.vhd' on line 98.
-Warning : Referenced signal not in sensitivity list.  This may cause simulation mismatches between the original and synthesized designs. [CDFG-360]
-        : Signal 'last_reg_ena' in module 'dbuf' in file 'dec.vhd' on line 98.
-Warning : Referenced signal not in sensitivity list.  This may cause simulation mismatches between the original and synthesized designs. [CDFG-360]
-        : Signal 'din' in module 'dbuf' in file 'dec.vhd' on line 98.
-Warning : Referenced signal not in sensitivity list.  This may cause simulation mismatches between the original and synthesized designs. [CDFG-360]
-        : Signal 'last_reg_ena' in module 'dbuf' in file 'dec.vhd' on line 98.
-Warning : Referenced signal not in sensitivity list.  This may cause simulation mismatches between the original and synthesized designs. [CDFG-360]
-        : Signal 'din' in module 'dbuf' in file 'dec.vhd' on line 98.
-Warning : Referenced signal not in sensitivity list.  This may cause simulation mismatches between the original and synthesized designs. [CDFG-360]
-        : Signal 'last_reg_ena' in module 'dbuf' in file 'dec.vhd' on line 98.
-Warning : Referenced signal not in sensitivity list.  This may cause simulation mismatches between the original and synthesized designs. [CDFG-360]
-        : Signal 'din' in module 'dbuf' in file 'dec.vhd' on line 98.
-Warning : Referenced signal not in sensitivity list.  This may cause simulation mismatches between the original and synthesized designs. [CDFG-360]
-        : Signal 'last_reg_ena' in module 'dbuf' in file 'dec.vhd' on line 98.
-Warning : Referenced signal not in sensitivity list.  This may cause simulation mismatches between the original and synthesized designs. [CDFG-360]
-        : Signal 'din' in module 'dbuf' in file 'dec.vhd' on line 98.
-Warning : Referenced signal not in sensitivity list.  This may cause simulation mismatches between the original and synthesized designs. [CDFG-360]
-        : Signal 'last_reg_ena' in module 'dbuf' in file 'dec.vhd' on line 98.
-Warning : Referenced signal not in sensitivity list.  This may cause simulation mismatches between the original and synthesized designs. [CDFG-360]
-        : Signal 'din' in module 'dbuf' in file 'dec.vhd' on line 98.
-Warning : Referenced signal not in sensitivity list.  This may cause simulation mismatches between the original and synthesized designs. [CDFG-360]
-        : Signal 'last_reg_ena' in module 'dbuf' in file 'dec.vhd' on line 98.
-Warning : Referenced signal not in sensitivity list.  This may cause simulation mismatches between the original and synthesized designs. [CDFG-360]
-        : Signal 'din' in module 'dbuf' in file 'dec.vhd' on line 98.
-Warning : Referenced signal not in sensitivity list.  This may cause simulation mismatches between the original and synthesized designs. [CDFG-360]
-        : Signal 'last_reg_ena' in module 'dbuf' in file 'dec.vhd' on line 98.
-Warning : Referenced signal not in sensitivity list.  This may cause simulation mismatches between the original and synthesized designs. [CDFG-360]
-        : Signal 'din' in module 'dbuf' in file 'dec.vhd' on line 98.
-Warning : Referenced signal not in sensitivity list.  This may cause simulation mismatches between the original and synthesized designs. [CDFG-360]
-        : Signal 'last_reg_ena' in module 'dbuf' in file 'dec.vhd' on line 98.
-Warning : Referenced signal not in sensitivity list.  This may cause simulation mismatches between the original and synthesized designs. [CDFG-360]
-        : Signal 'din' in module 'dbuf' in file 'dec.vhd' on line 98.
-Warning : Referenced signal not in sensitivity list.  This may cause simulation mismatches between the original and synthesized designs. [CDFG-360]
-        : Signal 'last_reg_ena' in module 'dbuf' in file 'dec.vhd' on line 98.
-Warning : Referenced signal not in sensitivity list.  This may cause simulation mismatches between the original and synthesized designs. [CDFG-360]
-        : Signal 'din' in module 'dbuf' in file 'dec.vhd' on line 98.
-Warning : Referenced signal not in sensitivity list.  This may cause simulation mismatches between the original and synthesized designs. [CDFG-360]
-        : Signal 'last_reg_ena' in module 'dbuf' in file 'dec.vhd' on line 98.
-Warning : Referenced signal not in sensitivity list.  This may cause simulation mismatches between the original and synthesized designs. [CDFG-360]
-        : Signal 'din' in module 'dbuf' in file 'dec.vhd' on line 98.
-Warning : Referenced signal not in sensitivity list.  This may cause simulation mismatches between the original and synthesized designs. [CDFG-360]
-        : Signal 'last_reg_ena' in module 'dbuf' in file 'dec.vhd' on line 98.
-Warning : Referenced signal not in sensitivity list.  This may cause simulation mismatches between the original and synthesized designs. [CDFG-360]
-        : Signal 'din' in module 'dbuf' in file 'dec.vhd' on line 98.
-Warning : Referenced signal not in sensitivity list.  This may cause simulation mismatches between the original and synthesized designs. [CDFG-360]
-        : Signal 'last_reg_ena' in module 'dbuf' in file 'dec.vhd' on line 98.
-Warning : Referenced signal not in sensitivity list.  This may cause simulation mismatches between the original and synthesized designs. [CDFG-360]
-        : Signal 'din' in module 'dbuf' in file 'dec.vhd' on line 98.
-Warning : Referenced signal not in sensitivity list.  This may cause simulation mismatches between the original and synthesized designs. [CDFG-360]
-        : Signal 'last_reg_ena' in module 'dbuf' in file 'dec.vhd' on line 98.
-Warning : Referenced signal not in sensitivity list.  This may cause simulation mismatches between the original and synthesized designs. [CDFG-360]
-        : Signal 'din' in module 'dbuf' in file 'dec.vhd' on line 98.
-Warning : Referenced signal not in sensitivity list.  This may cause simulation mismatches between the original and synthesized designs. [CDFG-360]
-        : Signal 'last_reg_ena' in module 'dbuf' in file 'dec.vhd' on line 98.
-Warning : Referenced signal not in sensitivity list.  This may cause simulation mismatches between the original and synthesized designs. [CDFG-360]
-        : Signal 'din' in module 'dbuf' in file 'dec.vhd' on line 98.
-Warning : Referenced signal not in sensitivity list.  This may cause simulation mismatches between the original and synthesized designs. [CDFG-360]
-        : Signal 'last_reg_ena' in module 'dbuf' in file 'dec.vhd' on line 98.
-Warning : Referenced signal not in sensitivity list.  This may cause simulation mismatches between the original and synthesized designs. [CDFG-360]
-        : Signal 'din' in module 'dbuf' in file 'dec.vhd' on line 98.
-Warning : Referenced signal not in sensitivity list.  This may cause simulation mismatches between the original and synthesized designs. [CDFG-360]
-        : Signal 'last_reg_ena' in module 'dbuf' in file 'dec.vhd' on line 98.
-Warning : Referenced signal not in sensitivity list.  This may cause simulation mismatches between the original and synthesized designs. [CDFG-360]
-        : Signal 'din' in module 'dbuf' in file 'dec.vhd' on line 98.
-Warning : Referenced signal not in sensitivity list.  This may cause simulation mismatches between the original and synthesized designs. [CDFG-360]
-        : Signal 'last_reg_ena' in module 'dbuf' in file 'dec.vhd' on line 98.
-Warning : Referenced signal not in sensitivity list.  This may cause simulation mismatches between the original and synthesized designs. [CDFG-360]
-        : Signal 'din' in module 'dbuf' in file 'dec.vhd' on line 98.
-Warning : Referenced signal not in sensitivity list.  This may cause simulation mismatches between the original and synthesized designs. [CDFG-360]
-        : Signal 'last_reg_ena' in module 'dbuf' in file 'dec.vhd' on line 98.
-Warning : Referenced signal not in sensitivity list.  This may cause simulation mismatches between the original and synthesized designs. [CDFG-360]
-        : Signal 'din' in module 'dbuf' in file 'dec.vhd' on line 98.
-Warning : Referenced signal not in sensitivity list.  This may cause simulation mismatches between the original and synthesized designs. [CDFG-360]
-        : Signal 'last_reg_ena' in module 'dbuf' in file 'dec.vhd' on line 98.
-Warning : Referenced signal not in sensitivity list.  This may cause simulation mismatches between the original and synthesized designs. [CDFG-360]
-        : Signal 'din' in module 'dbuf' in file 'dec.vhd' on line 98.
-Warning : Referenced signal not in sensitivity list.  This may cause simulation mismatches between the original and synthesized designs. [CDFG-360]
-        : Signal 'last_reg_ena' in module 'dbuf' in file 'dec.vhd' on line 98.
-Warning : Referenced signal not in sensitivity list.  This may cause simulation mismatches between the original and synthesized designs. [CDFG-360]
-        : Signal 'din' in module 'dbuf' in file 'dec.vhd' on line 98.
-Warning : Referenced signal not in sensitivity list.  This may cause simulation mismatches between the original and synthesized designs. [CDFG-360]
-        : Signal 'last_reg_ena' in module 'dbuf' in file 'dec.vhd' on line 98.
-Warning : Referenced signal not in sensitivity list.  This may cause simulation mismatches between the original and synthesized designs. [CDFG-360]
-        : Signal 'din' in module 'dbuf' in file 'dec.vhd' on line 98.
-Warning : Referenced signal not in sensitivity list.  This may cause simulation mismatches between the original and synthesized designs. [CDFG-360]
-        : Signal 'last_reg_ena' in module 'dbuf' in file 'dec.vhd' on line 98.
-Warning : Referenced signal not in sensitivity list.  This may cause simulation mismatches between the original and synthesized designs. [CDFG-360]
-        : Signal 'din' in module 'dbuf' in file 'dec.vhd' on line 98.
-Warning : Referenced signal not in sensitivity list.  This may cause simulation mismatches between the original and synthesized designs. [CDFG-360]
-        : Signal 'last_reg_ena' in module 'dbuf' in file 'dec.vhd' on line 98.
-Warning : Referenced signal not in sensitivity list.  This may cause simulation mismatches between the original and synthesized designs. [CDFG-360]
-        : Signal 'din' in module 'dbuf' in file 'dec.vhd' on line 98.
-Warning : Referenced signal not in sensitivity list.  This may cause simulation mismatches between the original and synthesized designs. [CDFG-360]
-        : Signal 'last_reg_ena' in module 'dbuf' in file 'dec.vhd' on line 98.
-Warning : Referenced signal not in sensitivity list.  This may cause simulation mismatches between the original and synthesized designs. [CDFG-360]
-        : Signal 'din' in module 'dbuf' in file 'dec.vhd' on line 98.
-Warning : Removing unused register. [CDFG-508]
-        : Removing unused register 'last_cnt' in module 'dbuf' in file 'dec.vhd' on line 106.
-        : A flip-flop or latch that was inferred for an unused signal or variable was removed. Use 'set_attribute hdl_preserve_unused_registers true /' to preserve the flip-flop or latch.
 Warning : Undriven module output port. [ELABUTL-123]
         : Undriven bits of output port 'vdin' in module 'enc_dec_wrapper' in file 'enc_dec_wrapper.vhd' on line 7, column 2.
         : Use the 'hdl_undriven_output_port_value' attribute to control treatment of undriven output port during elaboration.
   Done elaborating 'enc_dec_wrapper'.
 Info    : Deleting instances not driving any primary outputs. [GLO-32]
-        : Deleting 4 hierarchical instances.
+        : Deleting 3 hierarchical instances.
         : Optimizations like for example constant propagation or redundancy removal could change the connections so an instance does not drive any primary outputs anymore. To see the list of deleted instances, set the 'information_level' attribute to 2 or above.
-        Trying carrysave optimization (configuration 1 of 1) on module 'dbuf'...
-Info    : Done carrysave optimization. [RTLOPT-20]
-        : There is 1 CSA group in module 'dbuf'... Accepted.
 Mapping enc_dec_wrapper to gates.
+Info    : Replacing the synchronous part of an always feeding back flip-flop with a logic constant. [GLO-45]
+        : The instance is 'decoder/b1/reg_ena_reg[0]'. The constant is '0'.
+        : The value used to replace the flop can be set by the root attribute 'optimize_seq_x_to'. The assigned constant might also conflict with the simulation and/or verification setup.
 Info    : Replacing a flip-flop with a logic constant 0. [GLO-12]
-        : The instance is 'decoder/b1/cnt_reg[5]'.
+        : The instance is 'decoder/b1/cb_seqi/reg_ena_reg[0]'.
         : This optimization was enabled by the root attribute 'optimize_constant_0_flops'.
+Info    : Replacing a flip-flop with a logic constant 0. [GLO-12]
+        : The instance is 'decoder/b1/cb_seqi/buf_reg[0]'.
+Info    : Replacing a flip-flop with a logic constant 0. [GLO-12]
+        : The instance is 'decoder/b1/cb_oseqi/dout_buf3_reg'.
 Info    : Deleting instances not driving any primary outputs. [GLO-32]
-        : Deleting 1 sequential instance.
+        : Deleting 65 sequential instances.
  
 Global mapping target info
 ==========================
@@ -6975,7 +6852,7 @@ Global mapping status
                  Total    Neg   
 Operation         Area   Slack  Worst Path
 -------------------------------------------------------------------------------
- global_map       1745       0  N/A
+ global_map        958       0  N/A
  
 Global incremental target info
 ==============================
@@ -6989,7 +6866,7 @@ Global incremental optimization status
                  Total    Neg   
 Operation         Area   Slack  Worst Path
 -------------------------------------------------------------------------------
- global_inc       1674       0  N/A
+ global_inc        898       0  N/A
 Info    : 'Conformal LEC9.1-s400' or later builds is recommended for verification. [WDO-600]
         : The use of 'Conformal LEC9.1-s400' or later builds is recommended to get better verification results.
 Generating a dofile for design 'enc_dec_wrapper' in file 'fv/enc_dec_wrapper/rtl_to_g1.do' ...
@@ -7000,7 +6877,7 @@ Incremental optimization status
                  Total    Neg       Max       Max    Max   
 Operation         Area   Slack     Trans      Cap   Fanout 
 -------------------------------------------------------------------------------
- init_iopt        1674       0       319        0        0
+ init_iopt         898       0         0        0        0
  
 Incremental optimization status (pre-loop)
 ==========================================
@@ -7008,7 +6885,7 @@ Incremental optimization status (pre-loop)
                  Total    Neg       Max       Max    Max   
 Operation         Area   Slack     Trans      Cap   Fanout 
 -------------------------------------------------------------------------------
- simp_cc_in       1667       0       319        0        0
+ simp_cc_in        882       0         0        0        0
  
 Incremental optimization status
 ===============================
@@ -7016,17 +6893,14 @@ Incremental optimization status
                  Total    Neg       Max       Max    Max   
 Operation         Area   Slack     Trans      Cap   Fanout 
 -------------------------------------------------------------------------------
- init_delay       1667       0       319        0        0
- init_drc         1667       0       319        0        0
- incr_drc         1672       0         0        0        0
- init_area        1672       0         0        0        0
- rem_buf          1656       0         0        0        0
- rem_inv          1652       0         0        0        0
- merge_bi         1650       0         0        0        0
- io_phase         1649       0         0        0        0
- gate_comp        1645       0         0        0        0
- glob_area        1628       0         0        0        0
- area_down        1627       0         0        0        0
+ init_delay        882       0         0        0        0
+ init_drc          882       0         0        0        0
+ init_area         882       0         0        0        0
+ rem_buf           873       0         0        0        0
+ rem_inv           869       0         0        0        0
+ io_phase          867       0         0        0        0
+ gate_comp         857       0         0        0        0
+ glob_area         846       0         0        0        0
  
 Incremental optimization status
 ===============================
@@ -7034,9 +6908,9 @@ Incremental optimization status
                  Total    Neg       Max       Max    Max   
 Operation         Area   Slack     Trans      Cap   Fanout 
 -------------------------------------------------------------------------------
- init_delay       1627       0         0        0        0
- init_drc         1627       0         0        0        0
- init_area        1627       0         0        0        0
+ init_delay        846       0         0        0        0
+ init_drc          846       0         0        0        0
+ init_area         846       0         0        0        0
 
   Done mapping enc_dec_wrapper
   Synthesis succeeded.
@@ -7045,3 +6919,619 @@ Operation         Area   Slack     Trans      Cap   Fanout
 Warning : Possible timing problems have been detected in this design. [TIM-11]
         : The design is 'enc_dec_wrapper'.
         : Use 'report timing -lint' for more information.
+Warning : Replacing existing clock definition. [TIM-101]
+        : The clock name is 'main_clk'
+        : A new clock has been defined with the same name as an existing clock.
+Mapping enc_dec_wrapper to gates.
+ 
+Global mapping target info
+==========================
+Cost Group 'default' target slack:  -101 ps
+Target path end-point (Pin: decoder/h3/ch_reg[3]/d)
+
+ 
+Global mapping status
+=====================
+                         Worst  
+                 Total    Neg   
+Operation         Area   Slack  Worst Path
+-------------------------------------------------------------------------------
+ global_map       1083    -170  decoder/h1/ch_reg[1]/CP --> decoder/f1/q_reg/D
+ 
+Global incremental target info
+==============================
+Cost Group 'default' target slack:  -171 ps
+Target path end-point (Pin: decoder/f2/q_reg/D (HS65_LSS_DFPQNX35/D))
+
+Info    : Changing wireload model of a design/subdesign. [TIM-92]
+        : Changing wireload model of design 'enc_dec_wrapper' from area_1Kto2K to area_0Kto1K.
+        : The change of wireload model will likely change the design's timing slightly.
+ 
+Global incremental optimization status
+======================================
+                         Worst  
+                 Total    Neg   
+Operation         Area   Slack  Worst Path
+-------------------------------------------------------------------------------
+ global_inc       1000    -174  decoder/c1/cout_reg[0]/CP -->
+                                   decoder/h3/ch_reg[3]/D
+Info    : 'Conformal LEC9.1-s400' or later builds is recommended for verification. [WDO-600]
+Generating a dofile for design 'enc_dec_wrapper' in file 'fv/enc_dec_wrapper/rtl_to_g1.do' ...
+ 
+Incremental optimization status
+===============================
+                         Worst  - - - - DRC Totals - - - - 
+                 Total    Neg       Max       Max    Max   
+Operation         Area   Slack     Trans      Cap   Fanout 
+-------------------------------------------------------------------------------
+ init_iopt        1000    -174         0        0        0
+            Path: decoder/c1/cout_reg[0]/CP --> decoder/h3/ch_reg[3]/D
+ 
+Incremental optimization status (pre-loop)
+==========================================
+                         Worst  - - - - DRC Totals - - - - 
+                 Total    Neg       Max       Max    Max   
+Operation         Area   Slack     Trans      Cap   Fanout 
+-------------------------------------------------------------------------------
+ simp_cc_in       1006    -173         0        0        0
+            Path: decoder/h1/ch_reg[2]/CP --> decoder/h3/ch_reg[3]/D
+Info    : Changing wireload model of a design/subdesign. [TIM-92]
+        : Changing wireload model of design 'enc_dec_wrapper' from area_0Kto1K to area_1Kto2K.
+ 
+Incremental optimization status
+===============================
+                         Worst  - - - - DRC Totals - - - - 
+                 Total    Neg       Max       Max    Max   
+Operation         Area   Slack     Trans      Cap   Fanout 
+-------------------------------------------------------------------------------
+ init_delay       1006    -173         0        0        0
+            Path: decoder/h1/ch_reg[2]/CP --> decoder/h3/ch_reg[3]/D
+ incr_delay       1105     -96         0        0        0
+            Path: decoder/c1/cout_reg[2]/CP --> decoder/f1/q_reg/D
+ incr_delay       1111     -94         0        0        0
+            Path: decoder/c1/cout_reg[2]/CP --> decoder/f1/q_reg/D
+ incr_delay       1115     -92         0        0        0
+            Path: decoder/c1/cout_reg[2]/CP --> decoder/f1/q_reg/D
+ incr_delay       1127     -89         0        0        0
+            Path: decoder/c1/cout_reg[2]/CP --> decoder/f1/q_reg/D
+ incr_delay       1127     -88         0        0        0
+            Path: decoder/c1/cout_reg[2]/CP --> decoder/f1/q_reg/D
+ init_drc         1127     -88         0        0        0
+            Path: decoder/c1/cout_reg[2]/CP --> decoder/f1/q_reg/D
+ init_area        1127     -88         0        0        0
+            Path: decoder/c1/cout_reg[2]/CP --> decoder/f1/q_reg/D
+ rem_buf          1109     -88         0        0        0
+            Path: decoder/c1/cout_reg[2]/CP --> decoder/f1/q_reg/D
+ rem_inv          1099     -88         0        0        0
+            Path: decoder/c1/cout_reg[2]/CP --> decoder/f1/q_reg/D
+ merge_bi         1092     -88         0        0        0
+            Path: decoder/c1/cout_reg[2]/CP --> decoder/f1/q_reg/D
+ rem_inv_qb       1091     -88         0        0        0
+            Path: decoder/c1/cout_reg[2]/CP --> decoder/f1/q_reg/D
+ io_phase         1089     -88         0        0        0
+            Path: decoder/c1/cout_reg[2]/CP --> decoder/f1/q_reg/D
+ gate_comp        1080     -88         0        0        0
+            Path: decoder/c1/cout_reg[2]/CP --> decoder/f1/q_reg/D
+ glob_area        1055     -86         0        0        0
+            Path: decoder/c1/cout_reg[0]/CP --> decoder/f2/q_reg/D
+ area_down        1046     -86         0        0        0
+            Path: decoder/c1/cout_reg[0]/CP --> decoder/f2/q_reg/D
+ rem_buf          1044     -86         0        0        0
+            Path: decoder/c1/cout_reg[0]/CP --> decoder/f2/q_reg/D
+ 
+Incremental optimization status
+===============================
+                         Worst  - - - - DRC Totals - - - - 
+                 Total    Neg       Max       Max    Max   
+Operation         Area   Slack     Trans      Cap   Fanout 
+-------------------------------------------------------------------------------
+ init_delay       1044     -86         0        0        0
+            Path: decoder/c1/cout_reg[0]/CP --> decoder/f2/q_reg/D
+ incr_delay       1050     -85         0        0        0
+            Path: decoder/c1/cout_reg[2]/CP --> decoder/f1/q_reg/D
+ init_drc         1050     -85         0        0        0
+            Path: decoder/c1/cout_reg[2]/CP --> decoder/f1/q_reg/D
+ init_area        1050     -85         0        0        0
+            Path: decoder/c1/cout_reg[2]/CP --> decoder/f1/q_reg/D
+ glob_area        1048     -85         0        0        0
+            Path: decoder/c1/cout_reg[2]/CP --> decoder/f1/q_reg/D
+ area_down        1047     -85         0        0        0
+            Path: decoder/c1/cout_reg[2]/CP --> decoder/f1/q_reg/D
+
+  Done mapping enc_dec_wrapper
+  Synthesis succeeded.
+  Setting attribute of port 'din': 'lp_asserted_probability' = 0.50000
+  Setting attribute of port 'din': 'lp_asserted_toggle_rate' = 23.333000
+Warning : Possible timing problems have been detected in this design. [TIM-11]
+        : The design is 'enc_dec_wrapper'.
+Warning : Replacing existing clock definition. [TIM-101]
+        : The clock name is 'main_clk'
+Mapping enc_dec_wrapper to gates.
+ 
+Global mapping target info
+==========================
+Cost Group 'default' target slack:  -256 ps
+Target path end-point (Pin: decoder/h3/ch_reg[3]/d)
+
+ 
+Global mapping status
+=====================
+                         Worst  
+                 Total    Neg   
+Operation         Area   Slack  Worst Path
+-------------------------------------------------------------------------------
+ global_map       1089    -345  decoder/h1/ch_reg[1]/CP --> decoder/f2/q_reg/D
+ 
+Global incremental target info
+==============================
+Cost Group 'default' target slack:  -337 ps
+Target path end-point (Pin: decoder/f2/q_reg/D (HS65_LSS_DFPQNX27/D))
+
+Info    : Changing wireload model of a design/subdesign. [TIM-92]
+        : Changing wireload model of design 'enc_dec_wrapper' from area_1Kto2K to area_0Kto1K.
+ 
+Global incremental optimization status
+======================================
+                         Worst  
+                 Total    Neg   
+Operation         Area   Slack  Worst Path
+-------------------------------------------------------------------------------
+ global_inc        992    -318  decoder/h1/ch_reg[4]/CP -->
+                                   decoder/h1/ch_reg[1]/D
+Info    : 'Conformal LEC9.1-s400' or later builds is recommended for verification. [WDO-600]
+Generating a dofile for design 'enc_dec_wrapper' in file 'fv/enc_dec_wrapper/rtl_to_g1.do' ...
+ 
+Incremental optimization status
+===============================
+                         Worst  - - - - DRC Totals - - - - 
+                 Total    Neg       Max       Max    Max   
+Operation         Area   Slack     Trans      Cap   Fanout 
+-------------------------------------------------------------------------------
+ init_iopt         992    -318         0        0        0
+            Path: decoder/h1/ch_reg[4]/CP --> decoder/h1/ch_reg[1]/D
+ 
+Incremental optimization status (pre-loop)
+==========================================
+                         Worst  - - - - DRC Totals - - - - 
+                 Total    Neg       Max       Max    Max   
+Operation         Area   Slack     Trans      Cap   Fanout 
+-------------------------------------------------------------------------------
+ simp_cc_in        979    -314         0        0        0
+            Path: decoder/c1/cout_reg[3]/CP --> decoder/h1/ch_reg[1]/D
+ 
+Incremental optimization status
+===============================
+                         Worst  - - - - DRC Totals - - - - 
+                 Total    Neg       Max       Max    Max   
+Operation         Area   Slack     Trans      Cap   Fanout 
+-------------------------------------------------------------------------------
+ init_delay        979    -314         0        0        0
+            Path: decoder/c1/cout_reg[3]/CP --> decoder/h1/ch_reg[1]/D
+ incr_delay       1071    -248         0        0        0
+            Path: decoder/c1/cout_reg[3]/CP --> decoder/h1/ch_reg[1]/D
+ incr_delay       1108    -230         0        0        0
+            Path: decoder/c1/cout_reg[3]/CP --> decoder/h1/ch_reg[1]/D
+ incr_delay       1154    -219         0        0        0
+            Path: decoder/c1/cout_reg[3]/CP --> decoder/h1/ch_reg[1]/D
+ incr_delay       1161    -217         0        0        0
+            Path: decoder/c1/cout_reg[2]/CP --> decoder/h1/ch_reg[1]/D
+ incr_delay       1179    -203         0        0        0
+            Path: decoder/h1/ch_reg[2]/CP --> decoder/h1/ch_reg[1]/D
+ init_drc         1179    -203         0        0        0
+            Path: decoder/h1/ch_reg[2]/CP --> decoder/h1/ch_reg[1]/D
+ init_area        1179    -203         0        0        0
+            Path: decoder/h1/ch_reg[2]/CP --> decoder/h1/ch_reg[1]/D
+ rem_buf          1144    -203         0        0        0
+            Path: decoder/h1/ch_reg[2]/CP --> decoder/h1/ch_reg[1]/D
+ rem_inv          1140    -203         0        0        0
+            Path: decoder/h1/ch_reg[2]/CP --> decoder/h1/ch_reg[1]/D
+ merge_bi         1139    -203         0        0        0
+            Path: decoder/h1/ch_reg[2]/CP --> decoder/h1/ch_reg[1]/D
+ io_phase         1133    -203         0        0        0
+            Path: decoder/h1/ch_reg[2]/CP --> decoder/h1/ch_reg[1]/D
+ gate_comp        1125    -203         0        0        0
+            Path: decoder/h1/ch_reg[2]/CP --> decoder/h1/ch_reg[1]/D
+ glob_area        1113    -202         0        0        0
+            Path: decoder/c1/cout_reg[4]/CP --> decoder/h1/ch_reg[1]/D
+ area_down        1104    -202         0        0        0
+            Path: decoder/c1/cout_reg[4]/CP --> decoder/h1/ch_reg[1]/D
+ rem_buf          1102    -202         0        0        0
+            Path: decoder/c1/cout_reg[4]/CP --> decoder/h1/ch_reg[1]/D
+Info    : Changing wireload model of a design/subdesign. [TIM-92]
+        : Changing wireload model of design 'enc_dec_wrapper' from area_0Kto1K to area_1Kto2K.
+ 
+Incremental optimization status
+===============================
+                         Worst  - - - - DRC Totals - - - - 
+                 Total    Neg       Max       Max    Max   
+Operation         Area   Slack     Trans      Cap   Fanout 
+-------------------------------------------------------------------------------
+ init_delay       1102    -202         0        0        0
+            Path: decoder/c1/cout_reg[4]/CP --> decoder/h1/ch_reg[1]/D
+ incr_delay       1103    -202         0        0        0
+            Path: decoder/h1/ch_reg[2]/CP --> decoder/h1/ch_reg[1]/D
+ init_drc         1103    -202         0        0        0
+            Path: decoder/h1/ch_reg[2]/CP --> decoder/h1/ch_reg[1]/D
+ init_area        1103    -202         0        0        0
+            Path: decoder/h1/ch_reg[2]/CP --> decoder/h1/ch_reg[1]/D
+ rem_buf          1103    -202         0        0        0
+            Path: decoder/h1/ch_reg[2]/CP --> decoder/h1/ch_reg[1]/D
+ glob_area        1100    -202         0        0        0
+            Path: decoder/h1/ch_reg[2]/CP --> decoder/h1/ch_reg[1]/D
+ area_down        1099    -202         0        0        0
+            Path: decoder/c1/cout_reg[4]/CP --> decoder/h1/ch_reg[1]/D
+
+  Done mapping enc_dec_wrapper
+  Synthesis succeeded.
+  Setting attribute of port 'din': 'lp_asserted_probability' = 0.50000
+  Setting attribute of port 'din': 'lp_asserted_toggle_rate' = 17.500000
+Warning : Possible timing problems have been detected in this design. [TIM-11]
+        : The design is 'enc_dec_wrapper'.
+Warning : Replacing existing clock definition. [TIM-101]
+        : The clock name is 'main_clk'
+Mapping enc_dec_wrapper to gates.
+ 
+Global mapping target info
+==========================
+Cost Group 'default' target slack:  -350 ps
+Target path end-point (Pin: decoder/h1/ch_reg[1]/d)
+
+ 
+Global mapping status
+=====================
+                         Worst  
+                 Total    Neg   
+Operation         Area   Slack  Worst Path
+-------------------------------------------------------------------------------
+ global_map       1130    -424  decoder/h1/ch_reg[1]/CP --> decoder/f1/q_reg/D
+ 
+Global incremental target info
+==============================
+Cost Group 'default' target slack:  -425 ps
+Target path end-point (Pin: decoder/f2/q_reg/D (HS65_LSS_DFPQNX27/D))
+
+ 
+Global incremental optimization status
+======================================
+                         Worst  
+                 Total    Neg   
+Operation         Area   Slack  Worst Path
+-------------------------------------------------------------------------------
+ global_inc       1042    -427  decoder/c1/cout_reg[4]/CP -->
+                                   decoder/b1/dout_reg/D
+Info    : 'Conformal LEC9.1-s400' or later builds is recommended for verification. [WDO-600]
+Generating a dofile for design 'enc_dec_wrapper' in file 'fv/enc_dec_wrapper/rtl_to_g1.do' ...
+ 
+Incremental optimization status
+===============================
+                         Worst  - - - - DRC Totals - - - - 
+                 Total    Neg       Max       Max    Max   
+Operation         Area   Slack     Trans      Cap   Fanout 
+-------------------------------------------------------------------------------
+ init_iopt        1042    -427         0        0        0
+            Path: decoder/c1/cout_reg[4]/CP --> decoder/b1/dout_reg/D
+ 
+Incremental optimization status (pre-loop)
+==========================================
+                         Worst  - - - - DRC Totals - - - - 
+                 Total    Neg       Max       Max    Max   
+Operation         Area   Slack     Trans      Cap   Fanout 
+-------------------------------------------------------------------------------
+ simp_cc_in       1045    -425         0        0        0
+            Path: decoder/c1/cout_reg[4]/CP --> decoder/f1/q_reg/D
+ 
+Incremental optimization status
+===============================
+                         Worst  - - - - DRC Totals - - - - 
+                 Total    Neg       Max       Max    Max   
+Operation         Area   Slack     Trans      Cap   Fanout 
+-------------------------------------------------------------------------------
+ init_delay       1045    -425         0        0        0
+            Path: decoder/c1/cout_reg[4]/CP --> decoder/f1/q_reg/D
+ incr_delay       1098    -378         0        0        0
+            Path: decoder/c1/cout_reg[0]/CP --> decoder/b1/dout_reg/D
+ incr_delay       1111    -371         0        0        0
+            Path: decoder/c1/cout_reg[4]/CP --> decoder/h1/ch_reg[1]/D
+ incr_delay       1151    -364         0        0        0
+            Path: decoder/c1/cout_reg[4]/CP --> decoder/f1/q_reg/D
+ init_drc         1151    -364         0        0        0
+            Path: decoder/c1/cout_reg[4]/CP --> decoder/f1/q_reg/D
+ init_area        1151    -364         0        0        0
+            Path: decoder/c1/cout_reg[4]/CP --> decoder/f1/q_reg/D
+ rem_buf          1142    -364         0        0        0
+            Path: decoder/c1/cout_reg[4]/CP --> decoder/f1/q_reg/D
+ rem_inv          1139    -364         0        0        0
+            Path: decoder/c1/cout_reg[4]/CP --> decoder/f1/q_reg/D
+ merge_bi         1137    -364         0        0        0
+            Path: decoder/c1/cout_reg[4]/CP --> decoder/f1/q_reg/D
+ gate_comp        1132    -364         0        0        0
+            Path: decoder/c1/cout_reg[4]/CP --> decoder/f1/q_reg/D
+ glob_area        1123    -364         0        0        0
+            Path: decoder/c1/cout_reg[4]/CP --> decoder/f2/q_reg/D
+ area_down        1120    -364         0        0        0
+            Path: decoder/c1/cout_reg[4]/CP --> decoder/f1/q_reg/D
+ 
+Incremental optimization status
+===============================
+                         Worst  - - - - DRC Totals - - - - 
+                 Total    Neg       Max       Max    Max   
+Operation         Area   Slack     Trans      Cap   Fanout 
+-------------------------------------------------------------------------------
+ init_delay       1120    -364         0        0        0
+            Path: decoder/c1/cout_reg[4]/CP --> decoder/f1/q_reg/D
+ incr_delay       1121    -364         0        0        0
+            Path: decoder/c1/cout_reg[3]/CP --> decoder/f2/q_reg/D
+ incr_delay       1132    -351         0        0        0
+            Path: decoder/c1/cout_reg[0]/CP --> decoder/f1/q_reg/D
+ incr_delay       1161    -336         0        0        0
+            Path: decoder/c1/cout_reg[4]/CP --> decoder/f1/q_reg/D
+ incr_delay       1164    -335         0        0        0
+            Path: decoder/c1/cout_reg[4]/CP --> decoder/f1/q_reg/D
+ init_drc         1164    -335         0        0        0
+            Path: decoder/c1/cout_reg[4]/CP --> decoder/f1/q_reg/D
+ init_area        1164    -335         0        0        0
+            Path: decoder/c1/cout_reg[4]/CP --> decoder/f1/q_reg/D
+ rem_buf          1158    -335         0        0        0
+            Path: decoder/c1/cout_reg[4]/CP --> decoder/f1/q_reg/D
+ glob_area        1153    -335         0        0        0
+            Path: decoder/c1/cout_reg[4]/CP --> decoder/f1/q_reg/D
+ area_down        1147    -335         0        0        0
+            Path: decoder/c1/cout_reg[4]/CP --> decoder/f1/q_reg/D
+
+  Done mapping enc_dec_wrapper
+  Synthesis succeeded.
+  Setting attribute of port 'din': 'lp_asserted_probability' = 0.50000
+  Setting attribute of port 'din': 'lp_asserted_toggle_rate' = 14.000000
+Warning : Possible timing problems have been detected in this design. [TIM-11]
+        : The design is 'enc_dec_wrapper'.
+Warning : Replacing existing clock definition. [TIM-101]
+        : The clock name is 'main_clk'
+Mapping enc_dec_wrapper to gates.
+ 
+Global mapping target info
+==========================
+Cost Group 'default' target slack:  -422 ps
+Target path end-point (Pin: decoder/h1/ch_reg[1]/d)
+
+ 
+Global mapping status
+=====================
+                         Worst  
+                 Total    Neg   
+Operation         Area   Slack  Worst Path
+-------------------------------------------------------------------------------
+ global_map       1078    -517  decoder/h1/ch_reg[1]/CP --> decoder/f2/q_reg/D
+ 
+Global incremental target info
+==============================
+Cost Group 'default' target slack:  -518 ps
+Target path end-point (Pin: decoder/f2/q_reg/D (HS65_LSS_DFPQNX27/D))
+
+Info    : Changing wireload model of a design/subdesign. [TIM-92]
+        : Changing wireload model of design 'enc_dec_wrapper' from area_1Kto2K to area_0Kto1K.
+ 
+Global incremental optimization status
+======================================
+                         Worst  
+                 Total    Neg   
+Operation         Area   Slack  Worst Path
+-------------------------------------------------------------------------------
+ global_inc        992    -513  decoder/c1/cout_reg[4]/CP -->
+                                   decoder/f1/q_reg/D
+Info    : 'Conformal LEC9.1-s400' or later builds is recommended for verification. [WDO-600]
+Generating a dofile for design 'enc_dec_wrapper' in file 'fv/enc_dec_wrapper/rtl_to_g1.do' ...
+ 
+Incremental optimization status
+===============================
+                         Worst  - - - - DRC Totals - - - - 
+                 Total    Neg       Max       Max    Max   
+Operation         Area   Slack     Trans      Cap   Fanout 
+-------------------------------------------------------------------------------
+ init_iopt         992    -513         0        0        0
+            Path: decoder/c1/cout_reg[4]/CP --> decoder/f1/q_reg/D
+ 
+Incremental optimization status (pre-loop)
+==========================================
+                         Worst  - - - - DRC Totals - - - - 
+                 Total    Neg       Max       Max    Max   
+Operation         Area   Slack     Trans      Cap   Fanout 
+-------------------------------------------------------------------------------
+ simp_cc_in        982    -494         0        0        0
+            Path: decoder/c1/cout_reg[4]/CP --> decoder/h1/ch_reg[1]/D
+ 
+Incremental optimization status
+===============================
+                         Worst  - - - - DRC Totals - - - - 
+                 Total    Neg       Max       Max    Max   
+Operation         Area   Slack     Trans      Cap   Fanout 
+-------------------------------------------------------------------------------
+ init_delay        982    -494         0        0        0
+            Path: decoder/c1/cout_reg[4]/CP --> decoder/h1/ch_reg[1]/D
+ incr_delay       1098    -429         0        0        0
+            Path: decoder/c1/cout_reg[4]/CP --> decoder/h1/ch_reg[1]/D
+ incr_delay       1116    -421         0        0        0
+            Path: decoder/c1/cout_reg[4]/CP --> decoder/h1/ch_reg[1]/D
+ init_drc         1116    -421         0        0        0
+            Path: decoder/c1/cout_reg[4]/CP --> decoder/h1/ch_reg[1]/D
+ init_area        1116    -421         0        0        0
+            Path: decoder/c1/cout_reg[4]/CP --> decoder/h1/ch_reg[1]/D
+ rem_buf          1083    -421         0        0        0
+            Path: decoder/c1/cout_reg[4]/CP --> decoder/h1/ch_reg[1]/D
+ rem_inv          1076    -421         0        0        0
+            Path: decoder/c1/cout_reg[4]/CP --> decoder/h1/ch_reg[1]/D
+ merge_bi         1072    -421         0        0        0
+            Path: decoder/c1/cout_reg[4]/CP --> decoder/h1/ch_reg[1]/D
+ gate_comp        1067    -421         0        0        0
+            Path: decoder/h1/ch_reg[2]/CP --> decoder/h1/ch_reg[1]/D
+ glob_area        1039    -420         0        0        0
+            Path: decoder/c1/cout_reg[0]/CP --> decoder/h1/ch_reg[1]/D
+ area_down        1018    -418         0        0        0
+            Path: decoder/h1/ch_reg[2]/CP --> decoder/h1/ch_reg[1]/D
+ rem_buf          1019    -417         0        0        0
+            Path: decoder/c1/cout_reg[0]/CP --> decoder/h1/ch_reg[1]/D
+ rem_inv          1019    -416         0        0        0
+            Path: decoder/c1/cout_reg[0]/CP --> decoder/h1/ch_reg[1]/D
+Info    : Changing wireload model of a design/subdesign. [TIM-92]
+        : Changing wireload model of design 'enc_dec_wrapper' from area_0Kto1K to area_1Kto2K.
+ 
+Incremental optimization status
+===============================
+                         Worst  - - - - DRC Totals - - - - 
+                 Total    Neg       Max       Max    Max   
+Operation         Area   Slack     Trans      Cap   Fanout 
+-------------------------------------------------------------------------------
+ init_delay       1019    -416         0        0        0
+            Path: decoder/c1/cout_reg[0]/CP --> decoder/h1/ch_reg[1]/D
+ incr_delay       1080    -395         0        0        0
+            Path: decoder/c1/cout_reg[4]/CP --> decoder/h1/ch_reg[1]/D
+ incr_delay       1120    -392         0        0        0
+            Path: decoder/c1/cout_reg[4]/CP --> decoder/f1/q_reg/D
+ incr_delay       1123    -391         0        0        0
+            Path: decoder/c1/cout_reg[4]/CP --> decoder/f1/q_reg/D
+ init_drc         1123    -391         0        0        0
+            Path: decoder/c1/cout_reg[4]/CP --> decoder/f1/q_reg/D
+ init_area        1123    -391         0        0        0
+            Path: decoder/c1/cout_reg[4]/CP --> decoder/f1/q_reg/D
+ rem_buf          1096    -391         0        0        0
+            Path: decoder/c1/cout_reg[4]/CP --> decoder/f1/q_reg/D
+ merge_bi         1094    -391         0        0        0
+            Path: decoder/c1/cout_reg[4]/CP --> decoder/f1/q_reg/D
+ io_phase         1093    -391         0        0        0
+            Path: decoder/c1/cout_reg[4]/CP --> decoder/f1/q_reg/D
+ glob_area        1078    -391         0        0        0
+            Path: decoder/c1/cout_reg[4]/CP --> decoder/f1/q_reg/D
+ area_down        1071    -391         0        0        0
+            Path: decoder/c1/cout_reg[4]/CP --> decoder/f1/q_reg/D
+
+  Done mapping enc_dec_wrapper
+  Synthesis succeeded.
+  Setting attribute of port 'din': 'lp_asserted_probability' = 0.50000
+  Setting attribute of port 'din': 'lp_asserted_toggle_rate' = 11.666000
+Warning : Possible timing problems have been detected in this design. [TIM-11]
+        : The design is 'enc_dec_wrapper'.
+Warning : Replacing existing clock definition. [TIM-101]
+        : The clock name is 'main_clk'
+Mapping enc_dec_wrapper to gates.
+ 
+Global mapping target info
+==========================
+Cost Group 'default' target slack:  -465 ps
+Target path end-point (Pin: decoder/h1/ch_reg[1]/d)
+
+ 
+Global mapping status
+=====================
+                         Worst  
+                 Total    Neg   
+Operation         Area   Slack  Worst Path
+-------------------------------------------------------------------------------
+ global_map       1115    -507  decoder/c1/cout_reg[2]/CP -->
+                                   decoder/f2/q_reg/D
+ 
+Global incremental target info
+==============================
+Cost Group 'default' target slack:  -508 ps
+Target path end-point (Pin: decoder/f2/q_reg/D (HS65_LSS_DFPQNX27/D))
+
+ 
+Global incremental optimization status
+======================================
+                         Worst  
+                 Total    Neg   
+Operation         Area   Slack  Worst Path
+-------------------------------------------------------------------------------
+ global_inc       1067    -504  decoder/c1/cout_reg[4]/CP -->
+                                   decoder/h1/ch_reg[1]/D
+Info    : 'Conformal LEC9.1-s400' or later builds is recommended for verification. [WDO-600]
+Generating a dofile for design 'enc_dec_wrapper' in file 'fv/enc_dec_wrapper/rtl_to_g1.do' ...
+ 
+Incremental optimization status
+===============================
+                         Worst  - - - - DRC Totals - - - - 
+                 Total    Neg       Max       Max    Max   
+Operation         Area   Slack     Trans      Cap   Fanout 
+-------------------------------------------------------------------------------
+ init_iopt        1067    -504         0        0        0
+            Path: decoder/c1/cout_reg[4]/CP --> decoder/h1/ch_reg[1]/D
+ 
+Incremental optimization status (pre-loop)
+==========================================
+                         Worst  - - - - DRC Totals - - - - 
+                 Total    Neg       Max       Max    Max   
+Operation         Area   Slack     Trans      Cap   Fanout 
+-------------------------------------------------------------------------------
+ simp_cc_in       1056    -504         0        0        0
+            Path: decoder/c1/cout_reg[4]/CP --> decoder/h1/ch_reg[1]/D
+ 
+Incremental optimization status
+===============================
+                         Worst  - - - - DRC Totals - - - - 
+                 Total    Neg       Max       Max    Max   
+Operation         Area   Slack     Trans      Cap   Fanout 
+-------------------------------------------------------------------------------
+ init_delay       1056    -504         0        0        0
+            Path: decoder/c1/cout_reg[4]/CP --> decoder/h1/ch_reg[1]/D
+ incr_delay       1149    -454         0        0        0
+            Path: decoder/c1/cout_reg[3]/CP --> decoder/h1/ch_reg[1]/D
+ incr_delay       1161    -448         0        0        0
+            Path: decoder/c1/cout_reg[4]/CP --> decoder/h1/ch_reg[1]/D
+ incr_delay       1172    -445         0        0        0
+            Path: decoder/c1/cout_reg[4]/CP --> decoder/h1/ch_reg[1]/D
+ incr_delay       1175    -445         0        0        0
+            Path: decoder/c1/cout_reg[4]/CP --> decoder/h1/ch_reg[1]/D
+ incr_delay       1171    -444         0        0        0
+            Path: decoder/c1/cout_reg[4]/CP --> decoder/h1/ch_reg[1]/D
+ incr_delay       1191    -442         0        0        0
+            Path: decoder/c1/cout_reg[4]/CP --> decoder/h1/ch_reg[1]/D
+ incr_delay       1197    -440         0        0        0
+            Path: decoder/c1/cout_reg[4]/CP --> decoder/h1/ch_reg[1]/D
+ incr_delay       1207    -439         0        0        0
+            Path: decoder/c1/cout_reg[4]/CP --> decoder/f2/q_reg/D
+ incr_delay       1213    -439         0        0        0
+            Path: decoder/c1/cout_reg[4]/CP --> decoder/f1/q_reg/D
+ incr_delay       1216    -439         0        0        0
+            Path: decoder/c1/cout_reg[4]/CP --> decoder/f1/q_reg/D
+ incr_delay       1216    -438         0        0        0
+            Path: decoder/h1/ch_reg[2]/CP --> decoder/f1/q_reg/D
+ incr_delay       1230    -437         0        0        0
+            Path: decoder/c1/cout_reg[4]/CP --> decoder/h1/ch_reg[1]/D
+ incr_delay       1231    -437         0        0        0
+            Path: decoder/c1/cout_reg[4]/CP --> decoder/h1/ch_reg[1]/D
+ init_drc         1231    -437         0        0        0
+            Path: decoder/c1/cout_reg[4]/CP --> decoder/h1/ch_reg[1]/D
+ init_area        1231    -437         0        0        0
+            Path: decoder/c1/cout_reg[4]/CP --> decoder/h1/ch_reg[1]/D
+ rem_buf          1198    -437         0        0        0
+            Path: decoder/c1/cout_reg[4]/CP --> decoder/h1/ch_reg[1]/D
+ rem_inv          1195    -437         0        0        0
+            Path: decoder/c1/cout_reg[4]/CP --> decoder/h1/ch_reg[1]/D
+ merge_bi         1193    -437         0        0        0
+            Path: decoder/c1/cout_reg[4]/CP --> decoder/h1/ch_reg[1]/D
+ io_phase         1187    -437         0        0        0
+            Path: decoder/c1/cout_reg[4]/CP --> decoder/h1/ch_reg[1]/D
+ gate_comp        1182    -437         0        0        0
+            Path: decoder/c1/cout_reg[4]/CP --> decoder/h1/ch_reg[1]/D
+ glob_area        1165    -437         0        0        0
+            Path: decoder/c1/cout_reg[4]/CP --> decoder/h1/ch_reg[1]/D
+ area_down        1151    -437         0        0        0
+            Path: decoder/c1/cout_reg[4]/CP --> decoder/h1/ch_reg[1]/D
+ 
+Incremental optimization status
+===============================
+                         Worst  - - - - DRC Totals - - - - 
+                 Total    Neg       Max       Max    Max   
+Operation         Area   Slack     Trans      Cap   Fanout 
+-------------------------------------------------------------------------------
+ init_delay       1151    -437         0        0        0
+            Path: decoder/c1/cout_reg[4]/CP --> decoder/h1/ch_reg[1]/D
+ init_drc         1151    -437         0        0        0
+            Path: decoder/c1/cout_reg[4]/CP --> decoder/h1/ch_reg[1]/D
+ init_area        1151    -437         0        0        0
+            Path: decoder/c1/cout_reg[4]/CP --> decoder/h1/ch_reg[1]/D
+
+  Done mapping enc_dec_wrapper
+  Synthesis succeeded.
+  Setting attribute of port 'din': 'lp_asserted_probability' = 0.50000
+  Setting attribute of port 'din': 'lp_asserted_toggle_rate' = 10.000000
+Warning : Possible timing problems have been detected in this design. [TIM-11]
+        : The design is 'enc_dec_wrapper'.

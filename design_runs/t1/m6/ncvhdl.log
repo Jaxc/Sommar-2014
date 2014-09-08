@@ -1,5 +1,5 @@
 ncvhdl: 08.20-s012: (c) Copyright 1995-2009 Cadence Design Systems, Inc.
-TOOL:	ncvhdl	08.20-s012: Started on Sep 01, 2014 at 15:23:00 CEST
+TOOL:	ncvhdl	08.20-s012: Started on Sep 02, 2014 at 16:36:17 CEST
 ncvhdl
     -messages
     -linedebug
@@ -14,67 +14,7 @@ ncvhdl
 const.vhd:
 	errors: 0, warnings: 0
 dec.vhd:
-		registers:for i in 0 to n generate
-		                          |
-ncvhdl_p: *E,EXPLOP (dec.vhd,163|28): expecting the reserved word 'LOOP' 87[8.8] 93[8.9].
-		end generate;
-		           |
-ncvhdl_p: *E,EXPRIF (dec.vhd,169|13): expecting the reserved word 'IF' 87[8.6] 93[8.7].
-		MUX : for i in 0 to n-1 generate
-		                        |
-ncvhdl_p: *E,EXPLOP (dec.vhd,171|26): expecting the reserved word 'LOOP' 87[8.8] 93[8.9].
-			dout_buf2(i+1) <= dout_buf(i) or dout_buf2(i)
-			                                              |
-ncvhdl_p: *E,EXPSMI (dec.vhd,174|49): expecting a semicolon (';') 87[8.3] 93[8.4].
-		end if;
-		    |
-ncvhdl_p: *E,MISPRO (dec.vhd,181|6): expecting the reserved word 'PROCESS' [9.2].
-	end if;
-	    |
-ncvhdl_p: *E,EXPSMI (dec.vhd,184|5): expecting a semicolon (';') [1.2].
-end process;
-|
-ncvhdl_p: *E,EXPACE (dec.vhd,185|0): expecting a library unit [11.1].
-	SIGNAL syn1, ch1, ch_and: BIT_VECTOR(0 TO m-1);
-	                                          |
-ncvhdl_p: *E,IDENTU (dec.vhd,203|43): identifier (M) is not declared [10.3].
-	SIGNAL syn1, ch1, ch_and: BIT_VECTOR(0 TO m-1);
-	                                   |
-ncvhdl_p: *E,STIUNC (dec.vhd,203|36): subtype indication must not denote an unconstrained array type [4.3.1.2].
-			dout1: OUT BIT_VECTOR(0 TO m-1)); 
-			                           |
-ncvhdl_p: *E,IDENTU (dec.vhd,211|30): identifier (M) is not declared [10.3].
-			din: BIT_VECTOR(0 TO m-1);
-			                     |
-ncvhdl_p: *E,IDENTU (dec.vhd,216|24): identifier (M) is not declared [10.3].
-			dout: OUT BIT_VECTOR(0 TO m-1)); 
-			                          |
-ncvhdl_p: *E,IDENTU (dec.vhd,217|29): identifier (M) is not declared [10.3].
-		PORT MAP (clk, pe, din_reset, syn1);
-		                                 |
-ncvhdl_p: *E,IDENTU (dec.vhd,229|35): identifier (SYN1) is not declared [10.3].
-		PORT MAP (clk, pe, syn1, ch1);	
-		                      |
-ncvhdl_p: *E,IDENTU (dec.vhd,231|24): identifier (SYN1) is not declared [10.3].
-	err<= ch_and(m-1);
-	           |
-ncvhdl_p: *E,IDENTU (dec.vhd,236|12): identifier (CH_AND) is not declared [10.3].
-	ch_and(0)<= ch1(0);
-	              |
-ncvhdl_p: *E,IDENTU (dec.vhd,238|15): identifier (CH1) is not declared [10.3].
-	ch_and(0)<= ch1(0);
-	     |
-ncvhdl_p: *E,IDENTU (dec.vhd,238|6): identifier (CH_AND) is not declared [10.3].
-	FOR i IN 1 TO m-1 GENERATE
-	              |
-ncvhdl_p: *E,IDENTU (dec.vhd,240|15): identifier (M) is not declared [10.3].
-	  ch_and(i)<= ch_and(i-1) AND NOT ch1(i);
-	                   |
-ncvhdl_p: *E,IDENTU (dec.vhd,241|20): identifier (CH_AND) is not declared [10.3].
-	  ch_and(i)<= ch_and(i-1) AND NOT ch1(i);
-	       |
-ncvhdl_p: *E,IDENTU (dec.vhd,241|8): identifier (CH_AND) is not declared [10.3].
-	errors: 20, warnings: 0
+	errors: 0, warnings: 0
 enc.vhd:
 	errors: 0, warnings: 0
 bchio.vhd:
@@ -83,4 +23,70 @@ BCH_TB.vhd:
 	errors: 0, warnings: 0
 sim.vhd:
 	errors: 0, warnings: 0
-TOOL:	ncvhdl	08.20-s012: Exiting on Sep 01, 2014 at 15:23:01 CEST  (total: 00:00:01)
+WORKLIB.CONST (package):
+	streams: 1, words: 6
+WORKLIB.DCOUNT (entity):
+	streams: 6, words: 68
+WORKLIB.DCOUNT:DCOUNTA (architecture):
+	streams: 1, words: 246
+WORKLIB.DSYN1 (entity):
+	streams: 6, words: 236
+WORKLIB.DSYN1:DSYN1A (architecture):
+	streams: 1, words: 246
+WORKLIB.DCH1 (entity):
+	streams: 7, words: 410
+WORKLIB.DCH1:DCH1A (architecture):
+	streams: 1, words: 393
+WORKLIB.DBUF (entity):
+	streams: 6, words: 68
+WORKLIB.DBUF:DBUFA (architecture):
+	streams: 2, words: 2172
+WORKLIB.DEC (entity):
+	streams: 6, words: 68
+WORKLIB.DEC:DECA (architecture):
+	streams: 6, words: 2324
+WORKLIB.ERING (entity):
+	streams: 5, words: 62
+WORKLIB.ERING:ERINGA (architecture):
+	streams: 1, words: 393
+WORKLIB.ECOUNT (entity):
+	streams: 4, words: 56
+WORKLIB.ECOUNT:ECOUNTA (architecture):
+	streams: 1, words: 246
+WORKLIB.ENC (entity):
+	streams: 6, words: 68
+WORKLIB.ENC:ENCA (architecture):
+	streams: 3, words: 241
+WORKLIB.IOENC (entity):
+	streams: 6, words: 68
+WORKLIB.IOENC:IOENCA (architecture):
+	streams: 2, words: 754
+WORKLIB.IODEC (entity):
+	streams: 6, words: 68
+WORKLIB.IODEC:IODECA (architecture):
+	streams: 2, words: 754
+WORKLIB.BCH_TB (entity):
+	streams: 1, words: 38
+WORKLIB.BCH_TB:TESTBENCH (architecture):
+	streams: 8, words: 9010
+WORKLIB.ENCBUF (entity):
+	streams: 6, words: 366
+WORKLIB.ENCBUF:ENCBUFA (architecture):
+	streams: 1, words: 376
+WORKLIB.ERRBUF (entity):
+	streams: 6, words: 376
+WORKLIB.ERRBUF:ERRBUFA (architecture):
+	streams: 1, words: 386
+WORKLIB.COMBUF (entity):
+	streams: 4, words: 56
+WORKLIB.COMBUF:COMBUFA (architecture):
+	streams: 1, words: 396
+WORKLIB.DECBUF (entity):
+	streams: 6, words: 366
+WORKLIB.DECBUF:DECBUFA (architecture):
+	streams: 1, words: 376
+WORKLIB.SIM (entity):
+	streams: 13, words: 1014
+WORKLIB.SIM:SIMA (architecture):
+	streams: 7, words: 2153
+TOOL:	ncvhdl	08.20-s012: Exiting on Sep 02, 2014 at 16:36:17 CEST  (total: 00:00:00)

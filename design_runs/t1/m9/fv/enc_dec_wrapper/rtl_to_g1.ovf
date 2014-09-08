@@ -3,17 +3,3 @@
 
 ovf_setup -ungroup_separator { _ }
 
-ovf_transform \
--module { dbuf } \
--type { tree } \
--internal_type { 206 } \
--internal_index { 523 } \
--input { 10 add_166_15.A } \
--output { 10 O1 } \
--from { \
-   { 10 add_166_15 : UADD { { add_166_15.A } { 'b1 ZERO 10 } } } \
-   { O1 = { add_166_15.1 } } } \
--to { \
-   { 10 inc_add_166_15_1 : UINC { { add_166_15.A } { 'b1 ZERO 10 } } } \
-   { O1 = { inc_add_166_15_1.1 } } }
-
