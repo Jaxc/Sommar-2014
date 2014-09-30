@@ -21,7 +21,7 @@ t=$2
 
     ncvhdl -messages -linedebug -v93 const.vhd dec.vhd enc.vhd bchio.vhd BCH_TB.vhd sim.vhd  
     ncelab -messages -v93 WORKLIB.BCH_TB:Testbench
-    ncsim -gui WORKLIB.BCH_TB:Testbench
+    ncsim -input ncsim.tcl WORKLIB.BCH_TB:Testbench
 
     rm in.txt
     rm error.txt

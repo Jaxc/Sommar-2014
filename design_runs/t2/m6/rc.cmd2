@@ -2,6 +2,6 @@
 #   version v10.10-s209_1 (32-bit) built Feb  3 2011
 #
 # Run with the following arguments:
-#   -files sim-2.0GHz.s
+#   -files super-sim
 
-source sim-2.0GHz.s
+source super-sim

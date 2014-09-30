@@ -1,0 +1,17 @@
+ncelab: 08.20-s012: (c) Copyright 1995-2009 Cadence Design Systems, Inc.
+TOOL:	ncelab	08.20-s012: Started on Sep 30, 2014 at 16:40:47 CEST
+ncelab
+    -messages
+    -v93
+    WORKLIB.BCH_TB:Testbench
+
+	Elaborating the design hierarchy:
+	Building instance specific data structures.
+	Design hierarchy summary:
+		              Instances  Unique
+		Components:          21      19
+		Default bindings:     1       -
+		Processes:         2224     179
+		Signals:             85      84
+	Writing initial simulation snapshot: WORKLIB.BCH_TB:TESTBENCH
+TOOL:	ncelab	08.20-s012: Exiting on Sep 30, 2014 at 16:40:56 CEST  (total: 00:00:09)

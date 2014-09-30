@@ -126,6 +126,83 @@ ASSERT/WARNING (time 15494026 NS) from process :$PROCESS_003 (architecture WORKL
 61 % complete
 ASSERT/WARNING (time 15748026 NS) from process :$PROCESS_003 (architecture WORKLIB.BCH_TB:Testbench)
 62 % complete
-Simulation interrupted at 15806108 NS + 2
-./dec.vhd:39 	pe<=  cout(0) AND NOT cout(1) AND NOT cout(2) AND NOT cout(3) AND NOT cout(4) AND NOT cout(5) AND NOT cout(6);
+ASSERT/WARNING (time 16002026 NS) from process :$PROCESS_003 (architecture WORKLIB.BCH_TB:Testbench)
+63 % complete
+ASSERT/WARNING (time 16256026 NS) from process :$PROCESS_003 (architecture WORKLIB.BCH_TB:Testbench)
+64 % complete
+ASSERT/WARNING (time 16510026 NS) from process :$PROCESS_003 (architecture WORKLIB.BCH_TB:Testbench)
+65 % complete
+ASSERT/WARNING (time 16764026 NS) from process :$PROCESS_003 (architecture WORKLIB.BCH_TB:Testbench)
+66 % complete
+ASSERT/WARNING (time 17018026 NS) from process :$PROCESS_003 (architecture WORKLIB.BCH_TB:Testbench)
+67 % complete
+ASSERT/WARNING (time 17272026 NS) from process :$PROCESS_003 (architecture WORKLIB.BCH_TB:Testbench)
+68 % complete
+ASSERT/WARNING (time 17526026 NS) from process :$PROCESS_003 (architecture WORKLIB.BCH_TB:Testbench)
+69 % complete
+ASSERT/WARNING (time 17780026 NS) from process :$PROCESS_003 (architecture WORKLIB.BCH_TB:Testbench)
+70 % complete
+ASSERT/WARNING (time 18034026 NS) from process :$PROCESS_003 (architecture WORKLIB.BCH_TB:Testbench)
+71 % complete
+ASSERT/WARNING (time 18288026 NS) from process :$PROCESS_003 (architecture WORKLIB.BCH_TB:Testbench)
+72 % complete
+ASSERT/WARNING (time 18542026 NS) from process :$PROCESS_003 (architecture WORKLIB.BCH_TB:Testbench)
+73 % complete
+ASSERT/WARNING (time 18796026 NS) from process :$PROCESS_003 (architecture WORKLIB.BCH_TB:Testbench)
+74 % complete
+ASSERT/WARNING (time 19050026 NS) from process :$PROCESS_003 (architecture WORKLIB.BCH_TB:Testbench)
+75 % complete
+ASSERT/WARNING (time 19304026 NS) from process :$PROCESS_003 (architecture WORKLIB.BCH_TB:Testbench)
+76 % complete
+ASSERT/WARNING (time 19558026 NS) from process :$PROCESS_003 (architecture WORKLIB.BCH_TB:Testbench)
+77 % complete
+ASSERT/WARNING (time 19812026 NS) from process :$PROCESS_003 (architecture WORKLIB.BCH_TB:Testbench)
+78 % complete
+ASSERT/WARNING (time 20066026 NS) from process :$PROCESS_003 (architecture WORKLIB.BCH_TB:Testbench)
+79 % complete
+ASSERT/WARNING (time 20320026 NS) from process :$PROCESS_003 (architecture WORKLIB.BCH_TB:Testbench)
+80 % complete
+ASSERT/WARNING (time 20574026 NS) from process :$PROCESS_003 (architecture WORKLIB.BCH_TB:Testbench)
+81 % complete
+ASSERT/WARNING (time 20828026 NS) from process :$PROCESS_003 (architecture WORKLIB.BCH_TB:Testbench)
+82 % complete
+ASSERT/WARNING (time 21082026 NS) from process :$PROCESS_003 (architecture WORKLIB.BCH_TB:Testbench)
+83 % complete
+ASSERT/WARNING (time 21336026 NS) from process :$PROCESS_003 (architecture WORKLIB.BCH_TB:Testbench)
+84 % complete
+ASSERT/WARNING (time 21590026 NS) from process :$PROCESS_003 (architecture WORKLIB.BCH_TB:Testbench)
+85 % complete
+ASSERT/WARNING (time 21844026 NS) from process :$PROCESS_003 (architecture WORKLIB.BCH_TB:Testbench)
+86 % complete
+ASSERT/WARNING (time 22098026 NS) from process :$PROCESS_003 (architecture WORKLIB.BCH_TB:Testbench)
+87 % complete
+ASSERT/WARNING (time 22352026 NS) from process :$PROCESS_003 (architecture WORKLIB.BCH_TB:Testbench)
+88 % complete
+ASSERT/WARNING (time 22606026 NS) from process :$PROCESS_003 (architecture WORKLIB.BCH_TB:Testbench)
+89 % complete
+ASSERT/WARNING (time 22860026 NS) from process :$PROCESS_003 (architecture WORKLIB.BCH_TB:Testbench)
+90 % complete
+ASSERT/WARNING (time 23114026 NS) from process :$PROCESS_003 (architecture WORKLIB.BCH_TB:Testbench)
+91 % complete
+ASSERT/WARNING (time 23368026 NS) from process :$PROCESS_003 (architecture WORKLIB.BCH_TB:Testbench)
+92 % complete
+ASSERT/WARNING (time 23622026 NS) from process :$PROCESS_003 (architecture WORKLIB.BCH_TB:Testbench)
+93 % complete
+ASSERT/WARNING (time 23876026 NS) from process :$PROCESS_003 (architecture WORKLIB.BCH_TB:Testbench)
+94 % complete
+ASSERT/WARNING (time 24130026 NS) from process :$PROCESS_003 (architecture WORKLIB.BCH_TB:Testbench)
+95 % complete
+ASSERT/WARNING (time 24384026 NS) from process :$PROCESS_003 (architecture WORKLIB.BCH_TB:Testbench)
+96 % complete
+ASSERT/WARNING (time 24638026 NS) from process :$PROCESS_003 (architecture WORKLIB.BCH_TB:Testbench)
+97 % complete
+ASSERT/WARNING (time 24892026 NS) from process :$PROCESS_003 (architecture WORKLIB.BCH_TB:Testbench)
+98 % complete
+ASSERT/WARNING (time 25146026 NS) from process :$PROCESS_003 (architecture WORKLIB.BCH_TB:Testbench)
+99 % complete
+ASSERT/FAILURE (time 25399772 NS) from process :$PROCESS_002 (architecture WORKLIB.BCH_TB:Testbench)
+simulation over
+Assertion at 25399772 NS + 7
+./BCH_TB.vhd:147 assert (in_counter /= 99999) report "simulation over" severity failure;	
+ncsim> 
 ncsim> exit

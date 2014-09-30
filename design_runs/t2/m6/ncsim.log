@@ -204,4 +204,5 @@ ASSERT/FAILURE (time 12599904 NS) from process :$PROCESS_002 (architecture WORKL
 simulation over
 Assertion at 12599904 NS + 7
 ./BCH_TB.vhd:147 assert (in_counter /= 99999) report "simulation over" severity failure;	
+ncsim> 
 ncsim> exit

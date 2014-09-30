@@ -1,6 +1,5 @@
 clear all
 close all
-output = cell(2,10);
 
 
 for m_cnt = 1:10
@@ -17,23 +16,30 @@ for m_cnt = 1:10
         end
     end
 end
-%output2 = output;
+%output_double_buffer = output;
 load output_shift_buffer.mat
-output
+load output_double_buffer.mat
+load output_circular_buffer.mat
+%b1_1 = [output_double_buffer{1,6}{4,5} output_double_buffer{1,7}{4,5} output_double_buffer{1,10}{4,5}];
+%count_1 = [output_double_buffer{1,6}{5,5} output_double_buffer{1,7}{5,5} output_double_buffer{1,10}{5,5}];
+%s1_1 = [output_double_buffer{1,6}{6,5} output_double_buffer{1,7}{6,5} output_double_buffer{1,10}{6,5}];
+%h1_1 = [output_double_buffer{1,6}{7,5} output_double_buffer{1,7}{7,5} output_double_buffer{1,10}{7,5}];
+%c1_1 = [output_double_buffer{1,6}{9,5} output_double_buffer{1,7}{9,5} output_double_buffer{1,10}{9,5}];
+%r1_1 = [output_double_buffer{1,6}{10,5} output_double_buffer{1,7}{10,5} output_double_buffer{1,10}{10,5}];
 
-%b1_1 = [output2{1,6}{4,5} output2{1,7}{4,5} output2{1,10}{4,5}];
-%count_1 = [output2{1,6}{5,5} output2{1,7}{5,5} output2{1,10}{5,5}];
-%s1_1 = [output2{1,6}{6,5} output2{1,7}{6,5} output2{1,10}{6,5}];
-%h1_1 = [output2{1,6}{7,5} output2{1,7}{7,5} output2{1,10}{7,5}];
-%c1_1 = [output2{1,6}{9,5} output2{1,7}{9,5} output2{1,10}{9,5}];
-%r1_1 = [output2{1,6}{10,5} output2{1,7}{10,5} output2{1,10}{10,5}];
+%b1_1 = [output_circular_buffer{1,6}{4,5} output_circular_buffer{1,7}{4,5} output_circular_buffer{1,10}{4,5}];
+%count_1 = [output_circular_buffer{1,6}{5,5} output_circular_buffer{1,7}{5,5} output_circular_buffer{1,10}{5,5}];
+%s1_1 = [output_circular_buffer{1,6}{6,5} output_circular_buffer{1,7}{6,5} output_circular_buffer{1,10}{6,5}];
+%h1_1 = [output_circular_buffer{1,6}{7,5} output_circular_buffer{1,7}{7,5} output_circular_buffer{1,10}{7,5}];
+%c1_1 = [output_circular_buffer{1,6}{9,5} output_circular_buffer{1,7}{9,5} output_circular_buffer{1,10}{9,5}];
+%r1_1 = [output_circular_buffer{1,6}{10,5} output_circular_buffer{1,7}{10,5} output_circular_buffer{1,10}{10,5}];
 
-b1_1 = [output{1,6}{4,5} output{1,7}{4,5} output{1,10}{4,5}];
-count_1 = [output{1,6}{5,5} output{1,7}{5,5} output{1,10}{5,5}];
-s1_1 = [output{1,6}{6,5} output{1,7}{6,5} output{1,10}{6,5}];
-h1_1 = [output{1,6}{7,5} output{1,7}{7,5} output{1,10}{7,5}];
-c1_1 = [output{1,6}{9,5} output{1,7}{9,5} output{1,10}{9,5}];
-r1_1 = [output{1,6}{10,5} output{1,7}{10,5} output{1,10}{10,5}];
+b1_1 = [output_shift_buffer{1,6}{4,5} output_shift_buffer{1,7}{4,5} output_shift_buffer{1,10}{4,5}];
+count_1 = [output_shift_buffer{1,6}{5,5} output_shift_buffer{1,7}{5,5} output_shift_buffer{1,10}{5,5}];
+s1_1 = [output_shift_buffer{1,6}{6,5} output_shift_buffer{1,7}{6,5} output_shift_buffer{1,10}{6,5}];
+h1_1 = [output_shift_buffer{1,6}{7,5} output_shift_buffer{1,7}{7,5} output_shift_buffer{1,10}{7,5}];
+c1_1 = [output_shift_buffer{1,6}{9,5} output_shift_buffer{1,7}{9,5} output_shift_buffer{1,10}{9,5}];
+r1_1 = [output_shift_buffer{1,6}{10,5} output_shift_buffer{1,7}{10,5} output_shift_buffer{1,10}{10,5}];
 
 
 
@@ -63,9 +69,9 @@ for m_cnt = 1:10
 	for t_cnt = 1:2
 		
         try
-			for j = 1:length(output{t_cnt,m_cnt})
-				is_dec = strfind('decoder',output{t_cnt,m_cnt}{j,1});
-				is_enc = strfind('encoder',output{t_cnt,m_cnt}{j,1});
+			for j = 1:length(output_shift_buffer{t_cnt,m_cnt})
+				is_dec = strfind('decoder',output_shift_buffer{t_cnt,m_cnt}{j,1});
+				is_enc = strfind('encoder',output_shift_buffer{t_cnt,m_cnt}{j,1});
 
 				if is_dec == 1 
 					dec_row = j;
@@ -75,7 +81,7 @@ for m_cnt = 1:10
 					enc_row = j;
 				end
 			end
-			power(i) = (output{t_cnt,m_cnt}{dec_row,end}+output{t_cnt,m_cnt}{enc_row,end});
+			power(i) = (output_shift_buffer{t_cnt,m_cnt}{dec_row,end}+output_shift_buffer{t_cnt,m_cnt}{enc_row,end});
 			m(i) = m_cnt;
 			i = i+1;
 		end
@@ -87,9 +93,9 @@ for m_cnt = 1:10
 	for t_cnt = 1:2
 		
         try
-			for j = 1:length(output2{t_cnt,m_cnt})
-				is_dec = strfind('decoder',output2{t_cnt,m_cnt}{j,1});
-				is_enc = strfind('encoder',output2{t_cnt,m_cnt}{j,1});
+			for j = 1:length(output_circular_buffer{t_cnt,m_cnt})
+				is_dec = strfind('decoder',output_circular_buffer{t_cnt,m_cnt}{j,1});
+				is_enc = strfind('encoder',output_circular_buffer{t_cnt,m_cnt}{j,1});
 
 				if is_dec == 1 
 					dec_row = j;
@@ -99,7 +105,31 @@ for m_cnt = 1:10
 					enc_row = j;
 				end
 			end
-			power2(i) = (output2{t_cnt,m_cnt}{dec_row,end}+output2{t_cnt,m_cnt}{enc_row,end});
+			power2(i) = (output_circular_buffer{t_cnt,m_cnt}{dec_row,end}+output_double_buffer{t_cnt,m_cnt}{enc_row,end});
+			m2(i) = m_cnt;
+			i = i+1;
+		end
+	end
+end
+
+i = 1;
+for m_cnt = 1:10
+	for t_cnt = 1:2
+		
+        try
+			for j = 1:length(output_double_buffer{t_cnt,m_cnt})
+				is_dec = strfind('decoder',output_double_buffer{t_cnt,m_cnt}{j,1});
+				is_enc = strfind('encoder',output_double_buffer{t_cnt,m_cnt}{j,1});
+
+				if is_dec == 1 
+					dec_row = j;
+				end
+	
+				if is_enc == 1
+					enc_row = j;
+				end
+			end
+			power3(i) = (output_double_buffer{t_cnt,m_cnt}{dec_row,end}+output_double_buffer{t_cnt,m_cnt}{enc_row,end});
 			m2(i) = m_cnt;
 			i = i+1;
 		end
@@ -124,6 +154,14 @@ else
 end
 
 
+if mod(length(power2),2)==1 
+    power3 = [power3(1:2:end); power3(2:2:end) 0];
+    m3 = [m2(1:2:end); m2(2:2:end) 0];
+else
+    power3 = [power3(1:2:end); power3(2:2:end)];
+    m3 = [m2(1:2:end); m2(2:2:end)];
+end
+
 n = 2.^m-1;
 t(1,1:length(m)) = 1;
 t(2,1:length(m)) = 2;
@@ -136,6 +174,7 @@ bits_per_sec = k./n*freq;
 
 joule_sec = power*1e12;
 joule_sec2 = power2*1e12;
+joule_sec3 = power3*1e12;
 
 %%
 figure
@@ -147,7 +186,7 @@ legend('Location','NorthWest','t=1','t=2');
 
 %%
 figure
-plot(m',power'*1e3,'o-',m2',power2'*1e3,'o-')
+plot(m',power'*1e3,'o-',m2',power2'*1e3,'o-',m3',power3'*1e3,'o-')
 title('Comparision of power consumption of different memory implementations at f = 1GHz');
 xlabel('m');
 ylabel('Power [mW]');
@@ -170,9 +209,9 @@ for run = 1:4
         for t_cnt = 1:1
             
             try
-                for j = 1:length(output{t_cnt,m_cnt,run})
-                    is_dec = strfind('decoder',output{t_cnt,m_cnt,run}{j,1});
-                    is_enc = strfind('encoder',output{t_cnt,m_cnt,run}{j,1});
+                for j = 1:length(output_shift_buffer{t_cnt,m_cnt,run})
+                    is_dec = strfind('decoder',output_shift_buffer{t_cnt,m_cnt,run}{j,1});
+                    is_enc = strfind('encoder',output_shift_buffer{t_cnt,m_cnt,run}{j,1});
                     
                     if is_dec == 1
                         dec_row = j;
@@ -182,7 +221,7 @@ for run = 1:4
                         enc_row = j;
                     end
                 end
-                power(i,1) = (output{t_cnt,m_cnt,run}{dec_row,end}+output{t_cnt,m_cnt,run}{enc_row,end});
+                power(i,1) = (output_shift_buffer{t_cnt,m_cnt,run}{dec_row,end}+output_shift_buffer{t_cnt,m_cnt,run}{enc_row,end});
                 m(i) = m_cnt;
                 i = i+1;
             end
@@ -195,9 +234,9 @@ for run = 1:4
         for t_cnt = 1:1
             
             try
-                for j = 1:length(output{t_cnt,m_cnt,run})
-                    is_dec = strfind('decoder',output{t_cnt,m_cnt,run}{j,1});
-                    is_enc = strfind('encoder',output{t_cnt,m_cnt,run}{j,1});
+                for j = 1:length(output_shift_buffer{t_cnt,m_cnt,run})
+                    is_dec = strfind('decoder',output_shift_buffer{t_cnt,m_cnt,run}{j,1});
+                    is_enc = strfind('encoder',output_shift_buffer{t_cnt,m_cnt,run}{j,1});
                     
                     if is_dec == 1
                         dec_row = j;
@@ -207,7 +246,7 @@ for run = 1:4
                         enc_row = j;
                     end
                 end
-                power(i,2) = (output{t_cnt,m_cnt,run}{dec_row,end}+output{t_cnt,m_cnt,run}{enc_row,end});
+                power(i,2) = (output_shift_buffer{t_cnt,m_cnt,run}{dec_row,end}+output_shift_buffer{t_cnt,m_cnt,run}{enc_row,end});
                 m(i) = m_cnt;
                 i = i+1;
             end
@@ -221,9 +260,9 @@ for run = 1:4
         for t_cnt = 1:1
             
             try
-                for j = 1:length(output{t_cnt,m_cnt,run})
-                    is_dec = strfind('decoder',output{t_cnt,m_cnt,run}{j,1});
-                    is_enc = strfind('encoder',output{t_cnt,m_cnt,run}{j,1});
+                for j = 1:length(output_shift_buffer{t_cnt,m_cnt,run})
+                    is_dec = strfind('decoder',output_shift_buffer{t_cnt,m_cnt,run}{j,1});
+                    is_enc = strfind('encoder',output_shift_buffer{t_cnt,m_cnt,run}{j,1});
                     
                     if is_dec == 1
                         dec_row = j;
@@ -233,7 +272,7 @@ for run = 1:4
                         enc_row = j;
                     end
                 end
-                power(i,3) = (output{t_cnt,m_cnt,run}{dec_row,end}+output{t_cnt,m_cnt,run}{enc_row,end});
+                power(i,3) = (output_shift_buffer{t_cnt,m_cnt,run}{dec_row,end}+output_shift_buffer{t_cnt,m_cnt,run}{enc_row,end});
                 m(i) = m_cnt;
                 i = i+1;
             end
