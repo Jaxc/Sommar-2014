@@ -141,15 +141,13 @@ begin
 		last_in_2 <= last_in;
 	elsif (vdin'event) and (vdin = '1') then
 		assert (last_in_2 = dout) report "ERROR" severity failure;
+	end if;
+end process;
 		
 assert (in_counter /= 99999) report "simulation over" severity failure;	
 
 assert (in_counter MOD 1000 /= 0) report integer'image(in_counter/1000)&" % complete" severity warning;	
 
-assert (wrongNow /= '1') report "Error occurred" severity warning;	
-
-	end if;
-
-end process;	
+assert (wrongNow /= '1') report "Error occurred" severity warning;		
 		
 end Testbench;

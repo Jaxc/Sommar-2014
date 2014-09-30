@@ -1,38 +1,71 @@
 ncsim: 08.20-s012: (c) Copyright 1995-2009 Cadence Design Systems, Inc.
+
+-------------------------------------
+Relinquished control to SimVision...
+ncsim> 
+ncsim> database -open waves -into waves.shm -default
+Created default SHM database waves
+ncsim> probe -create -shm :BCH_sim:d1:b1:buf :BCH_sim:d1:b1:clk :BCH_sim:d1:b1:din :BCH_sim:d1:b1:dout :BCH_sim:d1:b1:dout_buf :BCH_sim:d1:b1:dout_buf2 :BCH_sim:d1:b1:dout_buf3 :BCH_sim:d1:b1:err :BCH_sim:d1:b1:reg_ena :BCH_sim:d1:b1:rst :BCH_sim:d1:b1:vdout :BCH_sim:d1:b1:vdout_last
+Created probe 1
 ncsim> run
 ASSERT/WARNING (time 0 FS) from process :$PROCESS_003 (architecture WORKLIB.BCH_TB:Testbench)
 0 % complete
-ASSERT/WARNING (time 190 NS) from process :$PROCESS_004 (architecture WORKLIB.BCH_TB:Testbench)
-Error occurred
-ASSERT/WARNING (time 196 NS) from process :$PROCESS_004 (architecture WORKLIB.BCH_TB:Testbench)
-Error occurred
-ASSERT/WARNING (time 202 NS) from process :$PROCESS_004 (architecture WORKLIB.BCH_TB:Testbench)
-Error occurred
-ASSERT/WARNING (time 206 NS) from process :$PROCESS_004 (architecture WORKLIB.BCH_TB:Testbench)
-Error occurred
-ASSERT/WARNING (time 214 NS) from process :$PROCESS_004 (architecture WORKLIB.BCH_TB:Testbench)
-Error occurred
-ASSERT/WARNING (time 222 NS) from process :$PROCESS_004 (architecture WORKLIB.BCH_TB:Testbench)
-Error occurred
-ASSERT/WARNING (time 250 NS) from process :$PROCESS_004 (architecture WORKLIB.BCH_TB:Testbench)
-Error occurred
-ASSERT/WARNING (time 258 NS) from process :$PROCESS_004 (architecture WORKLIB.BCH_TB:Testbench)
-Error occurred
-ASSERT/WARNING (time 266 NS) from process :$PROCESS_004 (architecture WORKLIB.BCH_TB:Testbench)
-Error occurred
-ASSERT/WARNING (time 270 NS) from process :$PROCESS_004 (architecture WORKLIB.BCH_TB:Testbench)
-Error occurred
-ASSERT/WARNING (time 278 NS) from process :$PROCESS_004 (architecture WORKLIB.BCH_TB:Testbench)
-Error occurred
-ASSERT/WARNING (time 282 NS) from process :$PROCESS_004 (architecture WORKLIB.BCH_TB:Testbench)
-Error occurred
-ASSERT/WARNING (time 286 NS) from process :$PROCESS_004 (architecture WORKLIB.BCH_TB:Testbench)
-Error occurred
-ASSERT/WARNING (time 294 NS) from process :$PROCESS_004 (architecture WORKLIB.BCH_TB:Testbench)
-Error occurred
-ASSERT/FAILURE (time 306 NS) from process :$PROCESS_001 (architecture WORKLIB.BCH_TB:Testbench)
-ERROR
-Assertion at 306 NS + 6
-./BCH_TB.vhd:143 		assert (last_in_2 = dout) report "ERROR" severity failure;
-ncsim> 
+ASSERT/WARNING (time 126042 NS) from process :$PROCESS_003 (architecture WORKLIB.BCH_TB:Testbench)
+1 % complete
+ASSERT/WARNING (time 252042 NS) from process :$PROCESS_003 (architecture WORKLIB.BCH_TB:Testbench)
+2 % complete
+ASSERT/WARNING (time 378042 NS) from process :$PROCESS_003 (architecture WORKLIB.BCH_TB:Testbench)
+3 % complete
+ASSERT/WARNING (time 504042 NS) from process :$PROCESS_003 (architecture WORKLIB.BCH_TB:Testbench)
+4 % complete
+ASSERT/WARNING (time 630042 NS) from process :$PROCESS_003 (architecture WORKLIB.BCH_TB:Testbench)
+5 % complete
+ASSERT/WARNING (time 756042 NS) from process :$PROCESS_003 (architecture WORKLIB.BCH_TB:Testbench)
+6 % complete
+ASSERT/WARNING (time 882042 NS) from process :$PROCESS_003 (architecture WORKLIB.BCH_TB:Testbench)
+7 % complete
+ASSERT/WARNING (time 1008042 NS) from process :$PROCESS_003 (architecture WORKLIB.BCH_TB:Testbench)
+8 % complete
+ASSERT/WARNING (time 1134042 NS) from process :$PROCESS_003 (architecture WORKLIB.BCH_TB:Testbench)
+9 % complete
+ASSERT/WARNING (time 1260042 NS) from process :$PROCESS_003 (architecture WORKLIB.BCH_TB:Testbench)
+10 % complete
+ASSERT/WARNING (time 1386042 NS) from process :$PROCESS_003 (architecture WORKLIB.BCH_TB:Testbench)
+11 % complete
+ASSERT/WARNING (time 1512042 NS) from process :$PROCESS_003 (architecture WORKLIB.BCH_TB:Testbench)
+12 % complete
+ASSERT/WARNING (time 1638042 NS) from process :$PROCESS_003 (architecture WORKLIB.BCH_TB:Testbench)
+13 % complete
+ASSERT/WARNING (time 1764042 NS) from process :$PROCESS_003 (architecture WORKLIB.BCH_TB:Testbench)
+14 % complete
+ASSERT/WARNING (time 1890042 NS) from process :$PROCESS_003 (architecture WORKLIB.BCH_TB:Testbench)
+15 % complete
+ASSERT/WARNING (time 2016042 NS) from process :$PROCESS_003 (architecture WORKLIB.BCH_TB:Testbench)
+16 % complete
+ASSERT/WARNING (time 2142042 NS) from process :$PROCESS_003 (architecture WORKLIB.BCH_TB:Testbench)
+17 % complete
+ASSERT/WARNING (time 2268042 NS) from process :$PROCESS_003 (architecture WORKLIB.BCH_TB:Testbench)
+18 % complete
+ASSERT/WARNING (time 2394042 NS) from process :$PROCESS_003 (architecture WORKLIB.BCH_TB:Testbench)
+19 % complete
+ASSERT/WARNING (time 2520042 NS) from process :$PROCESS_003 (architecture WORKLIB.BCH_TB:Testbench)
+20 % complete
+ASSERT/WARNING (time 2646042 NS) from process :$PROCESS_003 (architecture WORKLIB.BCH_TB:Testbench)
+21 % complete
+ASSERT/WARNING (time 2772042 NS) from process :$PROCESS_003 (architecture WORKLIB.BCH_TB:Testbench)
+22 % complete
+ASSERT/WARNING (time 2898042 NS) from process :$PROCESS_003 (architecture WORKLIB.BCH_TB:Testbench)
+23 % complete
+ASSERT/WARNING (time 3024042 NS) from process :$PROCESS_003 (architecture WORKLIB.BCH_TB:Testbench)
+24 % complete
+ASSERT/WARNING (time 3150042 NS) from process :$PROCESS_003 (architecture WORKLIB.BCH_TB:Testbench)
+25 % complete
+ASSERT/WARNING (time 3276042 NS) from process :$PROCESS_003 (architecture WORKLIB.BCH_TB:Testbench)
+26 % complete
+ASSERT/WARNING (time 3402042 NS) from process :$PROCESS_003 (architecture WORKLIB.BCH_TB:Testbench)
+27 % complete
+ASSERT/WARNING (time 3528042 NS) from process :$PROCESS_003 (architecture WORKLIB.BCH_TB:Testbench)
+28 % complete
+Simulation interrupted at 3608792 NS + 0
+ncsim> ^C
 ncsim> exit

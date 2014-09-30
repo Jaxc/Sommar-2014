@@ -59,13 +59,13 @@ USE IEEE.STD_LOGIC_1164.ALL;
 USE IEEE.numeric_STD.all;
 USE WORK.const.ALL;
 ENTITY dbuf IS
-	PORT (clk, err, vdout, din: IN BIT;
+	PORT (clk, err, vdout, din,rst: IN BIT;
 	dout: OUT BIT);
 END dbuf;
 ARCHITECTURE dbufa OF dbuf IS
 CONSTANT zero_vec : BIT_VECTOR(0 to n-1) := (others => '0');
 SIGNAL buf,dout_buf,dout_buf2 : BIT_VECTOR(0 to n);
-signal reg_ena : BIT_VECTOR(0 to n):= '1' & zero_vec;
+signal reg_ena : BIT_VECTOR(0 to n);
 signal dout_buf3,vdout_last : BIT;
 
 
@@ -97,12 +97,13 @@ PROCESS (clk)
 	if ( clk'EVENT AND clk='1') then
 		dout_buf3 <= dout_buf2(n);
 		dout <= (dout_buf3 XOR err) and vdout;
-		reg_ena(1 to n) <= reg_ena(0 to n-1);
 		vdout_last <= vdout;
-		if vdout = '1' and vdout_last = '0' then
+		if rst = '1' then
 			reg_ena(0) <= '1';
+			reg_ena(1 to n) <= (others => '0');
 		else
-			reg_ena(0) <= '0';
+			reg_ena(0) <= reg_ena(n);
+			reg_ena(1 to n) <= reg_ena(0 to n-1);
 		end if;
 	end if;
 end process;
@@ -141,7 +142,7 @@ ARCHITECTURE deca OF dec IS
 		END COMPONENT;
 		FOR ALL: dch1 USE ENTITY WORK.dch1 (dch1a);
 	COMPONENT dbuf -- buffer shift registers 
-		PORT (clk, err, vdout, din: IN BIT; 
+		PORT (clk, err, vdout, din,rst: IN BIT; 
 			dout: OUT BIT); 
 		END COMPONENT;
 		FOR ALL: dbuf USE ENTITY WORK.dbuf (dbufa);
@@ -153,7 +154,7 @@ ARCHITECTURE deca OF dec IS
 	h1: dch1
 		PORT MAP (clk, pe, syn1, ch1);	
 	b1: dbuf
-		PORT MAP (clk, err, vdout1, din_reset, dout);
+		PORT MAP (clk, err, vdout1, din_reset,reset, dout);
 
 	din_reset<= din AND NOT reset;
 	err<= ch_and(m-1);
