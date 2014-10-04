@@ -1,8 +1,7 @@
 ncvhdl: 08.20-s012: (c) Copyright 1995-2009 Cadence Design Systems, Inc.
-TOOL:	ncvhdl	08.20-s012: Started on Sep 30, 2014 at 16:44:32 CEST
+TOOL:	ncvhdl	08.20-s012: Started on Oct 01, 2014 at 14:53:51 CEST
 ncvhdl
     -messages
-    -linedebug
     -v93
     const.vhd
     dec.vhd
@@ -34,9 +33,9 @@ WORKLIB.DCOUNT (entity):
 WORKLIB.DCOUNT:DCOUNTA (architecture):
 	streams: 1, words: 246
 WORKLIB.DBUF (entity):
-	streams: 7, words: 74
+	streams: 6, words: 68
 WORKLIB.DBUF:DBUFA (architecture):
-	streams: 2, words: 2146
+	streams: 1, words: 396
 WORKLIB.DSYN1 (entity):
 	streams: 6, words: 236
 WORKLIB.DSYN1:DSYN1A (architecture):
@@ -52,7 +51,7 @@ WORKLIB.DPOW3:DPOW3A (architecture):
 WORKLIB.DEQ (entity):
 	streams: 6, words: 404
 WORKLIB.DEQ:DEQA (architecture):
-	streams: 3, words: 1740
+	streams: 3, words: 1718
 WORKLIB.DCH1 (entity):
 	streams: 9, words: 422
 WORKLIB.DCH1:DCH1A (architecture):
@@ -64,7 +63,7 @@ WORKLIB.DCH3:DCH3A (architecture):
 WORKLIB.DEC (entity):
 	streams: 6, words: 68
 WORKLIB.DEC:DECA (architecture):
-	streams: 10, words: 4363
+	streams: 10, words: 4341
 WORKLIB.ERING (entity):
 	streams: 5, words: 62
 WORKLIB.ERING:ERINGA (architecture):
@@ -88,7 +87,7 @@ WORKLIB.IODEC:IODECA (architecture):
 WORKLIB.BCH_TB (entity):
 	streams: 1, words: 38
 WORKLIB.BCH_TB:TESTBENCH (architecture):
-	streams: 8, words: 8839
+	streams: 8, words: 8672
 WORKLIB.ENCBUF (entity):
 	streams: 6, words: 346
 WORKLIB.ENCBUF:ENCBUFA (architecture):
@@ -109,4 +108,4 @@ WORKLIB.SIM (entity):
 	streams: 13, words: 974
 WORKLIB.SIM:SIMA (architecture):
 	streams: 7, words: 2073
-TOOL:	ncvhdl	08.20-s012: Exiting on Sep 30, 2014 at 16:44:32 CEST  (total: 00:00:00)
+TOOL:	ncvhdl	08.20-s012: Exiting on Oct 01, 2014 at 14:53:52 CEST  (total: 00:00:01)

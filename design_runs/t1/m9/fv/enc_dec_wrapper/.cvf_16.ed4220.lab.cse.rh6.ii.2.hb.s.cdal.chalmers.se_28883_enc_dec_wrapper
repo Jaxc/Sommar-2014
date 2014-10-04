@@ -3,6 +3,3 @@
 
 ovf_setup -ungroup_separator { _ }
 
-ovf_uniquify \
--module { dec } \
-{ { f2 ffce ffce_1 } } 

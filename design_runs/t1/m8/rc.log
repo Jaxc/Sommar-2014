@@ -12,7 +12,7 @@ Checking out license 'First_Encounter_GXL'... (0 seconds elapsed)
 License First_Encounter_GXL checkout failed
 Checking out license 'SOC_Encounter_GXL'... (0 seconds elapsed)
 License SOC_Encounter_GXL checkout failed
-Checking out license 'Encounter_Digital_Impl_Sys_XL'... (1 second elapsed)
+Checking out license 'Encounter_Digital_Impl_Sys_XL'... (0 seconds elapsed)
 Reading GUI preferences file '/chalmers/users/jacobro/.cadence/rc.gui'.
 
                        Cadence Encounter(R) RTL Compiler
@@ -108,7 +108,7 @@ called '~/.cadence/.synth_init'.
 Send us feedback at rc_feedback@cadence.com.
 ================================================================================
 
-Sourcing './super-sim' (Tue Sep 30 14:04:37 +0200 2014)...
+Sourcing './super-sim' (Wed Oct 01 16:07:06 +0200 2014)...
 Warning : Timing attributes intrinsic_rise and intrinsic_fall are not expected and will be ignored. [LBR-21]
         : The library pin involved is 'HS65_LSS1_FA1X21/CO'.
         : Although the delay model for this library is table lookup, it appears that linear delay model parameters are also present.
@@ -6816,15 +6816,12 @@ Warning : Timing attributes intrinsic_rise and intrinsic_fall are not expected a
 Warning : Timing attributes intrinsic_rise and intrinsic_fall are not expected and will be ignored. [LBR-21]
         : The library pin involved is 'HS65_LS_XOR3X9/Z'.
   Elaborating top-level block 'enc_dec_wrapper' from file 'enc_dec_wrapper.vhd'.
-Warning : Removing unused register. [CDFG-508]
-        : Removing unused register 'vdout_last' in module 'dbuf' in file 'dec.vhd' on line 160.
-        : A flip-flop or latch that was inferred for an unused signal or variable was removed. Use 'set_attribute hdl_preserve_unused_registers true /' to preserve the flip-flop or latch.
 Warning : Undriven module output port. [ELABUTL-123]
         : Undriven bits of output port 'vdin' in module 'enc_dec_wrapper' in file 'enc_dec_wrapper.vhd' on line 7, column 2.
         : Use the 'hdl_undriven_output_port_value' attribute to control treatment of undriven output port during elaboration.
   Done elaborating 'enc_dec_wrapper'.
 Info    : Deleting instances not driving any primary outputs. [GLO-32]
-        : Deleting 4 hierarchical instances.
+        : Deleting 3 hierarchical instances.
         : Optimizations like for example constant propagation or redundancy removal could change the connections so an instance does not drive any primary outputs anymore. To see the list of deleted instances, set the 'information_level' attribute to 2 or above.
 Mapping enc_dec_wrapper to gates.
  
@@ -6840,12 +6837,12 @@ Global mapping status
                  Total    Neg   
 Operation         Area   Slack  Worst Path
 -------------------------------------------------------------------------------
- global_map       6419       0  N/A
+ global_map       2629       0  N/A
  
 Global incremental target info
 ==============================
-Cost Group 'default' target slack:    18 ps
-Target path end-point (Pin: decoder/b1/dout_buf3_reg/D (HS65_LS_DFPQX9/D))
+Cost Group 'default' target slack:    16 ps
+Target path end-point (Pin: decoder/count/vdout11_reg/TE (HS65_LS_SDFPQX9/TE))
 
  
 Global incremental optimization status
@@ -6854,7 +6851,7 @@ Global incremental optimization status
                  Total    Neg   
 Operation         Area   Slack  Worst Path
 -------------------------------------------------------------------------------
- global_inc       6440       0  N/A
+ global_inc       2625       0  N/A
 Info    : 'Conformal LEC9.1-s400' or later builds is recommended for verification. [WDO-600]
         : The use of 'Conformal LEC9.1-s400' or later builds is recommended to get better verification results.
 Generating a dofile for design 'enc_dec_wrapper' in file 'fv/enc_dec_wrapper/rtl_to_g1.do' ...
@@ -6865,7 +6862,7 @@ Incremental optimization status
                  Total    Neg       Max       Max    Max   
 Operation         Area   Slack     Trans      Cap   Fanout 
 -------------------------------------------------------------------------------
- init_iopt        6440       0         0        0        0
+ init_iopt        2625       0         0        0        0
  
 Incremental optimization status
 ===============================
@@ -6873,12 +6870,11 @@ Incremental optimization status
                  Total    Neg       Max       Max    Max   
 Operation         Area   Slack     Trans      Cap   Fanout 
 -------------------------------------------------------------------------------
- init_delay       6440       0         0        0        0
- init_drc         6440       0         0        0        0
- init_area        6440       0         0        0        0
- rem_buf          6438       0         0        0        0
- glob_area        6437       0         0        0        0
- area_down        6433       0         0        0        0
+ init_delay       2625       0         0        0        0
+ init_drc         2625       0         0        0        0
+ init_area        2625       0         0        0        0
+ rem_buf          2623       0         0        0        0
+ glob_area        2623       0         0        0        0
  
 Incremental optimization status
 ===============================
@@ -6886,9 +6882,9 @@ Incremental optimization status
                  Total    Neg       Max       Max    Max   
 Operation         Area   Slack     Trans      Cap   Fanout 
 -------------------------------------------------------------------------------
- init_delay       6433       0         0        0        0
- init_drc         6433       0         0        0        0
- init_area        6433       0         0        0        0
+ init_delay       2623       0         0        0        0
+ init_drc         2623       0         0        0        0
+ init_area        2623       0         0        0        0
 
   Done mapping enc_dec_wrapper
   Synthesis succeeded.
@@ -6905,7 +6901,7 @@ Mapping enc_dec_wrapper to gates.
 Global mapping target info
 ==========================
 Cost Group 'default' target slack:    18 ps
-Target path end-point (Pin: decoder/b1/dout_buf3_reg/d)
+Target path end-point (Pin: decoder/count/vdout11_reg/d)
 
  
 Global mapping status
@@ -6914,12 +6910,12 @@ Global mapping status
                  Total    Neg   
 Operation         Area   Slack  Worst Path
 -------------------------------------------------------------------------------
- global_map       6519       0  N/A
+ global_map       2639       0  N/A
  
 Global incremental target info
 ==============================
-Cost Group 'default' target slack:    12 ps
-Target path end-point (Pin: decoder/b1/dout_buf3_reg/D (HS65_LS_DFPQX9/D))
+Cost Group 'default' target slack:     9 ps
+Target path end-point (Pin: encoder/c1/vdin1_reg/TE (HS65_LS_SDFPQX9/TE))
 
  
 Global incremental optimization status
@@ -6928,7 +6924,7 @@ Global incremental optimization status
                  Total    Neg   
 Operation         Area   Slack  Worst Path
 -------------------------------------------------------------------------------
- global_inc       6530       0  N/A
+ global_inc       2633       0  N/A
 Info    : 'Conformal LEC9.1-s400' or later builds is recommended for verification. [WDO-600]
 Generating a dofile for design 'enc_dec_wrapper' in file 'fv/enc_dec_wrapper/rtl_to_g1.do' ...
  
@@ -6938,7 +6934,7 @@ Incremental optimization status
                  Total    Neg       Max       Max    Max   
 Operation         Area   Slack     Trans      Cap   Fanout 
 -------------------------------------------------------------------------------
- init_iopt        6530       0         0        0        0
+ init_iopt        2633       0         0        0        0
  
 Incremental optimization status
 ===============================
@@ -6946,12 +6942,10 @@ Incremental optimization status
                  Total    Neg       Max       Max    Max   
 Operation         Area   Slack     Trans      Cap   Fanout 
 -------------------------------------------------------------------------------
- init_delay       6530       0         0        0        0
- init_drc         6530       0         0        0        0
- init_area        6530       0         0        0        0
- io_phase         6529       0         0        0        0
- gate_comp        6528       0         0        0        0
- glob_area        6519       0         0        0        0
+ init_delay       2633       0         0        0        0
+ init_drc         2633       0         0        0        0
+ init_area        2633       0         0        0        0
+ glob_area        2628       0         0        0        0
  
 Incremental optimization status
 ===============================
@@ -6959,9 +6953,9 @@ Incremental optimization status
                  Total    Neg       Max       Max    Max   
 Operation         Area   Slack     Trans      Cap   Fanout 
 -------------------------------------------------------------------------------
- init_delay       6519       0         0        0        0
- init_drc         6519       0         0        0        0
- init_area        6519       0         0        0        0
+ init_delay       2628       0         0        0        0
+ init_drc         2628       0         0        0        0
+ init_area        2628       0         0        0        0
 
   Done mapping enc_dec_wrapper
   Synthesis succeeded.
@@ -6976,7 +6970,7 @@ Mapping enc_dec_wrapper to gates.
 Global mapping target info
 ==========================
 Cost Group 'default' target slack:    13 ps
-Target path end-point (Pin: decoder/b1/dout_buf3_reg/d)
+Target path end-point (Pin: decoder/h1/ch_reg[2]/d)
 
  
 Global mapping status
@@ -6985,12 +6979,12 @@ Global mapping status
                  Total    Neg   
 Operation         Area   Slack  Worst Path
 -------------------------------------------------------------------------------
- global_map       6872       0  N/A
+ global_map       2686       0  N/A
  
 Global incremental target info
 ==============================
-Cost Group 'default' target slack:     8 ps
-Target path end-point (Pin: decoder/b1/dout_buf3_reg/D (HS65_LS_DFPQX9/D))
+Cost Group 'default' target slack:     9 ps
+Target path end-point (Pin: decoder/s1/syn_reg[0]/D (HS65_LS_DFPQX9/D))
 
  
 Global incremental optimization status
@@ -6999,7 +6993,7 @@ Global incremental optimization status
                  Total    Neg   
 Operation         Area   Slack  Worst Path
 -------------------------------------------------------------------------------
- global_inc       6716       0  N/A
+ global_inc       2675       0  N/A
 Info    : 'Conformal LEC9.1-s400' or later builds is recommended for verification. [WDO-600]
 Generating a dofile for design 'enc_dec_wrapper' in file 'fv/enc_dec_wrapper/rtl_to_g1.do' ...
  
@@ -7009,7 +7003,7 @@ Incremental optimization status
                  Total    Neg       Max       Max    Max   
 Operation         Area   Slack     Trans      Cap   Fanout 
 -------------------------------------------------------------------------------
- init_iopt        6716       0         0        0      237
+ init_iopt        2675       0         0        0        0
  
 Incremental optimization status (pre-loop)
 ==========================================
@@ -7017,7 +7011,7 @@ Incremental optimization status (pre-loop)
                  Total    Neg       Max       Max    Max   
 Operation         Area   Slack     Trans      Cap   Fanout 
 -------------------------------------------------------------------------------
- simp_cc_in       6716       0         0        0      237
+ simp_cc_in       2674       0         0        0        0
  
 Incremental optimization status
 ===============================
@@ -7025,19 +7019,14 @@ Incremental optimization status
                  Total    Neg       Max       Max    Max   
 Operation         Area   Slack     Trans      Cap   Fanout 
 -------------------------------------------------------------------------------
- init_delay       6716       0         0        0      237
- init_drc         6716       0         0        0      237
- incr_drc         6718       0         0        0      236
- init_area        6718       0         0        0      236
- rem_buf          6709       0         0        0      236
- merge_bi         6705       0         0        0      236
- io_phase         6703       0         0        0      236
- gate_comp        6624       0         0        0      236
- glob_area        6575       0         0        0      236
- area_down        6573       0         0        0      236
-Info    : Changing wireload model of a design/subdesign. [TIM-92]
-        : Changing wireload model of subdesign 'dbuf' from area_6Kto7K to area_5Kto6K.
-        : The change of wireload model will likely change the design's timing slightly.
+ init_delay       2674       0         0        0        0
+ init_drc         2674       0         0        0        0
+ init_area        2674       0         0        0        0
+ rem_buf          2670       0         0        0        0
+ merge_bi         2667       0         0        0        0
+ io_phase         2667       0         0        0        0
+ glob_area        2660       0         0        0        0
+ area_down        2658       0         0        0        0
  
 Incremental optimization status
 ===============================
@@ -7045,9 +7034,9 @@ Incremental optimization status
                  Total    Neg       Max       Max    Max   
 Operation         Area   Slack     Trans      Cap   Fanout 
 -------------------------------------------------------------------------------
- init_delay       6573       0         0        0      236
- init_drc         6573       0         0        0      236
- init_area        6573       0         0        0      236
+ init_delay       2658       0         0        0        0
+ init_drc         2658       0         0        0        0
+ init_area        2658       0         0        0        0
 
   Done mapping enc_dec_wrapper
   Synthesis succeeded.
@@ -7061,8 +7050,8 @@ Mapping enc_dec_wrapper to gates.
  
 Global mapping target info
 ==========================
-Cost Group 'default' target slack:    -2 ps
-Target path end-point (Pin: decoder/b1/dout_buf3_reg/d)
+Cost Group 'default' target slack:     8 ps
+Target path end-point (Pin: decoder/h1/ch_reg[2]/d)
 
  
 Global mapping status
@@ -7071,16 +7060,14 @@ Global mapping status
                  Total    Neg   
 Operation         Area   Slack  Worst Path
 -------------------------------------------------------------------------------
- global_map       8725     -29  decoder/count/cout_reg[3]/CP -->
-                                   decoder/h1/ch_reg[3]/D
+ global_map       2857     -14  decoder/count/cout_reg[1]/CP -->
+                                   decoder/s1/syn_reg[0]/D
  
 Global incremental target info
 ==============================
-Cost Group 'default' target slack:   -29 ps
-Target path end-point (Pin: decoder/b1/dout_buf3_reg/D (HS65_LS_DFPQX9/D))
+Cost Group 'default' target slack:   -13 ps
+Target path end-point (Pin: decoder/s1/syn_reg[0]/D (HS65_LS_DFPQX9/D))
 
-Info    : Changing wireload model of a design/subdesign. [TIM-92]
-        : Changing wireload model of subdesign 'dec' from area_8Kto9K to area_7Kto8K.
  
 Global incremental optimization status
 ======================================
@@ -7088,8 +7075,8 @@ Global incremental optimization status
                  Total    Neg   
 Operation         Area   Slack  Worst Path
 -------------------------------------------------------------------------------
- global_inc       8026     -34  decoder/b1/reg_ena_reg[135]/CP -->
-                                   decoder/b1/dout_buf3_reg/D
+ global_inc       2810     -12  encoder/c1/cout_reg[3]/CP -->
+                                   encoder/c1/vdin1_reg/D
 Info    : 'Conformal LEC9.1-s400' or later builds is recommended for verification. [WDO-600]
 Generating a dofile for design 'enc_dec_wrapper' in file 'fv/enc_dec_wrapper/rtl_to_g1.do' ...
  
@@ -7099,8 +7086,17 @@ Incremental optimization status
                  Total    Neg       Max       Max    Max   
 Operation         Area   Slack     Trans      Cap   Fanout 
 -------------------------------------------------------------------------------
- init_iopt        8026     -34         0        0      236
-            Path: decoder/b1/reg_ena_reg[135]/CP --> decoder/b1/dout_buf3_reg/D
+ init_iopt        2810     -12         0        0        0
+            Path: encoder/c1/cout_reg[3]/CP --> encoder/c1/vdin1_reg/D
+ 
+Incremental optimization status (pre-loop)
+==========================================
+                         Worst  - - - - DRC Totals - - - - 
+                 Total    Neg       Max       Max    Max   
+Operation         Area   Slack     Trans      Cap   Fanout 
+-------------------------------------------------------------------------------
+ simp_cc_in       2803     -12         0        0        0
+            Path: encoder/c1/cout_reg[3]/CP --> encoder/c1/vdin1_reg/D
  
 Incremental optimization status
 ===============================
@@ -7108,44 +7104,19 @@ Incremental optimization status
                  Total    Neg       Max       Max    Max   
 Operation         Area   Slack     Trans      Cap   Fanout 
 -------------------------------------------------------------------------------
- init_delay       8026     -34         0        0      236
-            Path: decoder/b1/reg_ena_reg[135]/CP --> decoder/b1/dout_buf3_reg/D
- incr_delay       8159     -22         0        0      236
-            Path: decoder/b1/reg_ena_reg[63]/CP --> decoder/b1/dout_buf3_reg/D
- incr_delay       8191     -20         0        0      236
-            Path: decoder/b1/reg_ena_reg[79]/CP --> decoder/b1/dout_buf3_reg/D
- incr_delay       8209     -19         0        0      236
-            Path: decoder/b1/reg_ena_reg[237]/CP --> decoder/b1/dout_buf3_reg/D
- incr_delay       8251     -18         0        0      236
-            Path: decoder/b1/reg_ena_reg[231]/CP --> decoder/b1/dout_buf3_reg/D
- incr_delay       8259     -18         0        0      236
-            Path: decoder/b1/reg_ena_reg[55]/CP --> decoder/b1/dout_buf3_reg/D
- init_drc         8259     -18         0        0      236
-            Path: decoder/b1/reg_ena_reg[55]/CP --> decoder/b1/dout_buf3_reg/D
- incr_drc         8307     -18         0        0      176
-            Path: decoder/b1/reg_ena_reg[55]/CP --> decoder/b1/dout_buf3_reg/D
- incr_drc         8349     -18         0        0        0
-            Path: decoder/b1/reg_ena_reg[55]/CP --> decoder/b1/dout_buf3_reg/D
- init_area        8349     -18         0        0        0
-            Path: decoder/b1/reg_ena_reg[55]/CP --> decoder/b1/dout_buf3_reg/D
- rem_buf          8172     -18         0        0        0
-            Path: decoder/b1/reg_ena_reg[55]/CP --> decoder/b1/dout_buf3_reg/D
- rem_inv          8166     -18         0        0        0
-            Path: decoder/b1/reg_ena_reg[55]/CP --> decoder/b1/dout_buf3_reg/D
- merge_bi         8160     -18         0        0        0
-            Path: decoder/b1/reg_ena_reg[55]/CP --> decoder/b1/dout_buf3_reg/D
- io_phase         8154     -18         0        0        0
-            Path: decoder/b1/reg_ena_reg[55]/CP --> decoder/b1/dout_buf3_reg/D
- gate_comp        8065     -18         0        0        0
-            Path: decoder/b1/reg_ena_reg[55]/CP --> decoder/b1/dout_buf3_reg/D
- glob_area        8030     -18         0        0        0
-            Path: decoder/b1/reg_ena_reg[55]/CP --> decoder/b1/dout_buf3_reg/D
- area_down        8015     -18         0        0        0
-            Path: decoder/b1/reg_ena_reg[55]/CP --> decoder/b1/dout_buf3_reg/D
- rem_buf          7972     -18         0        0        0
-            Path: decoder/b1/reg_ena_reg[55]/CP --> decoder/b1/dout_buf3_reg/D
-Info    : Changing wireload model of a design/subdesign. [TIM-92]
-        : Changing wireload model of design 'enc_dec_wrapper' from area_8Kto9K to area_7Kto8K.
+ init_delay       2803     -12         0        0        0
+            Path: encoder/c1/cout_reg[3]/CP --> encoder/c1/vdin1_reg/D
+ incr_delay       2808      -1         0        0        0
+            Path: din_buf_reg/CP --> encoder/r1/rout_reg[4]/D
+ incr_delay       2810       0         0        0        0
+ init_drc         2810       0         0        0        0
+ init_area        2810       0         0        0        0
+ rem_buf          2808       0         0        0        0
+ rem_inv          2803       0         0        0        0
+ io_phase         2795       0         0        0        0
+ gate_comp        2789       0         0        0        0
+ glob_area        2777       0         0        0        0
+ area_down        2777       0         0        0        0
  
 Incremental optimization status
 ===============================
@@ -7153,16 +7124,9 @@ Incremental optimization status
                  Total    Neg       Max       Max    Max   
 Operation         Area   Slack     Trans      Cap   Fanout 
 -------------------------------------------------------------------------------
- init_delay       7972     -18         0        0        0
-            Path: decoder/b1/reg_ena_reg[55]/CP --> decoder/b1/dout_buf3_reg/D
- init_drc         7972     -18         0        0        0
-            Path: decoder/b1/reg_ena_reg[55]/CP --> decoder/b1/dout_buf3_reg/D
- init_area        7972     -18         0        0        0
-            Path: decoder/b1/reg_ena_reg[55]/CP --> decoder/b1/dout_buf3_reg/D
- gate_comp        7958     -18         0        0        0
-            Path: decoder/b1/reg_ena_reg[55]/CP --> decoder/b1/dout_buf3_reg/D
- area_down        7956     -18         0        0        0
-            Path: decoder/b1/reg_ena_reg[55]/CP --> decoder/b1/dout_buf3_reg/D
+ init_delay       2777       0         0        0        0
+ init_drc         2777       0         0        0        0
+ init_area        2777       0         0        0        0
 
   Done mapping enc_dec_wrapper
   Synthesis succeeded.
@@ -7176,8 +7140,8 @@ Mapping enc_dec_wrapper to gates.
  
 Global mapping target info
 ==========================
-Cost Group 'default' target slack:   -69 ps
-Target path end-point (Pin: decoder/b1/dout_buf3_reg/d)
+Cost Group 'default' target slack:   -60 ps
+Target path end-point (Pin: decoder/h1/ch_reg[4]/d)
 
  
 Global mapping status
@@ -7186,16 +7150,14 @@ Global mapping status
                  Total    Neg   
 Operation         Area   Slack  Worst Path
 -------------------------------------------------------------------------------
- global_map       8909    -102  decoder/count/cout_reg[0]/CP -->
-                                   decoder/h1/ch_reg[7]/TE
+ global_map       2788     -86  decoder/count/cout_reg[7]/CP -->
+                                   decoder/h1/ch_reg[3]/D
  
 Global incremental target info
 ==============================
-Cost Group 'default' target slack:  -103 ps
-Target path end-point (Pin: decoder/b1/dout_buf3_reg/D (HS65_LS_DFPQX9/D))
+Cost Group 'default' target slack:   -86 ps
+Target path end-point (Pin: decoder/h1/ch_reg[2]/D (HS65_LS_DFPQX9/D))
 
-Info    : Changing wireload model of a design/subdesign. [TIM-92]
-        : Changing wireload model of subdesign 'dbuf' from area_8Kto9K to area_7Kto8K.
  
 Global incremental optimization status
 ======================================
@@ -7203,8 +7165,8 @@ Global incremental optimization status
                  Total    Neg   
 Operation         Area   Slack  Worst Path
 -------------------------------------------------------------------------------
- global_inc       8374    -102  decoder/count/cout_reg[5]/CP -->
-                                   decoder/h1/ch_reg[5]/D
+ global_inc       2746     -81  decoder/count/cout_reg[1]/CP -->
+                                   decoder/count/vdout11_reg/D
 Info    : 'Conformal LEC9.1-s400' or later builds is recommended for verification. [WDO-600]
 Generating a dofile for design 'enc_dec_wrapper' in file 'fv/enc_dec_wrapper/rtl_to_g1.do' ...
  
@@ -7214,17 +7176,8 @@ Incremental optimization status
                  Total    Neg       Max       Max    Max   
 Operation         Area   Slack     Trans      Cap   Fanout 
 -------------------------------------------------------------------------------
- init_iopt        8374    -102         0        0        0
-            Path: decoder/count/cout_reg[5]/CP --> decoder/h1/ch_reg[5]/D
- 
-Incremental optimization status (pre-loop)
-==========================================
-                         Worst  - - - - DRC Totals - - - - 
-                 Total    Neg       Max       Max    Max   
-Operation         Area   Slack     Trans      Cap   Fanout 
--------------------------------------------------------------------------------
- simp_cc_in       8387    -100         0        0        0
-            Path: decoder/count/cout_reg[5]/CP --> decoder/h1/ch_reg[5]/D
+ init_iopt        2746     -81         0        0        0
+            Path: decoder/count/cout_reg[1]/CP --> decoder/count/vdout11_reg/D
  
 Incremental optimization status
 ===============================
@@ -7232,38 +7185,32 @@ Incremental optimization status
                  Total    Neg       Max       Max    Max   
 Operation         Area   Slack     Trans      Cap   Fanout 
 -------------------------------------------------------------------------------
- init_delay       8387    -100         0        0        0
-            Path: decoder/count/cout_reg[5]/CP --> decoder/h1/ch_reg[5]/D
- incr_delay       8396     -92         0        0        0
+ init_delay       2746     -81         0        0        0
+            Path: decoder/count/cout_reg[1]/CP --> decoder/count/vdout11_reg/D
+ incr_delay       2773     -69         0        0        0
+            Path: decoder/count/cout_reg[2]/CP --> decoder/h1/ch_reg[1]/D
+ incr_delay       2798     -61         0        0        0
+            Path: decoder/count/cout_reg[2]/CP --> decoder/count/nFirst_reg/D
+ incr_delay       2823     -56         0        0        0
+            Path: decoder/count/cout_reg[4]/CP --> decoder/h1/ch_reg[3]/D
+ incr_delay       2826     -54         0        0        0
+            Path: decoder/count/cout_reg[5]/CP --> decoder/s1/syn_reg[0]/D
+ incr_delay       2830     -52         0        0        0
             Path: decoder/count/cout_reg[4]/CP --> decoder/h1/ch_reg[4]/D
- incr_delay       8465     -84         0        0        0
-            Path: decoder/b1/buf_reg[178]/CP --> decoder/b1/dout_buf3_reg/D
- incr_delay       8518     -82         0        0        0
-            Path: decoder/count/cout_reg[7]/CP --> decoder/h1/ch_reg[4]/D
- incr_delay       8522     -82         0        0        0
-            Path: decoder/b1/reg_ena_reg[61]/CP --> decoder/b1/dout_buf3_reg/D
- incr_delay       8540     -81         0        0        0
-            Path: decoder/b1/reg_ena_reg[65]/CP --> decoder/b1/dout_buf3_reg/D
- init_drc         8540     -81         0        0        0
-            Path: decoder/b1/reg_ena_reg[65]/CP --> decoder/b1/dout_buf3_reg/D
- init_area        8540     -81         0        0        0
-            Path: decoder/b1/reg_ena_reg[65]/CP --> decoder/b1/dout_buf3_reg/D
- rem_buf          8405     -81         0        0        0
-            Path: decoder/b1/reg_ena_reg[65]/CP --> decoder/b1/dout_buf3_reg/D
- rem_inv          8400     -81         0        0        0
-            Path: decoder/b1/reg_ena_reg[65]/CP --> decoder/b1/dout_buf3_reg/D
- rem_inv_qb       8400     -81         0        0        0
-            Path: decoder/b1/reg_ena_reg[65]/CP --> decoder/b1/dout_buf3_reg/D
- gate_comp        8245     -81         0        0        0
-            Path: decoder/b1/reg_ena_reg[65]/CP --> decoder/b1/dout_buf3_reg/D
- glob_area        8213     -81         0        0        0
-            Path: decoder/b1/reg_ena_reg[65]/CP --> decoder/b1/dout_buf3_reg/D
- area_down        8196     -81         0        0        0
-            Path: decoder/b1/reg_ena_reg[65]/CP --> decoder/b1/dout_buf3_reg/D
- rem_buf          8095     -81         0        0        0
-            Path: decoder/b1/reg_ena_reg[65]/CP --> decoder/b1/dout_buf3_reg/D
-Info    : Changing wireload model of a design/subdesign. [TIM-92]
-        : Changing wireload model of subdesign 'dec' from area_8Kto9K to area_7Kto8K.
+ incr_delay       2831     -49         0        0        0
+            Path: decoder/count/cout_reg[0]/CP --> decoder/count/nFirst_reg/D
+ init_drc         2831     -49         0        0        0
+            Path: decoder/count/cout_reg[0]/CP --> decoder/count/nFirst_reg/D
+ init_area        2831     -49         0        0        0
+            Path: decoder/count/cout_reg[0]/CP --> decoder/count/nFirst_reg/D
+ rem_inv          2828     -49         0        0        0
+            Path: decoder/count/cout_reg[0]/CP --> decoder/count/nFirst_reg/D
+ glob_area        2818     -48         0        0        0
+            Path: din_buf_reg/CP --> encoder/r1/rout_reg[2]/D
+ rem_inv          2816     -48         0        0        0
+            Path: din_buf_reg/CP --> encoder/r1/rout_reg[2]/D
+ merge_bi         2816     -48         0        0        0
+            Path: din_buf_reg/CP --> encoder/r1/rout_reg[2]/D
  
 Incremental optimization status
 ===============================
@@ -7271,20 +7218,26 @@ Incremental optimization status
                  Total    Neg       Max       Max    Max   
 Operation         Area   Slack     Trans      Cap   Fanout 
 -------------------------------------------------------------------------------
- init_delay       8095     -81         0        0        0
-            Path: decoder/b1/reg_ena_reg[65]/CP --> decoder/b1/dout_buf3_reg/D
- init_drc         8095     -81         0        0        0
-            Path: decoder/b1/reg_ena_reg[65]/CP --> decoder/b1/dout_buf3_reg/D
- init_area        8095     -81         0        0        0
-            Path: decoder/b1/reg_ena_reg[65]/CP --> decoder/b1/dout_buf3_reg/D
- io_phase         8094     -81         0        0        0
-            Path: decoder/b1/reg_ena_reg[65]/CP --> decoder/b1/dout_buf3_reg/D
- gate_comp        8067     -81         0        0        0
-            Path: decoder/b1/reg_ena_reg[65]/CP --> decoder/b1/dout_buf3_reg/D
- glob_area        8063     -81         0        0        0
-            Path: decoder/b1/reg_ena_reg[65]/CP --> decoder/b1/dout_buf3_reg/D
- area_down        8061     -81         0        0        0
-            Path: decoder/b1/reg_ena_reg[65]/CP --> decoder/b1/dout_buf3_reg/D
+ init_delay       2816     -48         0        0        0
+            Path: din_buf_reg/CP --> encoder/r1/rout_reg[2]/D
+ incr_delay       2820     -47         0        0        0
+            Path: decoder/count/cout_reg[1]/CP --> decoder/count/vdout11_reg/D
+ incr_delay       2819     -46         0        0        0
+            Path: decoder/count/cout_reg[4]/CP --> decoder/h1/ch_reg[3]/D
+ incr_delay       2828     -46         0        0        0
+            Path: decoder/count/cout_reg[4]/CP --> decoder/s1/syn_reg[0]/D
+ incr_delay       2845     -44         0        0        0
+            Path: decoder/count/cout_reg[4]/CP --> decoder/h1/ch_reg[7]/D
+ init_drc         2845     -44         0        0        0
+            Path: decoder/count/cout_reg[4]/CP --> decoder/h1/ch_reg[7]/D
+ init_area        2845     -44         0        0        0
+            Path: decoder/count/cout_reg[4]/CP --> decoder/h1/ch_reg[7]/D
+ gate_comp        2835     -44         0        0        0
+            Path: din_buf_reg/CP --> encoder/r1/rout_reg[4]/D
+ glob_area        2832     -44         0        0        0
+            Path: din_buf_reg/CP --> encoder/r1/rout_reg[4]/D
+ area_down        2828     -44         0        0        0
+            Path: din_buf_reg/CP --> encoder/r1/rout_reg[4]/D
 
   Done mapping enc_dec_wrapper
   Synthesis succeeded.
@@ -7298,8 +7251,8 @@ Mapping enc_dec_wrapper to gates.
  
 Global mapping target info
 ==========================
-Cost Group 'default' target slack:  -117 ps
-Target path end-point (Pin: decoder/b1/dout_buf3_reg/d)
+Cost Group 'default' target slack:   -99 ps
+Target path end-point (Pin: decoder/s1/syn_reg[0]/d)
 
  
 Global mapping status
@@ -7308,18 +7261,14 @@ Global mapping status
                  Total    Neg   
 Operation         Area   Slack  Worst Path
 -------------------------------------------------------------------------------
- global_map       8864    -160  decoder/count/cout_reg[4]/CP -->
-                                   decoder/h1/ch_reg[7]/TE
+ global_map       2795    -149  decoder/count/cout_reg[7]/CP -->
+                                   decoder/h1/ch_reg[4]/D
  
 Global incremental target info
 ==============================
-Cost Group 'default' target slack:  -160 ps
-Target path end-point (Pin: decoder/b1/dout_buf3_reg/D (HS65_LS_DFPQX9/D))
+Cost Group 'default' target slack:  -150 ps
+Target path end-point (Pin: decoder/h1/ch_reg[4]/D (HS65_LS_DFPQX9/D))
 
-Info    : Changing wireload model of a design/subdesign. [TIM-92]
-        : Changing wireload model of subdesign 'dec' from area_8Kto9K to area_7Kto8K.
-Info    : Changing wireload model of a design/subdesign. [TIM-92]
-        : Changing wireload model of subdesign 'dbuf' from area_8Kto9K to area_7Kto8K.
  
 Global incremental optimization status
 ======================================
@@ -7327,8 +7276,8 @@ Global incremental optimization status
                  Total    Neg   
 Operation         Area   Slack  Worst Path
 -------------------------------------------------------------------------------
- global_inc       8245    -154  decoder/count/cout_reg[5]/CP -->
-                                   decoder/h1/ch_reg[7]/TE
+ global_inc       2751    -140  decoder/count/cout_reg[2]/CP -->
+                                   decoder/s1/syn_reg[0]/D
 Info    : 'Conformal LEC9.1-s400' or later builds is recommended for verification. [WDO-600]
 Generating a dofile for design 'enc_dec_wrapper' in file 'fv/enc_dec_wrapper/rtl_to_g1.do' ...
  
@@ -7338,8 +7287,8 @@ Incremental optimization status
                  Total    Neg       Max       Max    Max   
 Operation         Area   Slack     Trans      Cap   Fanout 
 -------------------------------------------------------------------------------
- init_iopt        8245    -154         0        0        0
-            Path: decoder/count/cout_reg[5]/CP --> decoder/h1/ch_reg[7]/TE
+ init_iopt        2751    -140         0        0        0
+            Path: decoder/count/cout_reg[2]/CP --> decoder/s1/syn_reg[0]/D
  
 Incremental optimization status (pre-loop)
 ==========================================
@@ -7347,8 +7296,8 @@ Incremental optimization status (pre-loop)
                  Total    Neg       Max       Max    Max   
 Operation         Area   Slack     Trans      Cap   Fanout 
 -------------------------------------------------------------------------------
- simp_cc_in       8265    -153         0        0        0
-            Path: decoder/count/cout_reg[5]/CP --> decoder/h1/ch_reg[7]/TE
+ simp_cc_in       2755    -139         0        0        0
+            Path: decoder/count/cout_reg[2]/CP --> decoder/s1/syn_reg[0]/D
  
 Incremental optimization status
 ===============================
@@ -7356,34 +7305,32 @@ Incremental optimization status
                  Total    Neg       Max       Max    Max   
 Operation         Area   Slack     Trans      Cap   Fanout 
 -------------------------------------------------------------------------------
- init_delay       8265    -153         0        0        0
-            Path: decoder/count/cout_reg[5]/CP --> decoder/h1/ch_reg[7]/TE
- incr_delay       8310    -147         0        0      139
-            Path: decoder/b1/buf_reg[136]/CP --> decoder/b1/dout_buf3_reg/D
- incr_delay       8413    -136         0        0      139
-            Path: decoder/count/cout_reg[0]/CP --> decoder/h1/ch_reg[7]/TE
- init_drc         8413    -136         0        0      139
-            Path: decoder/count/cout_reg[0]/CP --> decoder/h1/ch_reg[7]/TE
- incr_drc         8450    -136         0        0        0
-            Path: decoder/count/cout_reg[0]/CP --> decoder/h1/ch_reg[7]/TE
- init_area        8450    -136         0        0        0
-            Path: decoder/count/cout_reg[0]/CP --> decoder/h1/ch_reg[7]/TE
- rem_buf          8217    -136         0        0        0
-            Path: decoder/count/cout_reg[0]/CP --> decoder/h1/ch_reg[7]/TE
- rem_inv          8201    -136         0        0        0
-            Path: decoder/count/cout_reg[0]/CP --> decoder/h1/ch_reg[7]/TE
- merge_bi         8195    -136         0        0        0
-            Path: decoder/b1/buf_reg[104]/CP --> decoder/b1/dout_buf3_reg/D
- gate_comp        7954    -136         0        0        0
-            Path: decoder/b1/buf_reg[104]/CP --> decoder/b1/dout_buf3_reg/D
- glob_area        7909    -136         0        0        0
-            Path: decoder/b1/buf_reg[104]/CP --> decoder/b1/dout_buf3_reg/D
- area_down        7883    -136         0        0        0
-            Path: decoder/b1/buf_reg[104]/CP --> decoder/b1/dout_buf3_reg/D
- rem_buf          7762    -136         0        0        0
-            Path: decoder/b1/buf_reg[104]/CP --> decoder/b1/dout_buf3_reg/D
-Info    : Changing wireload model of a design/subdesign. [TIM-92]
-        : Changing wireload model of design 'enc_dec_wrapper' from area_8Kto9K to area_7Kto8K.
+ init_delay       2755    -139         0        0        0
+            Path: decoder/count/cout_reg[2]/CP --> decoder/s1/syn_reg[0]/D
+ incr_delay       2779    -117         0        0        0
+            Path: decoder/count/cout_reg[5]/CP --> decoder/h1/ch_reg[4]/D
+ incr_delay       2807     -99         0        0        0
+            Path: decoder/count/cout_reg[6]/CP --> decoder/h1/ch_reg[0]/D
+ incr_delay       2812     -98         0        0        0
+            Path: decoder/count/cout_reg[6]/CP --> decoder/h1/ch_reg[4]/D
+ init_drc         2812     -98         0        0        0
+            Path: decoder/count/cout_reg[6]/CP --> decoder/h1/ch_reg[4]/D
+ init_area        2812     -98         0        0        0
+            Path: decoder/count/cout_reg[6]/CP --> decoder/h1/ch_reg[4]/D
+ rem_inv_qb       2810     -98         0        0        0
+            Path: decoder/count/cout_reg[6]/CP --> decoder/h1/ch_reg[4]/D
+ io_phase         2809     -98         0        0        0
+            Path: decoder/count/cout_reg[6]/CP --> decoder/h1/ch_reg[4]/D
+ gate_comp        2804     -98         0        0        0
+            Path: decoder/count/cout_reg[6]/CP --> decoder/h1/ch_reg[4]/D
+ glob_area        2792     -97         0        0        0
+            Path: decoder/h1/ch_reg[0]/CP --> decoder/b1/dout_reg/D
+ area_down        2778     -97         0        0        0
+            Path: decoder/h1/ch_reg[0]/CP --> decoder/b1/dout_reg/D
+ rem_inv          2776     -97         0        0        0
+            Path: decoder/h1/ch_reg[0]/CP --> decoder/b1/dout_reg/D
+ merge_bi         2775     -97         0        0        0
+            Path: decoder/h1/ch_reg[0]/CP --> decoder/b1/dout_reg/D
  
 Incremental optimization status
 ===============================
@@ -7391,38 +7338,24 @@ Incremental optimization status
                  Total    Neg       Max       Max    Max   
 Operation         Area   Slack     Trans      Cap   Fanout 
 -------------------------------------------------------------------------------
- init_delay       7762    -136         0        0        0
-            Path: decoder/b1/buf_reg[104]/CP --> decoder/b1/dout_buf3_reg/D
- incr_delay       7801    -136         0        0        0
-            Path: decoder/b1/buf_reg[12]/CP --> decoder/b1/dout_buf3_reg/D
- incr_delay       7811    -135         0        0        0
-            Path: decoder/b1/buf_reg[77]/CP --> decoder/b1/dout_buf3_reg/D
- incr_delay       7822    -135         0        0        0
-            Path: decoder/b1/buf_reg[132]/CP --> decoder/b1/dout_buf3_reg/D
- incr_delay       7888    -134         0        0        0
-            Path: decoder/b1/reg_ena_reg[32]/CP --> decoder/b1/dout_buf3_reg/D
- incr_delay       7896    -134         0        0        0
-            Path: decoder/b1/reg_ena_reg[66]/CP --> decoder/b1/dout_buf3_reg/D
- incr_delay       7936    -133         0        0        0
-            Path: decoder/b1/reg_ena_reg[166]/CP --> decoder/b1/dout_buf3_reg/D
- incr_delay       7947    -132         0        0        0
-            Path: decoder/b1/reg_ena_reg[178]/CP --> decoder/b1/dout_buf3_reg/D
- incr_delay       7949    -132         0        0        0
-            Path: decoder/b1/reg_ena_reg[104]/CP --> decoder/b1/dout_buf3_reg/D
- init_drc         7949    -132         0        0        0
-            Path: decoder/b1/reg_ena_reg[104]/CP --> decoder/b1/dout_buf3_reg/D
- init_area        7949    -132         0        0        0
-            Path: decoder/b1/reg_ena_reg[104]/CP --> decoder/b1/dout_buf3_reg/D
- rem_buf          7901    -132         0        0        0
-            Path: decoder/b1/reg_ena_reg[104]/CP --> decoder/b1/dout_buf3_reg/D
- io_phase         7887    -132         0        0        0
-            Path: decoder/b1/reg_ena_reg[104]/CP --> decoder/b1/dout_buf3_reg/D
- gate_comp        7830    -132         0        0        0
-            Path: decoder/b1/reg_ena_reg[104]/CP --> decoder/b1/dout_buf3_reg/D
- glob_area        7820    -132         0        0        0
-            Path: decoder/b1/reg_ena_reg[104]/CP --> decoder/b1/dout_buf3_reg/D
- area_down        7811    -132         0        0        0
-            Path: decoder/b1/reg_ena_reg[39]/CP --> decoder/b1/dout_buf3_reg/D
+ init_delay       2775     -97         0        0        0
+            Path: decoder/h1/ch_reg[0]/CP --> decoder/b1/dout_reg/D
+ incr_delay       2784     -95         0        0        0
+            Path: encoder/c1/cout_reg[7]/CP --> encoder/c1/cout_reg[3]/TI
+ incr_delay       2786     -95         0        0        0
+            Path: decoder/count/cout_reg[3]/CP --> decoder/h1/ch_reg[7]/D
+ init_drc         2786     -95         0        0        0
+            Path: decoder/count/cout_reg[3]/CP --> decoder/h1/ch_reg[7]/D
+ init_area        2786     -95         0        0        0
+            Path: decoder/count/cout_reg[3]/CP --> decoder/h1/ch_reg[7]/D
+ rem_inv          2784     -95         0        0        0
+            Path: decoder/count/cout_reg[3]/CP --> decoder/h1/ch_reg[7]/D
+ io_phase         2783     -95         0        0        0
+            Path: decoder/count/cout_reg[3]/CP --> decoder/h1/ch_reg[7]/D
+ glob_area        2780     -95         0        0        0
+            Path: decoder/count/cout_reg[3]/CP --> decoder/h1/ch_reg[7]/D
+ area_down        2778     -95         0        0        0
+            Path: decoder/count/cout_reg[3]/CP --> decoder/h1/ch_reg[7]/D
 
   Done mapping enc_dec_wrapper
   Synthesis succeeded.

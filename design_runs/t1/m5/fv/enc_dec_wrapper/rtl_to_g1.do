@@ -36,6 +36,11 @@ read design -rangeconstraint -configuration  \
 		enc.vhd \
 		dec.vhd \
 		enc_dec_wrapper.vhd \
+	-vhdl 93 \
+		const.vhd \
+		enc.vhd \
+		dec.vhd \
+		enc_dec_wrapper.vhd \
 	-golden -lastmod -noelab
 elaborate design -golden
 set root module enc_dec_wrapper -golden

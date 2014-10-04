@@ -1,8 +1,7 @@
 ncvhdl: 08.20-s012: (c) Copyright 1995-2009 Cadence Design Systems, Inc.
-TOOL:	ncvhdl	08.20-s012: Started on Sep 30, 2014 at 16:20:36 CEST
+TOOL:	ncvhdl	08.20-s012: Started on Oct 01, 2014 at 15:57:25 CEST
 ncvhdl
     -messages
-    -linedebug
     -v93
     const.vhd
     dec.vhd
@@ -11,7 +10,82 @@ ncvhdl
     BCH_TB.vhd
     sim.vhd
 
-TOOL:	ncvhdl	08.20-s012: Exiting on Sep 30, 2014 at 16:20:36 CEST  (total: 00:00:00)
 const.vhd:
 	errors: 0, warnings: 0
 dec.vhd:
+	errors: 0, warnings: 0
+enc.vhd:
+	errors: 0, warnings: 0
+bchio.vhd:
+	errors: 0, warnings: 0
+BCH_TB.vhd:
+	errors: 0, warnings: 0
+sim.vhd:
+	errors: 0, warnings: 0
+WORKLIB.CONST (package):
+	streams: 1, words: 6
+WORKLIB.DCOUNT (entity):
+	streams: 6, words: 68
+WORKLIB.DCOUNT:DCOUNTA (architecture):
+	streams: 1, words: 246
+WORKLIB.DSYN1 (entity):
+	streams: 6, words: 236
+WORKLIB.DSYN1:DSYN1A (architecture):
+	streams: 1, words: 246
+WORKLIB.DCH1 (entity):
+	streams: 7, words: 410
+WORKLIB.DCH1:DCH1A (architecture):
+	streams: 1, words: 393
+WORKLIB.DBUF (entity):
+	streams: 6, words: 68
+WORKLIB.DBUF:DBUFA (architecture):
+	streams: 1, words: 253
+WORKLIB.DEC (entity):
+	streams: 6, words: 68
+WORKLIB.DEC:DECA (architecture):
+	streams: 6, words: 2302
+WORKLIB.ERING (entity):
+	streams: 5, words: 62
+WORKLIB.ERING:ERINGA (architecture):
+	streams: 1, words: 393
+WORKLIB.ECOUNT (entity):
+	streams: 4, words: 56
+WORKLIB.ECOUNT:ECOUNTA (architecture):
+	streams: 1, words: 246
+WORKLIB.ENC (entity):
+	streams: 6, words: 68
+WORKLIB.ENC:ENCA (architecture):
+	streams: 3, words: 241
+WORKLIB.IOENC (entity):
+	streams: 6, words: 68
+WORKLIB.IOENC:IOENCA (architecture):
+	streams: 2, words: 508
+WORKLIB.IODEC (entity):
+	streams: 6, words: 68
+WORKLIB.IODEC:IODECA (architecture):
+	streams: 2, words: 508
+WORKLIB.BCH_TB (entity):
+	streams: 1, words: 38
+WORKLIB.BCH_TB:TESTBENCH (architecture):
+	streams: 8, words: 7809
+WORKLIB.ENCBUF (entity):
+	streams: 6, words: 243
+WORKLIB.ENCBUF:ENCBUFA (architecture):
+	streams: 1, words: 253
+WORKLIB.ERRBUF (entity):
+	streams: 6, words: 243
+WORKLIB.ERRBUF:ERRBUFA (architecture):
+	streams: 1, words: 253
+WORKLIB.COMBUF (entity):
+	streams: 4, words: 56
+WORKLIB.COMBUF:COMBUFA (architecture):
+	streams: 1, words: 253
+WORKLIB.DECBUF (entity):
+	streams: 6, words: 243
+WORKLIB.DECBUF:DECBUFA (architecture):
+	streams: 1, words: 253
+WORKLIB.SIM (entity):
+	streams: 13, words: 635
+WORKLIB.SIM:SIMA (architecture):
+	streams: 7, words: 1395
+TOOL:	ncvhdl	08.20-s012: Exiting on Oct 01, 2014 at 15:57:25 CEST  (total: 00:00:00)

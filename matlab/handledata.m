@@ -5,6 +5,7 @@ close all
 for m_cnt = 1:10
     for t_cnt = 1:3
         try
+        break
         output{t_cnt,m_cnt,1} = addtestrun(t_cnt,m_cnt,'1.0');
         output{t_cnt,m_cnt,2} = addtestrun(t_cnt,m_cnt,'1.500');
         output{t_cnt,m_cnt,3} = addtestrun(t_cnt,m_cnt,'2.0');
@@ -191,7 +192,7 @@ title('Comparision of power consumption of different memory implementations at f
 xlabel('m');
 ylabel('Power [mW]');
 
-legend('Location','NorthWest','Circular buffer T=1','Circular buffer T=2','Shift buffer T=1','Shift buffer T=2');
+legend('Location','NorthWest','Circular buffer T=1','Circular buffer T=2','Shift buffer T=1','Shift buffer T=2','Double buffer T=1','Double buffer T=2');
 
 figure
 plot(m',joule_sec'./bits_per_sec');
@@ -202,12 +203,14 @@ ylabel('Energy/bit [pJ/bit]');
 legend('Location','NorthWest','T=1','T=2');
 
 %%
-clear power
+clear power power2 power3
 i = 1;
-for run = 1:4
-    for m_cnt = 6:6
-        for t_cnt = 1:1
-            
+for t_cnt = 1:3
+    i = 0;
+    for run = 1:4
+        for m_cnt = 6:6
+       
+            i = i+1;
             try
                 for j = 1:length(output_shift_buffer{t_cnt,m_cnt,run})
                     is_dec = strfind('decoder',output_shift_buffer{t_cnt,m_cnt,run}{j,1});
@@ -221,22 +224,24 @@ for run = 1:4
                         enc_row = j;
                     end
                 end
-                power(i,1) = (output_shift_buffer{t_cnt,m_cnt,run}{dec_row,end}+output_shift_buffer{t_cnt,m_cnt,run}{enc_row,end});
+                power(i,t_cnt) = (output_shift_buffer{t_cnt,m_cnt,run}{dec_row,end}+output_shift_buffer{t_cnt,m_cnt,run}{enc_row,end});
                 m(i) = m_cnt;
-                i = i+1;
+                
             end
         end
     end
 end
 i = 1;
-for run = 1:4
-    for m_cnt = 7:7
-        for t_cnt = 1:1
+for t_cnt = 1:3
+    i = 1;
+    for run = 1:4
+        for m_cnt = 6:6
+       
             
             try
-                for j = 1:length(output_shift_buffer{t_cnt,m_cnt,run})
-                    is_dec = strfind('decoder',output_shift_buffer{t_cnt,m_cnt,run}{j,1});
-                    is_enc = strfind('encoder',output_shift_buffer{t_cnt,m_cnt,run}{j,1});
+                for j = 1:length(output_circular_buffer{t_cnt,m_cnt,run})
+                    is_dec = strfind('decoder',output_circular_buffer{t_cnt,m_cnt,run}{j,1});
+                    is_enc = strfind('encoder',output_circular_buffer{t_cnt,m_cnt,run}{j,1});
                     
                     if is_dec == 1
                         dec_row = j;
@@ -246,7 +251,7 @@ for run = 1:4
                         enc_row = j;
                     end
                 end
-                power(i,2) = (output_shift_buffer{t_cnt,m_cnt,run}{dec_row,end}+output_shift_buffer{t_cnt,m_cnt,run}{enc_row,end});
+                power2(i,t_cnt) = (output_circular_buffer{t_cnt,m_cnt,run}{dec_row,end}+output_circular_buffer{t_cnt,m_cnt,run}{enc_row,end});
                 m(i) = m_cnt;
                 i = i+1;
             end
@@ -255,14 +260,16 @@ for run = 1:4
 end
 
 i = 1;
-for run = 1:4
-    for m_cnt = 10:10
-        for t_cnt = 1:1
+for t_cnt = 1:2
+    i = 1;
+    for run = 1:4
+        for m_cnt = 6:6
+       
             
             try
-                for j = 1:length(output_shift_buffer{t_cnt,m_cnt,run})
-                    is_dec = strfind('decoder',output_shift_buffer{t_cnt,m_cnt,run}{j,1});
-                    is_enc = strfind('encoder',output_shift_buffer{t_cnt,m_cnt,run}{j,1});
+                for j = 1:length(output_double_buffer{t_cnt,m_cnt,run})
+                    is_dec = strfind('decoder',output_double_buffer{t_cnt,m_cnt,run}{j,1});
+                    is_enc = strfind('encoder',output_double_buffer{t_cnt,m_cnt,run}{j,1});
                     
                     if is_dec == 1
                         dec_row = j;
@@ -272,7 +279,7 @@ for run = 1:4
                         enc_row = j;
                     end
                 end
-                power(i,3) = (output_shift_buffer{t_cnt,m_cnt,run}{dec_row,end}+output_shift_buffer{t_cnt,m_cnt,run}{enc_row,end});
+                power3(i,t_cnt) = (output_double_buffer{t_cnt,m_cnt,run}{dec_row,end}+output_double_buffer{t_cnt,m_cnt,run}{enc_row,end});
                 m(i) = m_cnt;
                 i = i+1;
             end
@@ -285,17 +292,109 @@ freq = [1e9 1.5e9 2e9 2.5e9];
 %bits_per_sec = (k(1)./n(1)*freq);
 
 figure
-plot(freq',power(:,1)',freq([1 2 3])',power([1 2 3],2)',freq',power(:,3)')
+%plot(freq',power(:,1)',freq([1 2])',power([1 2],2)')
 title('Power consumption at different frequencies')
 xlabel('Frequency [Hz]')
 ylabel('Power [w]')
 legend('Location','NorthWest','m=6','m=7','m=10');
 
 figure
-plot(freq',power(:,1)'./(k(1)./n(1)*freq))
+plot(freq',power(:,1)'./(k(1,1:4)./n(1,1:4).*freq),freq',power2(:,1)'./(k(1,1:4)./n(1,1:4).*freq),freq',power3(:,1)'./(k(1,1:4)./n(1,1:4).*freq))
 title('Energy needed to transmit 1 bit of information')
 xlabel('Frequency [Hz]')
 ylabel('Joule per bit [J/bit]')
-legend('m = 6')
+legend('Shift buffer','Circular Buffer','Double Buffer')
 %freq([1 2 3])',power([1 2 3],2)'./(k(2)./n(2)*freq([1 2 3])))
 %plot(freq',power(:,3)'./(k(3)./n(3)*freq))
+
+%%
+clear power power2 power3
+i = 1;
+for t_cnt = 1:3
+    i = 0;
+    for run = 1:4
+        for m_cnt = 10:10
+       
+            i = i+1;
+            try
+                for j = 1:length(output_shift_buffer{t_cnt,m_cnt,run})
+                    is_dec = strfind('decoder',output_shift_buffer{t_cnt,m_cnt,run}{j,1});
+                    is_enc = strfind('encoder',output_shift_buffer{t_cnt,m_cnt,run}{j,1});
+                    
+                    if is_dec == 1
+                        dec_row = j;
+                    end
+                    
+                    if is_enc == 1
+                        enc_row = j;
+                    end
+                end
+                power(i,t_cnt) = (output_shift_buffer{t_cnt,m_cnt,run}{dec_row,end}+output_shift_buffer{t_cnt,m_cnt,run}{enc_row,end});
+                m(i) = m_cnt;
+                
+            end
+        end
+    end
+end
+i = 1;
+for t_cnt = 1:3
+    i = 1;
+    for run = 1:4
+        for m_cnt = 10:10
+       
+            
+            try
+                for j = 1:length(output_circular_buffer{t_cnt,m_cnt,run})
+                    is_dec = strfind('decoder',output_circular_buffer{t_cnt,m_cnt,run}{j,1});
+                    is_enc = strfind('encoder',output_circular_buffer{t_cnt,m_cnt,run}{j,1});
+                    
+                    if is_dec == 1
+                        dec_row = j;
+                    end
+                    
+                    if is_enc == 1
+                        enc_row = j;
+                    end
+                end
+                power2(i,t_cnt) = (output_circular_buffer{t_cnt,m_cnt,run}{dec_row,end}+output_circular_buffer{t_cnt,m_cnt,run}{enc_row,end});
+                m(i) = m_cnt;
+                i = i+1;
+            end
+        end
+    end
+end
+
+i = 1;
+for t_cnt = 1:2
+    i = 1;
+    for run = 1:4
+        for m_cnt = 10:10
+       
+            
+            try
+                for j = 1:length(output_double_buffer{t_cnt,m_cnt,run})
+                    is_dec = strfind('decoder',output_double_buffer{t_cnt,m_cnt,run}{j,1});
+                    is_enc = strfind('encoder',output_double_buffer{t_cnt,m_cnt,run}{j,1});
+                    
+                    if is_dec == 1
+                        dec_row = j;
+                    end
+                    
+                    if is_enc == 1
+                        enc_row = j;
+                    end
+                end
+                power3(i,t_cnt) = (output_double_buffer{t_cnt,m_cnt,run}{dec_row,end}+output_double_buffer{t_cnt,m_cnt,run}{enc_row,end});
+                m(i) = m_cnt;
+                i = i+1;
+            end
+        end
+    end
+end
+
+figure
+plot(freq',power(:,1)'./(k(1,1:4)./n(1,1:4).*freq),freq',power2(:,1)'./(k(1,1:4)./n(1,1:4).*freq),freq',power3(:,1)'./(k(1,1:4)./n(1,1:4).*freq))
+title('Energy needed to transmit 1 bit of information')
+xlabel('Frequency [Hz]')
+ylabel('Joule per bit [J/bit]')
+legend('Shift buffer','Circular Buffer','Double Buffer')

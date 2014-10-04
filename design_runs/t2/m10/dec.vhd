@@ -77,62 +77,23 @@ END dcounta;
 
 ---------------------------------------------------------------------
 -- buffer circuit
-	library IEEE;
-USE IEEE.STD_LOGIC_1164.ALL;
-USE IEEE.numeric_STD.all;
-USE WORK.const.ALL;
+
+	USE WORK.const.ALL;
 ENTITY dbuf IS
-	PORT (clk, err, vdout, din,rst: IN BIT;
-	dout: OUT BIT);
+PORT (clk, err, vdout, din: IN BIT;
+	dout: OUT BIT); 
 END dbuf;
+
 ARCHITECTURE dbufa OF dbuf IS
-CONSTANT zero_vec : BIT_VECTOR(0 to n-1) := (others => '0');
-SIGNAL buf,dout_buf,dout_buf2 : BIT_VECTOR(0 to n);
-signal reg_ena : BIT_VECTOR(0 to n);
-signal dout_buf3,vdout_last : BIT;
-
-
-
-component bufcount
-PORT(clk: in BIT; count : OUT STD_LOGIC_VECTOR(m-1 downto 0));
-end component;
-BEGIN
-	registers:for i in 0 to n generate
-	
-		buf2_gen1:if i /= 0 generate	
-			dout_buf2(i) <= dout_buf(i) or dout_buf2(i-1);
-		end generate;
-
-		process(clk,buf,reg_ena)
-		begin
-			if ( clk'EVENT AND clk='1') then
-				if reg_ena(i) = '1' then
-					buf(i) <= din;
-				end if;				
-			end if;
-			dout_buf(i) <= buf(i) and reg_ena(i);
-		end process;
-
-	end generate;
-dout_buf2(0) <= dout_buf(0);
-PROCESS (clk)
-	BEGIN
-	if ( clk'EVENT AND clk='1') then
-		dout_buf3 <= dout_buf2(n);
-		dout <= (dout_buf3 XOR err) and vdout;
-		vdout_last <= vdout;
-		if rst = '1' then
-			reg_ena(0) <= '1';
-			reg_ena(1 to n) <= (others => '0');
-		else
-			reg_ena(0) <= reg_ena(n);
-			reg_ena(1 to n) <= reg_ena(0 to n-1);
-		end if;
-	end if;
-end process;
-
+	SIGNAL buf: BIT_VECTOR(0 TO n+1); 
+	-- siso shift registers for storing data to be corrected
+  BEGIN
+  PROCESS BEGIN
+	WAIT UNTIL clk'EVENT AND clk='1';
+	buf<= din & buf(0 TO n);
+	dout<= (buf(n+1) XOR err) AND vdout;
+  END PROCESS;
 END dbufa;
-
 ---------------------------------------------------------------------------
 -- Syndromes calculation circuits
 
@@ -447,7 +408,7 @@ ARCHITECTURE deca OF dec IS
 		END COMPONENT;
 		FOR ALL: dcount USE ENTITY WORK.dcount (dcounta);
 	COMPONENT dbuf -- buffer shift registers 
-		PORT (clk, err, vdout, din,rst: IN BIT; 
+		PORT (clk, err, vdout, din: IN BIT; 
 			dout: OUT BIT); 
 		END COMPONENT;
 		FOR ALL: dbuf USE ENTITY WORK.dbuf (dbufa);
@@ -478,7 +439,7 @@ ARCHITECTURE deca OF dec IS
 	c1: dcount
 		PORT MAP (clk, reset, cef, pe, vdout, vdout1);
 	b1: dbuf
-		PORT MAP (clk, err, vdout1, din_reset,reset, dout);
+		PORT MAP (clk, err, vdout1, din_reset, dout);
 	e1: deq
 		PORT MAP (ch1, ch3, neq);
 	f1: ffce
